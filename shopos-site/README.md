@@ -46,6 +46,22 @@ node scripts/crosscheck.mjs --refs 04,06 --widths 1440,390            # subset
 Writes `crosscheck/report.html` (original | clone | diff per section per width) and
 `crosscheck/results.json` (mismatch % and height delta).
 
+## Motion
+
+Every animation is ported from the original's own JS (bundles in `reference/source/`, values
+cited in code comments): page-load loader, Lenis smooth scroll (1.0.29, duration 2), the
+Ticker algorithm for all tickers (`src/scripts/ticker.js`), hero prompt tap variants, Brand OS
+row hover, Under-the-hood parallax/appear, Running-Stroke button loop, footer Dock hover —
+springs via a port of framer-motion's solver. Verify frame-by-frame at desktop with
+`scripts/motioncheck.mjs` (see `docs/MOTION.md`).
+
+## Offline copy
+
+```bash
+npm run build && node scripts/package-offline.mjs   # → offline/House-of-Models-site/
+```
+Works by double-clicking `index.html` (fonts embedded, scripts inlined, relative paths).
+
 ## Cross-check results (production build vs original)
 
 Pixel mismatch per block at each reference width. Section heights match the original exactly

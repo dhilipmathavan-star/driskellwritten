@@ -67,8 +67,8 @@ async function run(browser, url, isOrig) {
     const frames = {}; let t = 0;
     for (const target of TIMES) {
       while (t < target) { const d = Math.min(16, target - t); await page.clock.runFor(d); t += d; await tick(); }
-      if (PIN) await page.evaluate((T) => { for (const a of document.getAnimations()) if (a.__tk) a.currentTime = T; }, target);
       await tick();
+      if (PIN) await page.evaluate((T) => { for (const a of document.getAnimations()) if (a.__tk) a.currentTime = T; }, target);
       await page.waitForTimeout(30);
       frames[target] = await page.screenshot({ clip: await clipFn() });
     }
@@ -95,7 +95,7 @@ async function run(browser, url, isOrig) {
   }
   // --pin-tickers: infinite ticker loops start at phase 0 at the trigger in both pages
   // (their phase otherwise depends on when each page hydrated)
-  if (PIN) await page.evaluate(() => { for (const a of document.getAnimations()) if (a.effect?.getTiming().iterations === Infinity && a.effect?.target?.tagName === 'UL') { a.__tk = 1; a.pause(); a.currentTime = 0; } });
+  if (PIN) await page.evaluate(() => { for (const a of document.getAnimations()) if (a.effect?.getTiming().iterations === Infinity && a.effect?.target?.tagName === 'UL') { a.__tk = 1; a.__s = performance.now(); a.pause(); a.currentTime = 0; } });
   const frames = await film(clip);
   await ctx.close();
   return frames;

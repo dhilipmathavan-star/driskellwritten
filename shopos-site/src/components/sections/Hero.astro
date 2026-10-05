@@ -150,7 +150,9 @@ const { logo, cta, title, prompt, chips, background } = content;
   }
 
   /* prompt tool */
-  .hero__tool { width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; }
+  /* overflow: hidden = the In Copy wrapper div (flex row, ov=hidden, reference/tree/1440-02.txt:35); it clips the
+     buttons/chips while they spring back up after the preview is removed */
+  .hero__tool { width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; overflow: hidden; }
   .hero__box {
     position: relative; isolation: isolate;
     width: 713px; max-width: 100%; display: flex; flex-direction: column; justify-content: center; gap: 10px;
@@ -347,13 +349,16 @@ const { logo, cta, title, prompt, chips, background } = content;
       }
     };
 
-    const tap = (table: { default: string; over: Record<string, string> }) => () => setVariant(table.over[variant] ?? table.default);
+    // Framer applies the tapped variant and starts the layout animation on its next frameloop
+    // update (startAnimation → frame.update, motion.pretty.js:2750–2753), i.e. one frame after the tap.
+    const nextFrame = (fn: () => void) => requestAnimationFrame(() => fn());
+    const tap = (table: { default: string; over: Record<string, string> }) => () => nextFrame(() => setVariant(table.over[variant] ?? table.default));
     root.querySelector('.hero__btn--upload')!.addEventListener('click', tap(UPLOAD));
     chips.forEach((chip, i) => {
       const go = tap(CHIPS[i]);
       chip.addEventListener('click', go);
       chip.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
     });
-    preview.addEventListener('click', () => { if (showWrap(variant)) setVariant(PREVIEW_TAP); });
+    preview.addEventListener('click', () => nextFrame(() => { if (showWrap(variant)) setVariant(PREVIEW_TAP); }));
   }
 </script>
