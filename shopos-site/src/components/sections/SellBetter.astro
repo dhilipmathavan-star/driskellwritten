@@ -1,7 +1,505 @@
 ---
-// TODO: build SellBetter (reference sections 06)
-const { content, links } = Astro.props;
+// Original block 06: "Sell Better" heading + bento grid (AI agents ticker, Multimodal AI,
+// Collaboration, Sharing). Desktop/laptop show a vertical agent ticker, tablet/mobile a
+// horizontal one with a different card set; both lists live in sell-better.json.
+interface Img { src: string; srcset: string; sizes: string }
+interface Icon { src: string; style: 'circle' | 'circle-alt' | 'plain' }
+interface VItem { title: string; description: string; chips: string[]; icon: Icon; layout: 'centered' | 'offset' }
+interface HItem { title: string; description: string; chipRows: string[][]; icon: Icon; titleWraps?: boolean; gap?: number }
+interface Ticker<T> { gap: number; itemSize: number; speed: number; items: T[] }
+interface Props {
+  content: {
+    ref: string;
+    heading: { plain: string; gradient: string };
+    agents: {
+      eyebrow: string; title: string; body: string; cardBackground: string;
+      vertical: Ticker<VItem>; horizontal: Ticker<HItem>;
+    };
+    multimodal: { eyebrow: string; title: string; body: string; image: string; imageWidth: number; imageSizes: string };
+    collaboration: {
+      eyebrow: string; title: string; body: string;
+      mock: { assetsLabel: string; assetThumb: Img; assetSize: string; deleteIcon: string; describeLabel: string; prompt: string; copyIcon: string; layersIcon: string };
+    };
+    sharing: {
+      eyebrow: string; title: string; body: string;
+      mock: { image: Img; panelTitle: string; chevronIcon: string; preview: Img; button: string; prompt: string };
+    };
+  };
+}
+const { content } = Astro.props;
+const { heading, agents, multimodal, collaboration, sharing } = content;
+const { vertical: vt, horizontal: ht } = agents;
+
+// One loop = one full set of items; the list is rendered twice so the loop is seamless.
+const loopOf = (t: Ticker<unknown>) => t.items.length * (t.itemSize + t.gap);
+const vLoop = loopOf(vt);
+const hLoop = loopOf(ht);
+const tickerVars =
+  `--v-gap:${vt.gap}px;--v-loop:${vLoop}px;--v-dur:${(vLoop / vt.speed).toFixed(2)}s;` +
+  `--h-gap:${ht.gap}px;--h-loop:${hLoop}px;--h-dur:${(hLoop / ht.speed).toFixed(2)}s;`;
+const sets = [0, 1];
 ---
-<section class="sell-better">
-  <div data-ref="06"></div>
+<section class="sb" data-ref={content.ref} style={tickerVars}>
+  <h2 class="sb-heading">
+    <span class="sb-heading__plain">{heading.plain}</span>
+    <span class="sb-heading__wrap"><span class="sb-heading__grad grad-text">{heading.gradient}</span></span>
+  </h2>
+
+  <div class="sb-grid">
+    <!-- AI agents -->
+    <div class="sb-row sb-row--agents">
+      <article class="sb-card sb-agents">
+        <div class="sb-agents__content">
+          <h3 class="sb-agents__head">
+            <span class="sb-agents__eyebrow">{agents.eyebrow}</span>
+            <span class="sb-agents__title">{agents.title}</span>
+          </h3>
+          <div class="sb-agents__bodywrap"><p class="sb-agents__body">{agents.body}</p></div>
+        </div>
+        <div class="sb-agents__panel">
+          <!-- desktop + laptop: vertical ticker -->
+          <div class="sb-ticker sb-ticker--v">
+            <div class="sb-ticker__mask">
+              <ul class="sb-ticker__list">
+                {sets.map((set) => vt.items.map((item) => (
+                  <li class={`agent agent--v agent--${item.layout}`} aria-hidden={set ? 'true' : undefined}>
+                    <img class="agent__bg" src={agents.cardBackground} alt="" aria-hidden="true" />
+                    <div class="agent__inner">
+                      <div class="agent__content">
+                        <div class={`agent__icon agent__icon--${item.icon.style}`}>
+                          <span class="agent__icon-clip"><img src={item.icon.src} alt="" /></span>
+                        </div>
+                        <div class="agent__text">
+                          <h4 class="agent__title"><span>{item.title}</span></h4>
+                          <p class="agent__desc">{item.description}</p>
+                        </div>
+                        <ul class="agent__chips">
+                          {item.chips.map((c) => <li class="agent__chip">{c}</li>)}
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                )))}
+              </ul>
+            </div>
+          </div>
+          <!-- tablet + mobile: horizontal ticker -->
+          <div class="sb-ticker sb-ticker--h">
+            <div class="sb-ticker__mask">
+              <ul class="sb-ticker__list">
+                {sets.map((set) => ht.items.map((item) => (
+                  <li class="agent agent--h" aria-hidden={set ? 'true' : undefined} style={item.gap ? `--agent-gap:${item.gap}px` : undefined}>
+                    <img class="agent__bg" src={agents.cardBackground} alt="" aria-hidden="true" />
+                    <div class="agent__inner">
+                      <div class="agent__content">
+                        <div class={`agent__icon agent__icon--${item.icon.style}`}>
+                          <span class="agent__icon-clip"><img src={item.icon.src} alt="" /></span>
+                        </div>
+                        <div class="agent__text">
+                          <h4 class={`agent__title${item.titleWraps ? ' agent__title--wrap' : ''}`}><span>{item.title}</span></h4>
+                          <p class="agent__desc">{item.description}</p>
+                        </div>
+                        <div class="agent__chiprows">
+                          {item.chipRows.map((row) => (
+                            <ul class="agent__chips">{row.map((c) => <li class="agent__chip">{c}</li>)}</ul>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                )))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Multimodal AI -->
+    <div class="sb-row sb-row--mm">
+      <article class="sb-card sb-mm">
+        <div class="sb-mm__media">
+          <!-- srcset/sizes mirror the original: they set the SVG's density-corrected size, which changes how this viewBox-less SVG is drawn -->
+          <img class="sb-mm__img" src={multimodal.image} srcset={`${multimodal.image} ${multimodal.imageWidth}w`} sizes={multimodal.imageSizes} alt="" aria-hidden="true" loading="lazy" />
+        </div>
+        <div class="sb-mm__content">
+          <h3 class="sb-mm__head">
+            <span class="sb-mm__eyebrow">{multimodal.eyebrow}</span>
+            <span class="sb-mm__title">{multimodal.title}</span>
+          </h3>
+          <p class="sb-mm__body">{multimodal.body}</p>
+        </div>
+      </article>
+    </div>
+
+    <!-- Collaboration + Sharing -->
+    <div class="sb-row sb-row--duo">
+      <div class="sb-duo__cell">
+        <article class="sb-card sb-small sb-collab">
+          <div class="sb-small__top" aria-hidden="true">
+            <div class="collab-mock">
+              <div class="collab-mock__group">
+                <p class="collab-mock__label">{collaboration.mock.assetsLabel}</p>
+                <div class="collab-mock__asset">
+                  <div class="collab-mock__asset-l">
+                    <img class="collab-mock__thumb" {...collaboration.mock.assetThumb} alt="" loading="lazy" />
+                    <span class="collab-mock__size"><span>{collaboration.mock.assetSize}</span></span>
+                  </div>
+                  <img class="collab-mock__trash" src={collaboration.mock.deleteIcon} alt="" />
+                </div>
+              </div>
+              <div class="collab-mock__group">
+                <p class="collab-mock__label">{collaboration.mock.describeLabel}</p>
+                <div class="collab-mock__field"><span>{collaboration.mock.prompt}</span></div>
+              </div>
+            </div>
+            <img class="collab-mock__copy" src={collaboration.mock.copyIcon} alt="" />
+            <img class="collab-mock__layers" src={collaboration.mock.layersIcon} alt="" />
+          </div>
+          <div class="sb-small__content">
+            <h3 class="sb-small__head">
+              <span class="sb-small__eyebrow">{collaboration.eyebrow}</span>
+              <span class="sb-small__title sb-small__title--inter">{collaboration.title}</span>
+            </h3>
+            <p class="sb-small__body">{collaboration.body}</p>
+          </div>
+        </article>
+      </div>
+      <div class="sb-duo__cell sb-duo__cell--share">
+        <article class="sb-card sb-small sb-share">
+          <div class="sb-small__top" aria-hidden="true">
+            <div class="share-mock">
+              <img class="share-mock__img" {...sharing.mock.image} alt="" loading="lazy" />
+              <div class="share-mock__panel">
+                <div class="share-mock__bar">
+                  <span class="share-mock__title">{sharing.mock.panelTitle}</span>
+                  <img class="share-mock__chev" src={sharing.mock.chevronIcon} alt="" />
+                </div>
+                <img class="share-mock__preview" {...sharing.mock.preview} alt="" loading="lazy" />
+                <span class="share-mock__btn"><span>{sharing.mock.button}</span></span>
+                <p class="share-mock__prompt">{sharing.mock.prompt}</p>
+              </div>
+            </div>
+          </div>
+          <div class="sb-small__content sb-small__content--share">
+            <h3 class="sb-small__head">
+              <span class="sb-small__eyebrow sb-small__eyebrow--share">{sharing.eyebrow}</span>
+              <span class="sb-small__title sb-small__title--share">{sharing.title}</span>
+            </h3>
+            <p class="sb-small__body sb-small__body--share">{sharing.body}</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
 </section>
+
+<style>
+  /* ---------- block ---------- */
+  .sb {
+    position: relative; width: 100%; max-width: 1440px; margin: 0 auto; overflow: hidden;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 60px; padding: 40px;
+  }
+  .sb h2, .sb h3, .sb h4 { font-weight: 400; }
+
+  /* ---------- heading ---------- */
+  .sb-heading {
+    width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center;
+    gap: 10px; padding: 21px 0;
+    font-family: var(--f-medium); font-size: 90px; line-height: 92.7px; letter-spacing: -1.76px;
+    text-align: center; color: #fff;
+  }
+  .sb-heading__plain { display: block; white-space: nowrap; }
+  .sb-heading__wrap { display: flex; overflow: hidden; }
+  .sb-heading__grad { display: block; white-space: nowrap; }
+
+  /* ---------- grid ---------- */
+  .sb-grid {
+    width: 100%; max-width: 1440px; overflow: hidden;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 30px;
+  }
+  .sb-row { position: relative; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 10px; }
+  .sb-row--agents { z-index: 0; }
+  .sb-row--duo { z-index: 1; gap: 36px; }
+
+  .sb-card { position: relative; background: #0f0f0f; border-radius: 16px; }
+  .sb-card::after {
+    content: ""; position: absolute; inset: 0; border: 1px solid #000; border-radius: inherit;
+    pointer-events: none; z-index: 2;
+  }
+
+  /* ---------- AI agents card ---------- */
+  .sb-agents { flex: 1 0 0px; width: 1px; display: flex; flex-direction: row; align-items: center; justify-content: center; }
+  .sb-agents__content {
+    flex: 1 0 0px; width: 1px; height: 808px; position: relative;
+    display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start;
+    padding: 80px 40px 80px 80px;
+  }
+  .sb-agents__head { display: flex; flex-direction: column; gap: 10px; width: 100%; }
+  .sb-agents__eyebrow { display: block; font-family: var(--f-medium); font-size: 35px; line-height: 42px; letter-spacing: -0.72px; color: rgb(104, 104, 104); }
+  .sb-agents__title { display: block; font-family: var(--f-medium); font-size: 82px; line-height: 82px; letter-spacing: -2.46px; color: #fff; }
+  .sb-agents__bodywrap { width: 100%; display: flex; flex-direction: column; }
+  .sb-agents__body { width: 422px; height: 109px; font-family: var(--f-medium); font-size: 20px; line-height: 27px; color: rgb(190, 188, 188); }
+  .sb-agents__panel {
+    flex: 1 0 0px; width: 1px; height: 805px; position: relative;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+    padding: 0 40px; background: #191919; border-radius: 15px;
+  }
+
+  /* ---------- ticker ---------- */
+  .sb-ticker { position: relative; flex: 1 0 0px; height: 1px; width: 100%; min-width: 0; }
+  .sb-ticker--h { display: none; }
+  .sb-ticker__mask {
+    display: flex; width: 100%; height: 100%; max-width: 100%; max-height: 100%; place-items: center;
+    padding: 10px; overflow: hidden;
+  }
+  .sb-ticker--v .sb-ticker__mask {
+    -webkit-mask-image: linear-gradient(rgba(0,0,0,0) 0%, #000 12.5%, #000 87.5%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(rgba(0,0,0,0) 0%, #000 12.5%, #000 87.5%, rgba(0,0,0,0) 100%);
+  }
+  .sb-ticker--h .sb-ticker__mask {
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, #000 12.5%, #000 87.5%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, #000 12.5%, #000 87.5%, rgba(0,0,0,0) 100%);
+  }
+  .sb-ticker__list {
+    display: flex; width: 100%; height: 100%; max-width: 100%; max-height: 100%; place-items: center;
+    position: relative; will-change: transform;
+  }
+  .sb-ticker--v .sb-ticker__list { flex-direction: column; gap: var(--v-gap); }
+  .sb-ticker--h .sb-ticker__list { flex-direction: row; gap: var(--h-gap); }
+  html:not(.no-motion) .sb-ticker--v .sb-ticker__list { animation: sb-ticker-y var(--v-dur) linear infinite; }
+  html:not(.no-motion) .sb-ticker--h .sb-ticker__list { animation: sb-ticker-x var(--h-dur) linear infinite; }
+  @media (prefers-reduced-motion: reduce) { .sb-ticker__list { animation: none !important; } }
+  @keyframes sb-ticker-y { from { transform: translateY(0); } to { transform: translateY(calc(-1 * var(--v-loop))); } }
+  @keyframes sb-ticker-x { from { transform: translateX(0); } to { transform: translateX(calc(-1 * var(--h-loop))); } }
+
+  /* ---------- agent card (shared) ---------- */
+  .agent { position: relative; flex-shrink: 0; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+  .agent__bg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .agent__inner {
+    position: absolute; left: 0; top: 0.123457%; width: 100%; height: 100%; z-index: 1;
+    display: flex; align-items: center; justify-content: center; border-radius: 30px; overflow: hidden;
+    will-change: transform; /* own layer, as in the original (affects text rasterisation) */
+  }
+  .agent__icon { position: relative; width: 70px; height: 70px; flex: none; }
+  .agent__icon--circle, .agent__icon--circle-alt { border-radius: 100%; background: rgb(31, 31, 31); }
+  .agent__icon-clip { position: absolute; overflow: hidden; }
+  .agent__icon--circle .agent__icon-clip { inset: 12px 13px 12px 10px; }
+  .agent__icon--circle-alt .agent__icon-clip { left: 12px; top: 10px; width: 47px; height: 47px; }
+  .agent__icon-clip img { position: absolute; left: 0; top: 0; width: 47px; height: 47px; object-fit: cover; }
+  .agent__icon--plain { width: 67px; height: 67px; }
+  .agent__icon--plain .agent__icon-clip { inset: 0; }
+  .agent__icon--plain .agent__icon-clip img { width: 67px; height: 67px; }
+  .agent__text { display: flex; flex-direction: column; }
+  .agent__title { font-family: var(--f-medium); font-size: 26.17px; letter-spacing: -1.45px; }
+  .agent__title > span {
+    background-image: linear-gradient(98.1351deg, #fff 0%, rgba(255,255,255,0) 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .agent__desc { font-family: var(--f-medium); color: rgb(183, 183, 183); }
+  .agent__chips { display: flex; flex-direction: row; align-items: center; gap: 10px; height: 32px; overflow: hidden; }
+  .agent__chip {
+    flex: none; height: 32px; display: flex; align-items: center; justify-content: center;
+    background: rgb(78, 78, 78); border-radius: 8px; padding: 5.99687px 15.9917px;
+    font-family: var(--f-light); font-size: 13.99px; line-height: 19.99px; letter-spacing: 0.1px;
+    color: rgb(230, 224, 233); text-align: center; white-space: nowrap;
+  }
+
+  /* vertical (desktop/laptop) cards: 460 × 405 */
+  .agent--v { width: 460px; height: 405px; }
+  .agent--v .agent__content { display: flex; flex-direction: column; gap: 35px; width: min-content; }
+  .agent--offset .agent__content { position: absolute; left: 42px; top: 52.5px; }
+  .agent--v .agent__text { gap: 17px; }
+  .agent--v .agent__title { width: 381px; height: 33px; display: flex; flex-direction: column; justify-content: center; line-height: 95.07px; white-space: nowrap; }
+  .agent--v .agent__title > span { display: inline; }
+  .agent--v .agent__desc { width: 381px; height: 73px; font-size: 17.45px; line-height: 24.71px; }
+  .agent--v .agent__chips { align-self: stretch; justify-content: flex-start; }
+
+  /* horizontal (tablet/mobile) cards: 260 × 405 */
+  .agent--h { width: 260px; height: 405px; border-radius: 30px; }
+  .agent--h .agent__inner { align-items: center; }
+  .agent--h .agent__content {
+    width: 260px; padding: 20px;
+    display: flex; flex-direction: column; gap: var(--agent-gap, 33px);
+  }
+  .agent--h .agent__text { gap: var(--agent-gap, 20px); width: 220px; }
+  .agent--h .agent__title { line-height: 31.404px; }
+  .agent--h .agent__title--wrap > span { display: block; }
+  .agent--h .agent__desc { font-size: 16px; line-height: 18.4px; }
+  .agent__chiprows { width: 220px; display: flex; flex-direction: column; gap: 10px; border-radius: 8px; overflow: hidden; }
+  .agent--h .agent__chips { width: 100%; justify-content: flex-start; }
+  .agent--h .agent__chip { flex: 1 0 0px; width: 1px; padding: 4px; }
+
+  /* ---------- Multimodal card ---------- */
+  .sb-row--mm { overflow: visible; max-width: 1440px; }
+  .sb-mm { flex: 1 0 0px; width: 1px; display: flex; flex-direction: row; align-items: center; justify-content: center; overflow: hidden; }
+  .sb-mm__media {
+    position: relative; flex: 1 0 0px; width: 1px; height: 763px; overflow: hidden;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+    padding: 0 40px; background: #191919; border-radius: 15px;
+  }
+  .sb-mm__img {
+    position: absolute; left: 48%; top: 52%; transform: translate(-50%, -50%); z-index: 0;
+    width: 164%; height: auto; aspect-ratio: 1.48429 / 1; object-fit: contain; border-radius: 12px;
+  }
+  .sb-mm__content {
+    position: relative; z-index: 0; flex: 1 0 0px; width: 1px; height: 758px;
+    display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start;
+    padding: 80px 60px;
+  }
+  .sb-mm__head { display: flex; flex-direction: column; gap: 0; width: 100%; }
+  .sb-mm__eyebrow { display: block; font-family: var(--f-medium); font-size: 34px; line-height: 43.2px; letter-spacing: -0.72px; color: rgb(104, 104, 104); }
+  .sb-mm__title { display: block; font-family: var(--f-medium); font-size: 60px; line-height: 72px; letter-spacing: -0.03em; color: #fff; }
+  .sb-mm__body { width: 100%; font-family: var(--f-medium); font-size: 20px; line-height: 30px; color: rgb(190, 188, 188); }
+
+  /* ---------- Collaboration / Sharing ---------- */
+  .sb-duo__cell { position: relative; flex: 1 0 0px; width: 1px; height: 643px; display: flex; flex-direction: row; align-items: center; justify-content: center; }
+  .sb-small {
+    flex: 1 0 0px; width: 1px; height: 643px; overflow: hidden;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+  }
+  .sb-share { position: absolute; inset: 0; width: auto; height: auto; }
+  .sb-small__top {
+    position: relative; flex: 1 0 0px; height: 1px; width: 100%; overflow: hidden; background: #191919;
+    display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 10px;
+  }
+  .sb-share .sb-small__top { flex-direction: column; gap: 0; }
+  .sb-small__content {
+    width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 10px; padding: 63px 40px;
+  }
+  .sb-small__head { width: 100%; display: flex; flex-direction: column; gap: 10px; overflow: hidden; }
+  .sb-small__eyebrow { display: block; width: 100%; font-family: var(--f-medium); font-size: 27.34px; line-height: 33.6px; letter-spacing: -0.56px; color: rgb(104, 104, 104); }
+  .sb-small__eyebrow--share { font-size: 27.78px; }
+  .sb-small__title { display: block; width: 100%; font-family: var(--f-medium); font-size: 37.66px; line-height: 48px; letter-spacing: -0.03em; color: #fff; }
+  .sb-small__title--inter { font-family: var(--f-inter); font-weight: 500; font-size: 38.44px; }
+  .sb-small__body { width: 100%; font-family: var(--f-medium); font-size: 17.44px; line-height: 27px; color: rgb(104, 104, 104); }
+  .sb-small__body--share { font-size: 17.58px; }
+
+  /* collaboration mock */
+  .collab-mock { width: 50%; display: flex; flex-direction: column; gap: 20px; }
+  .collab-mock__group { width: 100%; display: flex; flex-direction: column; gap: 12px; }
+  .collab-mock__label { font-family: var(--f-regular); font-size: 14px; line-height: 16.8px; color: #fff; }
+  .collab-mock__asset {
+    width: 100%; display: flex; align-items: center; justify-content: space-between;
+    padding: 11px; background: #0b0b0b; border-radius: 8px;
+  }
+  .collab-mock__asset-l { display: flex; align-items: center; gap: 12px; }
+  .collab-mock__thumb { width: 40px; height: 40px; border-radius: 4px; object-fit: cover; }
+  .collab-mock__size {
+    width: 74px; height: 23px; display: flex; flex-direction: column; justify-content: center;
+    font-family: var(--f-regular); font-size: 12.07px; line-height: 65.8px; color: rgb(151, 147, 147); white-space: nowrap;
+  }
+  .collab-mock__trash { width: 42px; height: 41px; }
+  .collab-mock__field {
+    position: relative; width: 100%; height: 105px; background: #0b0b0b; border-radius: 8px;
+    box-shadow: inset 0 0 0 1px #2a2a2a;
+  }
+  .collab-mock__field > span {
+    position: absolute; left: 8px; top: 13px; width: 94%;
+    font-family: var(--f-regular); font-size: 10px; line-height: 12px; color: #fff;
+  }
+  .collab-mock__copy { position: absolute; z-index: 1; left: 46px; bottom: 87px; width: 48px; height: 48px; }
+  .collab-mock__layers { position: absolute; z-index: 1; left: 511px; top: 32px; width: 48px; height: 48px; }
+
+  /* sharing mock */
+  .share-mock { width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 20px 50px 20px 20px; }
+  .share-mock__img { width: 247px; height: auto; aspect-ratio: 1.02353 / 1; object-fit: contain; border-radius: 5px; flex: none; }
+  .share-mock__panel {
+    width: 50%; flex: none; display: flex; flex-direction: column; align-items: center; gap: 9px;
+    padding: 13px; background: #000; border-radius: 8px;
+  }
+  .share-mock__bar { width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px; }
+  .share-mock__title { flex: 1 0 0px; width: 1px; font-family: var(--f-regular); font-size: 12px; line-height: 14.4px; color: #fff; }
+  .share-mock__chev { width: 24px; height: 24px; flex: none; }
+  .share-mock__preview { width: 100%; height: auto; aspect-ratio: 3.83824 / 1; object-fit: fill; border-radius: 8px; }
+  .share-mock__btn {
+    width: 100%; display: flex; align-items: flex-end; gap: 12px; padding: 12px;
+    background: rgba(255, 255, 255, 0.11); border-radius: 8px;
+  }
+  .share-mock__btn > span { flex: 1 0 0px; width: 1px; font-family: var(--f-regular); font-size: 12px; line-height: 14.4px; color: rgb(154, 154, 154); text-align: center; }
+  .share-mock__prompt { width: 100%; font-family: var(--f-regular); font-size: 10px; line-height: 15px; color: #fff; }
+
+  /* ================= laptop (ref 1280) ================= */
+  @media (min-width: 1200px) and (max-width: 1439px) {
+    .sb-mm__img { left: 50%; top: 50%; width: 169%; }
+    .collab-mock__layers { left: 421px; top: 48px; }
+  }
+
+  /* ================= tablet (ref 834) ================= */
+  @media (min-width: 810px) and (max-width: 1199px) {
+    .sb-heading { font-size: 80px; line-height: 82.4px; }
+    .sb-agents__content { padding: 40px; }
+    .sb-agents__eyebrow { font-size: 28px; line-height: 33.6px; }
+    .sb-agents__title { font-size: 60px; line-height: 60px; letter-spacing: -1.8px; }
+    .sb-agents__body { width: 100%; height: auto; font-size: 19px; }
+    .sb-agents__panel { padding: 0 20px; }
+    .sb-ticker--v { display: none; }
+    .sb-ticker--h { display: block; flex: none; width: 305px; height: 805px; }
+
+    .sb-row--mm { height: 97.3684vh; }
+    .sb-mm__img { left: 50%; top: 48%; width: 169%; }
+    .sb-mm__content { padding: 40px; }
+    .sb-mm__eyebrow { font-size: 24px; }
+    .sb-mm__title { font-size: 40px; line-height: 48px; }
+
+    .sb-duo__cell:not(.sb-duo__cell--share) { height: auto; }
+    .collab-mock { width: 77%; }
+    .collab-mock__copy { display: none; }
+    .collab-mock__layers { left: 259px; top: 21px; }
+    .sb-collab .sb-small__content { padding: 52px 15px; }
+    .sb-share .sb-small__content { padding: 15px; }
+    .share-mock { padding: 19px 20px; }
+    .share-mock__img { width: 149px; }
+  }
+
+  /* ================= mobile (ref 390) ================= */
+  @media (max-width: 809px) {
+    .sb { gap: 40px; padding: 15px; }
+    .sb-heading {
+      flex-direction: column; gap: 10px;
+      font-size: 70px; line-height: 72.1px; letter-spacing: -1.312px;
+    }
+    .sb-heading__plain { width: 100%; white-space: pre-wrap; }
+    .sb-heading__wrap { padding: 0 24px; }
+    .sb-heading__grad { letter-spacing: -1.76px; }
+
+    .sb-row { flex-direction: column; }
+    .sb-agents { flex: none; width: 100%; flex-direction: column; }
+    .sb-agents__content { flex: none; width: 100%; height: auto; gap: 70px; justify-content: center; padding: 31px 40px; }
+    .sb-agents__eyebrow { font-size: 22px; line-height: 26.4px; }
+    .sb-agents__title { font-size: 35px; line-height: 35px; letter-spacing: -1.05px; }
+    .sb-agents__body { width: 100%; height: auto; font-size: 18px; }
+    .sb-agents__panel { flex: none; width: 100%; height: 448px; padding: 0; }
+    .sb-ticker--v { display: none; }
+    .sb-ticker--h { display: block; }
+
+    .sb-mm { flex: none; width: 100%; flex-direction: column; }
+    .sb-mm__media { flex: none; width: 100%; height: 338px; padding: 0 10px; }
+    .sb-mm__img { left: 50%; top: 50%; width: 130%; }
+    .sb-mm__content { flex: none; width: 100%; height: 420px; gap: 10px; justify-content: center; padding: 20px; }
+    .sb-mm__head { gap: 5px; }
+    .sb-mm__eyebrow { font-size: 22px; }
+    .sb-mm__title { font-size: 35px; line-height: 42px; letter-spacing: -1.05px; }
+    .sb-mm__body { font-size: 18px; line-height: 27px; }
+
+    .sb-duo__cell { flex: none; width: 100%; }
+    .sb-duo__cell--share { height: auto; }
+    .sb-share { position: relative; inset: auto; flex: 1 0 0px; width: 1px; height: auto; }
+    .sb-share .sb-small__top { flex: none; height: auto; }
+    .collab-mock { width: 80%; }
+    .collab-mock__copy { display: none; }
+    .collab-mock__layers { left: 421px; top: 48px; }
+    .sb-small__content { padding: 20px; }
+    .sb-small__head { gap: 5px; }
+    .sb-small__eyebrow { font-size: 22px; }
+    .sb-small__eyebrow--share { font-size: 20px; }
+    .sb-small__title { font-size: 35px; letter-spacing: -1.05px; }
+    .sb-small__body { font-size: 18px; }
+    .sb-small__body--share { font-size: 17.58px; }
+    .share-mock { flex-direction: column; gap: 20px; padding: 20px; }
+    .share-mock__img { width: 219px; }
+    .share-mock__panel { width: 80%; }
+  }
+</style>

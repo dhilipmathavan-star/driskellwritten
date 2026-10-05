@@ -1,7 +1,128 @@
 ---
-// TODO: build YourModel (reference sections 14)
-const { content, links } = Astro.props;
+// Block 14 — "Your Store / Your Data / Your Model". Each gradient word sits on a blurred,
+// 40%-opacity copy of itself (the original's glow layer — on the first line that layer
+// reads "Better", which is what the original renders). Static on the original: no cycling
+// or floating, verified live. The crystal artwork column only shows at ≥1200px.
+interface Props {
+  content: {
+    ref: string;
+    lines: { lead: string; word: string; glow: string }[];
+    text: string;
+    features: { icon: string; iconSize: [number, number]; title: string; lines: string[] }[];
+    art: { src: string; alt: string };
+  };
+}
+const { content } = Astro.props;
 ---
-<section class="your-model">
-  <div data-ref="14"></div>
+<section class="ym" data-ref={content.ref}>
+  <div class="ym__copy">
+    <h2 class="ym__title">
+      {content.lines.map((l) => (
+        <span class="ym__row">
+          <span class="ym__lead">{l.lead}</span>
+          <span class="ym__word-wrap">
+            <span class="ym__glow" aria-hidden="true"><span class="ym__fill">{l.glow}</span></span>
+            <span class="ym__word"><span class="ym__fill">{l.word}</span></span>
+          </span>
+        </span>
+      ))}
+    </h2>
+    <div class="ym__text"><p>{content.text}</p></div>
+    <ul class="ym__features">
+      {content.features.map((f) => (
+        <li class="ym__feature">
+          <img class="ym__icon" src={f.icon} alt="" aria-hidden="true" width={f.iconSize[0]} height={f.iconSize[1]} />
+          <div class="ym__feature-body">
+            <h3 class="ym__feature-title">{f.title}</h3>
+            <div class="ym__feature-text">{f.lines.map((t) => <p>{t}</p>)}</div>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </div>
+  <div class="ym__art">
+    <img src={content.art.src} alt={content.art.alt} aria-hidden={content.art.alt ? undefined : 'true'} loading="lazy" decoding="async" />
+  </div>
 </section>
+
+<style>
+  .ym {
+    position: relative; width: 100%; max-width: 1440px; margin: 0 auto; overflow: hidden; background: #000;
+    display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 80px;
+    padding: 0 51px 80px;
+  }
+  .ym__copy {
+    flex: 1 0 0; width: 1px; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 100px; overflow: hidden;
+  }
+
+  /* ---- headline ---- */
+  .ym__title { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; overflow: hidden; font-weight: 400; }
+  .ym__row { display: flex; flex-direction: row; align-items: center; justify-content: flex-start; gap: 20px; width: 100%; overflow: hidden; }
+  .ym__lead {
+    flex: none; white-space: pre; font-family: var(--f-medium); font-size: 96px; line-height: 1.2;
+    letter-spacing: -0.03em; color: #fff; text-align: center;
+  }
+  .ym__word-wrap { position: relative; flex: none; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .ym__word, .ym__glow {
+    display: block; font-family: var(--f-medium); font-size: 96px; line-height: 1em; letter-spacing: -0.03em; text-align: center;
+  }
+  .ym__word { position: relative; white-space: pre; }
+  .ym__glow {
+    position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 1;
+    opacity: 0.4; filter: blur(15.55px); white-space: pre-wrap; word-break: break-word; overflow-wrap: break-word;
+  }
+  .ym__fill {
+    display: inline-block; padding: 0.15em; margin: -0.15em;
+    background-image: linear-gradient(97.4768deg, rgb(255, 58, 186) 0%, rgb(243, 173, 255) 56.7708%, rgb(98, 72, 255) 100%);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;
+  }
+
+  /* ---- copy ---- */
+  .ym__text { display: flex; width: 100%; overflow: hidden; }
+  .ym__text p {
+    flex: 1 0 0; width: 1px; font-family: var(--f-light); font-weight: 400; font-size: 24px; line-height: 1.4;
+    color: #fff; text-align: left; overflow-wrap: break-word;
+  }
+  .ym__features { display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 39px; width: 100%; overflow: hidden; }
+  .ym__feature { display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 18px; width: 100%; overflow: hidden; }
+  .ym__icon { flex: none; }
+  .ym__feature-body { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 30px; width: 100%; overflow: hidden; }
+  .ym__feature-title {
+    width: 100%; font-family: var(--f-medium); font-weight: 400; font-size: 20px; line-height: 1.2; color: #fff; text-align: left;
+  }
+  .ym__feature-text { width: 100%; }
+  .ym__feature-text p {
+    font-family: var(--f-light); font-weight: 400; font-size: 18px; line-height: 1.4; color: rgb(173, 176, 185);
+    text-align: left; white-space: pre-wrap; overflow-wrap: break-word;
+  }
+
+  /* ---- crystal artwork ---- */
+  .ym__art {
+    flex: 1 0 0; width: 1px; align-self: stretch; display: flex; flex-direction: column;
+    align-items: flex-end; justify-content: flex-end;
+  }
+  .ym__art img { flex: none; width: 720px; aspect-ratio: 0.587735 / 1; object-fit: cover; }
+
+  /* laptop */
+  @media (min-width: 1200px) and (max-width: 1439px) {
+    .ym { padding: 80px 10px 80px 50px; }
+  }
+
+  /* tablet */
+  @media (min-width: 810px) and (max-width: 1199px) {
+    .ym { flex-direction: column; padding: 80px 10px 40px 50px; }
+    .ym__copy { flex: none; width: 100%; }
+    .ym__word, .ym__glow { font-size: 130px; }
+    .ym__art { display: none; }
+  }
+
+  /* mobile */
+  @media (max-width: 809px) {
+    .ym { flex-direction: column; padding: 15px; }
+    .ym__copy { flex: none; width: 100%; gap: 60px; }
+    .ym__row { gap: 10px; }
+    .ym__lead, .ym__word, .ym__glow { font-size: 60px; }
+    .ym__art { display: none; }
+  }
+</style>

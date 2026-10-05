@@ -1,1 +1,14 @@
-{}
+{
+  "ref": "14",
+  "lines": [
+    { "lead": "Your", "word": "Store", "glow": "Better" },
+    { "lead": "Your", "word": "Data", "glow": "Data" },
+    { "lead": "Your", "word": "Model", "glow": "Model" }
+  ],
+  "text": "With House of Models, your brand gets access to the best AI outcomes and workflows possible to generate new, personalized media. Everything we use to do this, such as datasets, and workflows remain yours.",
+  "features": [
+    { "icon": "/assets/svg/ym-vendor.svg", "iconSize": [28, 31], "title": "Vendor agnostic", "lines": ["Create pipelines for GitHub, GitLab, ", "Bitbucket, Azure, and more."] },
+    { "icon": "/assets/svg/ym-platform.svg", "iconSize": [30, 30], "title": "Platform agnostic", "lines": ["Build pipelines for any language or platform. ", "Works with Linux, Windows and Mac."] }
+  ],
+  "art": { "src": "/assets/img/ivkKM6xcF8D5IjIeiYt4tiJvDE.png", "alt": "" }
+}

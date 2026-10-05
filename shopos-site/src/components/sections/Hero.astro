@@ -1,7 +1,224 @@
 ---
-// TODO: build Hero (reference sections 02)
+// Original block 02: top nav + hero headline, prompt box and capability chips.
+interface Chip { label: string; icon: string; iconW: number; groupW: number; textW: number; mobileW: number }
+interface Props {
+  content: {
+    ref: string;
+    logo: { src: string; alt: string; href: string };
+    cta: { label: string; link: string };
+    title: { line1: string; line2: string };
+    subtitle: string;
+    prompt: {
+      label: string; name: string; placeholder: string;
+      upload: { label: string; icon: string };
+      generate: { label: string; icon: string; link: string };
+    };
+    chips: Chip[];
+    background: { lines: string };
+  };
+  links: Record<string, string>;
+}
 const { content, links } = Astro.props;
+const { logo, cta, title, prompt, chips, background } = content;
 ---
-<section class="hero">
-  <div data-ref="02"></div>
+<section class="hero" data-ref={content.ref}>
+  <div class="hero__bg" aria-hidden="true">
+    <img class="hero__lines" src={background.lines} alt="" />
+    <div class="hero__ellipses">
+      <span class="hero__ellipse hero__ellipse--a"></span>
+      <span class="hero__ellipse hero__ellipse--b"></span>
+    </div>
+  </div>
+
+  <header class="hero__head">
+    <nav class="hero__nav" aria-label="Main">
+      <a class="hero__logo" href={logo.href}><img src={logo.src} alt={logo.alt} width="38" height="40" /></a>
+      <a class="hero__cta" href={links[cta.link]} target="_blank" rel="noopener">{cta.label}</a>
+      <span class="hero__navline" aria-hidden="true"></span>
+    </nav>
+  </header>
+
+  <div class="hero__content">
+    <h1 class="hero__title">
+      <span class="hero__line1">{title.line1}</span>
+      <span class="hero__line2">
+        <span class="hero__ai">{title.line2}</span>
+        <span class="hero__aiglow" aria-hidden="true"><span>{title.line2}</span></span>
+      </span>
+    </h1>
+    <p class="hero__sub">{content.subtitle}</p>
+
+    <div class="hero__tool">
+      <div class="hero__box">
+        <form class="hero__form" action={links[prompt.generate.link]} method="get" target="_blank">
+          <label class="sr-only" for="hero-prompt">{prompt.label}</label>
+          <input id="hero-prompt" class="hero__input" type="text" name={prompt.name} placeholder={prompt.placeholder} autocomplete="off" />
+        </form>
+        <div class="hero__actions">
+          <button class="hero__btn hero__btn--upload" type="button">
+            <span class="hero__btnin">
+              <img src={prompt.upload.icon} alt="" aria-hidden="true" />
+              <span class="hero__btntxt">{prompt.upload.label}</span>
+            </span>
+          </button>
+          <a class="hero__btn hero__btn--gen" href={links[prompt.generate.link]} target="_blank" rel="noopener">
+            <span class="hero__btnin">
+              <img src={prompt.generate.icon} alt="" aria-hidden="true" />
+              <span class="hero__btntxt">{prompt.generate.label}</span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <ul class="hero__chips">
+        {chips.map((c) => (
+          <li class="hero__chip" style={`--mw:${c.mobileW}px`}>
+            <span class="hero__chipgrp" style={`width:${c.groupW}px`}>
+              <span class="hero__chiptxt" style={`width:${c.textW}px`}>{c.label}</span>
+              <img src={c.icon} alt="" aria-hidden="true" width={c.iconW} height="25" />
+            </span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
 </section>
+
+<style>
+  .hero {
+    position: relative; overflow: hidden; background: #000;
+    display: flex; flex-direction: column; align-items: center; gap: 10px;
+  }
+
+  /* background: line art + blurred ellipses */
+  .hero__bg { position: absolute; inset: 0; pointer-events: none; }
+  .hero__lines { position: absolute; z-index: 0; left: 15%; width: 70%; top: -290.6px; height: 1035.8px; }
+  .hero__ellipses { position: absolute; inset: 0; opacity: 0.4; z-index: 1; }
+  .hero__ellipse { position: absolute; top: -489.2px; width: 70%; height: 527px; border-radius: 100%; filter: blur(100px); }
+  .hero__ellipse--a { left: 0; background: rgba(243, 173, 255, 0.7); }
+  .hero__ellipse--b { left: 436px; background: rgba(242, 189, 189, 0.7); }
+
+  /* nav */
+  .hero__head { position: relative; z-index: 2; width: 100%; height: 90.078px; }
+  .hero__nav {
+    position: relative; height: 100%; display: flex; justify-content: space-between; align-items: center;
+    padding: 25px 40px; overflow: hidden;
+  }
+  .hero__logo { display: block; width: 38px; height: 40.078px; }
+  .hero__logo img { width: 100%; height: 100%; object-fit: cover; }
+  .hero__cta {
+    display: flex; align-items: center; justify-content: center; padding: 12px 33px; height: 38px;
+    background: #fff; border-radius: 33px; color: #000; white-space: nowrap;
+    font-family: var(--f-bold); font-size: 14px; line-height: 14.02px; letter-spacing: -0.28px;
+  }
+  .hero__navline { position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: rgba(0, 0, 0, 0.08); z-index: 1; }
+
+  /* content */
+  .hero__content {
+    position: relative; z-index: 2; width: 100%; overflow: hidden;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 23px;
+    padding: 80px 40px 40px;
+  }
+  .hero__title { display: flex; flex-direction: column; align-items: center; width: 100%; overflow: hidden; font-weight: 400; }
+  .hero__line1 {
+    display: block; width: 100%; text-align: center; color: #fff;
+    font-family: var(--f-medium); font-size: 90px; line-height: 92.7px; letter-spacing: -1.76px;
+  }
+  .hero__line2 {
+    position: relative; display: block; width: 100%; text-align: center; height: 106px;
+    font-family: var(--f-medium); font-size: 90px; line-height: 90px; letter-spacing: -1.76px;
+  }
+  .hero__ai {
+    background-image: linear-gradient(4410deg, rgb(255, 58, 186) 0%, rgb(243, 173, 255) 56.7708%, rgb(98, 72, 255) 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .hero__aiglow {
+    position: absolute; left: 0; top: 0; width: 100%; z-index: 1;
+    line-height: 92.7px; opacity: 0.4; filter: blur(12.9073px);
+  }
+  .hero__aiglow span {
+    background-image: linear-gradient(97.4768deg, rgb(255, 58, 186) 0%, rgb(243, 173, 255) 56.7708%, rgb(98, 72, 255) 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .hero__sub {
+    width: 100%; text-align: center; color: var(--c-muted);
+    font-family: var(--f-medium); font-size: 20px; line-height: 66.4px; letter-spacing: -0.4px;
+  }
+
+  /* prompt tool */
+  .hero__tool { width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; }
+  .hero__box {
+    width: 713px; max-width: 100%; display: flex; flex-direction: column; justify-content: center; gap: 10px;
+    padding: 13px; background: var(--c-surface); border-radius: 13px;
+  }
+  .hero__form { display: flex; flex-direction: column; border-radius: 8px; }
+  .hero__input {
+    width: 100%; height: 50px; margin-bottom: 10px; padding: 15px; border: 0; border-radius: 4px; outline: none;
+    background: transparent; color: #fff; font-family: var(--f-inter); font-size: 16px; font-weight: 400;
+  }
+  .hero__input::placeholder { color: rgb(128, 128, 128); }
+  .hero__actions { display: flex; justify-content: space-between; align-items: center; height: 37px; overflow: hidden; }
+  .hero__btn {
+    display: flex; align-items: center; width: 125px; height: 37px; padding: 8px 10px 8px 8px; border-radius: 7px;
+    cursor: pointer; overflow: hidden;
+  }
+  .hero__btn--upload { background: rgb(38, 36, 36); }
+  .hero__btn--gen { background: #fff; }
+  .hero__btnin { position: relative; display: flex; align-items: center; width: 107px; height: 38px; flex-shrink: 0; }
+  .hero__btnin img { position: absolute; left: 0; top: 6px; width: 26px; height: 26px; object-fit: cover; }
+  .hero__btntxt {
+    display: block; width: 75px; margin-left: 32px; line-height: 13.2px; white-space: nowrap;
+    font-family: var(--f-satoshi); font-weight: 700; font-size: 11px;
+  }
+  .hero__btn--upload .hero__btntxt { color: rgb(184, 180, 180); letter-spacing: -0.306px; text-align: left; }
+  .hero__btn--gen .hero__btntxt { color: #000; text-align: center; }
+
+  .hero__chips { width: 100%; display: flex; justify-content: center; align-items: flex-start; gap: 12px; overflow: hidden; }
+  .hero__chip {
+    position: relative; flex-shrink: 0; width: 245px; height: 41px; padding: 8px 20px; border-radius: 30px;
+    display: flex; flex-direction: column; align-items: center; overflow: hidden;
+  }
+  .hero__chip::after { content: ""; position: absolute; inset: 0; border: 1px solid rgb(27, 27, 27); border-radius: inherit; pointer-events: none; }
+  .hero__chipgrp { display: flex; align-items: center; justify-content: center; gap: 10px; height: 25px; flex-shrink: 0; overflow: hidden; }
+  .hero__chipgrp img { flex-shrink: 0; }
+  .hero__chiptxt {
+    flex-shrink: 0; white-space: nowrap; text-align: center; color: rgb(139, 137, 137);
+    font-family: var(--f-regular); font-size: 16px; line-height: 22px; letter-spacing: -0.32px;
+  }
+
+  @media (min-width: 1200px) and (max-width: 1439px) {
+    .hero__ellipse { top: -488.7px; }
+    .hero__ellipse--b { left: 356px; }
+  }
+
+  @media (min-width: 810px) and (max-width: 1199px) {
+    .hero__lines { top: -377.5px; height: 1184.8px; }
+    .hero__ellipse { top: -501.1px; }
+    .hero__ellipse--b { left: 356px; }
+    .hero__content { gap: 26px; }
+    .hero__line1 { font-size: 80px; line-height: 82.4px; }
+    .hero__line2 { font-size: 80px; line-height: 80px; height: 96px; }
+    .hero__aiglow { line-height: 82.4px; }
+    .hero__sub { line-height: 23px; }
+    .hero__box { width: calc(100% - 40px); justify-content: flex-start; }
+    .hero__input { height: 44px; padding: 12px; }
+  }
+
+  @media (max-width: 809px) {
+    .hero { align-items: flex-start; }
+    .hero__lines { left: 5.5%; width: 89%; top: 42.7px; height: 479px; }
+    .hero__ellipse { top: -433.8px; }
+    .hero__ellipse--b { left: 356px; }
+    .hero__nav { padding: 25px; }
+    .hero__content { gap: 21px; padding: 80px 15px 0; }
+    .hero__line1 { font-size: 50px; line-height: 51.5px; letter-spacing: -0.03px; }
+    .hero__line2 { font-size: 50px; line-height: 50px; height: 66px; }
+    .hero__aiglow { line-height: 51.5px; }
+    .hero__sub { font-size: 18px; line-height: 20.7px; }
+    .hero__box { width: 100%; }
+    .hero__input { height: 40px; padding: 10px; }
+    .hero__chips { flex-direction: column; align-items: center; gap: 15px; }
+    .hero__chip { width: var(--mw); padding: 8px; }
+    .hero__chipgrp { justify-content: space-between; gap: 0; }
+  }
+</style>

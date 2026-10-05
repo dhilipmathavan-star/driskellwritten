@@ -1,1 +1,37 @@
-{}
+{
+  "ref": "12",
+  "title": "Multi-Platform Integration",
+  "lead": "Our AI models work across platforms, headless commerce products and enterprise ecosystems, in a safe, brand-centric manner.",
+  "platforms": [
+    { "name": "Shopify", "icon": "/assets/svg/int-shopify.svg" },
+    { "name": "WooCommerce", "icon": "/assets/svg/int-woocommerce.svg" },
+    { "name": "Wix", "icon": "/assets/svg/int-wix.svg" },
+    { "name": "Adobe Commerce", "icon": "/assets/svg/int-adobe.svg" }
+  ],
+  "cards": [
+    {
+      "title": "Generate",
+      "text": "Connect your site to the most popular apps out there.",
+      "media": { "type": "image", "src": "/assets/img/GEXBZOF89Isjz7rqcRYLhRUCjqE.svg", "alt": "Prompt box with Retry, Reprompt, Edit and Generate controls" }
+    },
+    {
+      "title": "Personalize",
+      "text": "Collaborate with team members or clients in real-time",
+      "media": {
+        "type": "ticker",
+        "duration": 18.25,
+        "copies": 3,
+        "items": [
+          { "src": "/assets/img/9ssTkATwQt20xyFoefcdKAEpnM.png", "alt": "" },
+          { "src": "/assets/img/ZpLq2t3U0XliztZgOVpVUS1ME.png", "alt": "" },
+          { "src": "/assets/img/P2SdwkCnOyqmZyFYmbYdcosMc.png", "alt": "" }
+        ]
+      }
+    },
+    {
+      "title": "Sell",
+      "text": "Unlock the Art of Multilingual Writing with Al in 15 Languages",
+      "media": { "type": "image", "src": "/assets/img/GHjwIpu0oZ1klw6KhgaQyDHG28.svg", "alt": "Language chips: Tamil, Hindi, Telugu, Malayalam, Marathi, Gujarati, Odia, Urdu, Konkani" }
+    }
+  ]
+}

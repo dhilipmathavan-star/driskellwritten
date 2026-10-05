@@ -1,1 +1,65 @@
-{}
+{
+  "ref": "11",
+  "title": {
+    "muted": "The Complete",
+    "strong": "Brand OS"
+  },
+  "agents": [
+    {
+      "name": "Dynamic Images",
+      "compactName": "Dynamic Images",
+      "type": "Image"
+    },
+    {
+      "name": "Ad Baker",
+      "compactName": "Ad Baker",
+      "type": "Video"
+    },
+    {
+      "name": "Talking Avatars",
+      "compactName": "Talking Avatars",
+      "type": "Video"
+    },
+    {
+      "name": "Product Videos",
+      "compactName": "Product Videos",
+      "type": "Video"
+    },
+    {
+      "name": "Background Enhancement",
+      "compactName": "Background Enhancement",
+      "type": "Image"
+    },
+    {
+      "name": "Text to 3D",
+      "compactName": "Text to 3d",
+      "type": "3D",
+      "typeAltFont": true
+    },
+    {
+      "name": "Product Voiceovers",
+      "compactName": "Product Voiceovers",
+      "type": "Audio"
+    },
+    {
+      "name": "Description & details",
+      "compactName": "Description & details",
+      "type": "Text"
+    },
+    {
+      "name": "Apparel Try On",
+      "compactName": "Appeal Try On",
+      "type": "Image"
+    },
+    {
+      "name": "Market Researcher",
+      "compactName": "Market Research",
+      "type": "Text"
+    },
+    {
+      "name": "Seller Store Manager",
+      "compactName": "Seller Store Manager",
+      "type": "Text"
+    }
+  ]
+}

@@ -1,7 +1,126 @@
 ---
-// TODO: build Generated (reference sections 08)
+// Block 08 — bordered dark card: two image tickers scrolling in opposite directions,
+// then "Generated Using / House of Models", stat copy and a CTA.
+// Ticker motion mirrors Framer's: linear translateX over one loop length at `speed` px/s.
+interface Row { direction: 'left' | 'right'; images: string[] }
+interface Props {
+  content: {
+    ref: string;
+    rows: Row[];
+    speed: number;
+    eyebrow: string;
+    title: string;
+    body: string;
+    cta: { label: string; link: string };
+  };
+  links: Record<string, string>;
+}
 const { content, links } = Astro.props;
+const ITEM = 197;
+const GAP = 10;
+const COPIES = 4;
+const rows = content.rows.map((row) => {
+  const loop = row.images.length * (ITEM + GAP);
+  return {
+    ...row,
+    style: `--loop:${loop}px;--dur:${(loop / content.speed).toFixed(3)}s;`,
+    items: Array.from({ length: COPIES }, (_, c) => row.images.map((src, i) => ({ src, hidden: c > 0, key: `${c}-${i}` }))).flat(),
+  };
+});
 ---
-<section class="generated">
-  <div data-ref="08"></div>
+<section class="gen" data-ref={content.ref}>
+  <div class="gen__card">
+    <div class="gen__top">
+      {rows.map((row) => (
+        <div class="gen__ticker">
+          <ul class={`gen__track gen__track--${row.direction}`} style={row.style}>
+            {row.items.map((it) => (
+              <li class="gen__item" aria-hidden={it.hidden ? 'true' : undefined}>
+                <img src={it.src} alt="" width="197" height="197" loading="lazy" decoding="async" />
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+    <div class="gen__bottom">
+      <h2 class="gen__head">
+        <span class="gen__eyebrow">{content.eyebrow}</span>
+        <span class="gen__title">{content.title}</span>
+      </h2>
+      <div class="gen__copy">
+        <p class="gen__body">{content.body}</p>
+        <div class="gen__btnrow">
+          <a class="gen__btn" href={links[content.cta.link]} target="_blank" rel="noopener">{content.cta.label}</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
+<style>
+  .gen {
+    position: relative; z-index: 1; width: 100%;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 220px 20px 20px;
+  }
+  .gen__card {
+    position: relative; width: 100%; overflow: hidden;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    background: rgba(15, 15, 15, 0.48); border-radius: 16px;
+  }
+  .gen__card::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    border: 1px solid rgb(117, 110, 110); border-radius: 16px;
+  }
+
+  /* tickers */
+  .gen__top { width: 100%; height: 500px; display: flex; flex-direction: column; gap: 20px; justify-content: center; align-items: center; padding: 40px; }
+  .gen__ticker {
+    width: 100%; height: 200px; padding: 10px; overflow: hidden; display: flex; align-items: center;
+    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #000 12.5%, #000 87.5%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #000 12.5%, #000 87.5%, rgba(0, 0, 0, 0) 100%);
+  }
+  .gen__track { position: relative; display: flex; align-items: center; gap: 10px; width: 100%; height: 100%; will-change: transform; }
+  .gen__track--right { left: calc(-1 * var(--loop)); }
+  .gen__item { flex-shrink: 0; width: 197px; height: 197px; border-radius: 15px; }
+  .gen__item img { width: 100%; height: 100%; object-fit: cover; border-radius: 15px; }
+  html:not(.no-motion) .gen__track--left { animation: gen-ticker-left var(--dur) linear infinite; }
+  html:not(.no-motion) .gen__track--right { animation: gen-ticker-right var(--dur) linear infinite; }
+  @keyframes gen-ticker-left { from { transform: translateX(0); } to { transform: translateX(calc(-1 * var(--loop))); } }
+  @keyframes gen-ticker-right { from { transform: translateX(0); } to { transform: translateX(var(--loop)); } }
+  @media (prefers-reduced-motion: reduce) { .gen__track { animation: none !important; } }
+
+  /* copy */
+  .gen__bottom { width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 60px; }
+  .gen__head, .gen__copy { flex: 1 0 0; min-width: 0; }
+  .gen__head { display: flex; flex-direction: column; justify-content: center; font-weight: 400; }
+  .gen__eyebrow { display: block; font: 29.48px/37.12px var(--f-medium); letter-spacing: -0.62px; color: rgb(167, 167, 167); }
+  .gen__title { display: block; font: 60px/72px var(--f-medium); letter-spacing: -1.8px; color: #fff; }
+  .gen__copy { display: flex; flex-direction: column; align-items: flex-start; gap: 32px; }
+  .gen__body { font: 19.22px/30px var(--f-medium); color: rgb(241, 240, 238); }
+  .gen__btnrow { width: 100%; display: flex; justify-content: flex-start; }
+  .gen__btn {
+    display: flex; align-items: center; justify-content: center; width: 176px; height: 44px;
+    background: #fff; border-radius: 8px; font: 15.38px/16px var(--f-medium); color: #000; text-align: center;
+  }
+
+  @media (min-width: 1200px) and (max-width: 1439px) {
+    .gen { padding: 200px 40px 0; }
+  }
+  @media (min-width: 810px) and (max-width: 1199px) {
+    .gen { padding: 50px 40px 0; height: 1019.4px; }
+  }
+  @media (max-width: 809px) {
+    .gen { padding: 15px; }
+    .gen__top { height: 476px; padding: 28px 40px; }
+    .gen__ticker { -webkit-mask-image: none; mask-image: none; }
+    .gen__bottom { flex-direction: column; padding: 10px 10px 20px; }
+    .gen__head, .gen__copy { flex: none; width: 100%; }
+    .gen__head { text-align: center; }
+    .gen__title { font-size: 37px; line-height: 44.4px; letter-spacing: -1.11px; }
+    .gen__copy { gap: 20px; }
+    .gen__body { font-size: 16px; text-align: center; }
+    .gen__btnrow { justify-content: center; }
+  }
+</style>

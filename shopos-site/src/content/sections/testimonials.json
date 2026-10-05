@@ -1,1 +1,61 @@
-{}
+{
+  "refs": { "heading": "17", "tickers": "18" },
+  "tag": "Testimonials",
+  "heading": "What our users say",
+  "ticker": {
+    "speed": 60,
+    "copies": 3,
+    "columns": [
+      { "direction": "forward", "items": ["sanket", "sanket", "sanket", "sanket", "madhur", "suparna", "madhur"] },
+      { "direction": "reverse", "items": ["satyen", "akash", "riley"] },
+      { "direction": "forward", "items": ["rafiq", "lorraine", "casey"] }
+    ]
+  },
+  "testimonials": {
+    "sanket": {
+      "name": "Sanket",
+      "quote": "House of Models changed our e-commerce strategy. Their AI agents altered our storefront, increasing engagement and sales. We're satisfied with the result s and rely on them for our business.",
+      "padY": 32
+    },
+    "madhur": {
+      "name": "Madhur Cruxfinder",
+      "quote": "The customer sentiment analysis provided by House of Models has been useful. We're now able to address customer concerns and integrate feedback into our product development process. ",
+      "padY": 45.3667
+    },
+    "suparna": {
+      "name": "Suparna",
+      "quote": "The content generation feature from House of Models has reduced manual work. Our product descriptions and marketing materials are now different.",
+      "padY": 45.3667
+    },
+    "satyen": {
+      "name": "Satyen",
+      "quote": "Implementing House of Models' AI Agent Operating System impacted our online store. The recommendations and pricing have increased our conversions and revenue.",
+      "padY": 45.3667
+    },
+    "akash": {
+      "name": "Akash Kedia",
+      "quote": "With House of Models' search and product discovery features, our customers can find what they're looking for quickly. This has led to customer satisfaction and loyalty.",
+      "padY": 45.3667
+    },
+    "riley": {
+      "name": "Riley Smith",
+      "quote": "House of Models' omnichannel order fulfillment and tracking have made our operations different. We can now provide our customers with a shopping experience across all channels.",
+      "padY": 45.3667
+    },
+    "rafiq": {
+      "name": "Rafiq",
+      "quote": " House of Models' AI-driven solutions have altered our business, now we do not do any physical photoshoots at all. We're now able to adjust our stock levels and reduce waste due to their predictions.",
+      "padY": 32
+    },
+    "lorraine": {
+      "name": "Lorraine",
+      "quote": "House of Models' fraud detection and risk management capabilities have reassured us. We can focus on our business, knowing our transactions are secure.",
+      "padY": 45.3667
+    },
+    "casey": {
+      "name": "Casey Harper",
+      "quote": "With House of Models' AI agents, we've seen an increase in customer engagement and retention. Their approach has helped us build relationships with our customers.",
+      "padY": 45.3667
+    }
+  }
+}

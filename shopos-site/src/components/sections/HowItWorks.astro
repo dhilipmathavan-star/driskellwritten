@@ -1,7 +1,72 @@
 ---
-// TODO: build HowItWorks (reference sections 10)
-const { content, links } = Astro.props;
+// Block 10 — "How it works" heading (gradient accent) and three steps with icons.
+interface Step { label: string; icon: string; iconHeight: number; title: string; body: string }
+interface Props {
+  content: { ref: string; title: { plain: string; accent: string }; steps: Step[] };
+}
+const { content } = Astro.props;
 ---
-<section class="how-it-works">
-  <div data-ref="10"></div>
+<section class="hiw" data-ref={content.ref}>
+  <h2 class="hiw__title">
+    <span class="hiw__plain">{content.title.plain}</span>
+    <span class="hiw__accent grad-text">{content.title.accent}</span>
+  </h2>
+  <ol class="hiw__steps">
+    {content.steps.map((s) => (
+      <li class="hiw__step">
+        <p class="hiw__label">{s.label}</p>
+        <img class="hiw__icon" src={s.icon} alt="" aria-hidden="true" width="32" height={s.iconHeight} style={`height:${s.iconHeight}px`} />
+        <h3 class="hiw__name">{s.title}</h3>
+        <div class="hiw__desc"><p>{s.body}</p></div>
+      </li>
+    ))}
+  </ol>
 </section>
+
+<style>
+  .hiw {
+    position: relative; width: 100%; height: 900px; overflow: hidden;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 60px;
+    padding: 50px;
+  }
+  .hiw__title {
+    display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 10px;
+    font: 90px/92.7px var(--f-medium); font-weight: 400; letter-spacing: -1.76px; color: #fff; text-align: center; white-space: nowrap;
+  }
+  .hiw__steps { width: 100%; display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 30px; padding: 50px 0; }
+  .hiw__step { flex: 1 0 0; min-width: 0; height: 233px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 30px; }
+  .hiw__label { width: 100%; font: 11px/24px var(--f-medium); text-transform: uppercase; color: rgba(255, 255, 255, 0.35); }
+  .hiw__icon { flex-shrink: 0; width: 32px; object-fit: cover; }
+  .hiw__name { width: 100%; font: 19.22px/23.064px var(--f-medium); font-weight: 400; letter-spacing: -0.4px; color: #fff; }
+  .hiw__step:nth-child(3) .hiw__name { line-height: 28px; }
+  .hiw__desc { width: 100%; display: flex; flex-direction: column; justify-content: center; }
+  .hiw__desc p { font: 15.5px/24px var(--f-medium); color: rgba(255, 255, 255, 0.75); }
+
+  @media (min-width: 1200px) and (max-width: 1439px) {
+    .hiw { padding: 40px; }
+    .hiw__steps { padding: 50px 150px; }
+    .hiw__step { height: auto; gap: 10px; }
+    .hiw__step:nth-child(1) { gap: 15px; }
+    .hiw__name { line-height: 28px; }
+    .hiw__step:nth-child(n + 2) .hiw__desc { height: 95px; }
+  }
+  @media (min-width: 810px) and (max-width: 1199px) {
+    .hiw { padding: 40px; }
+    .hiw__title { font-size: 80px; line-height: 82.4px; }
+    .hiw__steps { padding: 10px; gap: 20px; }
+    .hiw__step { height: auto; }
+    .hiw__step:nth-child(1) { gap: 37px; }
+    .hiw__step:nth-child(2) { gap: 27px; }
+    .hiw__step:nth-child(3) { gap: 22px; }
+    .hiw__name { line-height: 28px; }
+  }
+  @media (max-width: 809px) {
+    .hiw { height: auto; padding: 100px 15px; }
+    .hiw__title { font-size: 40px; line-height: 41.2px; }
+    .hiw__steps { flex-direction: column; padding: 0; gap: 30px; }
+    .hiw__step { flex: none; width: 100%; height: auto; gap: 10px; }
+    .hiw__step:nth-child(1) { gap: 15px; }
+    .hiw__name { line-height: 28px; }
+    .hiw__step:nth-child(n + 2) .hiw__desc { height: 95px; }
+  }
+</style>

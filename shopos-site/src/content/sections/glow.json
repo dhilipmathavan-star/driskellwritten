@@ -1,1 +1,22 @@
-{}
+{
+  "ref": "07",
+  "comment": "Thin divider whose two big blurred ellipses glow over the neighbouring blocks. Per breakpoint (d=desktop, l=laptop, t=tablet, m=mobile): left/top/bottom in px; with top+bottom the circle's size follows from the insets (aspect-ratio 1), otherwise `size` is used.",
+  "height": "0.418848vh",
+  "opacity": 0.4,
+  "ellipses": [
+    {
+      "color": "rgb(243, 173, 255)",
+      "d": { "left": 55, "top": -91, "bottom": -728, "blur": 100 },
+      "l": { "left": 0, "top": -12, "bottom": -724, "blur": 261.3 },
+      "t": { "left": 55, "top": -51, "bottom": -444, "blur": 100 },
+      "m": { "left": 18, "bottom": -314, "size": 314, "blur": 50 }
+    },
+    {
+      "color": "rgb(242, 189, 189)",
+      "d": { "left": 719, "top": -39, "bottom": -572, "blur": 100 },
+      "l": { "left": 632, "bottom": -578, "size": 498, "blur": 100 },
+      "t": { "left": 301, "top": -12, "bottom": -446, "blur": 100 },
+      "m": { "left": 632, "bottom": -578, "size": 498, "blur": 100 }
+    }
+  ]
+}

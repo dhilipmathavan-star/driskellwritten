@@ -1,7 +1,132 @@
 ---
-// TODO: build BrandOS (reference sections 11)
-const { content, links } = Astro.props;
+// Block 11 — light rounded panel with a blurred brand-gradient halo: "The Complete / Brand OS"
+// and the list of agents. Desktop/laptop: table rows with type pills; tablet/mobile: plain list.
+interface Agent { name: string; compactName: string; type: string; typeAltFont?: boolean }
+interface Props {
+  content: { ref: string; title: { muted: string; strong: string }; agents: Agent[] };
+}
+const { content } = Astro.props;
 ---
-<section class="brand-os">
-  <div data-ref="11"></div>
+<section class="bos" data-ref={content.ref}>
+  <div class="bos__inner">
+    <div class="bos__bg" aria-hidden="true">
+      <div class="bos__glow"></div>
+      <div class="bos__panel"></div>
+    </div>
+    <div class="bos__head">
+      <h2 class="bos__title">
+        <span class="bos__muted">{content.title.muted}<span class="bos__sp" aria-hidden="true">&nbsp;</span></span>
+        <span class="bos__strong">{content.title.strong}</span>
+      </h2>
+    </div>
+
+    <div class="bos__table">
+      <div class="bos__cols">
+        <div class="bos__left">
+          <ul class="bos__rows">
+            {content.agents.map((a) => (
+              <li class="bos__row">
+                <div class="bos__rowline">
+                  <span class="bos__dot" aria-hidden="true"></span>
+                  <div class="bos__rowmain">
+                    <h3 class="bos__name">{a.name}</h3>
+                    <span class:list={['bos__pill', { 'bos__pill--alt': a.typeAltFont }]}><span>{a.type}</span></span>
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="bos__right" aria-hidden="true"></div>
+      </div>
+    </div>
+
+    <ul class="bos__list">
+      {content.agents.map((a) => (
+        <li class="bos__item"><h3 class="bos__itemname">{a.compactName}</h3></li>
+      ))}
+    </ul>
+  </div>
 </section>
+
+<style>
+  .bos { position: relative; width: 100%; display: flex; justify-content: center; align-items: center; border-radius: 100px; }
+  .bos__inner {
+    position: relative; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 30px; padding: 100px 0; border-radius: 100px;
+  }
+  .bos__bg { position: absolute; inset: 0; z-index: 1; border-radius: 100px; pointer-events: none; }
+  .bos__glow { position: absolute; inset: 0; border-radius: 100px; background-image: var(--g-brand-h); filter: blur(105.75px); }
+  .bos__panel { position: absolute; inset: 0; border-radius: 60px; background: #fff; }
+
+  .bos__head { position: relative; z-index: 1; width: 100%; padding-bottom: 100px; overflow: hidden; display: flex; justify-content: center; }
+  .bos__title { width: 100%; font: 96px/115.2px var(--f-medium); font-weight: 400; letter-spacing: -2.88px; text-align: center; }
+  .bos__muted, .bos__strong { display: block; }
+  .bos__muted { color: rgb(156, 156, 156); }
+  .bos__strong { color: rgb(42, 42, 42); }
+
+  /* desktop / laptop table */
+  .bos__table { position: relative; z-index: 1; width: 100%; height: 1247px; overflow: hidden; background: #fff; }
+  .bos__cols { width: 100%; display: flex; flex-direction: row; justify-content: center; align-items: flex-start; gap: 10px; }
+  .bos__left { flex: 0 0 55%; overflow: hidden; padding-left: 51px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .bos__right { flex: 0 0 45%; height: 1742px; }
+  .bos__rows { width: 100%; display: flex; flex-direction: column; gap: 32px; }
+  .bos__rows::after, .bos__row::before {
+    content: ""; display: block; height: 3px; flex-shrink: 0;
+    background: linear-gradient(#d6d6d6, #d6d6d6) 1px 1px / calc(100% - 2px) 1px no-repeat;
+  }
+  .bos__row { width: 100%; display: flex; flex-direction: column; gap: 32px; }
+  .bos__rowline { width: 100%; height: 47px; display: flex; flex-direction: row; align-items: center; gap: 74px; padding-left: 30px; }
+  .bos__dot { flex-shrink: 0; width: 24px; height: 24px; border-radius: 100%; }
+  .bos__rowmain { flex: 1 0 0; min-width: 0; height: 47px; display: flex; flex-direction: row; align-items: center; gap: 38px; }
+  .bos__name { flex: 1 0 0; min-width: 0; font: 32px/39px var(--f-medium); font-weight: 400; letter-spacing: -1.6px; color: rgb(42, 42, 42); }
+  .bos__pill { flex-shrink: 0; width: 134px; height: 47px; padding: 0 25px; display: flex; align-items: center; justify-content: center; background: rgb(234, 234, 234); border-radius: 8px; }
+  .bos__pill span { display: block; width: 84px; font: 20px/22px var(--f-medium); letter-spacing: -1px; color: rgb(110, 110, 110); text-align: center; }
+  .bos__pill--alt span { font-family: "BDO Grotesk", sans-serif; font-weight: 500; }
+
+  /* tablet / mobile list */
+  .bos__list { display: none; }
+
+  @media (min-width: 810px) and (max-width: 1199px) {
+    .bos { padding: 20px; background: #fff; border-radius: 60px; }
+    .bos__inner { padding: 0; }
+    .bos__panel { inset: -20px; }
+    .bos__head { padding-bottom: 100px; }
+    .bos__title { font-size: 70px; line-height: 84px; letter-spacing: -2.1px; }
+    .bos__table { display: none; }
+    .bos__list { display: contents; }
+    .bos__item {
+      position: relative; z-index: 1; width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: flex-end;
+      gap: 20px; padding-bottom: 20px;
+    }
+    .bos__item::before { content: ""; display: block; width: 100%; height: 1px; background: rgb(214, 214, 214); }
+    .bos__itemname { width: 100%; padding: 0 20px; font: 600 32px/38.4px var(--f-inter); color: #000; text-align: left; }
+  }
+  @media (max-width: 809px) {
+    .bos { border-radius: 0; }
+    .bos__inner { gap: 10px; padding: 40px; border-radius: 0; }
+    .bos__bg { border-radius: 0; }
+    .bos__glow { border-radius: 19px; }
+    .bos__panel { border-radius: 33px; background: rgb(248, 248, 248); }
+    .bos__head { padding-bottom: 0; overflow: visible; }
+    .bos__title { font-size: 50px; line-height: 65px; letter-spacing: -2.5px; }
+    .bos__sp { display: none; } /* original's trailing space hangs (overflows) here */
+    .bos__table { display: none; }
+    .bos__list { display: contents; }
+    .bos__item {
+      position: relative; z-index: 1; width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: flex-end;
+      gap: 20px; padding-bottom: 20px;
+    }
+    .bos__item::before { content: ""; display: block; width: 100%; height: 1px; background: rgb(214, 214, 214); }
+    .bos__itemname { width: 100%; padding: 0 20px; font: 600 24px/28.8px var(--f-inter); color: #000; text-align: left; }
+  }
+</style>
+
+<style is:global>
+  /* Inter SemiBold (latin) — used by the tablet/mobile agent list; not in fonts.css yet */
+  @font-face {
+    font-family: "Inter"; font-weight: 600; font-style: normal; font-display: swap;
+    src: url("/assets/fonts/yDtI2UI8XcEg1W2je9XPN3Noo.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2070, U+2074-207E, U+2080-208E, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+</style>

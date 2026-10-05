@@ -1,8 +1,152 @@
 ---
-// TODO: build Testimonials (reference sections 17, 18)
-const { content, links } = Astro.props;
+// Testimonials — original blocks 17 (tag + heading) and 18 (three ticker columns).
+// Desktop/laptop: three vertical tickers (alternating up / down).
+// Tablet/mobile: three horizontal tickers stacked (alternating left / right).
+// Each list is rendered `copies` times so the loop is seamless; copies > 0 are aria-hidden.
+// Under html.no-motion the lists rest at their start position (first card at the top/left).
+interface Testimonial { name: string; quote: string; padY: number }
+interface Column { direction: 'forward' | 'reverse'; items: string[] }
+interface Props {
+  content: {
+    refs: { heading: string; tickers: string };
+    tag: string;
+    heading: string;
+    ticker: { speed: number; copies: number; columns: Column[] };
+    testimonials: Record<string, Testimonial>;
+  };
+}
+const { content } = Astro.props;
+const { ticker, testimonials } = content;
+const copies = Array.from({ length: ticker.copies }, (_, i) => i);
 ---
-<section class="testimonials">
-  <div data-ref="17"></div>
-  <div data-ref="18"></div>
+<section class="testimonials" aria-labelledby="testimonials-heading">
+  <div class="t-head" data-ref={content.refs.heading}>
+    <p class="t-tag">{content.tag}</p>
+    <h2 class="t-title" id="testimonials-heading">{content.heading}</h2>
+  </div>
+
+  <div class="t-grid" data-ref={content.refs.tickers} style={`--speed:${ticker.speed};`}>
+    {ticker.columns.map((col) => (
+      <div class={`t-col t-col--${col.direction}`}>
+        <ul class="t-list" style={`--n:${col.items.length};`}>
+          {copies.flatMap((copy) =>
+            col.items.map((id) => {
+              const t = testimonials[id];
+              return (
+                <li class="t-item" aria-hidden={copy > 0 ? 'true' : undefined}>
+                  <figure class="t-card" style={`--py:${t.padY}px;`}>
+                    <figcaption class="t-name">{t.name}</figcaption>
+                    <blockquote class="t-quote"><p>{t.quote}</p></blockquote>
+                  </figure>
+                </li>
+              );
+            }),
+          )}
+        </ul>
+      </div>
+    ))}
+  </div>
 </section>
+
+<style>
+  .testimonials { position: relative; width: 100%; }
+
+  /* ---- block 17: tag + heading ---- */
+  .t-head {
+    display: flex; flex-direction: column; align-items: center; gap: 22px;
+    padding: 40px 0 0;
+  }
+  .t-tag {
+    position: relative; display: flex; align-items: center; justify-content: center;
+    width: 115px; height: 35px; overflow: hidden;
+    padding: 11.3417px 14.7442px;
+    background: #000; border-radius: 11px;
+    font-family: var(--f-medium); font-size: 14.74px; line-height: 35.16px; letter-spacing: -0.2948px;
+    color: #fff; white-space: nowrap;
+  }
+  /* Framer's data-border: hairline on the top and left edges only */
+  .t-tag::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none; border-radius: inherit;
+    border-style: solid; border-color: #6b6969;
+    border-width: 1.1341667px 0 0 1.1341667px;
+  }
+  .t-title {
+    width: 612px; max-width: 100%;
+    font-family: var(--f-medium); font-weight: 400; font-size: 61.25px; line-height: 68.05px;
+    letter-spacing: -1.8375px; text-align: center; color: #fff;
+  }
+
+  /* ---- block 18: tickers ---- */
+  .t-grid {
+    --stride: 329; /* card box (319) + list gap (10) */
+    display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 10px;
+    padding: 80px 51px 0; overflow: hidden;
+  }
+  .t-col {
+    position: relative; flex: 1 0 0; width: 1px; height: 1000px;
+    display: flex; align-items: center; padding: 10px; overflow: hidden;
+    -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, #000 12.5%, #000 87.5%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, #000 12.5%, #000 87.5%, rgba(0, 0, 0, 0) 100%);
+  }
+  .t-list {
+    --dist: calc(var(--n) * var(--stride) * 1px);
+    position: relative; display: flex; flex-direction: column; align-items: center; gap: 10px;
+    width: 100%; height: 100%; will-change: transform;
+  }
+  .t-item { position: relative; flex: none; width: 369px; height: 319px; }
+  .t-card {
+    position: absolute; left: 0; top: 0;
+    display: flex; flex-direction: column; align-items: flex-start; gap: 23px;
+    padding: var(--py) 45.3667px;
+    background: #191919; border-radius: 23px;
+  }
+  .t-name {
+    font-family: var(--f-inter); font-weight: 500; font-size: 18.15px; line-height: 21.78px;
+    letter-spacing: -0.363px; color: #fff; white-space: pre;
+  }
+  .t-quote {
+    width: 278px;
+    font-family: var(--f-inter); font-weight: 400; font-size: 18.15px; line-height: 26.09px;
+    letter-spacing: -0.1815px; color: rgb(197, 197, 197);
+    white-space: pre-wrap; word-break: break-word; overflow-wrap: break-word;
+  }
+
+  /* motion: 60px/s, one list length per loop */
+  html:not(.no-motion) .t-list {
+    animation: tst-up calc(var(--n) * var(--stride) * 1s / var(--speed)) linear infinite;
+  }
+  html:not(.no-motion) .t-col--reverse .t-list { animation-name: tst-down; }
+  @keyframes tst-up { from { transform: translateY(0); } to { transform: translateY(calc(-1 * var(--dist))); } }
+  @keyframes tst-down { from { transform: translateY(calc(-1 * var(--dist))); } to { transform: translateY(0); } }
+  @keyframes tst-left { from { transform: translateX(0); } to { transform: translateX(calc(-1 * var(--dist))); } }
+  @keyframes tst-right { from { transform: translateX(calc(-1 * var(--dist))); } to { transform: translateX(0); } }
+  @media (prefers-reduced-motion: reduce) { html .t-list { animation: none !important; } }
+
+  /* laptop */
+  @media (min-width: 1200px) and (max-width: 1439px) {
+    .t-head { padding-top: 161px; }
+    .t-grid { padding: 40px; }
+  }
+
+  /* tablet + mobile: rows of horizontal tickers */
+  @media (max-width: 1199px) {
+    .t-grid { flex-direction: column; gap: 10px; padding: 40px; }
+    .t-col {
+      flex: none; width: 100%; height: 367px;
+      -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #000 12.5%, #000 87.5%, rgba(0, 0, 0, 0) 100%);
+      mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #000 12.5%, #000 87.5%, rgba(0, 0, 0, 0) 100%);
+    }
+    .t-list { flex-direction: row; }
+    html:not(.no-motion) .t-list { animation-name: tst-left; }
+    html:not(.no-motion) .t-col--reverse .t-list { animation-name: tst-right; }
+  }
+  @media (min-width: 810px) and (max-width: 1199px) {
+    .t-grid { --stride: 399; } /* 369 + 30 */
+    .t-list { gap: 30px; }
+  }
+  @media (max-width: 809px) {
+    .t-grid { --stride: 379; } /* 369 + 10 */
+    .t-col { width: 126%; }
+    .t-title { width: 100%; }
+  }
+</style>

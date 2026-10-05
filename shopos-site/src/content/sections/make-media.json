@@ -1,1 +1,25 @@
-{}
+{
+  "ref": "13",
+  "title": ["Make. ", "Media. Magical."],
+  "cta": { "label": "Get started", "link": "app", "icon": "/assets/svg/mm-chevron.svg" },
+  "editor": { "src": "/assets/img/FeW9yXkSPUmxIEcp8CribPXDZFg.svg", "alt": "Media editor with an interior photo, upscale options 2x, 4x, 8x and 16x, a Photo-realistic style select and an assets list" },
+  "cards": [
+    {
+      "id": "works",
+      "title": "Works everywhere",
+      "image": { "src": "/assets/img/roVYTmTfsBuXooWYa364LF2I.png", "alt": "House of Models connected to Slack, AWS, Jira, Google Cloud and more", "fit": "contain" },
+      "body": [
+        [{ "text": "Agents work, much like you do", "tone": "hi" }, { "text": ".", "tone": "dot" }, { "text": "   ", "tone": "mute" }],
+        [{ "text": "Over email, Slack and internal knowledge bases, tools and workflows.", "tone": "mute" }]
+      ]
+    },
+    {
+      "id": "migrate",
+      "title": "One-click migrations",
+      "image": { "src": "/assets/img/k1FnDMc77GEqM09lUtk0C67Xg.png", "alt": "", "fit": "cover" },
+      "body": [
+        [{ "text": "With a single click, ", "tone": "mute" }, { "text": "House of Models can personalize media and agents", "tone": "hi" }, { "text": " to be finetuned exactly to your brands assets, preferences.", "tone": "mute" }]
+      ]
+    }
+  ]
+}

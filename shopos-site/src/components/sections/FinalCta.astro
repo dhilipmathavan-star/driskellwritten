@@ -1,8 +1,142 @@
 ---
-// TODO: build FinalCta (reference sections 19, 20)
+// Final call to action — original blocks 19 (heading with gradient "your brand") and 20
+// ("Get Started" pill with a glow that runs around its border: Framer's Running-Stroke
+// component, variants Top → Right → Bottom → Left every 0.7s with 0.8s linear tweens).
+interface Props {
+  content: {
+    refs: { heading: string; button: string };
+    heading: { lead: string; highlight: string; tail: string; tailCompact: string };
+    button: { label: string; link: string; newTab?: boolean };
+  };
+  links: Record<string, string>;
+}
 const { content, links } = Astro.props;
+const { heading, button } = content;
 ---
-<section class="final-cta">
-  <div data-ref="19"></div>
-  <div data-ref="20"></div>
+<section class="final-cta" aria-labelledby="final-cta-heading">
+  <div class="fc-head" data-ref={content.refs.heading}>
+    <h2 class="fc-title" id="final-cta-heading">
+      <span class="fc-row">
+        <span class="fc-lead">{heading.lead}</span>
+        <span class="fc-hl grad-text">{heading.highlight}</span>
+      </span>
+      <span class="fc-tail fc-tail--wide">{heading.tail}</span>
+      <span class="fc-tail fc-tail--compact">{heading.tailCompact}</span>
+    </h2>
+  </div>
+
+  <div class="fc-cta" data-ref={content.refs.button}>
+    <a class="fc-btn" href={links[button.link]}
+      {...(button.newTab ? { target: '_blank', rel: 'noopener' } : {})}>
+      <span class="fc-glow" aria-hidden="true"></span>
+      <span class="fc-stroke" aria-hidden="true"></span>
+      <span class="fc-glow fc-glow--hover" aria-hidden="true"></span>
+      <span class="fc-stroke fc-stroke--hover" aria-hidden="true"></span>
+      <span class="fc-fill" aria-hidden="true"></span>
+      <span class="fc-label">{button.label}</span>
+    </a>
+  </div>
 </section>
+
+<style>
+  /* animatable gradient geometry for the running glow */
+  @property --fc-x { syntax: "<percentage>"; inherits: true; initial-value: 50%; }
+  @property --fc-y { syntax: "<percentage>"; inherits: true; initial-value: 0%; }
+  @property --fc-gry { syntax: "<percentage>"; inherits: true; initial-value: 50%; }
+  @property --fc-srx { syntax: "<percentage>"; inherits: true; initial-value: 20.7%; }
+  @property --fc-sry { syntax: "<percentage>"; inherits: true; initial-value: 50%; }
+
+  .final-cta { position: relative; width: 100%; }
+
+  /* ---- block 19 ---- */
+  .fc-head {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 115px 0 80px;
+  }
+  .fc-title {
+    display: flex; flex-direction: column; align-items: center; gap: 10px; width: 100%;
+    font-family: var(--f-medium); font-weight: 400; font-size: 70px; line-height: 84px;
+    letter-spacing: -2.1px; color: #fff; text-align: center;
+  }
+  .fc-row { display: flex; justify-content: center; align-items: center; gap: 10px; width: 100%; overflow: hidden; }
+  .fc-lead, .fc-hl { display: block; white-space: pre; }
+  .fc-tail { display: block; width: 100%; line-height: 91px; }
+  .fc-tail--compact { display: none; }
+
+  /* ---- block 20 ---- */
+  .fc-cta {
+    display: flex; justify-content: center; align-items: flex-start;
+    height: 214.6px;
+  }
+  .fc-btn {
+    --fc-x: 50%; --fc-y: 0%; --fc-gry: 50%; --fc-srx: 20.7%; --fc-sry: 50%;
+    position: relative; display: flex; align-items: center; justify-content: center;
+    width: 286px; height: 70px; flex: none;
+    background: rgba(255, 255, 255, 0.05); border-radius: 118px; cursor: pointer;
+  }
+  .fc-glow, .fc-stroke, .fc-fill { position: absolute; overflow: hidden; pointer-events: none; }
+  .fc-glow, .fc-stroke { inset: 0; border-radius: 72px; transition: opacity .8s linear; }
+  .fc-glow {
+    filter: blur(15px);
+    background: radial-gradient(25% var(--fc-gry) at var(--fc-x) var(--fc-y), rgb(243, 173, 255) 0%, rgba(255, 255, 255, 0) 100%);
+  }
+  .fc-stroke {
+    background: radial-gradient(var(--fc-srx) var(--fc-sry) at var(--fc-x) var(--fc-y), rgb(252, 110, 255) 0%, rgba(255, 255, 255, 0) 100%);
+  }
+  .fc-glow--hover, .fc-stroke--hover { opacity: 0; }
+  .fc-glow--hover { background: radial-gradient(50% 100% at 50% 50%, rgb(243, 173, 255) 0%, rgba(255, 255, 255, 0) 100%); }
+  .fc-stroke--hover { background: radial-gradient(75% 181.159% at 50% 50%, rgb(252, 110, 255) 0%, rgba(255, 255, 255, 0) 100%); }
+  .fc-btn:hover .fc-glow, .fc-btn:hover .fc-stroke,
+  .fc-btn:focus-visible .fc-glow, .fc-btn:focus-visible .fc-stroke { opacity: 0; }
+  .fc-btn:hover .fc-glow--hover, .fc-btn:hover .fc-stroke--hover,
+  .fc-btn:focus-visible .fc-glow--hover, .fc-btn:focus-visible .fc-stroke--hover { opacity: 1; }
+  .fc-fill { inset: 2px; background: #000; border-radius: 114px; }
+  .fc-label {
+    position: relative; white-space: pre;
+    font-family: var(--f-medium); font-size: 20px; line-height: 24px; letter-spacing: -0.2px; color: #fff;
+  }
+
+  /* Running stroke: rests on "Top" for 0.7s, then loops Top → Right → Bottom → Left.
+     Each 0.8s tween is interrupted after 0.7s, so the loop passes 7/8 of the way to each side. */
+  html:not(.no-motion) .fc-btn {
+    animation: fc-run-in .7s linear .7s 1 both, fc-run 2.8s linear 1.4s infinite;
+  }
+  @keyframes fc-run-in {
+    from { --fc-x: 50%; --fc-y: 0%; --fc-gry: 50%; --fc-srx: 20.7%; --fc-sry: 50%; }
+    to { --fc-x: 93.75%; --fc-y: 43.75%; --fc-gry: 37.22%; --fc-srx: 16.76%; --fc-sry: 42.3%; }
+  }
+  @keyframes fc-run {
+    0%, 100% { --fc-x: 93.08%; --fc-y: 44.62%; --fc-gry: 37.01%; --fc-srx: 16.71%; --fc-sry: 42.2%; }
+    25% { --fc-x: 55.38%; --fc-y: 93.08%; --fc-gry: 48.38%; --fc-srx: 20.2%; --fc-sry: 49.03%; }
+    50% { --fc-x: 6.92%; --fc-y: 55.38%; --fc-gry: 36.15%; --fc-srx: 17.05%; --fc-sry: 43.84%; }
+    75% { --fc-x: 44.62%; --fc-y: 6.92%; --fc-gry: 48.27%; --fc-srx: 20.24%; --fc-sry: 49.23%; }
+  }
+  @media (prefers-reduced-motion: reduce) { html .fc-btn { animation: none !important; } }
+
+  /* laptop */
+  @media (min-width: 1200px) and (max-width: 1439px) {
+    .fc-head { padding: 115px 40px 80px; }
+    .fc-cta { align-items: center; }
+  }
+  /* tablet */
+  @media (min-width: 810px) and (max-width: 1199px) {
+    .fc-head { padding: 40px; }
+    .fc-title { font-size: 55px; line-height: 66px; letter-spacing: -1.65px; }
+    .fc-row { gap: 15px; }
+    .fc-tail { font-size: 50px; line-height: 65px; letter-spacing: -1.5px; }
+    .fc-cta { align-items: center; }
+  }
+  /* mobile */
+  @media (max-width: 809px) {
+    .fc-head { padding: 15px; }
+    .fc-title { font-size: 26px; line-height: 31.2px; letter-spacing: -0.78px; }
+    .fc-row { gap: 5px; }
+    .fc-tail { line-height: 33.8px; }
+    .fc-cta { align-items: center; }
+    .fc-btn { width: 220px; height: 55px; }
+  }
+  @media (max-width: 1199px) {
+    .fc-tail--wide { display: none; }
+    .fc-tail--compact { display: block; }
+  }
+</style>

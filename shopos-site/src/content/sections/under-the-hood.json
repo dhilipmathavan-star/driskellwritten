@@ -1,1 +1,41 @@
-{}
+{
+  "ref": "16",
+  "pill": {
+    "background": "/assets/svg/uth-pill.svg",
+    "icon": "/assets/svg/uth-library.svg",
+    "text": "House of Models Library"
+  },
+  "heading": { "lead": "Under the", "accent": "hood" },
+  "intro": [
+    "Site Builder utilizes a built-in design system and component library of 1000+",
+    "components made for Figma & Webflow."
+  ],
+  "checkIcon": "/assets/svg/uth-check.svg",
+  "cards": [
+    {
+      "title": "Assemble your team",
+      "body": "Work with our AI expert to put together Agents that use Generative AI to transform your storefront.",
+      "image": "/assets/img/vSZ2IjhYnXG8nSWh9a3LDB7g6w.png",
+      "checks": ["Custom workflow management", "Engineered just for your brand", "Your data. Your models. Your agents.", "Unlimited usage"],
+      "cta": { "label": "Talk to an expert", "link": "email", "variant": "solid" }
+    },
+    {
+      "title": "Make some magic",
+      "body": "Create incredible images, videos, 3D, ads and more media for your brand, store or product with our crew of agents that are ready to go.",
+      "image": "/assets/img/hHMfgeWJbQSMsbTtDto9PATYYw.svg",
+      "checks": ["Custom workflow management", "Engineered just for your brand", "Your data. Your models. Your agents.", "Unlimited usage"],
+      "cta": { "label": "Get started for free", "link": "app", "variant": "outline" }
+    }
+  ],
+  "accelerator": {
+    "tag": "Brand Accelerator",
+    "kicker": "So, you're a new brand?",
+    "title": "Start here.",
+    "body": "We think brands of the future will be built using AI alone. Think you make the cut? Tell us about it, and we'd assemble your crew of AI agents.",
+    "features": [
+      { "icon": "/assets/img/yzrC14GSRZDcrzjIVKkLoCzr7Cs.svg", "title": "Unlimited Media", "text": "Use our agents to start your brand" },
+      { "icon": "/assets/img/i3dNOYFX1IAgdv0xX7HBsrRBLP4.svg", "title": "Idea to storefront", "text": "Our AI experts turn your idea into a live online store." },
+      { "icon": "/assets/img/399FD5zT0fmsnaDOfjIlF2sZEuk.svg", "title": "Your prompts, our GPUs", "text": "The cost of your AI models, is on the house" }
+    ]
+  }
+}

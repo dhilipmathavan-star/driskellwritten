@@ -1,7 +1,40 @@
 ---
-// TODO: build GlowDivider (reference sections 07)
-const { content, links } = Astro.props;
+// Original block 07: a ~4px-tall divider carrying two huge blurred ellipses (opacity 0.4)
+// that glow over the bottom of "Sell Better" and the top of the next block.
+interface Geo { left: number; top?: number; bottom: number; size?: number; blur: number }
+interface Props {
+  content: {
+    ref: string;
+    height: string;
+    opacity: number;
+    ellipses: { color: string; d: Geo; l: Geo; t: Geo; m: Geo }[];
+  };
+}
+const { content } = Astro.props;
+const BPS = ['d', 'l', 't', 'm'] as const;
+const vars = (g: Geo, bp: string) =>
+  `--left-${bp}:${g.left}px;--top-${bp}:${g.top ?? 'auto'}${g.top == null ? '' : 'px'};--bottom-${bp}:${g.bottom}px;` +
+  `--w-${bp}:${g.size == null ? 'auto' : g.size + 'px'};--h-${bp}:${g.size == null ? 'auto' : g.size + 'px'};--blur-${bp}:${g.blur}px;`;
 ---
-<section class="glow">
-  <div data-ref="07"></div>
-</section>
+<div class="glow" data-ref={content.ref} aria-hidden="true" style={`--glow-h:${content.height};opacity:${content.opacity};`}>
+  {content.ellipses.map((e) => (
+    <div class="glow__ellipse" style={`background-color:${e.color};` + BPS.map((bp) => vars(e[bp], bp)).join('')}></div>
+  ))}
+</div>
+
+<style>
+  .glow { position: relative; z-index: 0; width: 100%; max-width: 1440px; margin: 0 auto; height: var(--glow-h); overflow: visible; pointer-events: none; }
+  .glow__ellipse {
+    position: absolute; aspect-ratio: 1 / 1; border-radius: 100%;
+    left: var(--left-d); top: var(--top-d); bottom: var(--bottom-d); width: var(--w-d); height: var(--h-d); filter: blur(var(--blur-d));
+  }
+  @media (min-width: 1200px) and (max-width: 1439px) {
+    .glow__ellipse { left: var(--left-l); top: var(--top-l); bottom: var(--bottom-l); width: var(--w-l); height: var(--h-l); filter: blur(var(--blur-l)); }
+  }
+  @media (min-width: 810px) and (max-width: 1199px) {
+    .glow__ellipse { left: var(--left-t); top: var(--top-t); bottom: var(--bottom-t); width: var(--w-t); height: var(--h-t); filter: blur(var(--blur-t)); }
+  }
+  @media (max-width: 809px) {
+    .glow__ellipse { left: var(--left-m); top: var(--top-m); bottom: var(--bottom-m); width: var(--w-m); height: var(--h-m); filter: blur(var(--blur-m)); }
+  }
+</style>

@@ -1,1 +1,14 @@
-{}
+{
+  "refs": { "heading": "19", "button": "20" },
+  "heading": {
+    "lead": "Make AI work for",
+    "highlight": " your brand",
+    "tail": "from today.",
+    "tailCompact": "From Today"
+  },
+  "button": {
+    "label": "Get Started",
+    "link": "app",
+    "newTab": true
+  }
+}

@@ -1,7 +1,165 @@
 ---
-// TODO: build MakeMedia (reference sections 13)
+// Block 13 — "Make. Media. Magical." hero card (CTA + editor UI mock), followed by the
+// "Works everywhere" and "One-click migrations" cards.
+interface Segment { text: string; tone: 'hi' | 'dot' | 'mute' }
+interface Card {
+  id: string;
+  title: string;
+  image: { src: string; alt: string; fit: 'contain' | 'cover' };
+  body: Segment[][];
+}
+interface Props {
+  content: {
+    ref: string;
+    title: string[];
+    cta: { label: string; link: string; icon: string };
+    editor: { src: string; alt: string };
+    cards: Card[];
+  };
+  links: Record<string, string>;
+}
 const { content, links } = Astro.props;
+const href = links[content.cta.link] ?? content.cta.link;
 ---
-<section class="make-media">
-  <div data-ref="13"></div>
+<section class="mm" data-ref={content.ref}>
+  <div class="mm__hero-wrap">
+    <div class="mm__hero">
+      <div class="mm__intro">
+        <h2 class="mm__title">
+          {content.title.map((line) => <span class="mm__title-line">{line}</span>)}
+        </h2>
+        <div class="mm__cta-row">
+          <a class="mm__cta" href={href} target="_blank" rel="noopener">
+            <span class="mm__cta-label"><span>{content.cta.label}</span></span>
+            <img class="mm__cta-icon" src={content.cta.icon} alt="" aria-hidden="true" width="7" height="13" />
+          </a>
+        </div>
+      </div>
+      <div class="mm__editor">
+        <img class="mm__editor-img" src={content.editor.src} alt={content.editor.alt} loading="lazy" decoding="async" />
+      </div>
+    </div>
+  </div>
+
+  <ul class="mm__cards">
+    {content.cards.map((card) => (
+      <li class={`mm__card mm__card--${card.id}`}>
+        <h3 class="mm__card-title">{card.title}</h3>
+        <div class="mm__card-media">
+          <img src={card.image.src} alt={card.image.alt} style={`object-fit:${card.image.fit}`} loading="lazy" decoding="async" />
+        </div>
+        <div class="mm__card-text">
+          {card.body.map((para) => (
+            <p>{para.map((s) => <span class={`t-${s.tone}`}>{s.text}</span>)}</p>
+          ))}
+        </div>
+      </li>
+    ))}
+  </ul>
 </section>
+
+<style>
+  .mm {
+    position: relative; width: 100%; max-width: 1440px; margin: 0 auto; overflow: hidden;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 30px;
+    padding: 51px;
+  }
+
+  /* ---- hero card ---- */
+  .mm__hero-wrap { display: flex; width: 100%; overflow: hidden; }
+  .mm__hero {
+    position: relative; flex: 1 0 0; width: 1px;
+    display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 10px;
+    padding: 0 0 0 40px; background: rgb(26, 26, 26); border-radius: 30px; overflow: hidden;
+  }
+  .mm__hero::after {
+    content: ""; position: absolute; inset: 0; border: 1.5px solid #454545; border-radius: inherit; pointer-events: none;
+  }
+  .mm__intro {
+    flex: 1 0 0; width: 1px; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start;
+    gap: 50px; padding: 40px 0; overflow: hidden;
+  }
+  .mm__title {
+    width: 100%; font-family: var(--f-medium); font-weight: 400; font-size: 88px; line-height: 1.2;
+    letter-spacing: -0.03em; color: #fff; text-align: left; overflow-wrap: break-word;
+  }
+  .mm__title-line { display: block; white-space: pre-wrap; }
+  .mm__cta-row { display: flex; align-items: center; justify-content: flex-start; gap: 10px; width: 100%; }
+  .mm__cta {
+    flex: none; display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 10px;
+    width: 180px; height: 65px; background: #fff; border-radius: 9999px;
+    box-shadow: rgba(255, 255, 255, 0.2) 0 6px 16px 0;
+  }
+  .mm__cta-label {
+    flex: none; width: 84px; height: 22px; display: flex; flex-direction: column; justify-content: center;
+    font-family: var(--f-medium); font-weight: 400; font-size: 16px; line-height: 21.92px;
+    letter-spacing: -0.02em; color: rgb(7, 7, 9); white-space: pre-wrap; overflow-wrap: break-word;
+  }
+  .mm__cta-icon { flex: none; width: 7px; height: 13px; }
+
+  .mm__editor {
+    flex: none; width: 60%; align-self: stretch; display: flex; align-items: center; justify-content: center;
+    padding: 30px; background: #000; border-radius: 30px;
+  }
+  .mm__editor-img { position: relative; z-index: 1; flex: 1 0 0; width: 1px; aspect-ratio: 1.43358 / 1; object-fit: contain; }
+
+  /* ---- bottom cards ---- */
+  .mm__cards { display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 30px; width: 100%; overflow: hidden; }
+  .mm__card {
+    position: relative; flex: 1 0 0; width: 1px; height: 539px;
+    display: flex; flex-direction: column; align-items: flex-start; justify-content: center;
+    padding: 30px; background: rgb(14, 14, 14); border-radius: 16px; overflow: hidden;
+  }
+  .mm__card::after {
+    content: ""; position: absolute; inset: 0; border: 1px solid #000; border-radius: inherit; pointer-events: none;
+  }
+  .mm__card--migrate { align-self: stretch; height: auto; }
+  .mm__card-title {
+    width: 100%; font-family: var(--f-medium); font-weight: 400; font-size: 20px; line-height: 30px; color: #fff;
+  }
+  .mm__card-media { position: relative; flex: none; width: 100%; height: 75%; overflow: hidden; }
+  .mm__card--migrate .mm__card-media { border-radius: 16px; }
+  .mm__card-media img { position: absolute; inset: 0; width: 100%; height: 100%; border-radius: inherit; }
+  .mm__card-text {
+    width: 100%; font-family: var(--f-light); font-weight: 400; font-size: 20px; line-height: 30px;
+    color: rgb(173, 176, 185); overflow-wrap: break-word;
+  }
+  .mm__card-text p { white-space: pre-wrap; }
+  .t-hi { color: rgb(232, 232, 232); }
+  .t-dot { color: rgb(217, 217, 217); }
+  .t-mute { color: rgb(173, 176, 185); }
+
+  /* laptop */
+  @media (min-width: 1200px) and (max-width: 1439px) {
+    .mm { padding: 40px; }
+  }
+
+  /* tablet */
+  @media (min-width: 810px) and (max-width: 1199px) {
+    .mm { padding: 0 40px 40px; }
+    .mm__hero { flex-direction: column; padding: 20px; }
+    .mm__intro { flex: none; width: 100%; }
+    .mm__title { font-size: 80px; }
+    .mm__editor { width: 100%; align-self: auto; }
+    .mm__cards { flex-direction: column; }
+    .mm__card { flex: none; width: 100%; height: 593px; }
+    .mm__card--migrate { align-self: auto; height: auto; }
+    .mm__card-title { font-size: 22px; }
+    .mm__card-media { height: 80%; }
+    .mm__card--migrate .mm__card-media { height: 454px; }
+  }
+
+  /* mobile */
+  @media (max-width: 809px) {
+    .mm { padding: 15px; }
+    .mm__hero { flex-direction: column; padding: 0; }
+    .mm__intro { flex: none; width: 100%; padding: 20px; }
+    .mm__title { font-size: 50px; }
+    .mm__editor { width: 100%; align-self: auto; padding: 30px 30px 30px 40px; }
+    .mm__cards { flex-direction: column; }
+    .mm__card { flex: none; width: 100%; height: auto; padding: 15px; }
+    .mm__card--migrate { align-self: auto; padding: 20px; }
+    .mm__card-media { height: 203px; }
+    .mm__card--migrate .mm__card-media { height: 185px; }
+  }
+</style>

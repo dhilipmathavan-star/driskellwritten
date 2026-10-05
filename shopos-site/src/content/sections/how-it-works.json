@@ -1,1 +1,27 @@
-{}
+{
+  "ref": "10",
+  "title": { "plain": "How it", "accent": "works" },
+  "steps": [
+    {
+      "label": "Step 1",
+      "icon": "/assets/img/SnOMPU6z1fTbyK6AXARZO3yyU4.svg",
+      "iconHeight": 26.7,
+      "title": "Set your Preferences",
+      "body": "Specify the type of content you want to create, whether it's blog posts, articles, or social media updates."
+    },
+    {
+      "label": "Step 2",
+      "icon": "/assets/img/2wzFTufOIYFCvajBgjCmWDa4Q.svg",
+      "iconHeight": 30.7,
+      "title": "Let Al do the work",
+      "body": "Our advanced algorithms analyze your input and generate content that's tailored to your exact specifications"
+    },
+    {
+      "label": "Step 3",
+      "icon": "/assets/img/EFpJnUQCLUuoPPsdBxZcAxXcK0.svg",
+      "iconHeight": 30.7,
+      "title": "Review, edit and download",
+      "body": "Review the Al-generated content, make any necessary edits, and fine-tune it to perfection. Share it with your audience"
+    }
+  ]
+}

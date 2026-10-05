@@ -1,1 +1,12 @@
-{}
+{
+  "refs": { "social": "22", "line": "23", "copyright": "24" },
+  "socialLabel": "House of Models on social media",
+  "social": [
+    { "label": "X", "href": "https://twitter.com/houseofmodelsai", "icon": "/assets/svg/footer-x.svg", "iconSize": [17, 17] },
+    { "label": "Substack", "href": "https://substack.com/@houseofmodels", "icon": "/assets/img/AVShx5ZqmSSgBkScSS5rjYQjI.png", "iconSize": [12, 13.7] },
+    { "label": "Instagram", "href": "https://www.instagram.com/house.of.models/", "icon": "/assets/svg/footer-instagram.svg", "iconSize": [23, 23] },
+    { "label": "Mail", "link": "email", "icon": "/assets/svg/footer-mail.svg", "iconSize": [23, 16.6] }
+  ],
+  "line": "/assets/svg/footer-line.svg",
+  "copyright": "AI was used to make this page. © 2024 House of Models"
+}

@@ -1,1 +1,60 @@
-{}
+{
+  "ref": "02",
+  "logo": {
+    "src": "/assets/img/w6UE4eWrugGg7omU9kmxkCLJw.png",
+    "alt": "House of Models",
+    "href": "/"
+  },
+  "cta": {
+    "label": "Get Started",
+    "link": "app"
+  },
+  "title": {
+    "line1": "Your Store",
+    "line2": "AI Ready"
+  },
+  "subtitle": "An OS that makes your brand generate, personalize and sell better to your customers.",
+  "prompt": {
+    "label": "Describe what you want to generate",
+    "name": "prompt",
+    "placeholder": "Generate a photorealistic image male model",
+    "upload": {
+      "label": "Upload Image",
+      "icon": "/assets/img/YOaEOJvv8az10PzU8YOeFo2Xa8.svg"
+    },
+    "generate": {
+      "label": "Generate",
+      "icon": "/assets/img/7GXcGMkrrkTHiXZgp1TOfMMjDA.svg",
+      "link": "app"
+    }
+  },
+  "chips": [
+    {
+      "label": "Product Research",
+      "icon": "/assets/svg/hero-chip-research.svg",
+      "iconW": 24,
+      "groupW": 169,
+      "mobileW": 255,
+      "textW": 139
+    },
+    {
+      "label": "Photoshoots & images",
+      "icon": "/assets/svg/hero-chip-photo.svg",
+      "iconW": 22,
+      "groupW": 204,
+      "mobileW": 255,
+      "textW": 176
+    },
+    {
+      "label": "Storefront Optimizations",
+      "icon": "/assets/svg/hero-chip-store.svg",
+      "iconW": 23,
+      "groupW": 215,
+      "mobileW": 245,
+      "textW": 188
+    }
+  ],
+  "background": {
+    "lines": "/assets/svg/hero-lines.svg"
+  }
+}

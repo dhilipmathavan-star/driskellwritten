@@ -1,1 +1,287 @@
-{}
+{
+  "ref": "06",
+  "heading": {
+    "plain": "Sell",
+    "gradient": "Better"
+  },
+  "agents": {
+    "eyebrow": "A collective of",
+    "title": "AI agents",
+    "body": "Think of these agents as your remote team. They work 24/7 to generate new media for your products, that stick with your customers",
+    "cardBackground": "/assets/svg/sb-agent-card.svg",
+    "vertical": {
+      "comment": "desktop + laptop: vertical ticker, scrolls up at `speed` px/s",
+      "gap": 30,
+      "itemSize": 405,
+      "speed": 100,
+      "items": [
+        {
+          "title": "Apparel Shoots",
+          "description": "Change Backgrounds of your clothing and Try on different Fashion Models",
+          "chips": [
+            "Apparel",
+            "Fashion",
+            "Clothing",
+            "eCommerce"
+          ],
+          "icon": {
+            "src": "/assets/img/0AScKC7r1gfkDWf5CMujIwyEQ.png",
+            "style": "circle"
+          },
+          "layout": "centered"
+        },
+        {
+          "title": "Text to 3D",
+          "description": "Create High Quality AI generated 3D object of your products",
+          "chips": [
+            "Text to 3D",
+            "Image to 3D"
+          ],
+          "icon": {
+            "src": "/assets/img/BjaSMFbePuS7QboyVv2fqPoEU4.png",
+            "style": "circle-alt"
+          },
+          "layout": "offset"
+        },
+        {
+          "title": "Background Enhancement",
+          "description": "Create High Quality AI generated E-Commerce Photoshoots of your products",
+          "chips": [
+            "Product Photography",
+            "eCommerce"
+          ],
+          "icon": {
+            "src": "/assets/img/KJTKKgGTQvIBygj2g8Qx5X6w0.png",
+            "style": "plain"
+          },
+          "layout": "offset"
+        },
+        {
+          "title": "Product Description",
+          "description": "Create High Quality AI generated Product Descriptions for your products",
+          "chips": [
+            "Product Description"
+          ],
+          "icon": {
+            "src": "/assets/img/liQHa6f0Rrip64RmjcYPhpUQG4.png",
+            "style": "circle"
+          },
+          "layout": "centered"
+        },
+        {
+          "title": "Background Changer",
+          "description": "Change Backgrounds of your clothing on your fashion models",
+          "chips": [
+            "Fashion",
+            "Clothing",
+            "eCommerce"
+          ],
+          "icon": {
+            "src": "/assets/img/HP7vFboTWC8aaCU8pDFCrTaNMFE.png",
+            "style": "circle"
+          },
+          "layout": "centered"
+        },
+        {
+          "title": "Drape Diffusion",
+          "description": "Change Backgrounds of your clothing and Try on different Fashion Models",
+          "chips": [
+            "Fashion",
+            "Clothing",
+            "eCommerce"
+          ],
+          "icon": {
+            "src": "/assets/img/zDmlYxwB0njanYGa5BucwrtABU.png",
+            "style": "circle"
+          },
+          "layout": "centered"
+        },
+        {
+          "title": "Request an Agent",
+          "description": "Click here to send an email and request a specific agent for your needs.",
+          "chips": [
+            "Request an Agent"
+          ],
+          "icon": {
+            "src": "/assets/img/SxN3dexeRR77pEcLpRHRdn7me0s.png",
+            "style": "circle"
+          },
+          "layout": "centered"
+        }
+      ]
+    },
+    "horizontal": {
+      "comment": "tablet + mobile: horizontal ticker, scrolls left at `speed` px/s; chips laid out in rows",
+      "gap": 10,
+      "itemSize": 260,
+      "speed": 100,
+      "items": [
+        {
+          "title": "Talking Avatars",
+          "description": "An AI agent that enhances background visuals in images and videos for improved quality and aesthetics.",
+          "chipRows": [
+            [
+              "Apparel",
+              "Fashion"
+            ],
+            [
+              "Clothing",
+              "eCommerce"
+            ]
+          ],
+          "icon": {
+            "src": "/assets/img/0AScKC7r1gfkDWf5CMujIwyEQ.png",
+            "style": "circle"
+          }
+        },
+        {
+          "title": "Background Enhancement",
+          "titleWraps": true,
+          "description": "Create High Quality AI generated E-Commerce Photoshoots of your products",
+          "chipRows": [
+            [
+              "Product Photography"
+            ],
+            [
+              "eCommerce"
+            ]
+          ],
+          "icon": {
+            "src": "/assets/img/d1Ii8mI5qd83g74zetLiE16u4v0.png",
+            "style": "circle"
+          }
+        },
+        {
+          "title": "Text to 3D",
+          "description": "Create High Quality AI generated Product Descriptions for your products",
+          "chipRows": [
+            [
+              "Text to 3D"
+            ],
+            [
+              "Image to 3D"
+            ]
+          ],
+          "icon": {
+            "src": "/assets/img/BjaSMFbePuS7QboyVv2fqPoEU4.png",
+            "style": "circle"
+          },
+          "gap": 41
+        },
+        {
+          "title": "Product Description",
+          "titleWraps": true,
+          "description": "An AI agent that enhances background visuals in images and videos for improved quality and aesthetics.",
+          "chipRows": [
+            [
+              "Product Description"
+            ]
+          ],
+          "icon": {
+            "src": "/assets/img/liQHa6f0Rrip64RmjcYPhpUQG4.png",
+            "style": "circle"
+          }
+        },
+        {
+          "title": "Background Changer",
+          "titleWraps": true,
+          "description": "Change Backgrounds of your clothing on your fashion models",
+          "chipRows": [
+            [
+              "Fashion"
+            ],
+            [
+              "Clothing",
+              "eCommerce"
+            ]
+          ],
+          "icon": {
+            "src": "/assets/img/HP7vFboTWC8aaCU8pDFCrTaNMFE.png",
+            "style": "circle"
+          }
+        },
+        {
+          "title": "Drape Diffusion",
+          "description": "Change Backgrounds of your clothing and Try on different Fashion Models",
+          "chipRows": [
+            [
+              "Fashion"
+            ],
+            [
+              "Clothing",
+              "eCommerce"
+            ]
+          ],
+          "icon": {
+            "src": "/assets/img/zDmlYxwB0njanYGa5BucwrtABU.png",
+            "style": "circle"
+          }
+        },
+        {
+          "title": "Request an Agent",
+          "description": "Click here to send an email and request a specific agent for your needs.",
+          "chipRows": [
+            [
+              "Request an Agent"
+            ],
+            [
+              "eCommerce"
+            ]
+          ],
+          "icon": {
+            "src": "/assets/img/SxN3dexeRR77pEcLpRHRdn7me0s.png",
+            "style": "circle"
+          }
+        }
+      ]
+    }
+  },
+  "multimodal": {
+    "eyebrow": "Mixture of Experts",
+    "title": "Multimodal AI",
+    "body": "We've created a ground up new way of thinking about AI + eCommerce. Our Large Action Model lets you create images, change descriptions, make ads, search trends and supercharge your brand in ways never possible before.",
+    "image": "/assets/img/dJX6V4n6FUqBPGQkR4VF75JlyXU.svg",
+    "imageWidth": 640,
+    "imageSizes": "(max-width: 809px) calc(min(min(100vw, 1440px) - 30px, 1440px) * 1.3), (min-width: 1440px) calc(max(max(min(min(100vw, 1440px) - 80px, 1440px), 1px) / 2, 1px) * 1.6379), calc(max(max(min(min(100vw, 1440px) - 80px, 1440px), 1px) / 2, 1px) * 1.6926)"
+  },
+  "collaboration": {
+    "eyebrow": "Built for teams",
+    "title": "Collaboration",
+    "body": "Easily share, approve and work with easy communications",
+    "mock": {
+      "assetsLabel": "Assets",
+      "assetThumb": {
+        "src": "/assets/img/Ttz88qnmOpLu4QsaaywaPqAHLU.png",
+        "srcset": "/assets/img/Ttz88qnmOpLu4QsaaywaPqAHLU-1024.png 819w, /assets/img/Ttz88qnmOpLu4QsaaywaPqAHLU.png 1440w",
+        "sizes": "40.2484px"
+      },
+      "assetSize": "1080 x 1080",
+      "deleteIcon": "/assets/svg/sb-trash.svg",
+      "describeLabel": "Describe your product",
+      "prompt": "A foxtale Overnight Glow Mask",
+      "copyIcon": "/assets/svg/sb-copy.svg",
+      "layersIcon": "/assets/svg/sb-layers.svg"
+    }
+  },
+  "sharing": {
+    "eyebrow": "Be social",
+    "title": "Sharing",
+    "body": "Connect & share to your brand accounts across social media in just a click",
+    "mock": {
+      "image": {
+        "src": "/assets/img/1CJhVGTeTtwWSbzBrnNXaexyM.png",
+        "srcset": "/assets/img/1CJhVGTeTtwWSbzBrnNXaexyM-1024.png 840w, /assets/img/1CJhVGTeTtwWSbzBrnNXaexyM.png 1175w",
+        "sizes": "(max-width: 809px) 219px, (max-width: 1199px) 149px, 247px"
+      },
+      "panelTitle": "Text to 3D",
+      "chevronIcon": "/assets/svg/sb-chevron.svg",
+      "preview": {
+        "src": "/assets/img/fVhY2F0YA7I6XA4XaND1bLXIU.png",
+        "srcset": "/assets/img/fVhY2F0YA7I6XA4XaND1bLXIU-512.png 512w, /assets/img/fVhY2F0YA7I6XA4XaND1bLXIU-1024.png 1024w, /assets/img/fVhY2F0YA7I6XA4XaND1bLXIU.png 1044w",
+        "sizes": "(max-width: 809px) calc((max(min(min(100vw, 1440px) - 30px, 1440px), 1px) - 40px) * 0.8 - 26px), (max-width: 1199px) calc((max((min(min(100vw, 1440px) - 80px, 1440px) - 36px) / 2, 1px) - 40px) / 2 - 26px), calc((max((min(min(100vw, 1440px) - 80px, 1440px) - 36px) / 2, 1px) - 70px) / 2 - 26px)"
+      },
+      "button": "Generate",
+      "prompt": "oversized sweater stylized hand painted 3D game asset"
+    }
+  }
+}

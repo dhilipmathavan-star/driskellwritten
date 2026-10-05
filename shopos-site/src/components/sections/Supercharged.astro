@@ -1,7 +1,77 @@
 ---
-// TODO: build Supercharged (reference sections 15)
-const { content, links } = Astro.props;
+// Original block 15: "Supercharged" — centred copy over a full-bleed artwork (glowing 3X
+// surrounded by scattered monospace words). The artwork is a single static SVG on the
+// original (no scramble/matrix animation runs there), so it is reproduced as an image.
+interface Props {
+  content: {
+    ref: string;
+    label: string;
+    heading: string[];
+    body: string;
+    visual: { src: string; alt: string };
+  };
+}
+const { content } = Astro.props;
 ---
-<section class="supercharged">
-  <div data-ref="15"></div>
+<section class="sc" data-ref={content.ref}>
+  <div class="sc__visual" aria-hidden="true">
+    <img src={content.visual.src} alt={content.visual.alt} loading="lazy" decoding="async" />
+  </div>
+  <div class="sc__inner">
+    <div class="sc__text">
+      <p class="sc__label">{content.label}</p>
+      <h2 class="sc__title">
+        {content.heading.map((line, i) => <span>{i > 0 ? ' ' : ''}{line}</span>)}
+      </h2>
+      <p class="sc__body">{content.body}</p>
+    </div>
+  </div>
 </section>
+
+<style>
+  .sc {
+    position: relative; width: 100%; height: 900px; overflow: hidden;
+    display: flex; flex-direction: row; justify-content: center; align-items: center;
+  }
+  /* "cover" done with explicit sizing (artwork is 1647×1215): object-fit on this large SVG
+     occasionally rasterises unscaled in full-page captures. --cover-w = section height × ratio. */
+  .sc__visual { position: absolute; left: 0; top: -0.6px; width: 100%; height: 100%; z-index: 1; overflow: hidden; --cover-w: 1219.9px; }
+  .sc__visual img {
+    position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+    width: max(100%, var(--cover-w)); height: auto; aspect-ratio: 1647 / 1215;
+  }
+  .sc__inner {
+    position: relative; z-index: 1; width: 100%; height: 100%; overflow: hidden;
+    display: flex; flex-direction: column; align-items: center; padding: 0;
+  }
+  .sc__text {
+    width: 700px; overflow: hidden; text-align: center;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    gap: 10px; padding: 42px 0;
+  }
+  .sc__text > * { width: 100%; }
+  .sc__label { font-family: var(--f-medium); font-size: 16px; line-height: 19.2px; color: rgb(244, 173, 255); }
+  .sc__title { font-family: var(--f-demibold); font-weight: 400; font-size: 40px; line-height: 48px; letter-spacing: -1.2px; color: #fff; }
+  .sc__title span { display: block; }
+  .sc__body { font-family: var(--f-light); font-size: 16px; line-height: 22.4px; color: rgb(173, 176, 185); }
+
+  @media (min-width: 1200px) and (max-width: 1439px) {
+    .sc__inner { padding: 40px; }
+    .sc__text { padding: 37px 0; }
+  }
+  @media (min-width: 810px) and (max-width: 1199px) {
+    .sc { height: 1075px; }
+    .sc__visual { top: -0.7px; --cover-w: 1457.2px; }
+    .sc__inner { padding: 40px; }
+    .sc__text { padding: 65px 0; gap: 20px; }
+  }
+  @media (max-width: 809px) {
+    .sc { height: 637px; }
+    .sc__visual { top: -0.4px; --cover-w: 863.5px; }
+    .sc__inner { padding: 10px; }
+    .sc__text { width: 333px; padding: 54px 0; gap: 4px; }
+    .sc__title { font-size: 22px; line-height: 26.4px; letter-spacing: -0.66px; }
+    .sc__title span { display: inline; }
+    .sc__body { font-size: 14px; line-height: 19.6px; }
+  }
+</style>
