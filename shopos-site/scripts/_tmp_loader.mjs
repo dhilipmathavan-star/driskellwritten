@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import { chromium } from 'playwright';
 import { PNG } from 'pngjs';
 import pixelmatch from 'pixelmatch';
-const OFFS = [560, 576, 592, 608, 624, 640, 656, 672, 688, 704, 720, 736, 752];
+const OFFS = [0, 200, 400, 560, 600, 640, 680, 720, 800, 1000, 1300];
 const OUT = 'motioncheck/01-leave'; fs.mkdirSync(OUT, { recursive: true });
 async function run(url, isOrig) {
   const b = await chromium.launch(isOrig ? { proxy: { server: process.env.HTTPS_PROXY } } : {});

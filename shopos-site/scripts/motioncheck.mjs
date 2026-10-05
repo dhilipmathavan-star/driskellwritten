@@ -85,7 +85,7 @@ async function run(browser, url, isOrig) {
   };
   if (TRIGGER === 'load') { const frames = await film(clip); await ctx.close(); return frames; }
   await page.waitForLoadState('networkidle').catch(() => {});
-  for (let i = 0; i < 200; i++) { await page.clock.runFor(16); await tick(); } // settle ~3.2s
+  for (let i = 0; i < 500; i++) { await page.clock.runFor(16); await tick(); } // settle 8s: past the page-load loader (2s + 2s + 1.3s after hydration)
   box = await blockBox(page, isOrig, REF);
   await page.evaluate((y) => window.scrollTo({ top: y, behavior: 'instant' }), Math.max(0, box.top - PAD - Number(arg('offset', 0))));
   if (TRIGGER === 'hover') {

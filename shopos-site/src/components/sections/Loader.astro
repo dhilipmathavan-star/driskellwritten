@@ -58,18 +58,22 @@ const { image } = content;
   .loader__comp[data-variant="leave"] .loader__wrap { min-height: 118px; min-width: 474px; }
 </style>
 
-<script>
-  // Timings/easings copied from page.pretty.js (Loader Comp).
-  const STEP_MS = 2000; // te(() => T(`HSmZICM5_`), 2e3) / te(() => T(`rf0klfmmt`), 2e3) — :7521, :7525
-  const EASE = 'cubic-bezier(0.59, 0.25, 0.12, 1.17)'; // $r / ei ease [0.59, 0.25, 0.12, 1.17] — :7455, :7461
-  const TEXT_FADE = { duration: 1000, delay: 0 }; // $r: duration 1, delay 0 — :7455 (Text backgroundColor)
-  const BG_MOVE = { duration: 1000, delay: 300 }; // ei: duration 1, delay 0.3 — :7461 (BG layout)
+<!-- is:inline so the timers start the moment the overlay exists (during HTML parse), the same
+     moment the original's timers start (on Loader mount, which is when its overlay first appears),
+     instead of after the module graph loads. -->
+<script is:inline>
+  (() => {
+    // Timings/easings copied from page.pretty.js (Loader Comp).
+    const STEP_MS = 2000; // te(() => T(`HSmZICM5_`), 2e3) / te(() => T(`rf0klfmmt`), 2e3) — :7521, :7525
+    const EASE = 'cubic-bezier(0.59, 0.25, 0.12, 1.17)'; // $r / ei ease [0.59, 0.25, 0.12, 1.17] — :7455, :7461
+    const TEXT_FADE = { duration: 1000, delay: 0 }; // $r: duration 1, delay 0 — :7455 (Text backgroundColor)
+    const BG_MOVE = { duration: 1000, delay: 300 }; // ei: duration 1, delay 0.3 — :7461 (BG layout)
 
-  const isStatic = new URLSearchParams(location.search).has('static');
-  const comp = document.querySelector<HTMLElement>('[data-loader]');
-  if (comp && !isStatic) {
-    const bg = comp.querySelector<HTMLElement>('.loader__bg')!;
-    const text = comp.querySelector<HTMLElement>('.loader__text')!;
+    if (new URLSearchParams(location.search).has('static')) return;
+    const comp = document.querySelector('[data-loader]');
+    if (!comp) return;
+    const bg = comp.querySelector('.loader__bg');
+    const text = comp.querySelector('.loader__text');
     const leave = () => {
       comp.dataset.variant = 'leave';
       comp.querySelector('.loader__img')?.remove(); // GIF unmounted in Leave (:7585)
@@ -79,14 +83,12 @@ const { image } = content;
       );
       // Framer animates the BG's layout box (projection) from its Start box to its Leave box;
       // for a plain filled rect that is the same as interpolating top/height.
-      bg.animate(
-        { top: ['0px', '-120px'], height: ['calc(var(--framer-viewport-height, 100vh) * 1)', 'calc(var(--framer-viewport-height, 100vh) * 0.01)'] },
-        { ...BG_MOVE, easing: EASE, fill: 'both' },
-      );
+      const vh = (k) => `calc(var(--framer-viewport-height, 100vh) * ${k})`;
+      bg.animate({ top: ['0px', '-120px'], height: [vh(1), vh(0.01)] }, { ...BG_MOVE, easing: EASE, fill: 'both' });
     };
     setTimeout(() => {
       comp.dataset.variant = 'arrive';
       setTimeout(leave, STEP_MS);
     }, STEP_MS);
-  }
+  })();
 </script>
