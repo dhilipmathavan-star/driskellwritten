@@ -1,0 +1,19 @@
+{
+  "name": "shopos-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev --port 4321",
+    "build": "astro build",
+    "preview": "astro preview --port 4321",
+    "crosscheck": "node scripts/crosscheck.mjs"
+  },
+  "dependencies": {
+    "astro": "^5.18.2"
+  },
+  "devDependencies": {
+    "pixelmatch": "^7.2.0",
+    "playwright": "^1.56.1",
+    "pngjs": "^7.0.0"
+  }
+}

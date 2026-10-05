@@ -1,0 +1,22 @@
+{
+ "390": {
+  "02": {
+   "status": "ok",
+   "mismatchPct": 16.67,
+   "origTop": 0,
+   "cloneTop": 0,
+   "origHeight": 718,
+   "cloneHeight": 0,
+   "heightDelta": -718
+  },
+  "09": {
+   "status": "ok",
+   "mismatchPct": 0,
+   "origTop": 8057,
+   "cloneTop": 678,
+   "origHeight": 150,
+   "cloneHeight": 150,
+   "heightDelta": 0
+  }
+ }
+}

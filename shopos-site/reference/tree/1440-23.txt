@@ -1,0 +1,3 @@
+# section 23 "Line 1" top=19372
+svg "Line 1" [0,0,1440,3] ov=hidden  SVG=/assets/svg/83d31ae400.svg
+  svg [0,0,1440,3] ov=hidden  SVG=/assets/svg/83d31ae400.svg

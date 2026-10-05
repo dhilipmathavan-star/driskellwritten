@@ -1,0 +1,20 @@
+---
+import Base from '../layouts/Base.astro';
+import site from '../content/site.json';
+
+const modules = import.meta.glob('../components/sections/*.astro', { eager: true });
+const byName = Object.fromEntries(
+  Object.entries(modules).map(([path, mod]) => [path.split('/').pop().replace('.astro', ''), mod.default]),
+);
+const contentFiles = import.meta.glob('../content/sections/*.json', { eager: true, import: 'default' });
+const contentById = Object.fromEntries(
+  Object.entries(contentFiles).map(([path, data]) => [path.split('/').pop().replace('.json', ''), data]),
+);
+---
+<Base>
+  {site.sections.map((s) => {
+    const Section = byName[s.component];
+    const content = contentById[s.content ?? s.id];
+    return Section ? <Section content={content} links={site.links} /> : null;
+  })}
+</Base>

@@ -1,0 +1,218 @@
+{
+  "ref": "05",
+  "height": {
+    "d": 900,
+    "l": 900,
+    "t": 900,
+    "m": 75.64
+  },
+  "video": {
+    "src": "/assets/video/IFm1iCq5DMNEq4hsMtblkXkIWD8.mp4",
+    "box": {
+      "d": [
+        0,
+        0,
+        100,
+        900
+      ],
+      "l": [
+        0,
+        0,
+        100,
+        900
+      ],
+      "t": [
+        0,
+        0,
+        100,
+        900
+      ],
+      "m": [
+        0,
+        0,
+        100,
+        75.64
+      ]
+    }
+  },
+  "fades": {
+    "d": [
+      {
+        "gradient": "linear-gradient(rgb(0, 0, 0) 41.7418%, rgba(0, 0, 0, 0) 100%)",
+        "box": [
+          0,
+          0,
+          100,
+          145
+        ],
+        "z": 1
+      },
+      {
+        "gradient": "linear-gradient(rgba(0, 70, 232, 0) 16%, rgb(0, 0, 0) 100%)",
+        "box": [
+          0,
+          737,
+          100,
+          163
+        ],
+        "z": 1
+      },
+      {
+        "gradient": "linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%)",
+        "box": [
+          0,
+          0,
+          50,
+          900
+        ],
+        "z": 0
+      },
+      {
+        "gradient": "linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%)",
+        "box": [
+          81.74,
+          0,
+          18.26,
+          900
+        ],
+        "z": 0
+      }
+    ],
+    "l": [
+      {
+        "gradient": "linear-gradient(rgb(0, 0, 0) 41.7418%, rgba(0, 0, 0, 0) 100%)",
+        "box": [
+          0,
+          0,
+          100,
+          145
+        ],
+        "z": 1
+      },
+      {
+        "gradient": "linear-gradient(rgba(0, 70, 232, 0) 16%, rgb(0, 0, 0) 100%)",
+        "box": [
+          0,
+          737,
+          100,
+          163
+        ],
+        "z": 1
+      },
+      {
+        "gradient": "linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%)",
+        "box": [
+          0,
+          0,
+          50,
+          900
+        ],
+        "z": 0
+      },
+      {
+        "gradient": "linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%)",
+        "box": [
+          80,
+          0,
+          20,
+          900
+        ],
+        "z": 0
+      }
+    ],
+    "t": [
+      {
+        "gradient": "linear-gradient(rgb(0, 0, 0) 41.7418%, rgba(0, 0, 0, 0) 100%)",
+        "box": [
+          0,
+          -1,
+          100,
+          167
+        ],
+        "z": 1
+      },
+      {
+        "gradient": "linear-gradient(rgba(0, 70, 232, 0) 16%, rgb(0, 0, 0) 100%)",
+        "box": [
+          0,
+          723,
+          97.12,
+          195
+        ],
+        "z": 1
+      },
+      {
+        "gradient": "linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%)",
+        "box": [
+          0,
+          0,
+          50,
+          900
+        ],
+        "z": 0
+      },
+      {
+        "gradient": "linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%)",
+        "box": [
+          67,
+          0,
+          33,
+          900
+        ],
+        "z": 0
+      }
+    ],
+    "m": [
+      {
+        "gradient": "linear-gradient(rgb(0, 0, 0) 41.7418%, rgba(0, 0, 0, 0) 100%)",
+        "box": [
+          0,
+          0,
+          100,
+          12.1
+        ],
+        "z": 1
+      },
+      {
+        "gradient": "linear-gradient(rgba(0, 70, 232, 0) 16%, rgb(0, 0, 0) 100%)",
+        "box": [
+          0,
+          61.05,
+          100,
+          15.87
+        ],
+        "z": 1
+      },
+      {
+        "gradient": "linear-gradient(rgba(0, 70, 232, 0) 16%, rgb(0, 0, 0) 100%)",
+        "box": [
+          0,
+          -24.21,
+          100,
+          24.21
+        ],
+        "z": 1
+      },
+      {
+        "gradient": "linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%)",
+        "box": [
+          0.51,
+          -0.26,
+          14,
+          75.64
+        ],
+        "z": 0
+      },
+      {
+        "gradient": "linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%)",
+        "box": [
+          85,
+          -0.13,
+          15,
+          75.64
+        ],
+        "z": 0
+      }
+    ]
+  }
+}

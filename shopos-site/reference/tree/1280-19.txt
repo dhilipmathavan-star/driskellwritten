@@ -1,0 +1,14 @@
+# section 19 "Group 68" top=18081
+div "Group 68" [0,0,1280,380] flex=column gap:10px j:center a:center pad:115px 40px 80px
+  div [40,115,1200,84] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+    div "Section → Heading 2 → Under the hood" [184.8,115,536.4,84] flex=column gap:normal j:center a:normal pad:0px
+      p [184.8,115,536.4,84] font=BDO Grotesk Medium 400 70px/84px ls:-2.1px rgb(255, 255, 255) center  TEXT«Make AI work for»
+    div [731.3,115,363.9,84] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+      div "Section → Heading 2 → Under the hood" [731.3,115,363.9,84] pos=absolute ; flex=column gap:normal j:center a:normal pad:0px ; op=0.4 ; filter=blur(16px) ; z=1
+        p [731.3,115,363.9,84]
+          br [913.2,108,0,98]
+      div "Section → Heading 2 → Under the hood" [731.3,115,363.9,84] flex=column gap:normal j:center a:normal pad:0px
+        span [731.3,115,363.9,84] bgi=linear-gradient(97.4768deg, rgb(255, 58, 186) 0%, rgb(243, 173, 255) 56.7708%, rgb(98, 72, 255) 100%) ; font=BDO Grotesk Medium 400 70px/84px ls:-2.1px rgb(0, 0, 0) center ; clip=text  TEXT«your brand»
+          span [731.3,115,363.9,84] bgi=linear-gradient(97.4768deg, rgb(255, 58, 186) 0%, rgb(243, 173, 255) 56.7708%, rgb(98, 72, 255) 100%) ; font=BDO Grotesk Medium 400 70px/84px ls:-2.1px rgb(0, 0, 0) center ; clip=text  TEXT«your brand»
+  div "Section → Heading 2 → Under the hood" [40,209,1200,91] flex=column gap:normal j:center a:normal pad:0px
+    p [40,209,1200,91] font=BDO Grotesk Medium 400 70px/91px ls:-2.1px rgb(255, 255, 255) center  TEXT«from today.»

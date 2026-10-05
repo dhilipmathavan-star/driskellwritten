@@ -1,0 +1,15 @@
+# section 15 "null" top=14359
+div [0,0,834,1075] flex=column gap:10px j:center a:center pad:0px ; ov=hidden
+  div [0,0,834,1075] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+    div [0,-0.7,834,1075] pos=absolute ; z=1
+      div [0,-0.7,834,1075] pos=absolute
+        img [0,-0.7,834,1075] ov=clip ; fit=cover  SRC=/assets/img/vP0en219LMqVhHyWMZMxYWk8Dw.svg
+    div [0,0,834,1075] flex=column gap:10px j:flex-start a:center pad:40px ; ov=hidden ; z=1
+      div [67,40,700,330] flex=column gap:20px j:center a:center pad:65px 0px ; ov=hidden
+        div [67,105,700,19.2] flex=column gap:normal j:flex-start a:normal pad:0px
+          p [67,105,700,19.2] font=BDO Grotesk Medium 400 16px/19.2px ls:normal rgb(244, 173, 255) center  TEXT«Supercharged»
+        div [67,144.2,700,96] flex=column gap:normal j:flex-start a:normal pad:0px
+          p [67,144.2,700,48] font=BDO Grotesk DemiBold 400 40px/48px ls:-1.2px rgb(255, 255, 255) center  TEXT«Up to 3X higher»
+          p [67,192.2,700,48] font=BDO Grotesk DemiBold 400 40px/48px ls:-1.2px rgb(255, 255, 255) center  TEXT«engagement and conversions»
+        div [67,260.2,700,44.8] flex=column gap:normal j:flex-start a:normal pad:0px
+          p [67,260.2,700,44.8] font=BDO Grotesk Light 400 16px/22.4px ls:normal rgb(173, 176, 185) center  TEXT«A whole new way to generate media for your stores. Create images, videos, text, ads & 3D that let's your customers see your brand in ways never before.»

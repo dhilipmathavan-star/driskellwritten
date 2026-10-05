@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "title": "House Of Models ",
+    "description": "AI Agents that make your brand get personal with customers.",
+    "lang": "en",
+    "url": "https://shopos.framer.website/",
+    "favicon": "/assets/img/X5cvEbT7Z3RtxU9eiffYvNxdqC4.svg",
+    "ogImage": "/assets/img/Xyd043NAH49d0NT0sV3kNv9QpQI.png",
+    "twitterCard": "summary_large_image"
+  },
+  "links": {
+    "app": "http://app.houseofmodels.ai/",
+    "email": "mailto:hello@houseofmodels.ai"
+  },
+  "breakpoints": {
+    "desktop": "min-width: 1440px",
+    "laptop": "(min-width: 1200px) and (max-width: 1439px)",
+    "tablet": "(min-width: 810px) and (max-width: 1199px)",
+    "mobile": "max-width: 809px"
+  },
+  "sections": [
+    { "ref": "02", "id": "hero", "component": "Hero" },
+    { "ref": "03", "id": "video-intro", "component": "VideoBand", "content": "video-intro" },
+    { "ref": "04", "id": "explore", "component": "Explore" },
+    { "ref": "05", "id": "video-mid", "component": "VideoBand", "content": "video-mid" },
+    { "ref": "06", "id": "sell-better", "component": "SellBetter" },
+    { "ref": "07", "id": "glow", "component": "GlowDivider" },
+    { "ref": "08", "id": "generated", "component": "Generated" },
+    { "ref": "09", "id": "video-strip", "component": "VideoBand", "content": "video-strip" },
+    { "ref": "10", "id": "how-it-works", "component": "HowItWorks" },
+    { "ref": "11", "id": "brand-os", "component": "BrandOS" },
+    { "ref": "12", "id": "integrations", "component": "Integrations" },
+    { "ref": "13", "id": "make-media", "component": "MakeMedia" },
+    { "ref": "14", "id": "your-model", "component": "YourModel" },
+    { "ref": "15", "id": "supercharged", "component": "Supercharged" },
+    { "ref": "16", "id": "under-the-hood", "component": "UnderTheHood" },
+    { "ref": "17-18", "id": "testimonials", "component": "Testimonials" },
+    { "ref": "19-20", "id": "final-cta", "component": "FinalCta" },
+    { "ref": "21", "id": "video-outro", "component": "VideoBand", "content": "video-outro" },
+    { "ref": "22-24", "id": "footer", "component": "Footer" }
+  ]
+}

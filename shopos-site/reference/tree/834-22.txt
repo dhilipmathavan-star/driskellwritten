@@ -1,0 +1,37 @@
+# section 22 "null" top=19648
+div [0,0,272,120] flex=row gap:10px j:center a:center pad:20px 0px
+  div [0,20,272,80] z=1
+    div "Default" [0,20,272,80] flex=row gap:0px j:flex-start a:flex-end pad:0px
+      div "Container" [0,20,272,80] flex=row gap:16px j:center a:flex-end pad:8px 16px ; bg=rgb(34, 34, 34) ; radius=90px ; shadow=rgba(0, 0, 0, 0.18) 0px 0.602187px 0.602187px -1.25px, rgba(0, 0, 0, 0.16) 0px 2.28853px 2.28853px -2.5px, rgba(0, 0, 0, 0.06) 0px 10px 10px -3.75px
+        a "Icon" [16,28,48,64] flex=row gap:8px j:center a:center pad:0px  HREF=https://twitter.com/houseofmodelsai
+          div "Container" [16,28,48,64] flex=column gap:8px j:center a:center pad:0px
+            div "Button" [16,36,48,48] flex=row gap:0px j:center a:center pad:0px ; bg=rgb(0, 0, 0) ; radius=90px ; filter=invert(0) ; ov=hidden
+              svg "twitter_2_1" [31.5,51.5,17,17] ov=hidden  SVG=/assets/svg/39724947b7.svg
+                svg [31.5,51.5,17,17] ov=hidden  SVG=/assets/svg/39724947b7.svg
+            div "Tooltip" [33.5,-8,11,24] pos=absolute ; flex=row gap:0px j:center a:center pad:0px ; radius=8px ; op=0 ; tf=matrix(1, 0, 0, 1, -5.5, 0) ; shadow=rgba(0, 0, 0, 0.18) 0px 0.602187px 0.602187px -1.25px, rgba(0, 0, 0, 0.16) 0px 2.28853px 2.28853px -2.5px, rgba(0, 0, 0, 0.06) 0px 10px 10px -3.75px ; ov=hidden ; z=1
+              div [33.5,-8,11,24] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [33.5,-8,11,24] font=Inter 400 16px/24px ls:normal rgb(255, 255, 255)  TEXT«X»
+        div "Icon" [80,28,48,64] flex=row gap:8px j:center a:center pad:0px
+          div "Container" [80,28,48,64] flex=column gap:8px j:center a:center pad:0px
+            a "Button" [80,36,48,48] flex=row gap:0px j:center a:center pad:0px ; bg=rgb(0, 0, 0) ; radius=90px ; filter=invert(0) ; ov=hidden  HREF=https://substack.com/@houseofmodels
+              div "image0_210_2691_1" [98,53.1,12,13.7] pos=absolute
+                img [98,53.1,12,13.7] ov=clip ; fit=cover  SRC=/assets/img/AVShx5ZqmSSgBkScSS5rjYQjI.png
+            div "Tooltip" [66.5,-8,73,24] pos=absolute ; flex=row gap:0px j:center a:center pad:0px ; radius=8px ; op=0 ; tf=matrix(1, 0, 0, 1, -36.5, 0) ; shadow=rgba(0, 0, 0, 0.18) 0px 0.602187px 0.602187px -1.25px, rgba(0, 0, 0, 0.16) 0px 2.28853px 2.28853px -2.5px, rgba(0, 0, 0, 0.06) 0px 10px 10px -3.75px ; ov=hidden ; z=1
+              div [66.5,-8,73,24] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [66.5,-8,73,24] font=Inter 400 16px/24px ls:normal rgb(255, 255, 255)  TEXT«Substack»
+        a "Icon" [144,28,48,64] flex=row gap:8px j:center a:center pad:0px  HREF=https://www.instagram.com/house.of.models/
+          div "Container" [144,28,48,64] flex=column gap:8px j:center a:center pad:0px
+            div "Button" [144,36,48,48] flex=row gap:0px j:center a:center pad:0px ; bg=rgb(0, 0, 0) ; radius=90px ; filter=invert(0) ; ov=hidden
+              svg "Group_86" [156.5,48.5,23,23] ov=hidden  SVG=/assets/svg/a69a9161c8.svg
+                svg [156.5,48.5,23,23] ov=hidden  SVG=/assets/svg/a69a9161c8.svg
+            div "Tooltip" [128,-8,78,24] pos=absolute ; flex=row gap:0px j:center a:center pad:0px ; radius=8px ; op=0 ; tf=matrix(1, 0, 0, 1, -39, 0) ; shadow=rgba(0, 0, 0, 0.18) 0px 0.602187px 0.602187px -1.25px, rgba(0, 0, 0, 0.16) 0px 2.28853px 2.28853px -2.5px, rgba(0, 0, 0, 0.06) 0px 10px 10px -3.75px ; ov=hidden ; z=1
+              div [128,-8,78,24] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [128,-8,78,24] font=Inter 400 16px/24px ls:normal rgb(255, 255, 255)  TEXT«Instagram»
+        div "Icon" [208,28,48,64] flex=row gap:8px j:center a:center pad:0px
+          div "Container" [208,28,48,64] flex=column gap:8px j:center a:center pad:0px
+            a "Button" [208,36,48,48] flex=row gap:0px j:center a:center pad:0px ; bg=rgb(0, 0, 0) ; radius=90px ; filter=invert(0) ; ov=hidden  HREF=mailto:hello@houseofmodels.ai
+              svg "Group_1_" [220.5,51.7,23,16.6] ov=hidden  SVG=/assets/svg/ea3380e735.svg
+                svg [220.5,51.7,23,16.6] ov=hidden  SVG=/assets/svg/ea3380e735.svg
+            div "Tooltip" [215.5,-8,31,24] pos=absolute ; flex=row gap:0px j:center a:center pad:0px ; radius=8px ; op=0 ; tf=matrix(1, 0, 0, 1, -15.5, 0) ; shadow=rgba(0, 0, 0, 0.18) 0px 0.602187px 0.602187px -1.25px, rgba(0, 0, 0, 0.16) 0px 2.28853px 2.28853px -2.5px, rgba(0, 0, 0, 0.06) 0px 10px 10px -3.75px ; ov=hidden ; z=1
+              div [215.5,-8,31,24] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [215.5,-8,31,24] font=Inter 400 16px/24px ls:normal rgb(255, 255, 255)  TEXT«Mail»

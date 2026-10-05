@@ -1,0 +1,72 @@
+# section 11 "Group 117" top=10296
+div "Group 117" [0,0,390,1461] flex=column gap:30px j:center a:center pad:100px 15px 0px
+  div "Group 116" [15,100,360,1271] flex=column gap:0px j:center a:center pad:0px
+    div [15,100,360,304] flex=column gap:10px j:center a:center pad:37px 0px ; ov=hidden
+      div "div.margin-bottom" [15,137,360,100] flex=column gap:0px j:center a:center pad:0px
+        div "Heading 3 → Trial your next" [15,137,360,100] flex=column gap:normal j:center a:normal pad:0px
+          p [15,137,360,100] font=BDO Grotesk Medium 400 40px/50px ls:-1.2px rgb(255, 255, 255)  TEXT«Multi-Platform Integration»
+      div "div.text-size-large" [15,247,360,120] flex=row gap:0px j:center a:center pad:0px
+        div "Our AI models work across platforms, headless commerce products and enterprise ecosystems, in a safe, brand-centric manner." [15,247,360,120] flex=column gap:normal j:center a:normal pad:0px
+          p [15,247,360,120] font=BDO Grotesk Medium 400 19.53px/30px ls:normal rgb(176, 176, 176)  TEXT«Our AI models work across platforms, headless commerce products and enterprise ecosystems, in a safe, brand-centric manner.»
+    div [15,404,360,967] flex=column gap:37px j:center a:center pad:40px 20px ; bg=rgb(16, 16, 16) ; radius=20px ; ov=hidden
+      svg "Frame_283" [98,444,194,194] ov=hidden  SVG=/assets/svg/46440f223a.svg
+        svg [98,444,194,194] ov=hidden  SVG=/assets/svg/46440f223a.svg
+      svg "Group_82" [98,675,194,194] ov=hidden  SVG=/assets/svg/791d922b5e.svg
+        svg [98,675,194,194] ov=hidden  SVG=/assets/svg/791d922b5e.svg
+      svg "Group_83" [98,906,194,194] ov=hidden  SVG=/assets/svg/891f0ab9fd.svg
+        svg [98,906,194,194] ov=hidden  SVG=/assets/svg/891f0ab9fd.svg
+      svg "Frame_284" [98,1137,194,194] ov=hidden  SVG=/assets/svg/2dec340e4d.svg
+        svg [98,1137,194,194] ov=hidden  SVG=/assets/svg/2dec340e4d.svg
+  div [15,1401,360,60] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+    div "Group 120" [15,1401,360,60] flex=column gap:30px j:center a:center pad:0px
+      div "Section" [15,1401,360,0] flex=column gap:0px j:center a:center pad:0px ; bg=rgb(15, 15, 15) ; radius=11px ; ov=hidden
+        div "div#w-node-ff71f9ac-fcdb-e480-dbbc-60fce0cb05a4-2dabfb64" [15,1205.8,360,228] flex=column gap:20px j:flex-end a:center pad:0px ; bg=rgb(25, 25, 25) ; ov=hidden
+          div "Rectangle_23" [28.8,1205.8,332.4,228] pos=absolute
+            img [28.8,1205.8,332.4,228] ov=clip ; fit=contain  SRC=/assets/img/GEXBZOF89Isjz7rqcRYLhRUCjqE.svg
+        div "div.new-home_secondary-feature_card-content" [15,1433.8,360,162.4] flex=column gap:14px j:center a:center pad:40px
+          div "Heading 2" [55,1473.8,280,32.2] flex=column gap:0px j:center a:center pad:0px
+            div "Personalize" [55,1473.8,280,32.2] flex=column gap:normal j:center a:normal pad:0px
+              p [55,1473.8,280,32.2] font=BDO Grotesk Medium 400 25.76px/32.17px ls:-0.54px rgb(255, 255, 255)  TEXT«Generate»
+          div "p.text-size-medium" [55,1520,280,36.2] flex=column gap:0px j:center a:center pad:0px
+            div "Collaborate with team members or clients in real-time" [55,1520,280,36.2] flex=column gap:normal j:center a:normal pad:0px
+              p [55,1520,280,36.2] font=BDO Grotesk Medium 400 11.69px/18.1px ls:normal rgb(104, 104, 104)  TEXT«Connect your site to the most popular apps out there.»
+      div "Section" [15,1431,360,0] flex=column gap:0px j:center a:center pad:0px ; bg=rgb(15, 15, 15) ; radius=11px ; ov=hidden
+        div "div#w-node-ff71f9ac-fcdb-e480-dbbc-60fce0cb05a4-2dabfb64" [15,1235.8,360,228] flex=column gap:20px j:center a:center pad:0px ; bg=rgb(25, 25, 25) ; ov=hidden
+          section [15,1235.8,360,228] flex=row gap:normal j:normal a:center pad:10px ; ov=hidden ; mask=linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%)
+            ul [-818,1245.8,340,208] flex=row gap:10px j:normal a:center pad:0px ; tf=matrix(1, 0, 0, 1, -842.97, 0)
+              div "Rectangle_30" [-818,1180,355,339.6] pos=absolute
+                img [-818,1180,355,339.6] ov=clip ; fit=cover  SRC=/assets/img/9ssTkATwQt20xyFoefcdKAEpnM.png
+              div "Rectangle_32" [-453,1180,355,339.6] pos=absolute
+                img [-453,1180,355,339.6] ov=clip ; fit=cover  SRC=/assets/img/ZpLq2t3U0XliztZgOVpVUS1ME.png
+              div "Rectangle_31" [-88,1179.6,355,340.4] pos=absolute
+                img [-88,1179.6,355,340.4] ov=clip ; fit=cover  SRC=/assets/img/P2SdwkCnOyqmZyFYmbYdcosMc.png
+              div "Rectangle_30" [277,1180,355,339.6] pos=absolute
+                img [277,1180,355,339.6] ov=clip ; fit=cover  SRC=/assets/img/9ssTkATwQt20xyFoefcdKAEpnM.png
+              div "Rectangle_32" [642,1180,355,339.6] pos=absolute
+                img [642,1180,355,339.6] ov=clip ; fit=cover  SRC=/assets/img/ZpLq2t3U0XliztZgOVpVUS1ME.png
+              div "Rectangle_31" [1007,1179.6,355,340.4] pos=absolute
+                img [1007,1179.6,355,340.4] ov=clip ; fit=cover  SRC=/assets/img/P2SdwkCnOyqmZyFYmbYdcosMc.png
+              div "Rectangle_30" [1372,1180,355,339.6] pos=absolute
+                img [1372,1180,355,339.6] ov=clip ; fit=cover  SRC=/assets/img/9ssTkATwQt20xyFoefcdKAEpnM.png
+              div "Rectangle_32" [1737,1180,355,339.6] pos=absolute
+                img [1737,1180,355,339.6] ov=clip ; fit=cover  SRC=/assets/img/ZpLq2t3U0XliztZgOVpVUS1ME.png
+              div "Rectangle_31" [2102,1179.6,355,340.4] pos=absolute
+                img [2102,1179.6,355,340.4] ov=clip ; fit=cover  SRC=/assets/img/P2SdwkCnOyqmZyFYmbYdcosMc.png
+        div "div.new-home_secondary-feature_card-content" [15,1463.8,360,162.4] flex=column gap:14px j:center a:center pad:40px
+          div "Heading 2" [55,1503.8,280,32.2] flex=column gap:0px j:center a:center pad:0px
+            div "Personalize" [55,1503.8,280,32.2] flex=column gap:normal j:center a:normal pad:0px
+              p [55,1503.8,280,32.2] font=BDO Grotesk Medium 400 25.76px/32.17px ls:-0.54px rgb(255, 255, 255)  TEXT«Personalize»
+          div "p.text-size-medium" [55,1550,280,36.2] flex=column gap:0px j:center a:center pad:0px
+            div "Collaborate with team members or clients in real-time" [55,1550,280,36.2] flex=column gap:normal j:center a:normal pad:0px
+              p [55,1550,280,36.2] font=BDO Grotesk Medium 400 11.69px/18.1px ls:normal rgb(104, 104, 104)  TEXT«Collaborate with team members or clients in real-time»
+      div "Section" [15,1461,360,0] flex=column gap:0px j:center a:center pad:0px ; bg=rgb(15, 15, 15) ; radius=11px ; ov=hidden
+        div "div#w-node-ff71f9ac-fcdb-e480-dbbc-60fce0cb05a4-2dabfb64" [15,1265.8,360,228] flex=column gap:20px j:flex-end a:center pad:0px ; bg=rgb(25, 25, 25) ; ov=hidden
+          div "Rectangle_23" [28.8,1265.8,332.4,228] pos=absolute
+            img [28.8,1265.8,332.4,228] ov=clip ; fit=contain  SRC=/assets/img/GHjwIpu0oZ1klw6KhgaQyDHG28.svg
+        div "div.new-home_secondary-feature_card-content" [15,1493.8,360,162.4] flex=column gap:14px j:center a:center pad:40px
+          div "Heading 2" [55,1533.8,280,32.2] flex=column gap:0px j:center a:center pad:0px
+            div "Personalize" [55,1533.8,280,32.2] flex=column gap:normal j:center a:normal pad:0px
+              p [55,1533.8,280,32.2] font=BDO Grotesk Medium 400 25.76px/32.17px ls:-0.54px rgb(255, 255, 255)  TEXT«Sell»
+          div "p.text-size-medium" [55,1580,280,36.2] flex=column gap:0px j:center a:center pad:0px
+            div "Collaborate with team members or clients in real-time" [55,1580,280,36.2] flex=column gap:normal j:center a:normal pad:0px
+              p [55,1580,280,36.2] font=BDO Grotesk Medium 400 11.69px/18.1px ls:normal rgb(104, 104, 104)  TEXT«Unlock the Art of Multilingual Writing with Al in 15 Languages»

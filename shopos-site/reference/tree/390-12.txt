@@ -1,0 +1,75 @@
+# section 12 "Group 115" top=9180
+div "Group 115" [0,0,390,1116.6] flex=column gap:10px j:center a:center pad:40px
+  div "Group 85" [0,0,390,1116.6] pos=absolute ; z=1
+    div "Rectangle 44" [0,0,390,1116.6] pos=absolute ; bgi=linear-gradient(90deg, rgb(253, 82, 200) 0%, rgb(106, 78, 255) 100%) ; radius=19px ; filter=blur(105.75px)
+    div "Rectangle 45" [0,0,390,1116.6] pos=absolute ; bg=rgb(248, 248, 248) ; radius=33px
+  div "The Complete Brand OS" [40,40,310,130] flex=column gap:normal j:flex-start a:normal pad:0px ; z=1
+    p [40,40,310,65] font=BDO Grotesk Medium 400 50px/65px ls:-2.5px rgb(156, 156, 156) center  TEXT«The Complete»
+      span [347,37,9.5,70]
+    p [40,105,310,65] font=BDO Grotesk Medium 400 50px/65px ls:-2.5px rgb(42, 42, 42) center  TEXT«Brand OS»
+  div "1" [40,180,310,69.8] z=1
+    div "Phone" [40,180,310,69.8] flex=column gap:20px j:center a:flex-end pad:0px 0px 20px
+      div [40,180,310,1]
+      div [40,201,310,28.8] flex=column gap:20px j:center a:flex-start pad:0px 20px
+        div [60,201,270,28.8] flex=column gap:normal j:flex-start a:normal pad:0px
+          h4 [60,201,270,28.8] font=Inter 600 24px/28.8px ls:normal rgb(0, 0, 0) left  TEXT«Dynamic Images»
+  div "2" [40,259.8,310,69.8] z=1
+    div "Phone" [40,259.8,310,69.8] flex=column gap:20px j:center a:flex-end pad:0px 0px 20px
+      div [40,259.8,310,1]
+      div [40,280.8,310,28.8] flex=column gap:20px j:center a:flex-start pad:0px 20px
+        div [60,280.8,270,28.8] flex=column gap:normal j:flex-start a:normal pad:0px
+          h4 [60,280.8,270,28.8] font=Inter 600 24px/28.8px ls:normal rgb(0, 0, 0) left  TEXT«Ad Baker»
+  div "2" [40,339.6,310,69.8] z=1
+    div "Phone" [40,339.6,310,69.8] flex=column gap:20px j:center a:flex-end pad:0px 0px 20px
+      div [40,339.6,310,1]
+      div [40,360.6,310,28.8] flex=column gap:20px j:center a:flex-start pad:0px 20px
+        div [60,360.6,270,28.8] flex=column gap:normal j:flex-start a:normal pad:0px
+          h4 [60,360.6,270,28.8] font=Inter 600 24px/28.8px ls:normal rgb(0, 0, 0) left  TEXT«Talking Avatars»
+  div "2" [40,419.4,310,69.8] z=1
+    div "Phone" [40,419.4,310,69.8] flex=column gap:20px j:center a:flex-end pad:0px 0px 20px
+      div [40,419.4,310,1]
+      div [40,440.4,310,28.8] flex=column gap:20px j:center a:flex-start pad:0px 20px
+        div [60,440.4,270,28.8] flex=column gap:normal j:flex-start a:normal pad:0px
+          h4 [60,440.4,270,28.8] font=Inter 600 24px/28.8px ls:normal rgb(0, 0, 0) left  TEXT«Product Videos»
+  div "2" [40,499.2,310,98.6] z=1
+    div "Phone" [40,499.2,310,98.6] flex=column gap:20px j:center a:flex-end pad:0px 0px 20px
+      div [40,499.2,310,1]
+      div [40,520.2,310,57.6] flex=column gap:20px j:center a:flex-start pad:0px 20px
+        div [60,520.2,270,57.6] flex=column gap:normal j:flex-start a:normal pad:0px
+          h4 [60,520.2,270,57.6] font=Inter 600 24px/28.8px ls:normal rgb(0, 0, 0) left  TEXT«Background Enhancement»
+  div "2" [40,607.8,310,69.8] z=1
+    div "Phone" [40,607.8,310,69.8] flex=column gap:20px j:center a:flex-end pad:0px 0px 20px
+      div [40,607.8,310,1]
+      div [40,628.8,310,28.8] flex=column gap:20px j:center a:flex-start pad:0px 20px
+        div [60,628.8,270,28.8] flex=column gap:normal j:flex-start a:normal pad:0px
+          h4 [60,628.8,270,28.8] font=Inter 600 24px/28.8px ls:normal rgb(0, 0, 0) left  TEXT«Text to 3d»
+  div "2" [40,687.6,310,69.8] z=1
+    div "Phone" [40,687.6,310,69.8] flex=column gap:20px j:center a:flex-end pad:0px 0px 20px
+      div [40,687.6,310,1]
+      div [40,708.6,310,28.8] flex=column gap:20px j:center a:flex-start pad:0px 20px
+        div [60,708.6,270,28.8] flex=column gap:normal j:flex-start a:normal pad:0px
+          h4 [60,708.6,270,28.8] font=Inter 600 24px/28.8px ls:normal rgb(0, 0, 0) left  TEXT«Product Voiceovers»
+  div "2" [40,767.4,310,69.8] z=1
+    div "Phone" [40,767.4,310,69.8] flex=column gap:20px j:center a:flex-end pad:0px 0px 20px
+      div [40,767.4,310,1]
+      div [40,788.4,310,28.8] flex=column gap:20px j:center a:flex-start pad:0px 20px
+        div [60,788.4,270,28.8] flex=column gap:normal j:flex-start a:normal pad:0px
+          h4 [60,788.4,270,28.8] font=Inter 600 24px/28.8px ls:normal rgb(0, 0, 0) left  TEXT«Description & details»
+  div "2" [40,847.2,310,69.8] z=1
+    div "Phone" [40,847.2,310,69.8] flex=column gap:20px j:center a:flex-end pad:0px 0px 20px
+      div [40,847.2,310,1]
+      div [40,868.2,310,28.8] flex=column gap:20px j:center a:flex-start pad:0px 20px
+        div [60,868.2,270,28.8] flex=column gap:normal j:flex-start a:normal pad:0px
+          h4 [60,868.2,270,28.8] font=Inter 600 24px/28.8px ls:normal rgb(0, 0, 0) left  TEXT«Appeal Try On»
+  div "2" [40,927,310,69.8] z=1
+    div "Phone" [40,927,310,69.8] flex=column gap:20px j:center a:flex-end pad:0px 0px 20px
+      div [40,927,310,1]
+      div [40,948,310,28.8] flex=column gap:20px j:center a:flex-start pad:0px 20px
+        div [60,948,270,28.8] flex=column gap:normal j:flex-start a:normal pad:0px
+          h4 [60,948,270,28.8] font=Inter 600 24px/28.8px ls:normal rgb(0, 0, 0) left  TEXT«Market Research»
+  div "2" [40,1006.8,310,69.8] z=1
+    div "Phone" [40,1006.8,310,69.8] flex=column gap:20px j:center a:flex-end pad:0px 0px 20px
+      div [40,1006.8,310,1]
+      div [40,1027.8,310,28.8] flex=column gap:20px j:center a:flex-start pad:0px 20px
+        div [60,1027.8,270,28.8] flex=column gap:normal j:flex-start a:normal pad:0px
+          h4 [60,1027.8,270,28.8] font=Inter 600 24px/28.8px ls:normal rgb(0, 0, 0) left  TEXT«Seller Store Manager»

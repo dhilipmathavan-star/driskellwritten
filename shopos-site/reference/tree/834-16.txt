@@ -1,0 +1,143 @@
+# section 16 "Group 129" top=15434
+div "Group 129" [0,0,834,1924.1] flex=column gap:0px j:flex-start a:center pad:0px 40px
+  div [40,0,754,478] flex=column gap:0px j:center a:center pad:0px ; ov=hidden
+    div "Section" [416.5,0,1,232] flex=row gap:0px j:center a:center pad:0px ; bg=rgb(79, 79, 79) ; ov=hidden
+      div [416.5,-3124.3,1,355] bgi=linear-gradient(140deg, rgb(255, 59, 186) 0%, rgb(243, 173, 255) 59.9099%, rgb(98, 72, 255) 100%) ; op=0 ; tf=matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.000833333, 0, -3062.8, 0, 1) ; ov=hidden
+    div "Group 128" [40,232,754,246] flex=column gap:20px j:center a:center pad:0px
+      div "Section → Img" [274.5,232,285,50] flex=row gap:0px j:center a:center pad:0px ; ov=hidden
+        div "Group" [274.5,232,285,50] z=1
+          svg [274.5,232,285,50] ov=hidden  SVG=/assets/svg/ec0adbd77e.svg
+            svg [274.5,232,285,50] ov=hidden  SVG=/assets/svg/ec0adbd77e.svg
+        div [274.5,242,285,30] pos=absolute ; flex=row gap:10px j:center a:center pad:0px ; tf=matrix(1, 0, 0, 1, 0, -15) ; ov=hidden ; z=1
+          svg "hhhhhhhhh" [287.2,246,21,22] ov=hidden  SVG=/assets/svg/cb8786db5b.svg
+            svg [287.2,246,21,22] ov=hidden  SVG=/assets/svg/cb8786db5b.svg
+          div "Section → Site Builder utilizes a built-in design system and component library of 1000+" [318.2,242,228.6,30] flex=column gap:normal j:center a:normal pad:0px
+            p [318.2,242,228.6,30] font=BDO Grotesk Medium 400 19.22px/30px ls:-0.1922px rgb(171, 169, 169) center  TEXT«House of Models Library»
+      div "Group 66" [86,302,662,96] flex=row gap:10px j:center a:center pad:0px
+        div [86,300.5,662,99] flex=row gap:0px j:center a:center pad:0px ; ov=hidden
+          div "Section → Heading 2 → Under the hood" [133,308.8,342.9,82.4] flex=column gap:normal j:center a:normal pad:0px
+            p [133,308.8,342.9,82.4] font=BDO Grotesk Medium 400 80px/82.4px ls:-5.312px rgb(255, 255, 255) center  TEXT«Under the»
+          div [475.9,302,225,96] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+            div "Section → Heading 2 → Under the hood" [475.9,302,225,96] flex=column gap:normal j:center a:normal pad:0px
+              p [475.9,301.6,225,96.8]
+                span [480.3,294.8,216.4,110.4] bgi=linear-gradient(97.4768deg, rgb(255, 58, 186) 0%, rgb(243, 173, 255) 56.7708%, rgb(98, 72, 255) 100%) ; font=BDO Grotesk Medium 400 84.91px/96.8px ls:-2.5473px rgb(0, 0, 0) center ; clip=text  TEXT«hood»
+            div "Section → Heading 2 → Under the hood" [475.9,302,225,96] pos=absolute ; flex=column gap:normal j:center a:normal pad:0px ; op=0.4 ; filter=blur(16px) ; z=1
+              p [475.9,308.8,225,82.4]
+                span [510.1,308.8,156.7,82.4] bgi=linear-gradient(97.4768deg, rgb(255, 58, 186) 0%, rgb(243, 173, 255) 56.7708%, rgb(98, 72, 255) 100%) ; font=BDO Grotesk 500 80px/82.4px ls:-5.312px rgb(0, 0, 0) center ; clip=text  TEXT«hood»
+      div "Section → Site Builder utilizes a built-in design system and component library of 1000+" [24,418,786,60] flex=column gap:normal j:center a:normal pad:0px
+        p [24,418,786,30] font=BDO Grotesk Medium 400 19.22px/30px ls:normal rgb(171, 169, 169) center  TEXT«Site Builder utilizes a built-in design system and component library of 1000+»
+        p [24,448,786,30] font=BDO Grotesk Medium 400 19.22px/30px ls:normal rgb(171, 169, 169) center  TEXT«components made for Figma & Webflow.»
+      div "Group 65" [40,232,754,246] pos=absolute ; op=0.4 ; z=-1
+        div "Ellipse 23" [143,232,331.8,331.8] pos=absolute ; bg=rgb(243, 173, 255) ; radius=100% ; filter=blur(183.05px)
+        div "Ellipse 24" [321.5,447.5,369.5,369.5] pos=absolute ; bg=rgb(242, 189, 189) ; radius=100% ; filter=blur(183.05px)
+  div "Frame 264" [40,478,754,1446.1] flex=column gap:30px j:center a:center pad:40px 0px 0px
+    div [40,518,754,657] flex=row gap:30px j:center a:center pad:0px ; ov=hidden
+      div "Section" [40,518,362,657] flex=column gap:30px j:center a:center pad:23px 15px ; bg=rgb(15, 15, 15) ; radius=16px ; z=1
+        div "Rectangle 58" [55,541,332,215] radius=9px
+          div [55,541,332,215] pos=absolute ; radius=9px
+            img [55,541,332,215] radius=9px ; ov=clip ; fit=contain  SRC=/assets/img/vSZ2IjhYnXG8nSWh9a3LDB7g6w.png
+        div "div.new-home_relume-library_card-bottom" [55,786,332,366] flex=column gap:17px j:center a:flex-start pad:0px
+          div "Heading 3 → Webflow Library" [55,786,332,48] flex=column gap:normal j:center a:normal pad:0px
+            p [55,786,332,48] font=BDO Grotesk Regular 400 34px/48px ls:-1.02px rgb(255, 255, 255)  TEXT«Assemble your team»
+          div "Work with our AI expert to put together Agents that use Generative AI to transform your storefront." [55,851,332,96] flex=column gap:normal j:center a:normal pad:0px
+            p [55,851,332,72] font=BDO Grotesk Regular 400 15.5px/24px ls:normal rgb(104, 104, 104)  TEXT«Work with our AI expert to put together Agents that use Generative AI to transform your storefront.»
+            p [55,923,332,24]
+              br [55,924,0,22]
+          div [55,964,332,126] flex=column gap:10px j:center a:center pad:0px ; ov=hidden
+            div [55,964,332,24] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+              svg "Img" [55,966,20,20] ov=hidden  SVG=/assets/svg/9a71d89ba2.svg
+                svg [55,966,20,20] ov=hidden  SVG=/assets/svg/9a71d89ba2.svg
+              div "Custom workflow management" [85,964,302,24] flex=column gap:normal j:center a:normal pad:0px
+                p [85,964,302,24] font=BDO Grotesk Regular 400 15.13px/24px ls:normal rgb(104, 104, 104)  TEXT«Custom workflow management»
+            div [55,998,332,24] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+              svg "Img" [55,1000,20,20] ov=hidden  SVG=/assets/svg/5b853d1b5c.svg
+                svg [55,1000,20,20] ov=hidden  SVG=/assets/svg/5b853d1b5c.svg
+              div "Engineered just for your brand" [85,998,302,24] flex=column gap:normal j:center a:normal pad:0px
+                p [85,998,302,24] font=BDO Grotesk Regular 400 15.5px/24px ls:normal rgb(104, 104, 104)  TEXT«Engineered just for your brand»
+            div [55,1032,332,24] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+              svg "Img" [55,1034,20,20] ov=hidden  SVG=/assets/svg/7398a52501.svg
+                svg [55,1034,20,20] ov=hidden  SVG=/assets/svg/7398a52501.svg
+              div "Your data. Your models. Your agents." [85,1032,302,24] flex=column gap:normal j:center a:normal pad:0px
+                p [85,1032,302,24] font=BDO Grotesk Regular 400 15.5px/24px ls:normal rgb(104, 104, 104)  TEXT«Your data. Your models. Your agents.»
+            div [55,1066,332,24] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+              svg "Img" [55,1068,20,20] ov=hidden  SVG=/assets/svg/c4ab88b5e0.svg
+                svg [55,1068,20,20] ov=hidden  SVG=/assets/svg/c4ab88b5e0.svg
+              div "Unlimited usage" [85,1066,302,24] flex=column gap:normal j:center a:normal pad:0px
+                p [85,1066,302,24] font=BDO Grotesk Regular 400 15.25px/24px ls:normal rgb(104, 104, 104)  TEXT«Unlimited usage»
+          a "Link" [55,1107,332,45] flex=row gap:0px j:center a:center pad:0px ; bg=rgb(255, 255, 255) ; radius=8px  HREF=mailto:hello@houseofmodels.ai
+            div "Talk to an expert" [142,1121.5,158,16] flex=column gap:normal j:center a:normal pad:0px
+              p [142,1121.5,158,16] font=BDO Grotesk Medium 400 15.38px/16px ls:normal rgb(22, 22, 22) center  TEXT«Talk to an expert»
+      div "Section" [432,518,362,657] flex=column gap:0px j:center a:center pad:23px 15px ; bg=rgb(15, 15, 15) ; radius=16px ; z=1
+        div "Rectangle 58" [447,541,332,245] radius=9px
+          div [447,541,332,245] pos=absolute ; radius=9px
+            img [447,541,332,245] radius=9px ; ov=clip ; fit=contain  SRC=/assets/img/hHMfgeWJbQSMsbTtDto9PATYYw.svg
+        div "div.new-home_relume-library_card-bottom" [447,786,332,366] flex=column gap:17px j:center a:flex-start pad:0px
+          div "Heading 3 → Webflow Library" [447,786,332,48] flex=column gap:normal j:center a:normal pad:0px
+            p [447,786,332,48] font=BDO Grotesk Regular 400 34px/48px ls:-1.02px rgb(255, 255, 255)  TEXT«Make some magic»
+          div "Work with our AI expert to put together Agents that use Generative AI to transform your storefront." [447,851,332,96] flex=column gap:normal j:center a:normal pad:0px
+            p [447,851,332,96] font=BDO Grotesk Regular 400 15.5px/24px ls:normal rgb(104, 104, 104)  TEXT«Create incredible images, videos, 3D, ads and more media for your brand, store or product with our crew of agents that are ready to go.»
+          div [447,964,332,126] flex=column gap:10px j:center a:center pad:0px ; ov=hidden
+            div [447,964,332,24] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+              svg "Img" [447,966,20,20] ov=hidden  SVG=/assets/svg/9a71d89ba2.svg
+                svg [447,966,20,20] ov=hidden  SVG=/assets/svg/9a71d89ba2.svg
+              div "Custom workflow management" [477,964,302,24] flex=column gap:normal j:center a:normal pad:0px
+                p [477,964,302,24] font=BDO Grotesk Regular 400 15.13px/24px ls:normal rgb(104, 104, 104)  TEXT«Custom workflow management»
+            div [447,998,332,24] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+              svg "Img" [447,1000,20,20] ov=hidden  SVG=/assets/svg/5b853d1b5c.svg
+                svg [447,1000,20,20] ov=hidden  SVG=/assets/svg/5b853d1b5c.svg
+              div "Engineered just for your brand" [477,998,302,24] flex=column gap:normal j:center a:normal pad:0px
+                p [477,998,302,24] font=BDO Grotesk Regular 400 15.5px/24px ls:normal rgb(104, 104, 104)  TEXT«Engineered just for your brand»
+            div [447,1032,332,24] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+              svg "Img" [447,1034,20,20] ov=hidden  SVG=/assets/svg/7398a52501.svg
+                svg [447,1034,20,20] ov=hidden  SVG=/assets/svg/7398a52501.svg
+              div "Your data. Your models. Your agents." [477,1032,302,24] flex=column gap:normal j:center a:normal pad:0px
+                p [477,1032,302,24] font=BDO Grotesk Regular 400 15.5px/24px ls:normal rgb(104, 104, 104)  TEXT«Your data. Your models. Your agents.»
+            div [447,1066,332,24] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+              svg "Img" [447,1068,20,20] ov=hidden  SVG=/assets/svg/c4ab88b5e0.svg
+                svg [447,1068,20,20] ov=hidden  SVG=/assets/svg/c4ab88b5e0.svg
+              div "Unlimited usage" [477,1066,302,24] flex=column gap:normal j:center a:normal pad:0px
+                p [477,1066,302,24] font=BDO Grotesk Regular 400 15.25px/24px ls:normal rgb(104, 104, 104)  TEXT«Unlimited usage»
+          a "Link" [447,1107,332,45] flex=row gap:0px j:center a:center pad:0px ; radius=8px  HREF=http://app.houseofmodels.ai/
+            div "Talk to an expert" [534,1121.5,158,16] flex=column gap:normal j:center a:normal pad:0px
+              p [534,1121.5,158,16] font=BDO Grotesk Medium 400 15.38px/16px ls:normal rgb(255, 255, 255) center  TEXT«Get started for free»
+    div "Group 65" [40,426,754,1618.1] pos=absolute ; op=0.4 ; z=0
+      div "Ellipse 23" [622,387,331.8,331.8] pos=absolute ; bg=rgb(242, 189, 189) ; radius=100% ; filter=blur(183.05px)
+      div "Ellipse 23" [143,426,331.8,331.8] pos=absolute ; bg=rgb(243, 173, 255) ; radius=100% ; filter=blur(183.05px)
+    div [40,1205,754,719.1] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+      div "Section" [40,1205,754,719.1] flex=column gap:49px j:center a:center pad:73px 40px ; bg=rgb(22, 22, 22) ; radius=16px
+        div "div#w-node-_4b0e31fc-d7f8-a278-a5af-d887aea004e5-aea004e4" [80,1278,674,293.1] flex=column gap:30px j:center a:flex-start pad:0px
+          div "div.margin-bottom" [80,1278,674,173.1] flex=column gap:26px j:center a:flex-start pad:0px
+            div "Link" [80,1278,161,45] flex=row gap:0px j:center a:center pad:0px ; radius=8px
+              div "Talk to an expert" [80,1292.5,161,16] flex=column gap:normal j:center a:normal pad:0px
+                p [80,1292.5,161,16] font=BDO Grotesk Medium 400 15.38px/16px ls:normal rgb(255, 255, 255) center  TEXT«Brand Accelerator»
+            div "Heading 3 → Trial your next" [80,1349,674,26.1] flex=column gap:normal j:center a:normal pad:0px
+              p [80,1349,674,26.1] font=BDO Grotesk Medium 400 29px/26.1px ls:-0.87px rgb(255, 255, 255)  TEXT«So, you're a new brand?»
+            div "Heading 3 → Trial your next" [80,1401.1,674,50] flex=column gap:normal j:center a:normal pad:0px
+              p [80,1401.1,674,50] font=BDO Grotesk Medium 400 62px/50px ls:-1.86px rgb(255, 255, 255)  TEXT«Start here.»
+          div "We think brands of the future will be built using AI alone. Think you make the cut? Tell us about it, and we'd assemble your crew of AI agents." [80,1481.1,674,90] flex=column gap:normal j:center a:normal pad:0px
+            p [80,1481.1,674,90] font=BDO Grotesk Medium 400 19.53px/30px ls:normal rgb(241, 240, 238)  TEXT«We think brands of the future will be built using AI alone. Think you make the cut? Tell us about it, and we'd assemble your crew of AI agents.»
+        div "div#w-node-_4b0e31fc-d7f8-a278-a5af-d887aea004f3-aea004e4" [80,1620.1,674,231] flex=column gap:30px j:center a:flex-start pad:0px
+          div [80,1620.1,674,57] flex=row gap:30px j:center a:flex-start pad:0px ; ov=hidden
+            div [80,1620.1,30,30] pos=absolute
+              img [80,1620.1,30,30] ov=clip ; fit=cover  SRC=/assets/img/yzrC14GSRZDcrzjIVKkLoCzr7Cs.svg
+            div [140,1620.1,614,57] flex=column gap:5px j:center a:flex-start pad:0px ; ov=hidden
+              div "Heading 6 → Site Builder" [140,1620.1,614,28] flex=column gap:normal j:center a:normal pad:0px
+                p [140,1620.1,614,28] font=BDO Grotesk Medium 400 20px/28px ls:-0.4px rgb(255, 255, 255)  TEXT«Unlimited Media»
+              div "Use our agents to start your brand" [140,1653.1,614,24] flex=column gap:normal j:center a:normal pad:0px
+                p [140,1653.1,614,24] font=BDO Grotesk Medium 400 15px/24px ls:normal rgba(255, 255, 255, 0.75)  TEXT«Use our agents to start your brand»
+          div "Link" [80,1707.1,674,57] flex=row gap:30px j:center a:flex-start pad:0px ; radius=12px
+            div [80,1707.1,30,30] pos=absolute
+              img [80,1707.1,30,30] ov=clip ; fit=cover  SRC=/assets/img/i3dNOYFX1IAgdv0xX7HBsrRBLP4.svg
+            div "div" [140,1707.1,614,57] flex=column gap:5px j:center a:flex-start pad:0px
+              div "Heading 6 → Relume Figma Library" [140,1707.1,614,28] flex=column gap:normal j:center a:normal pad:0px
+                p [140,1707.1,614,28] font=BDO Grotesk Medium 400 20px/28px ls:-0.4px rgb(255, 255, 255)  TEXT«Idea to storefront»
+              div "Our AI Experts work with you to go from your brand idea to the launch of the online store." [140,1740.1,614,24] flex=column gap:normal j:center a:normal pad:0px
+                p [140,1740.1,614,24] font=BDO Grotesk Medium 400 15px/24px ls:normal rgba(255, 255, 255, 0.75)  TEXT«Our AI experts turn your idea into a live online store.»
+          div "Link" [80,1794.1,674,57] flex=row gap:30px j:center a:flex-start pad:0px ; radius=12px
+            div [80,1794.1,30,30] pos=absolute
+              img [80,1794.1,30,30] ov=clip ; fit=cover  SRC=/assets/img/399FD5zT0fmsnaDOfjIlF2sZEuk.svg
+            div "div" [140,1794.1,614,57] flex=column gap:5px j:center a:flex-start pad:0px
+              div "Heading 6 → Relume Webflow Library" [140,1794.1,614,28] flex=column gap:normal j:center a:normal pad:0px
+                p [140,1794.1,614,28] font=BDO Grotesk Medium 400 20px/28px ls:-0.4px rgb(255, 255, 255)  TEXT«Your prompts, our GPUs»
+              div "The cost of your AI models, is on the house" [140,1827.1,614,24] flex=column gap:normal j:center a:normal pad:0px
+                p [140,1827.1,614,24] font=BDO Grotesk Medium 400 15px/24px ls:normal rgba(255, 255, 255, 0.75)  TEXT«The cost of your AI models, is on the house»

@@ -1,0 +1,40 @@
+# section 10 "null" top=7718
+div [0,0,834,900] flex=column gap:60px j:center a:center pad:40px ; ov=hidden
+  div "Group 68" [40,220.5,754,82.4] flex=row gap:10px j:center a:center pad:0px
+    div "Section → Heading 2 → Under the hood" [183.2,220.5,232.5,82.4] flex=column gap:normal j:center a:normal pad:0px
+      p [183.2,220.5,232.5,82.4] font=BDO Grotesk Medium 400 80px/82.4px ls:-1.76px rgb(255, 255, 255) center  TEXT«How it»
+    div [425.6,220.5,225.2,82.4] flex=column gap:10px j:center a:center pad:0px ; ov=hidden
+      div "Section → Heading 2 → Under the hood" [425.6,220.5,253.1,85.5] pos=absolute ; flex=column gap:normal j:center a:normal pad:0px ; op=0 ; filter=blur(12.9073px) ; z=1
+        span [425.6,220.5,253.1,85.5] bgi=linear-gradient(97.4768deg, rgb(255, 58, 186) 0%, rgb(243, 173, 255) 56.7708%, rgb(98, 72, 255) 100%) ; font=BDO Grotesk Medium 400 83px/85.49px ls:-5.312px rgb(0, 0, 0) center ; clip=text  TEXT«works?»
+          span [425.6,220.5,253.1,85.5] bgi=linear-gradient(97.4768deg, rgb(255, 58, 186) 0%, rgb(243, 173, 255) 56.7708%, rgb(98, 72, 255) 100%) ; font=BDO Grotesk Medium 400 83px/85.49px ls:-5.312px rgb(0, 0, 0) center ; clip=text  TEXT«works?»
+      div "Section → Heading 2 → Under the hood" [425.6,220.5,225.2,82.4] flex=column gap:normal j:center a:normal pad:0px
+        span [425.6,220.5,225.2,82.4] bgi=linear-gradient(97.4768deg, rgb(255, 58, 186) 0%, rgb(243, 173, 255) 56.7708%, rgb(98, 72, 255) 100%) ; font=BDO Grotesk Medium 400 80px/82.4px ls:-1.76px rgb(0, 0, 0) center ; clip=text  TEXT«works»
+          span [425.6,220.5,225.2,82.4] bgi=linear-gradient(97.4768deg, rgb(255, 58, 186) 0%, rgb(243, 173, 255) 56.7708%, rgb(98, 72, 255) 100%) ; font=BDO Grotesk Medium 400 80px/82.4px ls:-1.76px rgb(0, 0, 0) center ; clip=text  TEXT«works»
+  div "Group 111" [40,362.9,754,316.7] flex=row gap:20px j:center a:center pad:10px
+    div "Group 69" [50,378.4,231.3,285.7] flex=column gap:37px j:center a:flex-start pad:0px
+      div "Step 1" [50,378.4,231.3,24] flex=column gap:normal j:center a:normal pad:0px
+        p [50,378.4,231.3,24] font=BDO Grotesk Medium 400 11px/24px ls:normal rgba(255, 255, 255, 0.35) uppercase  TEXT«Step 1»
+      div [50,439.4,32,26.7] pos=absolute
+        img [50,439.4,32,26.7] ov=clip ; fit=cover  SRC=/assets/img/SnOMPU6z1fTbyK6AXARZO3yyU4.svg
+      div "Heading 6 → Site Builder" [50,503,231.3,28] flex=column gap:normal j:center a:normal pad:0px
+        p [50,503,231.3,28] font=BDO Grotesk Medium 400 19.22px/28px ls:-0.4px rgb(255, 255, 255)  TEXT«Set your Preferences»
+      div "Specify the type of content you want to create, whether it's blog posts, articles, or social media updates." [50,568,231.3,96] flex=column gap:normal j:center a:normal pad:0px
+        p [50,568,231.3,96] font=BDO Grotesk Medium 400 15.5px/24px ls:normal rgba(255, 255, 255, 0.75)  TEXT«Specify the type of content you want to create, whether it's blog posts, articles, or social media updates.»
+    div "Group 70" [301.3,379.4,231.3,283.7] flex=column gap:27px j:center a:flex-start pad:0px
+      div "Step 2" [301.3,379.4,75,24] flex=column gap:normal j:center a:normal pad:0px
+        p [301.3,379.4,75,24] font=BDO Grotesk Medium 400 11px/24px ls:normal rgba(255, 255, 255, 0.35) uppercase  TEXT«Step 2»
+      div [301.3,430.4,32,30.7] pos=absolute
+        img [301.3,430.4,32,30.7] ov=clip ; fit=cover  SRC=/assets/img/2wzFTufOIYFCvajBgjCmWDa4Q.svg
+      div "Heading 6 → Site Builder" [301.3,488,231.3,28] flex=column gap:normal j:center a:normal pad:0px
+        p [301.3,488,231.3,28] font=BDO Grotesk Medium 400 19.22px/28px ls:-0.4px rgb(255, 255, 255)  TEXT«Let Al do the work»
+      div "Our advanced algorithms analyze your input and generate content that's tailored to your exact specifications" [301.3,543,231.3,120] flex=column gap:normal j:center a:normal pad:0px
+        p [301.3,543,231.3,120] font=BDO Grotesk Medium 400 15.5px/24px ls:normal rgba(255, 255, 255, 0.75)  TEXT«Our advanced algorithms analyze your input and generate content that's tailored to your exact specifications»
+    div "Group 71" [552.7,372.9,231.3,296.7] flex=column gap:22px j:center a:flex-start pad:0px
+      div "Step 3" [552.7,372.9,75,24] flex=column gap:normal j:center a:normal pad:0px
+        p [552.7,372.9,75,24] font=BDO Grotesk Medium 400 11px/24px ls:normal rgba(255, 255, 255, 0.35) uppercase  TEXT«Step 3»
+      div [552.7,418.9,32,30.7] pos=absolute
+        img [552.7,418.9,32,30.7] ov=clip ; fit=cover  SRC=/assets/img/EFpJnUQCLUuoPPsdBxZcAxXcK0.svg
+      div "Heading 6 → Site Builder" [552.7,471.5,231.3,56] flex=column gap:normal j:center a:normal pad:0px
+        p [552.7,471.5,231.3,56] font=BDO Grotesk Medium 400 19.22px/28px ls:-0.4px rgb(255, 255, 255)  TEXT«Review, edit and download»
+      div "Review the Al-generated content, make any necessary edits, and fine-tune it to perfection. Share it with your audience" [552.7,549.5,231.3,120] flex=column gap:normal j:center a:normal pad:0px
+        p [552.7,549.5,231.3,120] font=BDO Grotesk Medium 400 15.5px/24px ls:normal rgba(255, 255, 255, 0.75)  TEXT«Review the Al-generated content, make any necessary edits, and fine-tune it to perfection. Share it with your audience»

@@ -1,0 +1,63 @@
+# section 4 "Group 115" top=1101
+div "Group 115" [0,0,390,2640] flex=column gap:20px j:center a:center pad:40px ; bg=rgba(255, 255, 255, 0) ; radius=20px ; z=2
+  div [0,-272,390,162] pos=absolute ; bgi=linear-gradient(rgba(84, 84, 84, 0) 0%, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%) ; ov=hidden ; z=4
+  div "Group 85" [0,0,390,2640] pos=absolute ; bg=rgba(255, 255, 255, 0) ; radius=20px ; z=0
+    div "Rectangle 44" [0,0,390,2640] pos=absolute ; bgi=linear-gradient(90deg, rgb(253, 82, 200) 0%, rgb(106, 78, 255) 100%) ; radius=50px ; filter=blur(100px)
+    div "Rectangle 45" [0,0,390,2640] pos=absolute ; bg=rgb(247, 247, 247) ; radius=40px ; shadow=rgba(0, 0, 0, 0.25) 0px 1px 2px 0px
+  div "The Complete Brand OS" [40,40,310,46] flex=column gap:normal j:flex-start a:normal pad:0px
+    p [40,40,310,46] font=BDO Grotesk Medium 400 40px/46px ls:-1.2px rgb(42, 42, 42) center  TEXT«Explore»
+  div "Explore our AI agents which cut short your most of the business expenses" [40,106,310,84] flex=column gap:normal j:flex-start a:normal pad:0px
+    p [40,106,310,84] font=BDO Grotesk Regular 400 20px/28px ls:-0.4px rgb(130, 126, 126) center  TEXT«Explore our AI agents which cut short your most of the business expenses»
+  div [40,210,310,2390] flex=column gap:60px j:center a:center pad:0px ; ov=hidden
+    div [40,210,310,1151] flex=column gap:60px j:center a:center pad:0px ; ov=hidden
+      div "Group 89" [40,210,310,344] flex=column gap:10px j:center a:center pad:0px
+        div "Rectangle 59" [40,210,310,267] flex=column gap:10px j:center a:center pad:10px ; bg=rgb(227, 225, 225) ; radius=9px
+          div "Rectangle 60" [50,220,290,247] flex=row gap:10px j:center a:center pad:0px ; bg=rgb(242, 242, 242) ; radius=7px
+            div "WhatsApp_Image_2024_04_25_at_20_53_44" [83.8,232.3,222.3,222.3] radius=10px
+              div [83.8,232.3,222.3,222.3] pos=absolute ; radius=10px
+                img [83.8,232.3,222.3,222.3] radius=10px ; ov=clip ; fit=contain  SRC=/assets/img/tB3TOBWdCaaxVPJ96pXQMdCJSA.gif
+        div "Group 88" [40,487,310,67] flex=row gap:10px j:center a:center pad:0px
+          div [40,487,310,67] pos=absolute
+            img [40,487,310,67] ov=clip ; fit=contain  SRC=/assets/img/miUkjO0F10TK2w2DytyG090Y6k.svg
+      div "Group 89" [40,614,310,343] flex=column gap:10px j:center a:center pad:0px
+        div "Rectangle 59" [40,614,310,267] flex=column gap:10px j:center a:center pad:10px ; bg=rgb(227, 225, 225) ; radius=9px
+          div "Rectangle 60" [50,624,290,247] flex=row gap:10px j:center a:center pad:0px ; bg=rgb(242, 242, 242) ; radius=7px
+            div "WhatsApp_Image_2024_04_25_at_20_53_44" [81.4,633.9,227.2,227.2] radius=20px
+              div [81.4,633.9,227.2,227.2] pos=absolute ; radius=20px
+                img [81.4,633.9,227.2,227.2] radius=20px ; ov=clip ; fit=contain  SRC=/assets/img/XbvQn8KBPaHtYLCtCS9K1ps1DE.svg
+        div "Group 88" [40,891,310,66] flex=row gap:10px j:center a:center pad:0px
+          div [40,891,310,66] pos=absolute
+            img [40,891,310,66] ov=clip ; fit=contain  SRC=/assets/img/tqFI5t1zP6qs9n1XLh1z0dFFAE.svg
+      div "Group 89" [40,1017,310,344] flex=column gap:10px j:center a:center pad:0px
+        div "Rectangle 59" [40,1017,310,267] flex=column gap:10px j:center a:center pad:10px ; bg=rgb(227, 225, 225) ; radius=9px
+          div "Rectangle 60" [50,1027,290,247] flex=row gap:10px j:center a:center pad:0px ; bg=rgb(242, 242, 242) ; radius=7px
+            div "WhatsApp_Image_2024_04_25_at_20_53_44" [71.5,1027,247,247] pos=absolute
+              img [71.5,1027,247,247] ov=clip ; fit=contain  SRC=/assets/img/DQjWjo47hvH3UOid3AkyCXez0o.png
+        div "Group 88" [40,1294,310,67] flex=row gap:10px j:center a:center pad:0px
+          div [40,1294,310,67] pos=absolute
+            img [40,1294,310,67] ov=clip ; fit=contain  SRC=/assets/img/yIboqy9mWg41YQ7j3hCmc0ZWld0.svg
+    div [40,1421,310,1179] flex=column gap:60px j:center a:center pad:0px ; ov=hidden
+      div "Group 89" [40,1421,310,350] flex=column gap:10px j:center a:center pad:0px
+        div "Rectangle 59" [40,1421,310,267] flex=column gap:10px j:center a:center pad:10px ; bg=rgb(227, 225, 225) ; radius=9px
+          div "Rectangle 60" [50,1431,290,247] flex=row gap:10px j:center a:center pad:0px ; bg=rgb(242, 242, 242) ; radius=7px
+            div "WhatsApp_Image_2024_04_25_at_20_53_44" [83.8,1443.3,222.3,222.3] pos=absolute
+              img [83.8,1443.3,222.3,222.3] ov=clip ; fit=contain  SRC=/assets/img/wtNrkh7bH6Cx9T2EYwdFPdJQKw.gif
+        div "Group 88" [40,1698,310,73] flex=row gap:10px j:center a:center pad:0px
+          div [40,1698,310,73] pos=absolute
+            img [40,1698,310,73] ov=clip ; fit=contain  SRC=/assets/img/FQnpvOciw6pGUK3mINdhhJ4aQ.svg
+      div "Group 89" [40,1831,310,354] flex=column gap:10px j:center a:center pad:0px
+        div "Rectangle 59" [40,1831,310,267] flex=column gap:10px j:center a:center pad:10px ; bg=rgb(227, 225, 225) ; radius=9px
+          div "Rectangle 60" [50,1841,290,247] flex=row gap:10px j:center a:center pad:0px ; bg=rgb(242, 242, 242) ; radius=7px
+            div "WhatsApp_Image_2024_04_25_at_20_53_44" [76.4,1845.9,237.1,237.1] pos=absolute
+              img [76.4,1845.9,237.1,237.1] ov=clip ; fit=contain  SRC=/assets/img/1LPxfKipHVmyacS4EO2Gxyf890.png
+        div "Group 88" [40,2108,310,77] flex=row gap:10px j:center a:center pad:0px
+          div [40,2108,310,77] pos=absolute
+            img [40,2108,310,77] ov=clip ; fit=contain  SRC=/assets/img/QR25qAhdZwCrqOOvevQlkbafOs.svg
+      div "Group 89" [40,2245,310,355] flex=column gap:10px j:center a:center pad:0px
+        div "Rectangle 59" [40,2245,310,267] flex=column gap:10px j:center a:center pad:10px ; bg=rgb(227, 225, 225) ; radius=9px
+          div "Rectangle 60" [50,2255,290,247] flex=row gap:10px j:center a:center pad:0px ; bg=rgb(242, 242, 242) ; radius=7px
+            div "WhatsApp_Image_2024_04_25_at_20_53_44" [55.4,2239,279.1,279.1] pos=absolute
+              img [55.4,2239,279.1,279.1] ov=clip ; fit=contain  SRC=/assets/img/W6ugHQF164MmaZKY84RgDaaQZ0.gif
+        div "Group 88" [40,2522,310,78] flex=row gap:10px j:center a:center pad:0px
+          div [40,2522,310,78] pos=absolute
+            img [40,2522,310,78] ov=clip ; fit=contain  SRC=/assets/img/hFZ6yJavw0PgLAy5YYmIXBCbkaA.svg

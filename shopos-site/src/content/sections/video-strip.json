@@ -1,0 +1,198 @@
+{
+  "ref": "09",
+  "height": {
+    "d": 150,
+    "l": 150,
+    "t": 150,
+    "m": 38.46
+  },
+  "video": {
+    "src": "/assets/video/DLoaywSY4mPJ80gpVnVs5ASwo.mp4",
+    "box": {
+      "d": [
+        0,
+        0,
+        100,
+        150
+      ],
+      "l": [
+        0,
+        0,
+        100,
+        150
+      ],
+      "t": [
+        0,
+        0,
+        100,
+        150
+      ],
+      "m": [
+        0,
+        0,
+        100,
+        38.46
+      ]
+    }
+  },
+  "fades": {
+    "d": [
+      {
+        "gradient": "linear-gradient(rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%)",
+        "box": [
+          0,
+          -11,
+          100,
+          149
+        ],
+        "z": 1
+      },
+      {
+        "gradient": "linear-gradient(rgba(51, 170, 255, 0) 0%, rgb(0, 0, 0) 100%)",
+        "box": [
+          0,
+          9,
+          100,
+          141
+        ],
+        "z": 1
+      },
+      {
+        "gradient": "linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%)",
+        "box": [
+          0,
+          0,
+          10,
+          150
+        ],
+        "z": 0
+      },
+      {
+        "gradient": "linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%)",
+        "box": [
+          90.35,
+          0,
+          10,
+          150
+        ],
+        "z": 0
+      }
+    ],
+    "l": [
+      {
+        "gradient": "linear-gradient(rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%)",
+        "box": [
+          0,
+          -11,
+          100,
+          149
+        ],
+        "z": 1
+      },
+      {
+        "gradient": "linear-gradient(rgba(51, 170, 255, 0) 0%, rgb(0, 0, 0) 100%)",
+        "box": [
+          0,
+          9,
+          100,
+          141
+        ],
+        "z": 1
+      },
+      {
+        "gradient": "linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%)",
+        "box": [
+          0,
+          0,
+          10,
+          150
+        ],
+        "z": 0
+      },
+      {
+        "gradient": "linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%)",
+        "box": [
+          84.38,
+          0,
+          10,
+          150
+        ],
+        "z": 0
+      }
+    ],
+    "t": [
+      {
+        "gradient": "linear-gradient(rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%)",
+        "box": [
+          0,
+          0,
+          100,
+          149
+        ],
+        "z": 1
+      },
+      {
+        "gradient": "linear-gradient(rgba(51, 170, 255, 0) 0%, rgb(0, 0, 0) 100%)",
+        "box": [
+          0,
+          12,
+          100,
+          141
+        ],
+        "z": 1
+      },
+      {
+        "gradient": "linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%)",
+        "box": [
+          0,
+          0,
+          10,
+          150
+        ],
+        "z": 0
+      }
+    ],
+    "m": [
+      {
+        "gradient": "linear-gradient(rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 11.2613%)",
+        "box": [
+          0,
+          -0.51,
+          100,
+          11.03
+        ],
+        "z": 1
+      },
+      {
+        "gradient": "linear-gradient(rgba(51, 170, 255, 0) 0%, rgb(0, 0, 0) 100%)",
+        "box": [
+          0,
+          30.51,
+          100,
+          7.95
+        ],
+        "z": 1
+      },
+      {
+        "gradient": "linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%)",
+        "box": [
+          0,
+          0,
+          10,
+          38.46
+        ],
+        "z": 0
+      },
+      {
+        "gradient": "linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%)",
+        "box": [
+          276.92,
+          0,
+          10,
+          38.46
+        ],
+        "z": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+# section 7 "Group 78" top=6843
+div "Group 78" [0,0,1280,3.8] op=0.4 ; z=0
+  div "Ellipse 23" [0,-12,739.8,739.8] pos=absolute ; bg=rgb(243, 173, 255) ; radius=100% ; filter=blur(261.3px)
+  div "Ellipse 24" [632,83.8,498,498] pos=absolute ; bg=rgb(242, 189, 189) ; radius=100% ; filter=blur(100px)

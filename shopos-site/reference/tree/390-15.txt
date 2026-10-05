@@ -1,0 +1,14 @@
+# section 15 "null" top=14192
+div [0,0,390,637] flex=column gap:10px j:center a:center pad:0px ; ov=hidden
+  div [0,0,390,637] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+    div [0,-0.4,390,637] pos=absolute ; z=1
+      div [0,-0.4,390,637] pos=absolute
+        img [0,-0.4,390,637] ov=clip ; fit=cover  SRC=/assets/img/vP0en219LMqVhHyWMZMxYWk8Dw.svg
+    div [0,0,390,637] flex=column gap:10px j:flex-start a:center pad:10px ; ov=hidden ; z=1
+      div [28.5,10,333,246.8] flex=column gap:4px j:center a:center pad:54px 0px ; ov=hidden
+        div [28.5,64,333,19.2] flex=column gap:normal j:flex-start a:normal pad:0px
+          p [28.5,64,333,19.2] font=BDO Grotesk Medium 400 16px/19.2px ls:normal rgb(244, 173, 255) center  TEXT«Supercharged»
+        div [28.5,87.2,333,52.8] flex=column gap:normal j:flex-start a:normal pad:0px
+          p [28.5,87.2,333,52.8] font=BDO Grotesk DemiBold 400 22px/26.4px ls:-0.66px rgb(255, 255, 255) center  TEXT«Up to 3X higher engagement and conversions»
+        div [28.5,144,333,58.8] flex=column gap:normal j:flex-start a:normal pad:0px
+          p [28.5,144,333,58.8] font=BDO Grotesk Light 400 14px/19.6px ls:normal rgb(173, 176, 185) center  TEXT«A whole new way to generate media for your stores. Create images, videos, text, ads & 3D that let's your customers see your brand in ways never before.»

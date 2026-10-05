@@ -1,0 +1,6 @@
+# section 21 "Group 136" top=19160
+div "Group 136" [0,0,834,488] flex=column gap:10px j:center a:center pad:0px
+  div [0,51,834,84] pos=absolute ; bgi=linear-gradient(rgb(0, 0, 0) 48.1982%, rgba(0, 0, 0, 0) 100%) ; ov=hidden ; z=1
+  video [0,73.2,834,341.6] ov=clip ; fit=cover  SRC=/assets/video/wRohANpz9aHkFTX69NtufAoCyVE.mp4
+    video [0,73.2,834,341.6] ov=clip ; fit=cover  SRC=/assets/video/wRohANpz9aHkFTX69NtufAoCyVE.mp4
+  div [0,298,834,122] pos=absolute ; bgi=linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%) ; ov=hidden ; z=1

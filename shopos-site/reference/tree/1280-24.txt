@@ -1,0 +1,4 @@
+# section 24 "Frame 282" top=19287
+div "Frame 282" [0,0,1280,101] flex=row gap:0px j:center a:center pad:40px 0px
+  div "AI was used to make this page. © 2024 House of Models" [0,40,1280,21] flex=column gap:normal j:center a:normal pad:0px
+    p [0,40,1280,21] font=Inter 400 13px/21px ls:normal rgb(104, 104, 104) center  TEXT«AI was used to make this page. © 2024 House of Models»

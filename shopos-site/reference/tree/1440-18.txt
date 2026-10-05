@@ -1,0 +1,380 @@
+# section 18 "null" top=16992
+div [0,0,1440,1080] flex=row gap:10px j:center a:center pad:80px 51px 0px ; ov=hidden
+  section [51,80,439.3,1000] flex=row gap:normal j:normal a:center pad:10px ; ov=hidden ; mask=linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%)
+    ul [61,-877,419.3,980] flex=column gap:10px j:normal a:center pad:0px ; tf=matrix(1, 0, 0, 1, 0, -966.966)
+      div "Group 133" [86.2,-877,369,319]
+        div "Testimonial" [86.2,-877,368.7,291.4] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:32px 45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [131.5,-845,56.8,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [131.5,-845,56.8,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [131.5,-845,56.8,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [131.5,-845,56.8,21.8]
+                  span [131.5,-846,56.8,22] font=Inter-Medium 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Sanket»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [131.5,-800.2,278,182.7] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [131.5,-800.2,278,182.7] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«House of Models changed our e-commerce strategy. Their AI agents altered our storefront, increasing engagement and sales. We're satisfied with the result s and rely on them for our business.»
+      div "Group 133" [86.2,-548,369,319]
+        div "Testimonial" [86.2,-548,368.7,291.4] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:32px 45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [131.5,-516,56.8,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [131.5,-516,56.8,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [131.5,-516,56.8,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [131.5,-516,56.8,21.8]
+                  span [131.5,-517,56.8,22] font=Inter-Medium 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Sanket»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [131.5,-471.2,278,182.7] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [131.5,-471.2,278,182.7] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«House of Models changed our e-commerce strategy. Their AI agents altered our storefront, increasing engagement and sales. We're satisfied with the result s and rely on them for our business.»
+      div "Group 133" [86.2,-219,369,319]
+        div "Testimonial" [86.2,-219,368.7,291.4] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:32px 45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [131.5,-187,56.8,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [131.5,-187,56.8,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [131.5,-187,56.8,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [131.5,-187,56.8,21.8]
+                  span [131.5,-188,56.8,22] font=Inter-Medium 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Sanket»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [131.5,-142.2,278,182.7] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [131.5,-142.2,278,182.7] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«House of Models changed our e-commerce strategy. Their AI agents altered our storefront, increasing engagement and sales. We're satisfied with the result s and rely on them for our business.»
+      div "Group 133" [86.2,110,369,319]
+        div "Testimonial" [86.2,110,368.7,291.4] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:32px 45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [131.5,142,56.8,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [131.5,142,56.8,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [131.5,142,56.8,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [131.5,142,56.8,21.8]
+                  span [131.5,141,56.8,22] font=Inter-Medium 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Sanket»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [131.5,186.8,278,182.7] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [131.5,186.8,278,182.7] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«House of Models changed our e-commerce strategy. Their AI agents altered our storefront, increasing engagement and sales. We're satisfied with the result s and rely on them for our business.»
+      div "Group 133" [86.2,439,369,319]
+        div "Testimonial" [86.2,439,368.7,318.2] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [131.5,484.4,153.8,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [131.5,484.4,153.8,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [131.5,484.4,153.8,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [131.5,484.4,153.8,21.8] font=Inter 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Madhur Cruxfinder»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [131.5,529.2,278,182.7] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [131.5,529.2,278,182.7] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«The customer sentiment analysis provided by House of Models has been useful. We're now able to address customer concerns and integrate feedback into our product development process.»
+      div "Group 133" [86.2,768,369,319]
+        div "Testimonial" [86.2,768,368.7,292.1] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [131.5,813.4,66.5,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [131.5,813.4,66.5,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [131.5,813.4,66.5,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [131.5,813.4,66.5,21.8] font=Inter 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Suparna»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [131.5,858.2,278,156.6] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [131.5,858.2,278,156.6] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«The content generation feature from House of Models has reduced manual work. Our product descriptions and marketing materials are now different.»
+      div "Group 133" [86.2,1097,369,319]
+        div "Testimonial" [86.2,1097,368.7,318.2] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [131.5,1142.4,153.8,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [131.5,1142.4,153.8,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [131.5,1142.4,153.8,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [131.5,1142.4,153.8,21.8] font=Inter 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Madhur Cruxfinder»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [131.5,1187.2,278,182.7] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [131.5,1187.2,278,182.7] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«The customer sentiment analysis provided by House of Models has been useful. We're now able to address customer concerns and integrate feedback into our product development process.»
+      div "Group 133" [86.2,1426,369,319]
+        div "Testimonial" [86.2,1426,368.7,291.4] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:32px 45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [131.5,1458,56.8,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [131.5,1458,56.8,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [131.5,1458,56.8,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [131.5,1458,56.8,21.8]
+                  span [131.5,1457,56.8,22] font=Inter-Medium 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Sanket»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [131.5,1502.8,278,182.7] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [131.5,1502.8,278,182.7] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«House of Models changed our e-commerce strategy. Their AI agents altered our storefront, increasing engagement and sales. We're satisfied with the result s and rely on them for our business.»
+      div "Group 133" [86.2,1755,369,319]
+        div "Testimonial" [86.2,1755,368.7,291.4] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:32px 45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [131.5,1787,56.8,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [131.5,1787,56.8,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [131.5,1787,56.8,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [131.5,1787,56.8,21.8]
+                  span [131.5,1786,56.8,22] font=Inter-Medium 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Sanket»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [131.5,1831.8,278,182.7] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [131.5,1831.8,278,182.7] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«House of Models changed our e-commerce strategy. Their AI agents altered our storefront, increasing engagement and sales. We're satisfied with the result s and rely on them for our business.»
+      div "Group 133" [86.2,2084,369,319]
+        div "Testimonial" [86.2,2084,368.7,291.4] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:32px 45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [131.5,2116,56.8,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [131.5,2116,56.8,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [131.5,2116,56.8,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [131.5,2116,56.8,21.8]
+                  span [131.5,2115,56.8,22] font=Inter-Medium 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Sanket»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [131.5,2160.8,278,182.7] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [131.5,2160.8,278,182.7] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«House of Models changed our e-commerce strategy. Their AI agents altered our storefront, increasing engagement and sales. We're satisfied with the result s and rely on them for our business.»
+      div "Group 133" [86.2,2413,369,319]
+        div "Testimonial" [86.2,2413,368.7,291.4] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:32px 45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [131.5,2445,56.8,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [131.5,2445,56.8,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [131.5,2445,56.8,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [131.5,2445,56.8,21.8]
+                  span [131.5,2444,56.8,22] font=Inter-Medium 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Sanket»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [131.5,2489.8,278,182.7] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [131.5,2489.8,278,182.7] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«House of Models changed our e-commerce strategy. Their AI agents altered our storefront, increasing engagement and sales. We're satisfied with the result s and rely on them for our business.»
+      div "Group 133" [86.2,2742,369,319]
+        div "Testimonial" [86.2,2742,368.7,318.2] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [131.5,2787.4,153.8,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [131.5,2787.4,153.8,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [131.5,2787.4,153.8,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [131.5,2787.4,153.8,21.8] font=Inter 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Madhur Cruxfinder»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [131.5,2832.2,278,182.7] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [131.5,2832.2,278,182.7] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«The customer sentiment analysis provided by House of Models has been useful. We're now able to address customer concerns and integrate feedback into our product development process.»
+      div "Group 133" [86.2,3071,369,319]
+        div "Testimonial" [86.2,3071,368.7,292.1] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [131.5,3116.4,66.5,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [131.5,3116.4,66.5,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [131.5,3116.4,66.5,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [131.5,3116.4,66.5,21.8] font=Inter 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Suparna»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [131.5,3161.2,278,156.6] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [131.5,3161.2,278,156.6] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«The content generation feature from House of Models has reduced manual work. Our product descriptions and marketing materials are now different.»
+      div "Group 133" [86.2,3400,369,319]
+        div "Testimonial" [86.2,3400,368.7,318.2] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [131.5,3445.4,153.8,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [131.5,3445.4,153.8,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [131.5,3445.4,153.8,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [131.5,3445.4,153.8,21.8] font=Inter 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Madhur Cruxfinder»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [131.5,3490.2,278,182.7] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [131.5,3490.2,278,182.7] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«The customer sentiment analysis provided by House of Models has been useful. We're now able to address customer concerns and integrate feedback into our product development process.»
+      div "Group 133" [86.2,3729,369,319]
+        div "Testimonial" [86.2,3729,368.7,291.4] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:32px 45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [131.5,3761,56.8,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [131.5,3761,56.8,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [131.5,3761,56.8,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [131.5,3761,56.8,21.8]
+                  span [131.5,3760,56.8,22] font=Inter-Medium 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Sanket»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [131.5,3805.8,278,182.7] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [131.5,3805.8,278,182.7] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«House of Models changed our e-commerce strategy. Their AI agents altered our storefront, increasing engagement and sales. We're satisfied with the result s and rely on them for our business.»
+      div "Group 133" [86.2,4058,369,319]
+        div "Testimonial" [86.2,4058,368.7,291.4] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:32px 45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [131.5,4090,56.8,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [131.5,4090,56.8,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [131.5,4090,56.8,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [131.5,4090,56.8,21.8]
+                  span [131.5,4089,56.8,22] font=Inter-Medium 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Sanket»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [131.5,4134.8,278,182.7] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [131.5,4134.8,278,182.7] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«House of Models changed our e-commerce strategy. Their AI agents altered our storefront, increasing engagement and sales. We're satisfied with the result s and rely on them for our business.»
+      div "Group 133" [86.2,4387,369,319]
+        div "Testimonial" [86.2,4387,368.7,291.4] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:32px 45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [131.5,4419,56.8,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [131.5,4419,56.8,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [131.5,4419,56.8,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [131.5,4419,56.8,21.8]
+                  span [131.5,4418,56.8,22] font=Inter-Medium 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Sanket»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [131.5,4463.8,278,182.7] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [131.5,4463.8,278,182.7] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«House of Models changed our e-commerce strategy. Their AI agents altered our storefront, increasing engagement and sales. We're satisfied with the result s and rely on them for our business.»
+      div "Group 133" [86.2,4716,369,319]
+        div "Testimonial" [86.2,4716,368.7,291.4] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:32px 45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [131.5,4748,56.8,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [131.5,4748,56.8,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [131.5,4748,56.8,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [131.5,4748,56.8,21.8]
+                  span [131.5,4747,56.8,22] font=Inter-Medium 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Sanket»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [131.5,4792.8,278,182.7] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [131.5,4792.8,278,182.7] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«House of Models changed our e-commerce strategy. Their AI agents altered our storefront, increasing engagement and sales. We're satisfied with the result s and rely on them for our business.»
+      div "Group 133" [86.2,5045,369,319]
+        div "Testimonial" [86.2,5045,368.7,318.2] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [131.5,5090.4,153.8,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [131.5,5090.4,153.8,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [131.5,5090.4,153.8,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [131.5,5090.4,153.8,21.8] font=Inter 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Madhur Cruxfinder»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [131.5,5135.2,278,182.7] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [131.5,5135.2,278,182.7] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«The customer sentiment analysis provided by House of Models has been useful. We're now able to address customer concerns and integrate feedback into our product development process.»
+      div "Group 133" [86.2,5374,369,319]
+        div "Testimonial" [86.2,5374,368.7,292.1] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [131.5,5419.4,66.5,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [131.5,5419.4,66.5,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [131.5,5419.4,66.5,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [131.5,5419.4,66.5,21.8] font=Inter 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Suparna»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [131.5,5464.2,278,156.6] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [131.5,5464.2,278,156.6] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«The content generation feature from House of Models has reduced manual work. Our product descriptions and marketing materials are now different.»
+      div "Group 133" [86.2,5703,369,319]
+        div "Testimonial" [86.2,5703,368.7,318.2] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [131.5,5748.4,153.8,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [131.5,5748.4,153.8,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [131.5,5748.4,153.8,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [131.5,5748.4,153.8,21.8] font=Inter 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Madhur Cruxfinder»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [131.5,5793.2,278,182.7] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [131.5,5793.2,278,182.7] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«The customer sentiment analysis provided by House of Models has been useful. We're now able to address customer concerns and integrate feedback into our product development process.»
+  section [500.3,80,439.3,1000] flex=row gap:normal j:normal a:center pad:10px ; ov=hidden ; mask=linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%)
+    ul [510.3,-917,419.3,980] flex=column gap:10px j:normal a:center pad:0px ; tf=matrix(1, 0, 0, 1, 0, 966.966)
+      div "Group 133" [535.5,-917,369,319]
+        div "Testimonial" [535.5,-917,368.7,292.1] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [580.8,-871.7,56.8,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [580.8,-871.7,56.8,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [580.8,-871.7,56.8,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [580.8,-871.7,56.8,21.8] font=Inter 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Satyen»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [580.8,-826.9,278,156.6] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [580.8,-826.9,278,156.6] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«Implementing House of Models' AI Agent Operating System impacted our online store. The recommendations and pricing have increased our conversions and revenue.»
+      div "Group 133" [535.5,-588,369,319]
+        div "Testimonial" [535.5,-588,368.7,292.1] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [580.8,-542.7,101,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [580.8,-542.7,101,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [580.8,-542.7,101,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [580.8,-542.7,101,21.8] font=Inter 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Akash Kedia»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [580.8,-497.9,278,156.6] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [580.8,-497.9,278,156.6] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«With House of Models' search and product discovery features, our customers can find what they're looking for quickly. This has led to customer satisfaction and loyalty.»
+      div "Group 133" [535.5,-259,369,319]
+        div "Testimonial" [535.5,-259,368.7,292.1] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [580.8,-213.7,89,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [580.8,-213.7,89,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [580.8,-213.7,89,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [580.8,-213.7,89,21.8] font=Inter 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Riley Smith»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [580.8,-168.9,278,156.6] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [580.8,-168.9,278,156.6] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«House of Models' omnichannel order fulfillment and tracking have made our operations different. We can now provide our customers with a shopping experience across all channels.»
+      div "Group 133" [535.5,70,369,319]
+        div "Testimonial" [535.5,70,368.7,292.1] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [580.8,115.3,56.8,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [580.8,115.3,56.8,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [580.8,115.3,56.8,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [580.8,115.3,56.8,21.8] font=Inter 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Satyen»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [580.8,160.1,278,156.6] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [580.8,160.1,278,156.6] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«Implementing House of Models' AI Agent Operating System impacted our online store. The recommendations and pricing have increased our conversions and revenue.»
+      div "Group 133" [535.5,399,369,319]
+        div "Testimonial" [535.5,399,368.7,292.1] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [580.8,444.3,101,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [580.8,444.3,101,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [580.8,444.3,101,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [580.8,444.3,101,21.8] font=Inter 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Akash Kedia»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [580.8,489.1,278,156.6] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [580.8,489.1,278,156.6] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«With House of Models' search and product discovery features, our customers can find what they're looking for quickly. This has led to customer satisfaction and loyalty.»
+      div "Group 133" [535.5,728,369,319]
+        div "Testimonial" [535.5,728,368.7,292.1] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [580.8,773.3,89,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [580.8,773.3,89,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [580.8,773.3,89,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [580.8,773.3,89,21.8] font=Inter 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Riley Smith»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [580.8,818.1,278,156.6] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [580.8,818.1,278,156.6] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«House of Models' omnichannel order fulfillment and tracking have made our operations different. We can now provide our customers with a shopping experience across all channels.»
+      div "Group 133" [535.5,1057,369,319]
+        div "Testimonial" [535.5,1057,368.7,292.1] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [580.8,1102.3,56.8,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [580.8,1102.3,56.8,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [580.8,1102.3,56.8,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [580.8,1102.3,56.8,21.8] font=Inter 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Satyen»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [580.8,1147.1,278,156.6] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [580.8,1147.1,278,156.6] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«Implementing House of Models' AI Agent Operating System impacted our online store. The recommendations and pricing have increased our conversions and revenue.»
+      div "Group 133" [535.5,1386,369,319]
+        div "Testimonial" [535.5,1386,368.7,292.1] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [580.8,1431.3,101,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [580.8,1431.3,101,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [580.8,1431.3,101,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [580.8,1431.3,101,21.8] font=Inter 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Akash Kedia»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [580.8,1476.1,278,156.6] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [580.8,1476.1,278,156.6] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«With House of Models' search and product discovery features, our customers can find what they're looking for quickly. This has led to customer satisfaction and loyalty.»
+      div "Group 133" [535.5,1715,369,319]
+        div "Testimonial" [535.5,1715,368.7,292.1] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [580.8,1760.3,89,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [580.8,1760.3,89,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [580.8,1760.3,89,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [580.8,1760.3,89,21.8] font=Inter 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Riley Smith»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [580.8,1805.1,278,156.6] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [580.8,1805.1,278,156.6] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«House of Models' omnichannel order fulfillment and tracking have made our operations different. We can now provide our customers with a shopping experience across all channels.»
+      div "Group 133" [535.5,2044,369,319]
+        div "Testimonial" [535.5,2044,368.7,292.1] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [580.8,2089.3,56.8,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [580.8,2089.3,56.8,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [580.8,2089.3,56.8,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [580.8,2089.3,56.8,21.8] font=Inter 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Satyen»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [580.8,2134.1,278,156.6] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [580.8,2134.1,278,156.6] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«Implementing House of Models' AI Agent Operating System impacted our online store. The recommendations and pricing have increased our conversions and revenue.»
+      div "Group 133" [535.5,2373,369,319]
+        div "Testimonial" [535.5,2373,368.7,292.1] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [580.8,2418.3,101,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [580.8,2418.3,101,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [580.8,2418.3,101,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [580.8,2418.3,101,21.8] font=Inter 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Akash Kedia»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [580.8,2463.1,278,156.6] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [580.8,2463.1,278,156.6] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«With House of Models' search and product discovery features, our customers can find what they're looking for quickly. This has led to customer satisfaction and loyalty.»
+      div "Group 133" [535.5,2702,369,319]
+        div "Testimonial" [535.5,2702,368.7,292.1] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [580.8,2747.3,89,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [580.8,2747.3,89,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [580.8,2747.3,89,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [580.8,2747.3,89,21.8] font=Inter 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Riley Smith»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [580.8,2792.1,278,156.6] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [580.8,2792.1,278,156.6] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«House of Models' omnichannel order fulfillment and tracking have made our operations different. We can now provide our customers with a shopping experience across all channels.»
+  section [949.7,80,439.3,1000] flex=row gap:normal j:normal a:center pad:10px ; ov=hidden ; mask=linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%)
+    ul [959.7,-877,419.3,980] flex=column gap:10px j:normal a:center pad:0px ; tf=matrix(1, 0, 0, 1, 0, -966.966)
+      div "Group 133" [984.8,-877,369,319]
+        div "Testimonial" [984.8,-877,368.7,291.4] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:32px 45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [1030.2,-845,42.2,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [1030.2,-845,42.2,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [1030.2,-845,42.2,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [1030.2,-845,42.2,21.8] font=Inter 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Rafiq»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [1030.2,-800.2,278,182.7] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [1030.2,-800.2,278,182.7] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«House of Models' AI-driven solutions have altered our business, now we do not do any physical photoshoots at all. We're now able to adjust our stock levels and reduce waste due to their predictions.»
+      div "Group 133" [984.8,-548,369,319]
+        div "Testimonial" [984.8,-548,368.7,292.1] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [1030.2,-502.6,67.1,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [1030.2,-502.6,67.1,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [1030.2,-502.6,67.1,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [1030.2,-502.6,67.1,21.8] font=Inter 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Lorraine»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [1030.2,-457.8,278,156.6] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [1030.2,-457.8,278,156.6] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«House of Models' fraud detection and risk management capabilities have reassured us. We can focus on our business, knowing our transactions are secure.»
+      div "Group 133" [984.8,-219,369,319]
+        div "Testimonial" [984.8,-219,368.7,292.1] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [1030.2,-173.6,113.7,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [1030.2,-173.6,113.7,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [1030.2,-173.6,113.7,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [1030.2,-173.6,113.7,21.8] font=Inter 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Casey Harper»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [1030.2,-128.8,278,156.6] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [1030.2,-128.8,278,156.6] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«With House of Models' AI agents, we've seen an increase in customer engagement and retention. Their approach has helped us build relationships with our customers.»
+      div "Group 133" [984.8,110,369,319]
+        div "Testimonial" [984.8,110,368.7,291.4] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:32px 45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [1030.2,142,42.2,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [1030.2,142,42.2,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [1030.2,142,42.2,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [1030.2,142,42.2,21.8] font=Inter 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Rafiq»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [1030.2,186.8,278,182.7] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [1030.2,186.8,278,182.7] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«House of Models' AI-driven solutions have altered our business, now we do not do any physical photoshoots at all. We're now able to adjust our stock levels and reduce waste due to their predictions.»
+      div "Group 133" [984.8,439,369,319]
+        div "Testimonial" [984.8,439,368.7,292.1] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [1030.2,484.4,67.1,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [1030.2,484.4,67.1,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [1030.2,484.4,67.1,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [1030.2,484.4,67.1,21.8] font=Inter 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Lorraine»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [1030.2,529.2,278,156.6] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [1030.2,529.2,278,156.6] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«House of Models' fraud detection and risk management capabilities have reassured us. We can focus on our business, knowing our transactions are secure.»
+      div "Group 133" [984.8,768,369,319]
+        div "Testimonial" [984.8,768,368.7,292.1] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [1030.2,813.4,113.7,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [1030.2,813.4,113.7,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [1030.2,813.4,113.7,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [1030.2,813.4,113.7,21.8] font=Inter 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Casey Harper»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [1030.2,858.2,278,156.6] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [1030.2,858.2,278,156.6] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«With House of Models' AI agents, we've seen an increase in customer engagement and retention. Their approach has helped us build relationships with our customers.»
+      div "Group 133" [984.8,1097,369,319]
+        div "Testimonial" [984.8,1097,368.7,291.4] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:32px 45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [1030.2,1129,42.2,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [1030.2,1129,42.2,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [1030.2,1129,42.2,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [1030.2,1129,42.2,21.8] font=Inter 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Rafiq»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [1030.2,1173.8,278,182.7] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [1030.2,1173.8,278,182.7] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«House of Models' AI-driven solutions have altered our business, now we do not do any physical photoshoots at all. We're now able to adjust our stock levels and reduce waste due to their predictions.»
+      div "Group 133" [984.8,1426,369,319]
+        div "Testimonial" [984.8,1426,368.7,292.1] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [1030.2,1471.4,67.1,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [1030.2,1471.4,67.1,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [1030.2,1471.4,67.1,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [1030.2,1471.4,67.1,21.8] font=Inter 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Lorraine»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [1030.2,1516.2,278,156.6] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [1030.2,1516.2,278,156.6] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«House of Models' fraud detection and risk management capabilities have reassured us. We can focus on our business, knowing our transactions are secure.»
+      div "Group 133" [984.8,1755,369,319]
+        div "Testimonial" [984.8,1755,368.7,292.1] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [1030.2,1800.4,113.7,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [1030.2,1800.4,113.7,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [1030.2,1800.4,113.7,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [1030.2,1800.4,113.7,21.8] font=Inter 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Casey Harper»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [1030.2,1845.2,278,156.6] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [1030.2,1845.2,278,156.6] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«With House of Models' AI agents, we've seen an increase in customer engagement and retention. Their approach has helped us build relationships with our customers.»
+      div "Group 133" [984.8,2084,369,319]
+        div "Testimonial" [984.8,2084,368.7,291.4] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:32px 45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [1030.2,2116,42.2,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [1030.2,2116,42.2,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [1030.2,2116,42.2,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [1030.2,2116,42.2,21.8] font=Inter 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Rafiq»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [1030.2,2160.8,278,182.7] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [1030.2,2160.8,278,182.7] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«House of Models' AI-driven solutions have altered our business, now we do not do any physical photoshoots at all. We're now able to adjust our stock levels and reduce waste due to their predictions.»
+      div "Group 133" [984.8,2413,369,319]
+        div "Testimonial" [984.8,2413,368.7,292.1] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [1030.2,2458.4,67.1,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [1030.2,2458.4,67.1,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [1030.2,2458.4,67.1,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [1030.2,2458.4,67.1,21.8] font=Inter 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Lorraine»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [1030.2,2503.2,278,156.6] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [1030.2,2503.2,278,156.6] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«House of Models' fraud detection and risk management capabilities have reassured us. We can focus on our business, knowing our transactions are secure.»
+      div "Group 133" [984.8,2742,369,319]
+        div "Testimonial" [984.8,2742,368.7,292.1] pos=absolute ; flex=column gap:23px j:flex-start a:flex-start pad:45.3667px ; bg=rgb(25, 25, 25) ; radius=23px
+          div "Frame 18" [1030.2,2787.4,113.7,21.8] flex=row gap:9px j:flex-start a:center pad:0px
+            div "Frame 1" [1030.2,2787.4,113.7,21.8] flex=column gap:0px j:flex-start a:flex-start pad:0px
+              div "Alex Rivera" [1030.2,2787.4,113.7,21.8] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [1030.2,2787.4,113.7,21.8] font=Inter 500 18.15px/21.78px ls:-0.363px rgb(255, 255, 255) center  TEXT«Casey Harper»
+          div "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention." [1030.2,2832.2,278,156.6] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [1030.2,2832.2,278,156.6] font=Inter 400 18.15px/26.09px ls:-0.1815px rgb(197, 197, 197)  TEXT«With House of Models' AI agents, we've seen an increase in customer engagement and retention. Their approach has helped us build relationships with our customers.»

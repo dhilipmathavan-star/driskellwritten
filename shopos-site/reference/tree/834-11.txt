@@ -1,0 +1,77 @@
+# section 11 "null" top=8618
+div [0,0,834,1511.5] flex=row gap:10px j:center a:center pad:20px ; bg=rgb(255, 255, 255) ; radius=60px
+  div "Group 115" [20,20,794,1471.5] flex=column gap:30px j:center a:center pad:0px ; radius=100px
+    div "Group 85" [20,20,794,1471.5] pos=absolute ; radius=100px ; z=1
+      div "Rectangle 44" [20,20,794,1471.5] pos=absolute ; flex=column gap:10px j:center a:center pad:0px ; bgi=linear-gradient(90deg, rgb(253, 82, 200) 0%, rgb(106, 78, 255) 100%) ; radius=100px ; filter=blur(105.75px)
+      div "Rectangle 45" [0,0,833.7,1515.6] pos=absolute ; bg=rgb(255, 255, 255) ; radius=60px ; z=0
+    div [20,20,794,268] flex=row gap:10px j:center a:center pad:0px 0px 100px ; ov=hidden
+      div "The Complete Brand OS" [20,20,794,168] flex=column gap:normal j:flex-start a:normal pad:0px ; z=1
+        p [20,20,794,84] font=BDO Grotesk Medium 400 70px/84px ls:-2.1px rgb(156, 156, 156) center  TEXT«The Complete»
+          span [636,13,13.9,98]
+        p [20,104,794,84] font=BDO Grotesk Medium 400 70px/84px ls:-2.1px rgb(42, 42, 42) center  TEXT«Brand OS»
+    div "1" [20,318,794,79.4] z=1
+      div "Tablet" [20,318,794,79.4] flex=column gap:20px j:center a:flex-end pad:0px 0px 20px
+        div [20,318,794,1]
+        div [20,339,794,38.4] flex=column gap:20px j:center a:flex-start pad:0px 20px
+          div [40,339,754,38.4] flex=column gap:normal j:flex-start a:normal pad:0px
+            h4 [40,339,754,38.4] font=Inter 600 32px/38.4px ls:normal rgb(0, 0, 0) left  TEXT«Dynamic Images»
+    div "2" [20,427.4,794,79.4] z=1
+      div "Tablet" [20,427.4,794,79.4] flex=column gap:20px j:center a:flex-end pad:0px 0px 20px
+        div [20,427.4,794,1]
+        div [20,448.4,794,38.4] flex=column gap:20px j:center a:flex-start pad:0px 20px
+          div [40,448.4,754,38.4] flex=column gap:normal j:flex-start a:normal pad:0px
+            h4 [40,448.4,754,38.4] font=Inter 600 32px/38.4px ls:normal rgb(0, 0, 0) left  TEXT«Ad Baker»
+    div "2" [20,536.8,794,79.4] z=1
+      div "Tablet" [20,536.8,794,79.4] flex=column gap:20px j:center a:flex-end pad:0px 0px 20px
+        div [20,536.8,794,1]
+        div [20,557.8,794,38.4] flex=column gap:20px j:center a:flex-start pad:0px 20px
+          div [40,557.8,754,38.4] flex=column gap:normal j:flex-start a:normal pad:0px
+            h4 [40,557.8,754,38.4] font=Inter 600 32px/38.4px ls:normal rgb(0, 0, 0) left  TEXT«Talking Avatars»
+    div "2" [20,646.2,794,79.4] z=1
+      div "Tablet" [20,646.2,794,79.4] flex=column gap:20px j:center a:flex-end pad:0px 0px 20px
+        div [20,646.2,794,1]
+        div [20,667.2,794,38.4] flex=column gap:20px j:center a:flex-start pad:0px 20px
+          div [40,667.2,754,38.4] flex=column gap:normal j:flex-start a:normal pad:0px
+            h4 [40,667.2,754,38.4] font=Inter 600 32px/38.4px ls:normal rgb(0, 0, 0) left  TEXT«Product Videos»
+    div "2" [20,755.6,794,79.4] z=1
+      div "Tablet" [20,755.6,794,79.4] flex=column gap:20px j:center a:flex-end pad:0px 0px 20px
+        div [20,755.6,794,1]
+        div [20,776.6,794,38.4] flex=column gap:20px j:center a:flex-start pad:0px 20px
+          div [40,776.6,754,38.4] flex=column gap:normal j:flex-start a:normal pad:0px
+            h4 [40,776.6,754,38.4] font=Inter 600 32px/38.4px ls:normal rgb(0, 0, 0) left  TEXT«Background Enhancement»
+    div "2" [20,865,794,79.4] z=1
+      div "Tablet" [20,865,794,79.4] flex=column gap:20px j:center a:flex-end pad:0px 0px 20px
+        div [20,865,794,1]
+        div [20,886,794,38.4] flex=column gap:20px j:center a:flex-start pad:0px 20px
+          div [40,886,754,38.4] flex=column gap:normal j:flex-start a:normal pad:0px
+            h4 [40,886,754,38.4] font=Inter 600 32px/38.4px ls:normal rgb(0, 0, 0) left  TEXT«Text to 3d»
+    div "2" [20,974.4,794,79.4] z=1
+      div "Tablet" [20,974.4,794,79.4] flex=column gap:20px j:center a:flex-end pad:0px 0px 20px
+        div [20,974.4,794,1]
+        div [20,995.4,794,38.4] flex=column gap:20px j:center a:flex-start pad:0px 20px
+          div [40,995.4,754,38.4] flex=column gap:normal j:flex-start a:normal pad:0px
+            h4 [40,995.4,754,38.4] font=Inter 600 32px/38.4px ls:normal rgb(0, 0, 0) left  TEXT«Product Voiceovers»
+    div "2" [20,1083.8,794,79.4] z=1
+      div "Tablet" [20,1083.8,794,79.4] flex=column gap:20px j:center a:flex-end pad:0px 0px 20px
+        div [20,1083.8,794,1]
+        div [20,1104.8,794,38.4] flex=column gap:20px j:center a:flex-start pad:0px 20px
+          div [40,1104.8,754,38.4] flex=column gap:normal j:flex-start a:normal pad:0px
+            h4 [40,1104.8,754,38.4] font=Inter 600 32px/38.4px ls:normal rgb(0, 0, 0) left  TEXT«Description & details»
+    div "2" [20,1193.3,794,79.4] z=1
+      div "Tablet" [20,1193.3,794,79.4] flex=column gap:20px j:center a:flex-end pad:0px 0px 20px
+        div [20,1193.3,794,1]
+        div [20,1214.3,794,38.4] flex=column gap:20px j:center a:flex-start pad:0px 20px
+          div [40,1214.3,754,38.4] flex=column gap:normal j:flex-start a:normal pad:0px
+            h4 [40,1214.3,754,38.4] font=Inter 600 32px/38.4px ls:normal rgb(0, 0, 0) left  TEXT«Appeal Try On»
+    div "2" [20,1302.7,794,79.4] z=1
+      div "Tablet" [20,1302.7,794,79.4] flex=column gap:20px j:center a:flex-end pad:0px 0px 20px
+        div [20,1302.7,794,1]
+        div [20,1323.7,794,38.4] flex=column gap:20px j:center a:flex-start pad:0px 20px
+          div [40,1323.7,754,38.4] flex=column gap:normal j:flex-start a:normal pad:0px
+            h4 [40,1323.7,754,38.4] font=Inter 600 32px/38.4px ls:normal rgb(0, 0, 0) left  TEXT«Market Research»
+    div "2" [20,1412.1,794,79.4] z=1
+      div "Tablet" [20,1412.1,794,79.4] flex=column gap:20px j:center a:flex-end pad:0px 0px 20px
+        div [20,1412.1,794,1]
+        div [20,1433.1,794,38.4] flex=column gap:20px j:center a:flex-start pad:0px 20px
+          div [40,1433.1,754,38.4] flex=column gap:normal j:flex-start a:normal pad:0px
+            h4 [40,1433.1,754,38.4] font=Inter 600 32px/38.4px ls:normal rgb(0, 0, 0) left  TEXT«Seller Store Manager»

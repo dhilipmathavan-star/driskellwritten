@@ -1,0 +1,95 @@
+# section 8 "Group 108" top=7286
+div "Group 108" [0,0,390,771.5] flex=column gap:10px j:center a:center pad:15px ; z=1
+  div "Frame 265" [15,15,360,741.5] flex=row gap:0px j:center a:center pad:0px
+    div "Section" [15,15,360,741.5] flex=column gap:0px j:center a:center pad:0px ; bg=rgba(15, 15, 15, 0.48) ; radius=16px ; ov=hidden
+      div "div.new-home_showcase_top" [15,15,360,476] flex=column gap:20px j:center a:center pad:28px 40px
+        section [55,43,280,200] flex=row gap:normal j:normal a:center pad:10px ; ov=hidden
+          ul [-778,53,260,180] flex=row gap:10px j:normal a:center pad:0px ; tf=matrix(1, 0, 0, 1, -842.97, 0)
+            div "$21_2" [-778,44.5,197,197] radius=15px
+              div [-778,44.5,197,197] pos=absolute ; radius=15px
+                img [-778,44.5,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/eX3lcaLXPij8Bwv4VTUgKAbrEgQ.png
+            div "$18_2" [-571,44.5,197,197] radius=15px
+              div [-571,44.5,197,197] pos=absolute ; radius=15px
+                img [-571,44.5,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/okvZktaFZcyRbtMBXrhf6Qwo8.png
+            div "$23_2" [-364,44.5,197,197] radius=15px
+              div [-364,44.5,197,197] pos=absolute ; radius=15px
+                img [-364,44.5,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/t7sNdBqJZds6dBfaDGE0oDfbBHE.png
+            div "$24_2" [-157,44.5,197,197] radius=15px
+              div [-157,44.5,197,197] pos=absolute ; radius=15px
+                img [-157,44.5,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/yokGHIXsQmWRoxQxdXbk1sWHpu0.png
+            div "$19_2" [50,44.5,197,197] radius=15px
+              div [50,44.5,197,197] pos=absolute ; radius=15px
+                img [50,44.5,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/vysPSchx1Hqu0HWBuebf6EVln8.png
+            div "$22_2" [257,44.5,197,197] radius=15px
+              div [257,44.5,197,197] pos=absolute ; radius=15px
+                img [257,44.5,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/QvWD7NfVa2ZSsb12MEWStOJ6ZM.png
+            div "$21_2" [464,44.5,197,197] radius=15px
+              div [464,44.5,197,197] pos=absolute ; radius=15px
+                img [464,44.5,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/eX3lcaLXPij8Bwv4VTUgKAbrEgQ.png
+            div "$18_2" [671,44.5,197,197] radius=15px
+              div [671,44.5,197,197] pos=absolute ; radius=15px
+                img [671,44.5,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/okvZktaFZcyRbtMBXrhf6Qwo8.png
+            div "$23_2" [878,44.5,197,197] radius=15px
+              div [878,44.5,197,197] pos=absolute ; radius=15px
+                img [878,44.5,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/t7sNdBqJZds6dBfaDGE0oDfbBHE.png
+            div "$24_2" [1085,44.5,197,197] radius=15px
+              div [1085,44.5,197,197] pos=absolute ; radius=15px
+                img [1085,44.5,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/yokGHIXsQmWRoxQxdXbk1sWHpu0.png
+            div "$19_2" [1292,44.5,197,197] radius=15px
+              div [1292,44.5,197,197] pos=absolute ; radius=15px
+                img [1292,44.5,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/vysPSchx1Hqu0HWBuebf6EVln8.png
+            div "$22_2" [1499,44.5,197,197] radius=15px
+              div [1499,44.5,197,197] pos=absolute ; radius=15px
+                img [1499,44.5,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/QvWD7NfVa2ZSsb12MEWStOJ6ZM.png
+        section [55,263,280,200] flex=row gap:normal j:normal a:center pad:10px ; ov=hidden
+          ul [-334,273,260,180] flex=row gap:10px j:normal a:center pad:0px ; tf=matrix(1, 0, 0, 1, 842.97, 0)
+            div "$9_3" [-334,264.5,197,197] radius=15px
+              div [-334,264.5,197,197] pos=absolute ; radius=15px
+                img [-334,264.5,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/tioMZtsyxIV38niYA6JWGv5E4.png
+            div "$8_3" [-127,264.5,197,197] radius=15px
+              div [-127,264.5,197,197] pos=absolute ; radius=15px
+                img [-127,264.5,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/XG2C0LryfwW6fANWPeT6Ze2mDWM.png
+            div "$7_3" [80,264.5,197,197] radius=15px
+              div [80,264.5,197,197] pos=absolute ; radius=15px
+                img [80,264.5,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/DnlOGDB1kmeDlRCeTEL2Gd3Asc.png
+            div "$6_3" [287,264.5,197,197] radius=15px
+              div [287,264.5,197,197] pos=absolute ; radius=15px
+                img [287,264.5,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/z43cKFm4lD648InqWbday30NO0.png
+            div "$5_3" [494,264.5,197,197] radius=15px
+              div [494,264.5,197,197] pos=absolute ; radius=15px
+                img [494,264.5,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/T3eSynwkEdaW5Cee5JYWvofNY.png
+            div "$4_3" [701,264.5,197,197] radius=15px
+              div [701,264.5,197,197] pos=absolute ; radius=15px
+                img [701,264.5,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/i6K2zGtov8mHR1junRMNPStjsWw.png
+            div "$9_3" [908,264.5,197,197] radius=15px
+              div [908,264.5,197,197] pos=absolute ; radius=15px
+                img [908,264.5,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/tioMZtsyxIV38niYA6JWGv5E4.png
+            div "$8_3" [1115,264.5,197,197] radius=15px
+              div [1115,264.5,197,197] pos=absolute ; radius=15px
+                img [1115,264.5,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/XG2C0LryfwW6fANWPeT6Ze2mDWM.png
+            div "$7_3" [1322,264.5,197,197] radius=15px
+              div [1322,264.5,197,197] pos=absolute ; radius=15px
+                img [1322,264.5,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/DnlOGDB1kmeDlRCeTEL2Gd3Asc.png
+            div "$6_3" [1529,264.5,197,197] radius=15px
+              div [1529,264.5,197,197] pos=absolute ; radius=15px
+                img [1529,264.5,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/z43cKFm4lD648InqWbday30NO0.png
+            div "$5_3" [1736,264.5,197,197] radius=15px
+              div [1736,264.5,197,197] pos=absolute ; radius=15px
+                img [1736,264.5,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/T3eSynwkEdaW5Cee5JYWvofNY.png
+            div "$4_3" [1943,264.5,197,197] radius=15px
+              div [1943,264.5,197,197] pos=absolute ; radius=15px
+                img [1943,264.5,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/i6K2zGtov8mHR1junRMNPStjsWw.png
+      div "div.new-home_showcase_bottom" [15,491,360,265.5] flex=column gap:0px j:center a:center pad:10px 10px 20px
+        div "div" [25,501,340,81.5] flex=column gap:0px j:center a:center pad:0px
+          div "Heading 2 → Designed & built" [25,501,340,37.1] flex=column gap:normal j:center a:normal pad:0px
+            p [25,501,340,37.1] font=BDO Grotesk Medium 400 29.48px/37.12px ls:-0.62px rgb(167, 167, 167) center  TEXT«Generated Using»
+          div "Heading 2 → Using Relume" [25,538.1,340,44.4] flex=column gap:normal j:center a:normal pad:0px
+            p [25,538.1,340,44.4] font=BDO Grotesk Medium 400 37px/44.4px ls:-1.11px rgb(255, 255, 255) center  TEXT«House of Models»
+        div "div#w-node-ff71f9ac-fcdb-e480-dbbc-60fce0cb0672-2dabfb64" [25,582.5,340,154] flex=column gap:20px j:flex-start a:flex-start pad:0px
+          div "div.text-size-large" [25,582.5,340,90] flex=column gap:0px j:center a:center pad:0px
+            div "Over 250,000 images, videos, models and descriptions have been generated by House of Models so far." [25,582.5,340,90] flex=column gap:normal j:center a:normal pad:0px
+              p [25,582.5,340,90] font=BDO Grotesk Medium 400 16px/30px ls:normal rgb(241, 240, 238) center  TEXT«Over 250,000 images, videos, models and descriptions have been generated by House of Models so far.»
+          div "div.button-row" [25,692.5,340,44] flex=row gap:0px j:center a:flex-start pad:0px
+            a "Link" [107,692.5,176,44] bg=rgb(255, 255, 255) ; radius=8px  HREF=mailto:hello@houseofmodels.ai
+              div "Talk to an expert" [124,706.5,141,16] pos=absolute ; flex=column gap:normal j:center a:normal pad:0px
+                p [124,706.5,141,16] font=BDO Grotesk Medium 400 15.38px/16px ls:normal rgb(0, 0, 0) center  TEXT«Talk to an expert»

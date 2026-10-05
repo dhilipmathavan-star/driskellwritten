@@ -1,0 +1,9 @@
+# section 3 "Group 103" top=718
+div "Group 103" [0,0,390,383] flex=column gap:10px j:center a:center pad:0px 0px 80px
+  div "_HOM_Final_Out_Color 1" [0,0,390,303] flex=row gap:10px j:center a:center pad:0px
+    div [0,0,390,157.5] pos=absolute ; bgi=linear-gradient(rgb(0, 0, 0) 41.7418%, rgba(0, 0, 0, 0) 100%) ; ov=hidden ; z=1
+    div [0,151.5,390,151.5] pos=absolute ; bgi=linear-gradient(rgba(0, 70, 232, 0) 0%, rgb(0, 0, 0) 55.4054%, rgba(0, 0, 0, 0) 100%) ; ov=hidden ; z=4
+    video [0,90.9,390,121.2] ov=clip ; fit=cover  SRC=/assets/video/oi6sebXDmnVMQbvHHKXGiG0hNw.mp4
+      video [0,90.9,390,121.2] ov=clip ; fit=cover  SRC=/assets/video/oi6sebXDmnVMQbvHHKXGiG0hNw.mp4
+    div [0,40.7,62.4,136.3] pos=absolute ; bgi=linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%) ; ov=hidden ; z=0
+    div [339.3,32.8,50.7,124.2] pos=absolute ; bgi=linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%) ; ov=hidden ; z=0

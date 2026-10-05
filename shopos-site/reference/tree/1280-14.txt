@@ -1,0 +1,59 @@
+# section 14 "null" top=12804
+div [0,0,1280,1385] flex=row gap:80px j:center a:center pad:80px 10px 80px 50px ; bg=rgb(0, 0, 0) ; ov=hidden
+  div [50,163.3,570,1058.4] flex=column gap:100px j:center a:center pad:0px ; ov=hidden
+    div [50,163.3,570,345.6] flex=column gap:0px j:center a:center pad:0px ; ov=hidden
+      div [50,163.3,570,115.2] flex=row gap:20px j:flex-start a:center pad:0px ; ov=hidden
+        div [50,163.3,199.5,115.2] flex=column gap:normal j:flex-start a:normal pad:0px
+          p [50,163.3,199.5,115.2] font=BDO Grotesk Medium 400 96px/115.2px ls:-2.88px rgb(255, 255, 255) center  TEXT«Your»
+        div [269.5,172.9,231.6,96] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+          div "Better" [269.5,172.9,231.6,96] pos=absolute ; flex=column gap:normal j:flex-start a:normal pad:0px ; op=0.4 ; filter=blur(15.55px) ; z=1
+            p [269.5,172.9,231.6,192]
+              span [255.1,158.5,260.4,220.8] bgi=linear-gradient(97.4768deg, rgb(255, 58, 186) 0%, rgb(243, 173, 255) 56.7708%, rgb(98, 72, 255) 100%) ; font=BDO Grotesk Medium 400 96px/96px ls:-2.88px rgb(0, 0, 0) center ; clip=text  TEXT«Better»
+          div "Better" [269.5,172.9,231.6,96] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [269.5,172.9,231.6,96]
+              span [255.1,158.5,260.4,124.8] bgi=linear-gradient(97.4768deg, rgb(255, 58, 186) 0%, rgb(243, 173, 255) 56.7708%, rgb(98, 72, 255) 100%) ; font=BDO Grotesk Medium 400 96px/96px ls:-2.88px rgb(0, 0, 0) center ; clip=text  TEXT«Store»
+      div [50,278.5,570,115.2] flex=row gap:20px j:flex-start a:center pad:0px ; ov=hidden
+        div [50,278.5,199.5,115.2] flex=column gap:normal j:flex-start a:normal pad:0px
+          p [50,278.5,199.5,115.2] font=BDO Grotesk Medium 400 96px/115.2px ls:-2.88px rgb(255, 255, 255) center  TEXT«Your»
+        div [269.5,288.1,207.5,96] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+          div "Better" [269.5,288.1,207.5,96] pos=absolute ; flex=column gap:normal j:flex-start a:normal pad:0px ; op=0.4 ; filter=blur(15.55px) ; z=1
+            p [269.5,288.1,207.5,96]
+              span [255.1,273.7,236.3,124.8] bgi=linear-gradient(97.4768deg, rgb(255, 58, 186) 0%, rgb(243, 173, 255) 56.7708%, rgb(98, 72, 255) 100%) ; font=BDO Grotesk Medium 400 96px/96px ls:-2.88px rgb(0, 0, 0) center ; clip=text  TEXT«Data»
+          div "Better" [269.5,288.1,207.5,96] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [269.5,288.1,207.5,96]
+              span [255.1,273.7,236.3,124.8] bgi=linear-gradient(97.4768deg, rgb(255, 58, 186) 0%, rgb(243, 173, 255) 56.7708%, rgb(98, 72, 255) 100%) ; font=BDO Grotesk Medium 400 96px/96px ls:-2.88px rgb(0, 0, 0) center ; clip=text  TEXT«Data»
+      div [50,393.7,570,115.2] flex=row gap:20px j:flex-start a:center pad:0px ; ov=hidden
+        div [50,393.7,199.5,115.2] flex=column gap:normal j:flex-start a:normal pad:0px
+          p [50,393.7,199.5,115.2] font=BDO Grotesk Medium 400 96px/115.2px ls:-2.88px rgb(255, 255, 255) center  TEXT«Your»
+        div [269.5,403.3,279.6,96] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+          div "Better" [269.5,403.3,279.6,96] pos=absolute ; flex=column gap:normal j:flex-start a:normal pad:0px ; op=0.4 ; filter=blur(15.55px) ; z=1
+            p [269.5,403.3,279.6,96]
+              span [255.1,388.9,308.4,124.8] bgi=linear-gradient(97.4768deg, rgb(255, 58, 186) 0%, rgb(243, 173, 255) 56.7708%, rgb(98, 72, 255) 100%) ; font=BDO Grotesk Medium 400 96px/96px ls:-2.88px rgb(0, 0, 0) center ; clip=text  TEXT«Model»
+          div "Better" [269.5,403.3,279.6,96] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [269.5,403.3,279.6,96]
+              span [255.1,388.9,308.4,124.8] bgi=linear-gradient(97.4768deg, rgb(255, 58, 186) 0%, rgb(243, 173, 255) 56.7708%, rgb(98, 72, 255) 100%) ; font=BDO Grotesk Medium 400 96px/96px ls:-2.88px rgb(0, 0, 0) center ; clip=text  TEXT«Model»
+    div [50,608.9,570,168] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+      div [50,608.9,570,168] flex=column gap:normal j:flex-start a:normal pad:0px
+        p [50,608.9,570,168] font=BDO Grotesk Light 400 24px/33.6px ls:normal rgb(255, 255, 255) left  TEXT«With House of Models, your brand gets access to the best AI outcomes and workflows possible to generate new, personalized media. Everything we use to do this, such as datasets, and workflows remain yours.»
+    div [50,876.9,570,344.8] flex=column gap:39px j:flex-start a:center pad:0px ; ov=hidden
+      div [50,876.9,570,153.4] flex=column gap:18px j:flex-start a:flex-start pad:0px ; ov=hidden
+        svg "Group" [50,876.9,28,31] ov=hidden  SVG=/assets/svg/0a329c5e4d.svg
+          svg [50,876.9,28,31] ov=hidden  SVG=/assets/svg/0a329c5e4d.svg
+        div [50,925.9,570,104.4] flex=column gap:30px j:center a:center pad:0px ; ov=hidden
+          div [50,925.9,570,24] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [50,925.9,570,24] font=BDO Grotesk Medium 400 20px/24px ls:normal rgb(255, 255, 255) left  TEXT«Vendor agnostic»
+          div [50,979.9,570,50.4] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [50,979.9,570,25.2] font=BDO Grotesk Light 400 18px/25.2px ls:normal rgb(173, 176, 185) left  TEXT«Create pipelines for GitHub, GitLab,»
+            p [50,1005.1,570,25.2] font=BDO Grotesk Light 400 18px/25.2px ls:normal rgb(173, 176, 185) left  TEXT«Bitbucket, Azure, and more.»
+      div [50,1069.3,570,152.4] flex=column gap:18px j:flex-start a:flex-start pad:0px ; ov=hidden
+        svg "Group 113" [50,1069.3,30,30] ov=hidden  SVG=/assets/svg/fdbe99c515.svg
+          svg [50,1069.3,30,30] ov=hidden  SVG=/assets/svg/fdbe99c515.svg
+        div [50,1117.3,570,104.4] flex=column gap:30px j:center a:center pad:0px ; ov=hidden
+          div [50,1117.3,570,24] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [50,1117.3,570,24] font=BDO Grotesk Medium 400 20px/24px ls:normal rgb(255, 255, 255) left  TEXT«Platform agnostic»
+          div [50,1171.3,570,50.4] flex=column gap:normal j:flex-start a:normal pad:0px
+            p [50,1171.3,570,25.2] font=BDO Grotesk Light 400 18px/25.2px ls:normal rgb(173, 176, 185) left  TEXT«Build pipelines for any language or platform.»
+            p [50,1196.5,570,25.2] font=BDO Grotesk Light 400 18px/25.2px ls:normal rgb(173, 176, 185) left  TEXT«Works with Linux, Windows and Mac.»
+  div [700,80,570,1225] flex=column gap:0px j:center a:flex-end pad:0px
+    div "Group_140" [550,80,720,1225] pos=absolute
+      img [550,80,720,1225] ov=clip ; fit=cover  SRC=/assets/img/ivkKM6xcF8D5IjIeiYt4tiJvDE.png

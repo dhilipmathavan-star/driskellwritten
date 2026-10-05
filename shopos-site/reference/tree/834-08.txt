@@ -1,0 +1,131 @@
+# section 8 "Group 108" top=6549
+div "Group 108" [0,0,834,1019.4] flex=column gap:10px j:center a:center pad:50px 40px 0px ; z=1
+  div "Frame 265" [40,126.7,754,816] flex=row gap:0px j:center a:center pad:0px
+    div "Section" [40,126.7,754,816] flex=column gap:0px j:center a:center pad:0px ; bg=rgba(15, 15, 15, 0.48) ; radius=16px ; ov=hidden
+      div "div.new-home_showcase_top" [40,126.7,754,500] flex=column gap:20px j:center a:center pad:40px
+        section [80,166.7,674,200] flex=row gap:normal j:normal a:center pad:10px ; ov=hidden ; mask=linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%)
+          ul [-896,176.7,654,180] flex=row gap:10px j:normal a:center pad:0px ; tf=matrix(1, 0, 0, 1, -985.962, 0)
+            div "$21_2" [-896,168.2,197,197] radius=15px
+              div [-896,168.2,197,197] pos=absolute ; radius=15px
+                img [-896,168.2,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/eX3lcaLXPij8Bwv4VTUgKAbrEgQ.png
+            div "$18_2" [-689,168.2,197,197] radius=15px
+              div [-689,168.2,197,197] pos=absolute ; radius=15px
+                img [-689,168.2,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/okvZktaFZcyRbtMBXrhf6Qwo8.png
+            div "$23_2" [-482,168.2,197,197] radius=15px
+              div [-482,168.2,197,197] pos=absolute ; radius=15px
+                img [-482,168.2,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/t7sNdBqJZds6dBfaDGE0oDfbBHE.png
+            div "$24_2" [-275,168.2,197,197] radius=15px
+              div [-275,168.2,197,197] pos=absolute ; radius=15px
+                img [-275,168.2,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/yokGHIXsQmWRoxQxdXbk1sWHpu0.png
+            div "$19_2" [-68,168.2,197,197] radius=15px
+              div [-68,168.2,197,197] pos=absolute ; radius=15px
+                img [-68,168.2,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/vysPSchx1Hqu0HWBuebf6EVln8.png
+            div "$22_2" [139,168.2,197,197] radius=15px
+              div [139,168.2,197,197] pos=absolute ; radius=15px
+                img [139,168.2,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/QvWD7NfVa2ZSsb12MEWStOJ6ZM.png
+            div "$21_2" [346,168.2,197,197] radius=15px
+              div [346,168.2,197,197] pos=absolute ; radius=15px
+                img [346,168.2,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/eX3lcaLXPij8Bwv4VTUgKAbrEgQ.png
+            div "$18_2" [553,168.2,197,197] radius=15px
+              div [553,168.2,197,197] pos=absolute ; radius=15px
+                img [553,168.2,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/okvZktaFZcyRbtMBXrhf6Qwo8.png
+            div "$23_2" [760,168.2,197,197] radius=15px
+              div [760,168.2,197,197] pos=absolute ; radius=15px
+                img [760,168.2,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/t7sNdBqJZds6dBfaDGE0oDfbBHE.png
+            div "$24_2" [967,168.2,197,197] radius=15px
+              div [967,168.2,197,197] pos=absolute ; radius=15px
+                img [967,168.2,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/yokGHIXsQmWRoxQxdXbk1sWHpu0.png
+            div "$19_2" [1174,168.2,197,197] radius=15px
+              div [1174,168.2,197,197] pos=absolute ; radius=15px
+                img [1174,168.2,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/vysPSchx1Hqu0HWBuebf6EVln8.png
+            div "$22_2" [1381,168.2,197,197] radius=15px
+              div [1381,168.2,197,197] pos=absolute ; radius=15px
+                img [1381,168.2,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/QvWD7NfVa2ZSsb12MEWStOJ6ZM.png
+            div "$21_2" [1588,168.2,197,197] radius=15px
+              div [1588,168.2,197,197] pos=absolute ; radius=15px
+                img [1588,168.2,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/eX3lcaLXPij8Bwv4VTUgKAbrEgQ.png
+            div "$18_2" [1795,168.2,197,197] radius=15px
+              div [1795,168.2,197,197] pos=absolute ; radius=15px
+                img [1795,168.2,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/okvZktaFZcyRbtMBXrhf6Qwo8.png
+            div "$23_2" [2002,168.2,197,197] radius=15px
+              div [2002,168.2,197,197] pos=absolute ; radius=15px
+                img [2002,168.2,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/t7sNdBqJZds6dBfaDGE0oDfbBHE.png
+            div "$24_2" [2209,168.2,197,197] radius=15px
+              div [2209,168.2,197,197] pos=absolute ; radius=15px
+                img [2209,168.2,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/yokGHIXsQmWRoxQxdXbk1sWHpu0.png
+            div "$19_2" [2416,168.2,197,197] radius=15px
+              div [2416,168.2,197,197] pos=absolute ; radius=15px
+                img [2416,168.2,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/vysPSchx1Hqu0HWBuebf6EVln8.png
+            div "$22_2" [2623,168.2,197,197] radius=15px
+              div [2623,168.2,197,197] pos=absolute ; radius=15px
+                img [2623,168.2,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/QvWD7NfVa2ZSsb12MEWStOJ6ZM.png
+        section [80,386.7,674,200] flex=row gap:normal j:normal a:center pad:10px ; ov=hidden ; mask=linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%)
+          ul [-1408,396.7,654,180] flex=row gap:10px j:normal a:center pad:0px ; tf=matrix(1, 0, 0, 1, 985.962, 0)
+            div "$9_3" [-1408,388.2,197,197] radius=15px
+              div [-1408,388.2,197,197] pos=absolute ; radius=15px
+                img [-1408,388.2,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/tioMZtsyxIV38niYA6JWGv5E4.png
+            div "$8_3" [-1201,388.2,197,197] radius=15px
+              div [-1201,388.2,197,197] pos=absolute ; radius=15px
+                img [-1201,388.2,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/XG2C0LryfwW6fANWPeT6Ze2mDWM.png
+            div "$7_3" [-994,388.2,197,197] radius=15px
+              div [-994,388.2,197,197] pos=absolute ; radius=15px
+                img [-994,388.2,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/DnlOGDB1kmeDlRCeTEL2Gd3Asc.png
+            div "$6_3" [-787,388.2,197,197] radius=15px
+              div [-787,388.2,197,197] pos=absolute ; radius=15px
+                img [-787,388.2,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/z43cKFm4lD648InqWbday30NO0.png
+            div "$5_3" [-580,388.2,197,197] radius=15px
+              div [-580,388.2,197,197] pos=absolute ; radius=15px
+                img [-580,388.2,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/T3eSynwkEdaW5Cee5JYWvofNY.png
+            div "$4_3" [-373,388.2,197,197] radius=15px
+              div [-373,388.2,197,197] pos=absolute ; radius=15px
+                img [-373,388.2,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/i6K2zGtov8mHR1junRMNPStjsWw.png
+            div "$9_3" [-166,388.2,197,197] radius=15px
+              div [-166,388.2,197,197] pos=absolute ; radius=15px
+                img [-166,388.2,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/tioMZtsyxIV38niYA6JWGv5E4.png
+            div "$8_3" [41,388.2,197,197] radius=15px
+              div [41,388.2,197,197] pos=absolute ; radius=15px
+                img [41,388.2,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/XG2C0LryfwW6fANWPeT6Ze2mDWM.png
+            div "$7_3" [248,388.2,197,197] radius=15px
+              div [248,388.2,197,197] pos=absolute ; radius=15px
+                img [248,388.2,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/DnlOGDB1kmeDlRCeTEL2Gd3Asc.png
+            div "$6_3" [455,388.2,197,197] radius=15px
+              div [455,388.2,197,197] pos=absolute ; radius=15px
+                img [455,388.2,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/z43cKFm4lD648InqWbday30NO0.png
+            div "$5_3" [662,388.2,197,197] radius=15px
+              div [662,388.2,197,197] pos=absolute ; radius=15px
+                img [662,388.2,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/T3eSynwkEdaW5Cee5JYWvofNY.png
+            div "$4_3" [869,388.2,197,197] radius=15px
+              div [869,388.2,197,197] pos=absolute ; radius=15px
+                img [869,388.2,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/i6K2zGtov8mHR1junRMNPStjsWw.png
+            div "$9_3" [1076,388.2,197,197] radius=15px
+              div [1076,388.2,197,197] pos=absolute ; radius=15px
+                img [1076,388.2,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/tioMZtsyxIV38niYA6JWGv5E4.png
+            div "$8_3" [1283,388.2,197,197] radius=15px
+              div [1283,388.2,197,197] pos=absolute ; radius=15px
+                img [1283,388.2,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/XG2C0LryfwW6fANWPeT6Ze2mDWM.png
+            div "$7_3" [1490,388.2,197,197] radius=15px
+              div [1490,388.2,197,197] pos=absolute ; radius=15px
+                img [1490,388.2,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/DnlOGDB1kmeDlRCeTEL2Gd3Asc.png
+            div "$6_3" [1697,388.2,197,197] radius=15px
+              div [1697,388.2,197,197] pos=absolute ; radius=15px
+                img [1697,388.2,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/z43cKFm4lD648InqWbday30NO0.png
+            div "$5_3" [1904,388.2,197,197] radius=15px
+              div [1904,388.2,197,197] pos=absolute ; radius=15px
+                img [1904,388.2,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/T3eSynwkEdaW5Cee5JYWvofNY.png
+            div "$4_3" [2111,388.2,197,197] radius=15px
+              div [2111,388.2,197,197] pos=absolute ; radius=15px
+                img [2111,388.2,197,197] radius=15px ; ov=clip ; fit=cover  SRC=/assets/img/i6K2zGtov8mHR1junRMNPStjsWw.png
+      div "div.new-home_showcase_bottom" [40,626.7,754,316] flex=row gap:0px j:center a:center pad:60px
+        div "div" [100,694.2,317,181.1] flex=column gap:0px j:center a:center pad:0px
+          div "Heading 2 → Designed & built" [100,694.2,317,37.1] flex=column gap:normal j:center a:normal pad:0px
+            p [100,694.2,317,37.1] font=BDO Grotesk Medium 400 29.48px/37.12px ls:-0.62px rgb(167, 167, 167)  TEXT«Generated Using»
+          div "Heading 2 → Using Relume" [100,731.3,317,144] flex=column gap:normal j:center a:normal pad:0px
+            p [100,731.3,317,144] font=BDO Grotesk Medium 400 60px/72px ls:-1.8px rgb(255, 255, 255)  TEXT«House of Models»
+        div "div#w-node-ff71f9ac-fcdb-e480-dbbc-60fce0cb0672-2dabfb64" [417,686.7,317,196] flex=column gap:32px j:flex-start a:flex-start pad:0px
+          div "div.text-size-large" [417,686.7,317,120] flex=column gap:0px j:center a:center pad:0px
+            div "Over 250,000 images, videos, models and descriptions have been generated by House of Models so far." [417,686.7,317,120] flex=column gap:normal j:center a:normal pad:0px
+              p [417,686.7,317,120] font=BDO Grotesk Medium 400 19.22px/30px ls:normal rgb(241, 240, 238)  TEXT«Over 250,000 images, videos, models and descriptions have been generated by House of Models so far.»
+          div "div.button-row" [417,838.7,317,44] flex=row gap:0px j:flex-start a:flex-start pad:0px
+            a "Link" [417,838.7,176,44] bg=rgb(255, 255, 255) ; radius=8px  HREF=mailto:hello@houseofmodels.ai
+              div "Talk to an expert" [434,852.7,141,16] pos=absolute ; flex=column gap:normal j:center a:normal pad:0px
+                p [434,852.7,141,16] font=BDO Grotesk Medium 400 15.38px/16px ls:normal rgb(0, 0, 0) center  TEXT«Talk to an expert»

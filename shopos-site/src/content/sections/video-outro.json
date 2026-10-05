@@ -1,0 +1,148 @@
+{
+  "ref": "21",
+  "height": {
+    "d": 585,
+    "l": 488,
+    "t": 488,
+    "m": 77.69
+  },
+  "video": {
+    "src": "/assets/video/wRohANpz9aHkFTX69NtufAoCyVE.mp4",
+    "box": {
+      "d": [
+        0,
+        0,
+        100,
+        585
+      ],
+      "l": [
+        0,
+        0,
+        100,
+        488
+      ],
+      "t": [
+        0,
+        73.2,
+        100,
+        341.6
+      ],
+      "m": [
+        0,
+        17.87,
+        100,
+        41.95
+      ]
+    }
+  },
+  "fades": {
+    "d": [
+      {
+        "gradient": "linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%)",
+        "box": [
+          0,
+          -6,
+          10,
+          585
+        ],
+        "z": 1
+      },
+      {
+        "gradient": "linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%)",
+        "box": [
+          90,
+          -6,
+          10,
+          585
+        ],
+        "z": 1
+      },
+      {
+        "gradient": "linear-gradient(rgb(0, 0, 0) 48.1982%, rgba(0, 0, 0, 0) 100%)",
+        "box": [
+          0,
+          -63,
+          100,
+          140
+        ],
+        "z": 1
+      },
+      {
+        "gradient": "linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%)",
+        "box": [
+          0,
+          482,
+          100,
+          122
+        ],
+        "z": 1
+      }
+    ],
+    "l": [
+      {
+        "gradient": "linear-gradient(rgb(0, 0, 0) 48.1982%, rgba(0, 0, 0, 0) 100%)",
+        "box": [
+          0,
+          0,
+          100,
+          84
+        ],
+        "z": 1
+      },
+      {
+        "gradient": "linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%)",
+        "box": [
+          0,
+          370,
+          100,
+          122
+        ],
+        "z": 1
+      }
+    ],
+    "t": [
+      {
+        "gradient": "linear-gradient(rgb(0, 0, 0) 48.1982%, rgba(0, 0, 0, 0) 100%)",
+        "box": [
+          0,
+          51,
+          100,
+          84
+        ],
+        "z": 1
+      },
+      {
+        "gradient": "linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%)",
+        "box": [
+          0,
+          298,
+          100,
+          122
+        ],
+        "z": 1
+      }
+    ],
+    "m": [
+      {
+        "gradient": "linear-gradient(rgb(0, 0, 0) 48.1982%, rgba(0, 0, 0, 0) 100%)",
+        "box": [
+          0,
+          10.26,
+          100,
+          21.54
+        ],
+        "z": 1
+      },
+      {
+        "gradient": "linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%)",
+        "box": [
+          0,
+          31.79,
+          100,
+          31.28
+        ],
+        "z": 1
+      }
+    ]
+  }
+}

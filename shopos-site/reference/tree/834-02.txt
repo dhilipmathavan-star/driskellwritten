@@ -1,0 +1,73 @@
+# section 2 "null" top=0
+div [0,0,834,704.5] flex=column gap:10px j:flex-start a:center pad:0px ; bg=rgb(0, 0, 0) ; ov=hidden
+  div [0,0,834,90.1] z=2
+    nav "Desktop" [0,0,834,90.1] flex=row gap:normal j:space-between a:center pad:25px 40px ; ov=hidden
+      div "Top" [40,25,38,40.1] flex=row gap:0px j:center a:center pad:0px
+        div "Layer 1 copy 3 1" [40,25,38,40.1] pos=absolute
+          img [40,25,38,40.1] ov=clip ; fit=cover  SRC=/assets/img/w6UE4eWrugGg7omU9kmxkCLJw.png
+      a "Frame 1" [641.1,26,152.9,38] flex=row gap:10px j:center a:center pad:12px 33px ; bg=rgb(255, 255, 255) ; radius=33px  HREF=http://app.houseofmodels.ai/
+        div "Get Started" [674.1,38,86.9,14] flex=column gap:normal j:flex-start a:normal pad:0px
+          p [674.1,38,86.9,14] font=BDO Grotesk Bold 400 14px/14.02px ls:-0.28px rgb(0, 0, 0)  TEXT«Get Started»
+      div "Bottom Line" [0,89.1,834,1] pos=absolute ; bg=rgba(0, 0, 0, 0.08) ; z=1
+  div [0,-274.7,834,979.2] pos=absolute ; flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+    div "hhhhhhhhh" [125.1,-377.5,583.8,1184.8] z=0
+      svg [125.1,-377.5,583.8,1184.8] ov=hidden  SVG=/assets/svg/2ca0a4eea0.svg
+        svg [125.1,-377.5,583.8,1184.8] ov=hidden  SVG=/assets/svg/2ca0a4eea0.svg
+    div "Group 31" [0,-1180.7,834,1885.2] pos=absolute ; op=0.4 ; z=1
+      div "Ellipse 23" [0,-501.1,583.8,527] pos=absolute ; bg=rgba(243, 173, 255, 0.7) ; radius=100% ; filter=blur(100px)
+      div "Ellipse 24" [356,-501.1,583.8,527] pos=absolute ; bg=rgba(242, 189, 189, 0.7) ; radius=100% ; filter=blur(100px)
+  div [0,100.1,834,604.4] flex=column gap:26px j:center a:center pad:80px 40px 40px ; ov=hidden ; z=2
+    div [40,180.1,754,178.4] flex=column gap:0px j:center a:center pad:0px ; ov=hidden
+      div "Generative Commerce." [40,180.1,754,82.4] flex=column gap:normal j:flex-start a:normal pad:0px
+        p [40,180.1,754,82.4] font=BDO Grotesk Medium 400 80px/82.4px ls:-1.76px rgb(255, 255, 255) center  TEXT«Your Store»
+      div [40,262.5,754,96] flex=column gap:0px j:center a:center pad:0px
+        div [40,262.5,754,96] flex=column gap:normal j:flex-start a:normal pad:0px
+          p [40,262.5,754,80]
+            span [237.5,250.5,358.9,104] bgi=linear-gradient(4410deg, rgb(255, 58, 186) 0%, rgb(243, 173, 255) 56.7708%, rgb(98, 72, 255) 100%) ; font=BDO Grotesk Medium 400 80px/80px ls:-1.76px rgb(0, 0, 0) center ; clip=text  TEXT«AI Ready»
+          p [40,342.5,754,16]
+            br [417,340.5,0,20]
+        div "Sell." [40,262.5,754,96] pos=absolute ; flex=column gap:normal j:flex-start a:normal pad:0px ; op=0.4 ; filter=blur(12.9073px) ; z=1
+          p [40,262.5,754,82.4]
+            span [249.5,262.5,334.9,82.4] bgi=linear-gradient(97.4768deg, rgb(255, 58, 186) 0%, rgb(243, 173, 255) 56.7708%, rgb(98, 72, 255) 100%) ; font=BDO Grotesk Medium 400 80px/82.4px ls:-1.76px rgb(0, 0, 0) center ; clip=text  TEXT«AI Ready»
+    div "An OS that makes your brand generate, personalize and sell better to your customers." [40,384.5,754,46] flex=column gap:normal j:flex-start a:normal pad:0px
+      p [40,384.5,754,46] font=BDO Grotesk Medium 400 20px/23px ls:-0.4px rgb(171, 168, 168) center  TEXT«An OS that makes your brand generate, personalize and sell better to your customers.»
+    div [40,456.5,754,208] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+      div [40,456.5,754,208] z=4
+        div "Tab" [40,456.5,754,208] flex=column gap:40px j:center a:center pad:0px
+          div "Rectangle 8" [60,456.5,714,127] flex=column gap:10px j:flex-start a:center pad:13px ; bg=rgb(21, 21, 21) ; radius=13px
+            form [73,469.5,688,54] flex=column gap:normal j:normal a:normal pad:0px ; radius=8px
+              input [73,469.5,688,44] radius=4px ; ov=clip
+            div [73,533.5,688,37] flex=row gap:normal j:space-between a:center pad:0px ; ov=hidden
+              div "Button/Button Copy" [73,533.5,125,37] flex=row gap:normal j:space-between a:center pad:8px 10px 8px 8px ; bg=rgb(38, 36, 36) ; radius=7px ; ov=hidden
+                div [81,533,107,38] flex=row gap:6px j:center a:center pad:0px ; ov=hidden
+                  div [81,539,26,26] pos=absolute
+                    img [81,539,26,26] ov=clip ; fit=cover  SRC=/assets/img/YOaEOJvv8az10PzU8YOeFo2Xa8.svg
+                  div [113,545.4,75,13.2] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+                    div [113,545.4,75,13.2] flex=column gap:normal j:flex-start a:normal pad:0px ; z=0
+                      p [113,545.4,75,13.2] font=Satoshi 700 11px/13.2px ls:-0.306px rgb(184, 180, 180) left  TEXT«Upload Image»
+              a "Default" [636,533.5,125,37] flex=row gap:normal j:space-between a:center pad:8px 10px 8px 8px ; bg=rgb(255, 255, 255) ; radius=7px  HREF=http://app.houseofmodels.ai/
+                div [644,533,107,38] flex=row gap:6px j:center a:center pad:0px
+                  div [644,539,26,26] pos=absolute
+                    img [644,539,26,26] ov=clip ; fit=cover  SRC=/assets/img/7GXcGMkrrkTHiXZgp1TOfMMjDA.svg
+                  div [676,545.4,75,13.2] flex=row gap:10px j:center a:center pad:0px
+                    div [676,545.4,75,13.2] flex=column gap:normal j:flex-start a:normal pad:0px ; z=0
+                      p [676,545.4,75,13.2] font=Satoshi 700 11px/13.2px ls:normal rgb(0, 0, 0) center  TEXT«Generate»
+          div "Frame 11" [40,623.5,754,41] flex=row gap:12px j:center a:flex-start pad:0px ; ov=hidden
+            div "Frame 8" [37.5,623.5,245,41] flex=column gap:10px j:flex-start a:center pad:8px 20px ; radius=30px ; ov=hidden
+              div "Group 38" [75.5,631.5,169,25] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+                div "Product Research" [73.5,633,139,22] flex=column gap:normal j:center a:normal pad:0px
+                  p [73.5,610.8,139,66.4] font=BDO Grotesk Regular 400 16px/66.43px ls:-0.32px rgb(139, 137, 137) center  TEXT«Product Research»
+                svg "Frame" [222.5,631.5,24,25] ov=hidden  SVG=/assets/svg/6c5132e765.svg
+                  svg [222.5,631.5,24,25] ov=hidden  SVG=/assets/svg/6c5132e765.svg
+            div "Frame 9" [294.5,623.5,245,41] flex=column gap:10px j:flex-start a:center pad:8px 20px ; radius=30px ; ov=hidden
+              div "Group 38" [315,631.5,204,25] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+                div "Photoshoots & images" [313,633,176,22] flex=column gap:normal j:center a:normal pad:0px
+                  p [313,610.8,176,66.4] font=BDO Grotesk Regular 400 16px/66.43px ls:-0.32px rgb(139, 137, 137) center  TEXT«Photoshoots & images»
+                svg "Frame" [499,631.5,22,25] ov=hidden  SVG=/assets/svg/1813de64fb.svg
+                  svg [499,631.5,22,25] ov=hidden  SVG=/assets/svg/1813de64fb.svg
+            div "Frame 10" [551.5,623.5,245,41] flex=column gap:10px j:flex-start a:center pad:8px 20px ; radius=30px ; ov=hidden
+              div "Group 38" [566.5,631.5,215,25] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+                div "Storefront Optimizations" [563.5,633,188,22] flex=column gap:normal j:center a:normal pad:0px
+                  p [563.5,610.8,188,66.4] font=BDO Grotesk Regular 400 16px/66.43px ls:-0.32px rgb(139, 137, 137) center  TEXT«Storefront Optimizations»
+                svg "Frame" [761.5,631.5,23,25] ov=hidden  SVG=/assets/svg/64a66eec11.svg
+                  svg [761.5,631.5,23,25] ov=hidden  SVG=/assets/svg/64a66eec11.svg

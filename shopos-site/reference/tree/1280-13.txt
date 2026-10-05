@@ -1,0 +1,39 @@
+# section 13 "null" top=11643
+div [0,0,1280,1160.8] flex=column gap:30px j:center a:center pad:40px ; ov=hidden
+  div [40,40,1200,511.8] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+    div [40,40,1200,511.8] flex=row gap:10px j:center a:center pad:0px 0px 0px 40px ; bg=rgb(26, 26, 26) ; radius=30px ; ov=hidden
+      div [80,40,454,511.8] flex=column gap:50px j:center a:flex-start pad:40px 0px ; ov=hidden
+        div [80,80,454,316.8] flex=column gap:normal j:flex-start a:normal pad:0px
+          p [80,80,454,105.6] font=BDO Grotesk Medium 400 88px/105.6px ls:-2.64px rgb(255, 255, 255) left  TEXT«Make.»
+          p [80,185.6,454,211.2] font=BDO Grotesk Medium 400 88px/105.6px ls:-2.64px rgb(255, 255, 255) left  TEXT«Media. Magical.»
+        div "Group 124" [80,446.8,454,65] flex=row gap:10px j:flex-start a:center pad:0px
+          a "Link" [80,446.8,180,65] flex=row gap:10px j:center a:center pad:0px ; bg=rgb(255, 255, 255) ; radius=9999px ; shadow=rgba(255, 255, 255, 0.2) 0px 6px 16px 0px  HREF=http://app.houseofmodels.ai/
+            div "Get started" [119.5,468.3,84,22] flex=column gap:normal j:center a:normal pad:0px
+              p [119.5,457.4,84,43.8] font=BDO Grotesk Medium 400 16px/21.92px ls:-0.32px rgb(7, 7, 9)  TEXT«Get started»
+            svg "SVG" [213.5,472.8,7,13] ov=hidden  SVG=/assets/svg/1bb0f3f72c.svg
+              svg [213.5,472.8,7,13] ov=hidden  SVG=/assets/svg/1bb0f3f72c.svg
+      div [544,40,696,511.8] flex=row gap:10px j:center a:center pad:30px ; bg=rgb(0, 0, 0) ; radius=30px
+        div "image" [574,74.1,636,443.6] z=1
+          div [574,74.1,636,443.6] pos=absolute
+            img [574,74.1,636,443.6] ov=clip ; fit=contain  SRC=/assets/img/FeW9yXkSPUmxIEcp8CribPXDZFg.svg
+  div [40,581.8,1200,539] flex=row gap:30px j:center a:center pad:0px ; ov=hidden
+    div "div.border-glow" [40,581.8,585,539] flex=column gap:0px j:center a:flex-start pad:30px ; bg=rgb(14, 14, 14) ; radius=16px ; ov=hidden
+      div "Integrations" [70,611.7,525,30] flex=column gap:normal j:center a:normal pad:0px
+        p [70,611.7,525,30] font=BDO Grotesk Medium 400 20px/30px ls:normal rgb(255, 255, 255)  TEXT«Works everywhere»
+      div "image" [70,641.7,525,359.3] ov=hidden
+        div [70,641.7,525,359.3] pos=absolute
+          img [70,641.7,525,359.3] ov=clip ; fit=contain  SRC=/assets/img/roVYTmTfsBuXooWYa364LF2I.png
+      div "Publish, deploy, notify, report - Gitness integrates with your favorite tools. Create custom integration with ease and share with the community." [70,1000.9,525,90] flex=column gap:normal j:center a:normal pad:0px
+        p [70,1000.9,525,30] font=BDO Grotesk Light 400 20px/30px ls:normal rgb(232, 232, 232)  TEXT«Agents work, much like you do»
+          span [346,1001.9,3,28] font=BDO Grotesk Light 400 20px/30px ls:normal rgb(217, 217, 217)  TEXT«.»
+          span [349,1001.9,12,28]
+        p [70,1030.9,525,60] font=BDO Grotesk Light 400 20px/30px ls:normal rgb(173, 176, 185)  TEXT«Over email, Slack and internal knowledge bases, tools and workflows.»
+    div "div.border-glow" [655,581.8,585,539] flex=column gap:0px j:center a:flex-start pad:30px ; bg=rgb(14, 14, 14) ; radius=16px ; ov=hidden
+      div "Integrations" [685,611.7,525,30] flex=column gap:normal j:center a:normal pad:0px
+        p [685,611.7,525,30] font=BDO Grotesk Medium 400 20px/30px ls:normal rgb(255, 255, 255)  TEXT«One-click migrations»
+      div "image" [685,641.7,525,359.3] radius=16px ; ov=hidden
+        div [685,641.7,525,359.3] pos=absolute ; radius=16px
+          img [685,641.7,525,359.3] radius=16px ; ov=clip ; fit=cover  SRC=/assets/img/k1FnDMc77GEqM09lUtk0C67Xg.png
+      div "Publish, deploy, notify, report - Gitness integrates with your favorite tools. Create custom integration with ease and share with the community." [685,1000.9,525,90] flex=column gap:normal j:center a:normal pad:0px
+        p [685,1000.9,525,90] font=BDO Grotesk Light 400 20px/30px ls:normal rgb(173, 176, 185)  TEXT«With a single click,  to be finetuned exactly to your brands assets, preferences.»
+          span [685,1001.9,481,58] font=BDO Grotesk Light 400 20px/30px ls:normal rgb(232, 232, 232)  TEXT«House of Models can personalize media and agents»

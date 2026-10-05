@@ -1,0 +1,6 @@
+# section 1 "null" top=0
+div [0,0,1280,900] pos=fixed ; z=10
+  div "Leave" [0,0,1280,900] ov=hidden
+    div "BG" [0,-120,1280,9] pos=absolute ; flex=column gap:10px j:center a:center pad:0px ; bg=rgb(0, 0, 0) ; ov=hidden
+    div "Text" [0,0,1280,900] pos=absolute ; flex=column gap:20px j:center a:center pad:0px ; ov=hidden
+      div [403,391,474,118] flex=column gap:20px j:center a:center pad:0px

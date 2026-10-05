@@ -1,0 +1,55 @@
+---
+// Full-bleed looping video with edge fades. Geometry per breakpoint comes from content JSON:
+// x/w in % of the band width, y/h in px (desktop d, laptop l, tablet t) or vw (mobile m).
+interface Box { [bp: string]: number[] | null }
+interface Fade { gradient: string; box: number[]; z: number }
+interface Props {
+  content: {
+    ref: string;
+    height: Record<string, number>;
+    video: { src: string; box: Box };
+    fades: Record<string, Fade[]>;
+  };
+}
+const { content } = Astro.props;
+const BPS = ['d', 'l', 't', 'm'] as const;
+const unit = (bp: string) => (bp === 'm' ? 'vw' : 'px');
+const vars = (box: number[] | null, bp: string, prefix: string) =>
+  box ? `--${prefix}x-${bp}:${box[0]}%;--${prefix}y-${bp}:${box[1]}${unit(bp)};--${prefix}w-${bp}:${box[2]}%;--${prefix}h-${bp}:${box[3]}${unit(bp)};` : '';
+const bandStyle = BPS.map((bp) => `--h-${bp}:${content.height[bp]}${unit(bp)};` + vars(content.video.box[bp], bp, 'v')).join('');
+---
+<section class="video-band" data-ref={content.ref} style={bandStyle}>
+  <video class="video-band__video" src={content.video.src} muted loop playsinline preload="metadata" autoplay data-autoplay></video>
+  {BPS.map((bp) =>
+    content.fades[bp].map((f) => (
+      <div class={`video-band__fade only-${bp}`} aria-hidden="true"
+        style={`left:${f.box[0]}%;top:${f.box[1]}${unit(bp)};width:${f.box[2]}%;height:${f.box[3]}${unit(bp)};background-image:${f.gradient};z-index:${f.z};`}></div>
+    )),
+  )}
+</section>
+
+<style>
+  .video-band { position: relative; width: 100%; height: var(--h-d); }
+  .video-band__video {
+    position: absolute; object-fit: cover; z-index: 0;
+    left: var(--vx-d); top: var(--vy-d); width: var(--vw-d); height: var(--vh-d);
+  }
+  .video-band__fade { position: absolute; overflow: hidden; pointer-events: none; }
+  .only-l, .only-t, .only-m { display: none; }
+
+  @media (min-width: 1200px) and (max-width: 1439px) {
+    .video-band { height: var(--h-l); }
+    .video-band__video { left: var(--vx-l); top: var(--vy-l); width: var(--vw-l); height: var(--vh-l); }
+    .only-d { display: none; } .only-l { display: block; }
+  }
+  @media (min-width: 810px) and (max-width: 1199px) {
+    .video-band { height: var(--h-t); }
+    .video-band__video { left: var(--vx-t); top: var(--vy-t); width: var(--vw-t); height: var(--vh-t); }
+    .only-d { display: none; } .only-t { display: block; }
+  }
+  @media (max-width: 809px) {
+    .video-band { height: var(--h-m); }
+    .video-band__video { left: var(--vx-m); top: var(--vy-m); width: var(--vw-m); height: var(--vh-m); }
+    .only-d { display: none; } .only-m { display: block; }
+  }
+</style>

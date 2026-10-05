@@ -1,0 +1,685 @@
+# section 6 "null" top=4294
+div [0,0,1440,2548.7] flex=column gap:60px j:center a:center pad:40px ; ov=hidden
+  div "Group 53" [40,40,1360,134.7] flex=row gap:10px j:center a:center pad:21px 0px
+    div "Sell" [513.8,61,151,92.7] flex=column gap:normal j:flex-start a:normal pad:0px
+      p [513.8,61,151,92.7] font=BDO Grotesk Medium 400 90px/92.7px ls:-1.76px rgb(255, 255, 255) center  TEXT«Sell»
+    div [674.8,61,251.5,92.7] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+      div "Better" [674.8,61,251.5,92.7] flex=column gap:normal j:flex-start a:normal pad:0px
+        span [674.8,61,251.5,92.7] bgi=linear-gradient(97.4768deg, rgb(255, 58, 186) 0%, rgb(243, 173, 255) 56.7708%, rgb(98, 72, 255) 100%) ; font=BDO Grotesk Medium 400 90px/92.7px ls:-1.76px rgb(0, 0, 0) center ; clip=text  TEXT«Better»
+          span [674.8,61,251.5,92.7] bgi=linear-gradient(97.4768deg, rgb(255, 58, 186) 0%, rgb(243, 173, 255) 56.7708%, rgb(98, 72, 255) 100%) ; font=BDO Grotesk Medium 400 90px/92.7px ls:-1.76px rgb(0, 0, 0) center ; clip=text  TEXT«Better»
+  div [40,234.7,1360,2274] flex=column gap:30px j:center a:center pad:0px ; ov=hidden
+    div "Group 105" [40,234.7,1360,808] flex=row gap:10px j:center a:center pad:0px ; z=0
+      div "div.new-home_primary-feature_card" [40,234.7,1360,808] flex=row gap:0px j:center a:center pad:0px ; bg=rgb(15, 15, 15) ; radius=16px
+        div "div.new-home_primary-feature_card-content" [40,234.7,700,808] flex=column gap:normal j:space-between a:flex-start pad:80px 40px 80px 80px
+          div "div.new-home_primary-feature_card-content-top" [120,314.7,580,134] flex=column gap:10px j:center a:flex-start pad:0px
+            div "Heading 2 → Description to" [120,314.7,580,42] flex=column gap:normal j:center a:normal pad:0px
+              p [120,314.7,580,42] font=BDO Grotesk Medium 400 35px/42px ls:-0.72px rgb(104, 104, 104)  TEXT«A collective of»
+            div "Heading 2 → Sitemap" [120,366.7,580,82] flex=column gap:normal j:center a:normal pad:0px
+              p [120,366.7,580,82] font=BDO Grotesk Medium 400 82px/82px ls:-2.46px rgb(255, 255, 255)  TEXT«AI agents»
+          div "div.w-layout-grid" [120,853.7,580,109] flex=column gap:0px j:center a:flex-start pad:0px
+            div "Think of these agents as your remote team. They work 24/7 to generate new media for your products, that stick with your customers" [120,853.7,422,109] flex=column gap:normal j:flex-start a:normal pad:0px
+              p [120,853.7,422,108] font=BDO Grotesk Medium 400 20px/27px ls:normal rgb(190, 188, 188)  TEXT«Think of these agents as your remote team. They work 24/7 to generate new media for your products, that stick with your customers»
+        div "Rectangle 12" [740,236.2,660,805] flex=column gap:10px j:center a:center pad:0px 40px ; bg=rgb(25, 25, 25) ; radius=15px
+          section [780,236.2,580,805] flex=row gap:normal j:normal a:center pad:10px ; ov=hidden ; mask=linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%)
+            ul [790,-1365.4,560,785] flex=column gap:30px j:normal a:center pad:0px ; tf=matrix(1, 0, 0, 1, 0, -1611.61)
+              div [840,-1365.4,460,405] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+                div [840,-1364.9,460,405] pos=absolute ; flex=row gap:10px j:center a:center pad:0px ; radius=30px ; ov=hidden ; z=1
+                  div "Frame 281" [840,-1309.9,460,295] flex=row gap:17px j:flex-start a:flex-start pad:0px
+                    div "Group 7" [840,-1309.9,460,295] flex=row gap:10px j:center a:center pad:0px
+                      div "Frame 16" [871.5,-1309.9,397,295] flex=column gap:35px j:flex-start a:flex-start pad:0px
+                        div "Frame 12" [871.5,-1309.9,70,70] flex=row gap:15px j:flex-start a:flex-start pad:0px
+                          div "Group 10" [871.5,-1309.9,70,70]
+                            div "Ellipse 10" [871.5,-1309.9,70,70] pos=absolute ; bg=rgb(31, 31, 31) ; radius=100%
+                            div "Raising hand" [881.5,-1297.9,47,46] pos=absolute ; ov=hidden
+                              div "Image" [881.5,-1297.9,47,47] pos=absolute
+                                div [881.5,-1297.9,47,47] pos=absolute
+                                  img [881.5,-1297.9,47,47] ov=clip ; fit=cover  SRC=/assets/img/0AScKC7r1gfkDWf5CMujIwyEQ.png
+                        div "Frame 15" [871.5,-1204.9,381,123] flex=column gap:17px j:flex-start a:flex-start pad:0px
+                          div "Talking Avatars" [871.5,-1204.9,381,33] flex=column gap:normal j:center a:normal pad:0px
+                            p [871.5,-1235.9,381,95.1]
+                              span [871.5,-1235.9,176.7,95.1] bgi=linear-gradient(98.1351deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%) ; font=BDO Grotesk Medium 400 26.17px/95.07px ls:-1.45px rgb(0, 0, 0) ; clip=text  TEXT«Apparel Shoots»
+                          div "An AI agent that enhances background visuals in images and videos for improved quality and aesthetics." [871.5,-1154.9,381,73] flex=column gap:normal j:flex-start a:normal pad:0px
+                            p [871.5,-1154.9,381,49.4] font=BDO Grotesk Medium 400 17.45px/24.71px ls:normal rgb(183, 183, 183)  TEXT«Change Backgrounds of your clothing and Try on different Fashion Models»
+                        div "Assistive chip-dark" [871.5,-1046.9,397,32] flex=row gap:10px j:flex-start a:center pad:0px ; ov=hidden
+                          div "state-layer" [871.5,-1046.9,83.7,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [887.5,-1040.9,51.7,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [887.5,-1040.9,51.7,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«Apparel»
+                          div "state-layer" [965.2,-1046.9,82.7,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [981.2,-1040.9,50.7,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [981.2,-1040.9,50.7,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«Fashion»
+                          div "state-layer" [1057.8,-1046.9,86.8,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [1073.8,-1040.9,54.8,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [1073.8,-1040.9,54.8,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«Clothing»
+                          div "state-layer" [1154.6,-1046.9,113.9,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [1170.6,-1040.9,81.9,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [1170.6,-1040.9,81.9,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«eCommerce»
+                svg "Group 6" [840,-1365.4,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+                  svg [840,-1365.4,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+              div [840,-930.4,460,405] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+                div [840,-929.9,460,405] pos=absolute ; flex=row gap:10px j:center a:center pad:0px ; radius=30px ; ov=hidden ; z=1
+                  div "Frame 281" [856,-903.4,428,352] flex=row gap:17px j:flex-start a:flex-start pad:0px
+                    div "Group 7" [856,-903.4,428,352]
+                      div "Frame 16" [882,-877.4,381,295] pos=absolute ; flex=column gap:35px j:flex-start a:flex-start pad:0px
+                        div "Frame 12" [882,-877.4,70,70] flex=row gap:15px j:flex-start a:flex-start pad:0px
+                          div "Group 9" [882,-877.4,70,70]
+                            div "Ellipse 10" [882,-877.4,70,70] pos=absolute ; bgi=linear-gradient(177.831deg, rgb(31, 31, 31) 0%, rgb(31, 31, 31) 100%) ; radius=100%
+                            div "Clapper board" [894,-867.4,47,47] pos=absolute ; ov=hidden
+                              div "image 24" [894,-867.4,47,47] pos=absolute
+                                div [894,-867.4,47,47] pos=absolute
+                                  img [894,-867.4,47,47] ov=clip ; fit=cover  SRC=/assets/img/BjaSMFbePuS7QboyVv2fqPoEU4.png
+                        div "Frame 15" [882,-772.4,381,123] flex=column gap:17px j:flex-start a:flex-start pad:0px
+                          div "Talking Avatars" [882,-772.4,381,33] flex=column gap:normal j:center a:normal pad:0px
+                            p [882,-803.4,381,95.1]
+                              span [882,-803.4,111.5,95.1] bgi=linear-gradient(98.1351deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%) ; font=BDO Grotesk Medium 400 26.17px/95.07px ls:-1.45px rgb(0, 0, 0) ; clip=text  TEXT«Text to 3D»
+                          div "An AI agent that enhances background visuals in images and videos for improved quality and aesthetics." [882,-722.4,381,73] flex=column gap:normal j:flex-start a:normal pad:0px
+                            p [882,-722.4,381,49.4] font=BDO Grotesk Medium 400 17.45px/24.71px ls:normal rgb(183, 183, 183)  TEXT«Create High Quality AI generated 3D object of your products»
+                        div "Assistive chip-dark" [882,-614.4,220,32] flex=row gap:10px j:center a:center pad:0px ; radius=8px ; ov=hidden
+                          div "state-layer" [882,-614.4,98,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [898,-608.4,66,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [898,-608.4,66,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«Text to 3D»
+                          div "state-layer" [990,-614.4,112.1,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [1006,-608.4,80.1,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [1006,-608.4,80.1,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«Image to 3D»
+                svg "Group 6" [840,-930.4,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+                  svg [840,-930.4,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+              div [840,-495.4,460,405] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+                div [840,-494.9,460,405] pos=absolute ; flex=row gap:10px j:center a:center pad:0px ; radius=30px ; ov=hidden ; z=1
+                  div "Frame 281" [856,-468.4,428,352] flex=row gap:17px j:flex-start a:flex-start pad:0px
+                    div "Group 7" [856,-468.4,428,352]
+                      div "Frame 16" [882,-442.4,381,292] pos=absolute ; flex=column gap:35px j:flex-start a:flex-start pad:0px
+                        div "Frame 12" [882,-442.4,67,67] flex=row gap:15px j:flex-start a:flex-start pad:0px
+                          div "Group_130" [882,-442.4,67,67] pos=absolute
+                            img [882,-442.4,67,67] ov=clip ; fit=cover  SRC=/assets/img/KJTKKgGTQvIBygj2g8Qx5X6w0.png
+                        div "Frame 15" [882,-340.4,381,123] flex=column gap:17px j:flex-start a:flex-start pad:0px
+                          div "Talking Avatars" [882,-340.4,381,33] flex=column gap:normal j:center a:normal pad:0px
+                            p [882,-371.4,381,95.1]
+                              span [882,-371.4,314.1,95.1] bgi=linear-gradient(98.1351deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%) ; font=BDO Grotesk Medium 400 26.17px/95.07px ls:-1.45px rgb(0, 0, 0) ; clip=text  TEXT«Background Enhancement»
+                          div "An AI agent that enhances background visuals in images and videos for improved quality and aesthetics." [882,-290.4,381,73] flex=column gap:normal j:flex-start a:normal pad:0px
+                            p [882,-290.4,381,49.4] font=BDO Grotesk Medium 400 17.45px/24.71px ls:normal rgb(183, 183, 183)  TEXT«Create High Quality AI generated E-Commerce Photoshoots of your products»
+                        div "Assistive chip-dark" [882,-182.4,295.8,32] flex=row gap:10px j:center a:center pad:0px ; radius=8px ; ov=hidden
+                          div "state-layer" [882,-182.4,171.9,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [898,-176.4,139.9,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [898,-176.4,139.9,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«Product Photography»
+                          div "state-layer" [1063.9,-182.4,113.9,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [1079.9,-176.4,81.9,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [1079.9,-176.4,81.9,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«eCommerce»
+                svg "Group 6" [840,-495.4,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+                  svg [840,-495.4,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+              div [840,-60.4,460,405] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+                div [840,-59.9,460,405] pos=absolute ; flex=row gap:10px j:center a:center pad:0px ; radius=30px ; ov=hidden ; z=1
+                  div "Frame 281" [840,-4.9,460,295] flex=row gap:17px j:flex-start a:flex-start pad:0px
+                    div "Group 7" [840,-4.9,460,295] flex=row gap:10px j:center a:center pad:0px
+                      div "Frame 16" [879.5,-4.9,381,295] flex=column gap:35px j:flex-start a:flex-start pad:0px
+                        div "Frame 12" [879.5,-4.9,70,70] flex=row gap:15px j:flex-start a:flex-start pad:0px
+                          div "Group 10" [879.5,-4.9,70,70]
+                            div "Ellipse 10" [879.5,-4.9,70,70] pos=absolute ; bg=rgb(31, 31, 31) ; radius=100%
+                            div "Raising hand" [889.5,7.1,47,46] pos=absolute ; ov=hidden
+                              div "Image" [889.5,7.1,47,47] pos=absolute
+                                div [889.5,7.1,47,47] pos=absolute
+                                  img [889.5,7.1,47,47] ov=clip ; fit=cover  SRC=/assets/img/liQHa6f0Rrip64RmjcYPhpUQG4.png
+                        div "Frame 15" [879.5,100.1,381,123] flex=column gap:17px j:flex-start a:flex-start pad:0px
+                          div "Talking Avatars" [879.5,100.1,381,33] flex=column gap:normal j:center a:normal pad:0px
+                            p [879.5,69.1,381,95.1]
+                              span [879.5,69.1,231.5,95.1] bgi=linear-gradient(98.1351deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%) ; font=BDO Grotesk Medium 400 26.17px/95.07px ls:-1.45px rgb(0, 0, 0) ; clip=text  TEXT«Product Description»
+                          div "An AI agent that enhances background visuals in images and videos for improved quality and aesthetics." [879.5,150.1,381,73] flex=column gap:normal j:flex-start a:normal pad:0px
+                            p [879.5,150.1,381,49.4] font=BDO Grotesk Medium 400 17.45px/24.71px ls:normal rgb(183, 183, 183)  TEXT«Create High Quality AI generated Product Descriptions for your products»
+                        div "Assistive chip-dark" [879.5,258.1,381,32] flex=row gap:10px j:flex-start a:center pad:0px ; ov=hidden
+                          div "state-layer" [879.5,258.1,162.9,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [895.5,264.1,130.9,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [895.5,264.1,130.9,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«Product Description»
+                svg "Group 6" [840,-60.4,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+                  svg [840,-60.4,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+              div [840,374.6,460,405] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+                div [840,375.1,460,405] pos=absolute ; flex=row gap:10px j:center a:center pad:0px ; radius=30px ; ov=hidden ; z=1
+                  div "Frame 281" [840,430.1,460,295] flex=row gap:17px j:flex-start a:flex-start pad:0px
+                    div "Group 7" [840,430.1,460,295] flex=row gap:10px j:center a:center pad:0px
+                      div "Frame 16" [879.5,430.1,381,295] flex=column gap:35px j:flex-start a:flex-start pad:0px
+                        div "Frame 12" [879.5,430.1,70,70] flex=row gap:15px j:flex-start a:flex-start pad:0px
+                          div "Group 10" [879.5,430.1,70,70]
+                            div "Ellipse 10" [879.5,430.1,70,70] pos=absolute ; bg=rgb(31, 31, 31) ; radius=100%
+                            div "Raising hand" [889.5,442.1,47,46] pos=absolute ; ov=hidden
+                              div "Image" [889.5,442.1,47,47] pos=absolute
+                                div [889.5,442.1,47,47] pos=absolute
+                                  img [889.5,442.1,47,47] ov=clip ; fit=cover  SRC=/assets/img/HP7vFboTWC8aaCU8pDFCrTaNMFE.png
+                        div "Frame 15" [879.5,535.1,381,123] flex=column gap:17px j:flex-start a:flex-start pad:0px
+                          div "Talking Avatars" [879.5,535.1,381,33] flex=column gap:normal j:center a:normal pad:0px
+                            p [879.5,504.1,381,95.1]
+                              span [879.5,504.1,249.9,95.1] bgi=linear-gradient(98.1351deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%) ; font=BDO Grotesk Medium 400 26.17px/95.07px ls:-1.45px rgb(0, 0, 0) ; clip=text  TEXT«Background Changer»
+                          div "An AI agent that enhances background visuals in images and videos for improved quality and aesthetics." [879.5,585.1,381,73] flex=column gap:normal j:flex-start a:normal pad:0px
+                            p [879.5,585.1,381,49.4] font=BDO Grotesk Medium 400 17.45px/24.71px ls:normal rgb(183, 183, 183)  TEXT«Change Backgrounds of your clothing on your fashion models»
+                        div "Assistive chip-dark" [879.5,693.1,381,32] flex=row gap:10px j:flex-start a:center pad:0px ; ov=hidden
+                          div "state-layer" [879.5,693.1,82.7,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [895.5,699.1,50.7,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [895.5,699.1,50.7,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«Fashion»
+                          div "state-layer" [972.2,693.1,86.8,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [988.2,699.1,54.8,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [988.2,699.1,54.8,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«Clothing»
+                          div "state-layer" [1069,693.1,113.9,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [1084.9,699.1,81.9,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [1084.9,699.1,81.9,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«eCommerce»
+                svg "Group 6" [840,374.6,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+                  svg [840,374.6,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+              div [840,809.6,460,405] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+                div [840,810.1,460,405] pos=absolute ; flex=row gap:10px j:center a:center pad:0px ; radius=30px ; ov=hidden ; z=1
+                  div "Frame 281" [840,865.1,460,295] flex=row gap:17px j:flex-start a:flex-start pad:0px
+                    div "Group 7" [840,865.1,460,295] flex=row gap:10px j:center a:center pad:0px
+                      div "Frame 16" [879.5,865.1,381,295] flex=column gap:35px j:flex-start a:flex-start pad:0px
+                        div "Frame 12" [879.5,865.1,70,70] flex=row gap:15px j:flex-start a:flex-start pad:0px
+                          div "Group 10" [879.5,865.1,70,70]
+                            div "Ellipse 10" [879.5,865.1,70,70] pos=absolute ; bg=rgb(31, 31, 31) ; radius=100%
+                            div "Raising hand" [889.5,877.1,47,46] pos=absolute ; ov=hidden
+                              div "Image" [889.5,877.1,47,47] pos=absolute
+                                div [889.5,877.1,47,47] pos=absolute
+                                  img [889.5,877.1,47,47] ov=clip ; fit=cover  SRC=/assets/img/zDmlYxwB0njanYGa5BucwrtABU.png
+                        div "Frame 15" [879.5,970.1,381,123] flex=column gap:17px j:flex-start a:flex-start pad:0px
+                          div "Talking Avatars" [879.5,970.1,381,33] flex=column gap:normal j:center a:normal pad:0px
+                            p [879.5,939.1,381,95.1]
+                              span [879.5,939.1,184.3,95.1] bgi=linear-gradient(98.1351deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%) ; font=BDO Grotesk Medium 400 26.17px/95.07px ls:-1.45px rgb(0, 0, 0) ; clip=text  TEXT«Drape Diffusion»
+                          div "An AI agent that enhances background visuals in images and videos for improved quality and aesthetics." [879.5,1020.1,381,73] flex=column gap:normal j:flex-start a:normal pad:0px
+                            p [879.5,1020.1,381,49.4] font=BDO Grotesk Medium 400 17.45px/24.71px ls:normal rgb(183, 183, 183)  TEXT«Change Backgrounds of your clothing and Try on different Fashion Models»
+                        div "Assistive chip-dark" [879.5,1128.1,381,32] flex=row gap:10px j:flex-start a:center pad:0px ; ov=hidden
+                          div "state-layer" [879.5,1128.1,82.7,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [895.5,1134.1,50.7,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [895.5,1134.1,50.7,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«Fashion»
+                          div "state-layer" [972.2,1128.1,86.8,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [988.2,1134.1,54.8,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [988.2,1134.1,54.8,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«Clothing»
+                          div "state-layer" [1069,1128.1,113.9,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [1084.9,1134.1,81.9,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [1084.9,1134.1,81.9,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«eCommerce»
+                svg "Group 6" [840,809.6,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+                  svg [840,809.6,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+              div [840,1244.6,460,405] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+                div [840,1245.1,460,405] pos=absolute ; flex=row gap:10px j:center a:center pad:0px ; radius=30px ; ov=hidden ; z=1
+                  div "Frame 281" [840,1300.1,460,295] flex=row gap:17px j:flex-start a:flex-start pad:0px
+                    div "Group 7" [840,1300.1,460,295] flex=row gap:10px j:center a:center pad:0px
+                      div "Frame 16" [879.5,1300.1,381,295] flex=column gap:35px j:flex-start a:flex-start pad:0px
+                        div "Frame 12" [879.5,1300.1,70,70] flex=row gap:15px j:flex-start a:flex-start pad:0px
+                          div "Group 10" [879.5,1300.1,70,70]
+                            div "Ellipse 10" [879.5,1300.1,70,70] pos=absolute ; bg=rgb(31, 31, 31) ; radius=100%
+                            div "Raising hand" [889.5,1312.1,47,46] pos=absolute ; ov=hidden
+                              div "Image" [889.5,1312.1,47,47] pos=absolute
+                                div [889.5,1312.1,47,47] pos=absolute
+                                  img [889.5,1312.1,47,47] ov=clip ; fit=cover  SRC=/assets/img/SxN3dexeRR77pEcLpRHRdn7me0s.png
+                        div "Frame 15" [879.5,1405.1,381,123] flex=column gap:17px j:flex-start a:flex-start pad:0px
+                          div "Talking Avatars" [879.5,1405.1,381,33] flex=column gap:normal j:center a:normal pad:0px
+                            p [879.5,1374.1,381,95.1]
+                              span [879.5,1374.1,208.8,95.1] bgi=linear-gradient(98.1351deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%) ; font=BDO Grotesk Medium 400 26.17px/95.07px ls:-1.45px rgb(0, 0, 0) ; clip=text  TEXT«Request an Agent»
+                          div "An AI agent that enhances background visuals in images and videos for improved quality and aesthetics." [879.5,1455.1,381,73] flex=column gap:normal j:flex-start a:normal pad:0px
+                            p [879.5,1455.1,381,49.4] font=BDO Grotesk Medium 400 17.45px/24.71px ls:normal rgb(183, 183, 183)  TEXT«Click here to send an email and request a specific agent for your needs.»
+                        div "Assistive chip-dark" [879.5,1563.1,381,32] flex=row gap:10px j:flex-start a:center pad:0px ; ov=hidden
+                          div "state-layer" [879.5,1563.1,148.6,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [895.5,1569.1,116.6,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [895.5,1569.1,116.6,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«Request an Agent»
+                svg "Group 6" [840,1244.6,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+                  svg [840,1244.6,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+              div [840,1679.6,460,405] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+                div [840,1680.1,460,405] pos=absolute ; flex=row gap:10px j:center a:center pad:0px ; radius=30px ; ov=hidden ; z=1
+                  div "Frame 281" [840,1735.1,460,295] flex=row gap:17px j:flex-start a:flex-start pad:0px
+                    div "Group 7" [840,1735.1,460,295] flex=row gap:10px j:center a:center pad:0px
+                      div "Frame 16" [871.5,1735.1,397,295] flex=column gap:35px j:flex-start a:flex-start pad:0px
+                        div "Frame 12" [871.5,1735.1,70,70] flex=row gap:15px j:flex-start a:flex-start pad:0px
+                          div "Group 10" [871.5,1735.1,70,70]
+                            div "Ellipse 10" [871.5,1735.1,70,70] pos=absolute ; bg=rgb(31, 31, 31) ; radius=100%
+                            div "Raising hand" [881.5,1747.1,47,46] pos=absolute ; ov=hidden
+                              div "Image" [881.5,1747.1,47,47] pos=absolute
+                                div [881.5,1747.1,47,47] pos=absolute
+                                  img [881.5,1747.1,47,47] ov=clip ; fit=cover  SRC=/assets/img/0AScKC7r1gfkDWf5CMujIwyEQ.png
+                        div "Frame 15" [871.5,1840.1,381,123] flex=column gap:17px j:flex-start a:flex-start pad:0px
+                          div "Talking Avatars" [871.5,1840.1,381,33] flex=column gap:normal j:center a:normal pad:0px
+                            p [871.5,1809.1,381,95.1]
+                              span [871.5,1809.1,176.7,95.1] bgi=linear-gradient(98.1351deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%) ; font=BDO Grotesk Medium 400 26.17px/95.07px ls:-1.45px rgb(0, 0, 0) ; clip=text  TEXT«Apparel Shoots»
+                          div "An AI agent that enhances background visuals in images and videos for improved quality and aesthetics." [871.5,1890.1,381,73] flex=column gap:normal j:flex-start a:normal pad:0px
+                            p [871.5,1890.1,381,49.4] font=BDO Grotesk Medium 400 17.45px/24.71px ls:normal rgb(183, 183, 183)  TEXT«Change Backgrounds of your clothing and Try on different Fashion Models»
+                        div "Assistive chip-dark" [871.5,1998.1,397,32] flex=row gap:10px j:flex-start a:center pad:0px ; ov=hidden
+                          div "state-layer" [871.5,1998.1,83.7,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [887.5,2004.1,51.7,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [887.5,2004.1,51.7,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«Apparel»
+                          div "state-layer" [965.2,1998.1,82.7,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [981.2,2004.1,50.7,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [981.2,2004.1,50.7,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«Fashion»
+                          div "state-layer" [1057.8,1998.1,86.8,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [1073.8,2004.1,54.8,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [1073.8,2004.1,54.8,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«Clothing»
+                          div "state-layer" [1154.6,1998.1,113.9,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [1170.6,2004.1,81.9,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [1170.6,2004.1,81.9,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«eCommerce»
+                svg "Group 6" [840,1679.6,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+                  svg [840,1679.6,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+              div [840,2114.6,460,405] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+                div [840,2115.1,460,405] pos=absolute ; flex=row gap:10px j:center a:center pad:0px ; radius=30px ; ov=hidden ; z=1
+                  div "Frame 281" [856,2141.6,428,352] flex=row gap:17px j:flex-start a:flex-start pad:0px
+                    div "Group 7" [856,2141.6,428,352]
+                      div "Frame 16" [882,2167.6,381,295] pos=absolute ; flex=column gap:35px j:flex-start a:flex-start pad:0px
+                        div "Frame 12" [882,2167.6,70,70] flex=row gap:15px j:flex-start a:flex-start pad:0px
+                          div "Group 9" [882,2167.6,70,70]
+                            div "Ellipse 10" [882,2167.6,70,70] pos=absolute ; bgi=linear-gradient(177.831deg, rgb(31, 31, 31) 0%, rgb(31, 31, 31) 100%) ; radius=100%
+                            div "Clapper board" [894,2177.6,47,47] pos=absolute ; ov=hidden
+                              div "image 24" [894,2177.6,47,47] pos=absolute
+                                div [894,2177.6,47,47] pos=absolute
+                                  img [894,2177.6,47,47] ov=clip ; fit=cover  SRC=/assets/img/BjaSMFbePuS7QboyVv2fqPoEU4.png
+                        div "Frame 15" [882,2272.6,381,123] flex=column gap:17px j:flex-start a:flex-start pad:0px
+                          div "Talking Avatars" [882,2272.6,381,33] flex=column gap:normal j:center a:normal pad:0px
+                            p [882,2241.6,381,95.1]
+                              span [882,2241.6,111.5,95.1] bgi=linear-gradient(98.1351deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%) ; font=BDO Grotesk Medium 400 26.17px/95.07px ls:-1.45px rgb(0, 0, 0) ; clip=text  TEXT«Text to 3D»
+                          div "An AI agent that enhances background visuals in images and videos for improved quality and aesthetics." [882,2322.6,381,73] flex=column gap:normal j:flex-start a:normal pad:0px
+                            p [882,2322.6,381,49.4] font=BDO Grotesk Medium 400 17.45px/24.71px ls:normal rgb(183, 183, 183)  TEXT«Create High Quality AI generated 3D object of your products»
+                        div "Assistive chip-dark" [882,2430.6,220,32] flex=row gap:10px j:center a:center pad:0px ; radius=8px ; ov=hidden
+                          div "state-layer" [882,2430.6,98,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [898,2436.6,66,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [898,2436.6,66,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«Text to 3D»
+                          div "state-layer" [990,2430.6,112.1,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [1006,2436.6,80.1,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [1006,2436.6,80.1,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«Image to 3D»
+                svg "Group 6" [840,2114.6,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+                  svg [840,2114.6,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+              div [840,2549.6,460,405] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+                div [840,2550.1,460,405] pos=absolute ; flex=row gap:10px j:center a:center pad:0px ; radius=30px ; ov=hidden ; z=1
+                  div "Frame 281" [856,2576.6,428,352] flex=row gap:17px j:flex-start a:flex-start pad:0px
+                    div "Group 7" [856,2576.6,428,352]
+                      div "Frame 16" [882,2602.6,381,292] pos=absolute ; flex=column gap:35px j:flex-start a:flex-start pad:0px
+                        div "Frame 12" [882,2602.6,67,67] flex=row gap:15px j:flex-start a:flex-start pad:0px
+                          div "Group_130" [882,2602.6,67,67] pos=absolute
+                            img [882,2602.6,67,67] ov=clip ; fit=cover  SRC=/assets/img/KJTKKgGTQvIBygj2g8Qx5X6w0.png
+                        div "Frame 15" [882,2704.6,381,123] flex=column gap:17px j:flex-start a:flex-start pad:0px
+                          div "Talking Avatars" [882,2704.6,381,33] flex=column gap:normal j:center a:normal pad:0px
+                            p [882,2673.6,381,95.1]
+                              span [882,2673.6,314.1,95.1] bgi=linear-gradient(98.1351deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%) ; font=BDO Grotesk Medium 400 26.17px/95.07px ls:-1.45px rgb(0, 0, 0) ; clip=text  TEXT«Background Enhancement»
+                          div "An AI agent that enhances background visuals in images and videos for improved quality and aesthetics." [882,2754.6,381,73] flex=column gap:normal j:flex-start a:normal pad:0px
+                            p [882,2754.6,381,49.4] font=BDO Grotesk Medium 400 17.45px/24.71px ls:normal rgb(183, 183, 183)  TEXT«Create High Quality AI generated E-Commerce Photoshoots of your products»
+                        div "Assistive chip-dark" [882,2862.6,295.8,32] flex=row gap:10px j:center a:center pad:0px ; radius=8px ; ov=hidden
+                          div "state-layer" [882,2862.6,171.9,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [898,2868.6,139.9,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [898,2868.6,139.9,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«Product Photography»
+                          div "state-layer" [1063.9,2862.6,113.9,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [1079.9,2868.6,81.9,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [1079.9,2868.6,81.9,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«eCommerce»
+                svg "Group 6" [840,2549.6,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+                  svg [840,2549.6,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+              div [840,2984.6,460,405] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+                div [840,2985.1,460,405] pos=absolute ; flex=row gap:10px j:center a:center pad:0px ; radius=30px ; ov=hidden ; z=1
+                  div "Frame 281" [840,3040.1,460,295] flex=row gap:17px j:flex-start a:flex-start pad:0px
+                    div "Group 7" [840,3040.1,460,295] flex=row gap:10px j:center a:center pad:0px
+                      div "Frame 16" [879.5,3040.1,381,295] flex=column gap:35px j:flex-start a:flex-start pad:0px
+                        div "Frame 12" [879.5,3040.1,70,70] flex=row gap:15px j:flex-start a:flex-start pad:0px
+                          div "Group 10" [879.5,3040.1,70,70]
+                            div "Ellipse 10" [879.5,3040.1,70,70] pos=absolute ; bg=rgb(31, 31, 31) ; radius=100%
+                            div "Raising hand" [889.5,3052.1,47,46] pos=absolute ; ov=hidden
+                              div "Image" [889.5,3052.1,47,47] pos=absolute
+                                div [889.5,3052.1,47,47] pos=absolute
+                                  img [889.5,3052.1,47,47] ov=clip ; fit=cover  SRC=/assets/img/liQHa6f0Rrip64RmjcYPhpUQG4.png
+                        div "Frame 15" [879.5,3145.1,381,123] flex=column gap:17px j:flex-start a:flex-start pad:0px
+                          div "Talking Avatars" [879.5,3145.1,381,33] flex=column gap:normal j:center a:normal pad:0px
+                            p [879.5,3114.1,381,95.1]
+                              span [879.5,3114.1,231.5,95.1] bgi=linear-gradient(98.1351deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%) ; font=BDO Grotesk Medium 400 26.17px/95.07px ls:-1.45px rgb(0, 0, 0) ; clip=text  TEXT«Product Description»
+                          div "An AI agent that enhances background visuals in images and videos for improved quality and aesthetics." [879.5,3195.1,381,73] flex=column gap:normal j:flex-start a:normal pad:0px
+                            p [879.5,3195.1,381,49.4] font=BDO Grotesk Medium 400 17.45px/24.71px ls:normal rgb(183, 183, 183)  TEXT«Create High Quality AI generated Product Descriptions for your products»
+                        div "Assistive chip-dark" [879.5,3303.1,381,32] flex=row gap:10px j:flex-start a:center pad:0px ; ov=hidden
+                          div "state-layer" [879.5,3303.1,162.9,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [895.5,3309.1,130.9,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [895.5,3309.1,130.9,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«Product Description»
+                svg "Group 6" [840,2984.6,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+                  svg [840,2984.6,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+              div [840,3419.6,460,405] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+                div [840,3420.1,460,405] pos=absolute ; flex=row gap:10px j:center a:center pad:0px ; radius=30px ; ov=hidden ; z=1
+                  div "Frame 281" [840,3475.1,460,295] flex=row gap:17px j:flex-start a:flex-start pad:0px
+                    div "Group 7" [840,3475.1,460,295] flex=row gap:10px j:center a:center pad:0px
+                      div "Frame 16" [879.5,3475.1,381,295] flex=column gap:35px j:flex-start a:flex-start pad:0px
+                        div "Frame 12" [879.5,3475.1,70,70] flex=row gap:15px j:flex-start a:flex-start pad:0px
+                          div "Group 10" [879.5,3475.1,70,70]
+                            div "Ellipse 10" [879.5,3475.1,70,70] pos=absolute ; bg=rgb(31, 31, 31) ; radius=100%
+                            div "Raising hand" [889.5,3487.1,47,46] pos=absolute ; ov=hidden
+                              div "Image" [889.5,3487.1,47,47] pos=absolute
+                                div [889.5,3487.1,47,47] pos=absolute
+                                  img [889.5,3487.1,47,47] ov=clip ; fit=cover  SRC=/assets/img/HP7vFboTWC8aaCU8pDFCrTaNMFE.png
+                        div "Frame 15" [879.5,3580.1,381,123] flex=column gap:17px j:flex-start a:flex-start pad:0px
+                          div "Talking Avatars" [879.5,3580.1,381,33] flex=column gap:normal j:center a:normal pad:0px
+                            p [879.5,3549.1,381,95.1]
+                              span [879.5,3549.1,249.9,95.1] bgi=linear-gradient(98.1351deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%) ; font=BDO Grotesk Medium 400 26.17px/95.07px ls:-1.45px rgb(0, 0, 0) ; clip=text  TEXT«Background Changer»
+                          div "An AI agent that enhances background visuals in images and videos for improved quality and aesthetics." [879.5,3630.1,381,73] flex=column gap:normal j:flex-start a:normal pad:0px
+                            p [879.5,3630.1,381,49.4] font=BDO Grotesk Medium 400 17.45px/24.71px ls:normal rgb(183, 183, 183)  TEXT«Change Backgrounds of your clothing on your fashion models»
+                        div "Assistive chip-dark" [879.5,3738.1,381,32] flex=row gap:10px j:flex-start a:center pad:0px ; ov=hidden
+                          div "state-layer" [879.5,3738.1,82.7,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [895.5,3744.1,50.7,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [895.5,3744.1,50.7,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«Fashion»
+                          div "state-layer" [972.2,3738.1,86.8,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [988.2,3744.1,54.8,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [988.2,3744.1,54.8,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«Clothing»
+                          div "state-layer" [1069,3738.1,113.9,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [1084.9,3744.1,81.9,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [1084.9,3744.1,81.9,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«eCommerce»
+                svg "Group 6" [840,3419.6,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+                  svg [840,3419.6,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+              div [840,3854.6,460,405] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+                div [840,3855.1,460,405] pos=absolute ; flex=row gap:10px j:center a:center pad:0px ; radius=30px ; ov=hidden ; z=1
+                  div "Frame 281" [840,3910.1,460,295] flex=row gap:17px j:flex-start a:flex-start pad:0px
+                    div "Group 7" [840,3910.1,460,295] flex=row gap:10px j:center a:center pad:0px
+                      div "Frame 16" [879.5,3910.1,381,295] flex=column gap:35px j:flex-start a:flex-start pad:0px
+                        div "Frame 12" [879.5,3910.1,70,70] flex=row gap:15px j:flex-start a:flex-start pad:0px
+                          div "Group 10" [879.5,3910.1,70,70]
+                            div "Ellipse 10" [879.5,3910.1,70,70] pos=absolute ; bg=rgb(31, 31, 31) ; radius=100%
+                            div "Raising hand" [889.5,3922.1,47,46] pos=absolute ; ov=hidden
+                              div "Image" [889.5,3922.1,47,47] pos=absolute
+                                div [889.5,3922.1,47,47] pos=absolute
+                                  img [889.5,3922.1,47,47] ov=clip ; fit=cover  SRC=/assets/img/zDmlYxwB0njanYGa5BucwrtABU.png
+                        div "Frame 15" [879.5,4015.1,381,123] flex=column gap:17px j:flex-start a:flex-start pad:0px
+                          div "Talking Avatars" [879.5,4015.1,381,33] flex=column gap:normal j:center a:normal pad:0px
+                            p [879.5,3984.1,381,95.1]
+                              span [879.5,3984.1,184.3,95.1] bgi=linear-gradient(98.1351deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%) ; font=BDO Grotesk Medium 400 26.17px/95.07px ls:-1.45px rgb(0, 0, 0) ; clip=text  TEXT«Drape Diffusion»
+                          div "An AI agent that enhances background visuals in images and videos for improved quality and aesthetics." [879.5,4065.1,381,73] flex=column gap:normal j:flex-start a:normal pad:0px
+                            p [879.5,4065.1,381,49.4] font=BDO Grotesk Medium 400 17.45px/24.71px ls:normal rgb(183, 183, 183)  TEXT«Change Backgrounds of your clothing and Try on different Fashion Models»
+                        div "Assistive chip-dark" [879.5,4173.1,381,32] flex=row gap:10px j:flex-start a:center pad:0px ; ov=hidden
+                          div "state-layer" [879.5,4173.1,82.7,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [895.5,4179.1,50.7,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [895.5,4179.1,50.7,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«Fashion»
+                          div "state-layer" [972.2,4173.1,86.8,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [988.2,4179.1,54.8,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [988.2,4179.1,54.8,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«Clothing»
+                          div "state-layer" [1069,4173.1,113.9,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [1084.9,4179.1,81.9,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [1084.9,4179.1,81.9,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«eCommerce»
+                svg "Group 6" [840,3854.6,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+                  svg [840,3854.6,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+              div [840,4289.6,460,405] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+                div [840,4290.1,460,405] pos=absolute ; flex=row gap:10px j:center a:center pad:0px ; radius=30px ; ov=hidden ; z=1
+                  div "Frame 281" [840,4345.1,460,295] flex=row gap:17px j:flex-start a:flex-start pad:0px
+                    div "Group 7" [840,4345.1,460,295] flex=row gap:10px j:center a:center pad:0px
+                      div "Frame 16" [879.5,4345.1,381,295] flex=column gap:35px j:flex-start a:flex-start pad:0px
+                        div "Frame 12" [879.5,4345.1,70,70] flex=row gap:15px j:flex-start a:flex-start pad:0px
+                          div "Group 10" [879.5,4345.1,70,70]
+                            div "Ellipse 10" [879.5,4345.1,70,70] pos=absolute ; bg=rgb(31, 31, 31) ; radius=100%
+                            div "Raising hand" [889.5,4357.1,47,46] pos=absolute ; ov=hidden
+                              div "Image" [889.5,4357.1,47,47] pos=absolute
+                                div [889.5,4357.1,47,47] pos=absolute
+                                  img [889.5,4357.1,47,47] ov=clip ; fit=cover  SRC=/assets/img/SxN3dexeRR77pEcLpRHRdn7me0s.png
+                        div "Frame 15" [879.5,4450.1,381,123] flex=column gap:17px j:flex-start a:flex-start pad:0px
+                          div "Talking Avatars" [879.5,4450.1,381,33] flex=column gap:normal j:center a:normal pad:0px
+                            p [879.5,4419.1,381,95.1]
+                              span [879.5,4419.1,208.8,95.1] bgi=linear-gradient(98.1351deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%) ; font=BDO Grotesk Medium 400 26.17px/95.07px ls:-1.45px rgb(0, 0, 0) ; clip=text  TEXT«Request an Agent»
+                          div "An AI agent that enhances background visuals in images and videos for improved quality and aesthetics." [879.5,4500.1,381,73] flex=column gap:normal j:flex-start a:normal pad:0px
+                            p [879.5,4500.1,381,49.4] font=BDO Grotesk Medium 400 17.45px/24.71px ls:normal rgb(183, 183, 183)  TEXT«Click here to send an email and request a specific agent for your needs.»
+                        div "Assistive chip-dark" [879.5,4608.1,381,32] flex=row gap:10px j:flex-start a:center pad:0px ; ov=hidden
+                          div "state-layer" [879.5,4608.1,148.6,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [895.5,4614.1,116.6,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [895.5,4614.1,116.6,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«Request an Agent»
+                svg "Group 6" [840,4289.6,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+                  svg [840,4289.6,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+              div [840,4724.6,460,405] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+                div [840,4725.1,460,405] pos=absolute ; flex=row gap:10px j:center a:center pad:0px ; radius=30px ; ov=hidden ; z=1
+                  div "Frame 281" [840,4780.1,460,295] flex=row gap:17px j:flex-start a:flex-start pad:0px
+                    div "Group 7" [840,4780.1,460,295] flex=row gap:10px j:center a:center pad:0px
+                      div "Frame 16" [871.5,4780.1,397,295] flex=column gap:35px j:flex-start a:flex-start pad:0px
+                        div "Frame 12" [871.5,4780.1,70,70] flex=row gap:15px j:flex-start a:flex-start pad:0px
+                          div "Group 10" [871.5,4780.1,70,70]
+                            div "Ellipse 10" [871.5,4780.1,70,70] pos=absolute ; bg=rgb(31, 31, 31) ; radius=100%
+                            div "Raising hand" [881.5,4792.1,47,46] pos=absolute ; ov=hidden
+                              div "Image" [881.5,4792.1,47,47] pos=absolute
+                                div [881.5,4792.1,47,47] pos=absolute
+                                  img [881.5,4792.1,47,47] ov=clip ; fit=cover  SRC=/assets/img/0AScKC7r1gfkDWf5CMujIwyEQ.png
+                        div "Frame 15" [871.5,4885.1,381,123] flex=column gap:17px j:flex-start a:flex-start pad:0px
+                          div "Talking Avatars" [871.5,4885.1,381,33] flex=column gap:normal j:center a:normal pad:0px
+                            p [871.5,4854.1,381,95.1]
+                              span [871.5,4854.1,176.7,95.1] bgi=linear-gradient(98.1351deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%) ; font=BDO Grotesk Medium 400 26.17px/95.07px ls:-1.45px rgb(0, 0, 0) ; clip=text  TEXT«Apparel Shoots»
+                          div "An AI agent that enhances background visuals in images and videos for improved quality and aesthetics." [871.5,4935.1,381,73] flex=column gap:normal j:flex-start a:normal pad:0px
+                            p [871.5,4935.1,381,49.4] font=BDO Grotesk Medium 400 17.45px/24.71px ls:normal rgb(183, 183, 183)  TEXT«Change Backgrounds of your clothing and Try on different Fashion Models»
+                        div "Assistive chip-dark" [871.5,5043.1,397,32] flex=row gap:10px j:flex-start a:center pad:0px ; ov=hidden
+                          div "state-layer" [871.5,5043.1,83.7,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [887.5,5049.1,51.7,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [887.5,5049.1,51.7,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«Apparel»
+                          div "state-layer" [965.2,5043.1,82.7,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [981.2,5049.1,50.7,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [981.2,5049.1,50.7,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«Fashion»
+                          div "state-layer" [1057.8,5043.1,86.8,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [1073.8,5049.1,54.8,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [1073.8,5049.1,54.8,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«Clothing»
+                          div "state-layer" [1154.6,5043.1,113.9,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [1170.6,5049.1,81.9,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [1170.6,5049.1,81.9,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«eCommerce»
+                svg "Group 6" [840,4724.6,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+                  svg [840,4724.6,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+              div [840,5159.6,460,405] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+                div [840,5160.1,460,405] pos=absolute ; flex=row gap:10px j:center a:center pad:0px ; radius=30px ; ov=hidden ; z=1
+                  div "Frame 281" [856,5186.6,428,352] flex=row gap:17px j:flex-start a:flex-start pad:0px
+                    div "Group 7" [856,5186.6,428,352]
+                      div "Frame 16" [882,5212.6,381,295] pos=absolute ; flex=column gap:35px j:flex-start a:flex-start pad:0px
+                        div "Frame 12" [882,5212.6,70,70] flex=row gap:15px j:flex-start a:flex-start pad:0px
+                          div "Group 9" [882,5212.6,70,70]
+                            div "Ellipse 10" [882,5212.6,70,70] pos=absolute ; bgi=linear-gradient(177.831deg, rgb(31, 31, 31) 0%, rgb(31, 31, 31) 100%) ; radius=100%
+                            div "Clapper board" [894,5222.6,47,47] pos=absolute ; ov=hidden
+                              div "image 24" [894,5222.6,47,47] pos=absolute
+                                div [894,5222.6,47,47] pos=absolute
+                                  img [894,5222.6,47,47] ov=clip ; fit=cover  SRC=/assets/img/BjaSMFbePuS7QboyVv2fqPoEU4.png
+                        div "Frame 15" [882,5317.6,381,123] flex=column gap:17px j:flex-start a:flex-start pad:0px
+                          div "Talking Avatars" [882,5317.6,381,33] flex=column gap:normal j:center a:normal pad:0px
+                            p [882,5286.6,381,95.1]
+                              span [882,5286.6,111.5,95.1] bgi=linear-gradient(98.1351deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%) ; font=BDO Grotesk Medium 400 26.17px/95.07px ls:-1.45px rgb(0, 0, 0) ; clip=text  TEXT«Text to 3D»
+                          div "An AI agent that enhances background visuals in images and videos for improved quality and aesthetics." [882,5367.6,381,73] flex=column gap:normal j:flex-start a:normal pad:0px
+                            p [882,5367.6,381,49.4] font=BDO Grotesk Medium 400 17.45px/24.71px ls:normal rgb(183, 183, 183)  TEXT«Create High Quality AI generated 3D object of your products»
+                        div "Assistive chip-dark" [882,5475.6,220,32] flex=row gap:10px j:center a:center pad:0px ; radius=8px ; ov=hidden
+                          div "state-layer" [882,5475.6,98,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [898,5481.6,66,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [898,5481.6,66,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«Text to 3D»
+                          div "state-layer" [990,5475.6,112.1,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [1006,5481.6,80.1,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [1006,5481.6,80.1,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«Image to 3D»
+                svg "Group 6" [840,5159.6,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+                  svg [840,5159.6,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+              div [840,5594.6,460,405] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+                div [840,5595.1,460,405] pos=absolute ; flex=row gap:10px j:center a:center pad:0px ; radius=30px ; ov=hidden ; z=1
+                  div "Frame 281" [856,5621.6,428,352] flex=row gap:17px j:flex-start a:flex-start pad:0px
+                    div "Group 7" [856,5621.6,428,352]
+                      div "Frame 16" [882,5647.6,381,292] pos=absolute ; flex=column gap:35px j:flex-start a:flex-start pad:0px
+                        div "Frame 12" [882,5647.6,67,67] flex=row gap:15px j:flex-start a:flex-start pad:0px
+                          div "Group_130" [882,5647.6,67,67] pos=absolute
+                            img [882,5647.6,67,67] ov=clip ; fit=cover  SRC=/assets/img/KJTKKgGTQvIBygj2g8Qx5X6w0.png
+                        div "Frame 15" [882,5749.6,381,123] flex=column gap:17px j:flex-start a:flex-start pad:0px
+                          div "Talking Avatars" [882,5749.6,381,33] flex=column gap:normal j:center a:normal pad:0px
+                            p [882,5718.6,381,95.1]
+                              span [882,5718.6,314.1,95.1] bgi=linear-gradient(98.1351deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%) ; font=BDO Grotesk Medium 400 26.17px/95.07px ls:-1.45px rgb(0, 0, 0) ; clip=text  TEXT«Background Enhancement»
+                          div "An AI agent that enhances background visuals in images and videos for improved quality and aesthetics." [882,5799.6,381,73] flex=column gap:normal j:flex-start a:normal pad:0px
+                            p [882,5799.6,381,49.4] font=BDO Grotesk Medium 400 17.45px/24.71px ls:normal rgb(183, 183, 183)  TEXT«Create High Quality AI generated E-Commerce Photoshoots of your products»
+                        div "Assistive chip-dark" [882,5907.6,295.8,32] flex=row gap:10px j:center a:center pad:0px ; radius=8px ; ov=hidden
+                          div "state-layer" [882,5907.6,171.9,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [898,5913.6,139.9,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [898,5913.6,139.9,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«Product Photography»
+                          div "state-layer" [1063.9,5907.6,113.9,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [1079.9,5913.6,81.9,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [1079.9,5913.6,81.9,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«eCommerce»
+                svg "Group 6" [840,5594.6,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+                  svg [840,5594.6,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+              div [840,6029.6,460,405] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+                div [840,6030.1,460,405] pos=absolute ; flex=row gap:10px j:center a:center pad:0px ; radius=30px ; ov=hidden ; z=1
+                  div "Frame 281" [840,6085.1,460,295] flex=row gap:17px j:flex-start a:flex-start pad:0px
+                    div "Group 7" [840,6085.1,460,295] flex=row gap:10px j:center a:center pad:0px
+                      div "Frame 16" [879.5,6085.1,381,295] flex=column gap:35px j:flex-start a:flex-start pad:0px
+                        div "Frame 12" [879.5,6085.1,70,70] flex=row gap:15px j:flex-start a:flex-start pad:0px
+                          div "Group 10" [879.5,6085.1,70,70]
+                            div "Ellipse 10" [879.5,6085.1,70,70] pos=absolute ; bg=rgb(31, 31, 31) ; radius=100%
+                            div "Raising hand" [889.5,6097.1,47,46] pos=absolute ; ov=hidden
+                              div "Image" [889.5,6097.1,47,47] pos=absolute
+                                div [889.5,6097.1,47,47] pos=absolute
+                                  img [889.5,6097.1,47,47] ov=clip ; fit=cover  SRC=/assets/img/liQHa6f0Rrip64RmjcYPhpUQG4.png
+                        div "Frame 15" [879.5,6190.1,381,123] flex=column gap:17px j:flex-start a:flex-start pad:0px
+                          div "Talking Avatars" [879.5,6190.1,381,33] flex=column gap:normal j:center a:normal pad:0px
+                            p [879.5,6159.1,381,95.1]
+                              span [879.5,6159.1,231.5,95.1] bgi=linear-gradient(98.1351deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%) ; font=BDO Grotesk Medium 400 26.17px/95.07px ls:-1.45px rgb(0, 0, 0) ; clip=text  TEXT«Product Description»
+                          div "An AI agent that enhances background visuals in images and videos for improved quality and aesthetics." [879.5,6240.1,381,73] flex=column gap:normal j:flex-start a:normal pad:0px
+                            p [879.5,6240.1,381,49.4] font=BDO Grotesk Medium 400 17.45px/24.71px ls:normal rgb(183, 183, 183)  TEXT«Create High Quality AI generated Product Descriptions for your products»
+                        div "Assistive chip-dark" [879.5,6348.1,381,32] flex=row gap:10px j:flex-start a:center pad:0px ; ov=hidden
+                          div "state-layer" [879.5,6348.1,162.9,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [895.5,6354.1,130.9,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [895.5,6354.1,130.9,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«Product Description»
+                svg "Group 6" [840,6029.6,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+                  svg [840,6029.6,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+              div [840,6464.6,460,405] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+                div [840,6465.1,460,405] pos=absolute ; flex=row gap:10px j:center a:center pad:0px ; radius=30px ; ov=hidden ; z=1
+                  div "Frame 281" [840,6520.1,460,295] flex=row gap:17px j:flex-start a:flex-start pad:0px
+                    div "Group 7" [840,6520.1,460,295] flex=row gap:10px j:center a:center pad:0px
+                      div "Frame 16" [879.5,6520.1,381,295] flex=column gap:35px j:flex-start a:flex-start pad:0px
+                        div "Frame 12" [879.5,6520.1,70,70] flex=row gap:15px j:flex-start a:flex-start pad:0px
+                          div "Group 10" [879.5,6520.1,70,70]
+                            div "Ellipse 10" [879.5,6520.1,70,70] pos=absolute ; bg=rgb(31, 31, 31) ; radius=100%
+                            div "Raising hand" [889.5,6532.1,47,46] pos=absolute ; ov=hidden
+                              div "Image" [889.5,6532.1,47,47] pos=absolute
+                                div [889.5,6532.1,47,47] pos=absolute
+                                  img [889.5,6532.1,47,47] ov=clip ; fit=cover  SRC=/assets/img/HP7vFboTWC8aaCU8pDFCrTaNMFE.png
+                        div "Frame 15" [879.5,6625.1,381,123] flex=column gap:17px j:flex-start a:flex-start pad:0px
+                          div "Talking Avatars" [879.5,6625.1,381,33] flex=column gap:normal j:center a:normal pad:0px
+                            p [879.5,6594.1,381,95.1]
+                              span [879.5,6594.1,249.9,95.1] bgi=linear-gradient(98.1351deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%) ; font=BDO Grotesk Medium 400 26.17px/95.07px ls:-1.45px rgb(0, 0, 0) ; clip=text  TEXT«Background Changer»
+                          div "An AI agent that enhances background visuals in images and videos for improved quality and aesthetics." [879.5,6675.1,381,73] flex=column gap:normal j:flex-start a:normal pad:0px
+                            p [879.5,6675.1,381,49.4] font=BDO Grotesk Medium 400 17.45px/24.71px ls:normal rgb(183, 183, 183)  TEXT«Change Backgrounds of your clothing on your fashion models»
+                        div "Assistive chip-dark" [879.5,6783.1,381,32] flex=row gap:10px j:flex-start a:center pad:0px ; ov=hidden
+                          div "state-layer" [879.5,6783.1,82.7,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [895.5,6789.1,50.7,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [895.5,6789.1,50.7,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«Fashion»
+                          div "state-layer" [972.2,6783.1,86.8,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [988.2,6789.1,54.8,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [988.2,6789.1,54.8,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«Clothing»
+                          div "state-layer" [1069,6783.1,113.9,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [1084.9,6789.1,81.9,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [1084.9,6789.1,81.9,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«eCommerce»
+                svg "Group 6" [840,6464.6,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+                  svg [840,6464.6,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+              div [840,6899.6,460,405] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+                div [840,6900.1,460,405] pos=absolute ; flex=row gap:10px j:center a:center pad:0px ; radius=30px ; ov=hidden ; z=1
+                  div "Frame 281" [840,6955.1,460,295] flex=row gap:17px j:flex-start a:flex-start pad:0px
+                    div "Group 7" [840,6955.1,460,295] flex=row gap:10px j:center a:center pad:0px
+                      div "Frame 16" [879.5,6955.1,381,295] flex=column gap:35px j:flex-start a:flex-start pad:0px
+                        div "Frame 12" [879.5,6955.1,70,70] flex=row gap:15px j:flex-start a:flex-start pad:0px
+                          div "Group 10" [879.5,6955.1,70,70]
+                            div "Ellipse 10" [879.5,6955.1,70,70] pos=absolute ; bg=rgb(31, 31, 31) ; radius=100%
+                            div "Raising hand" [889.5,6967.1,47,46] pos=absolute ; ov=hidden
+                              div "Image" [889.5,6967.1,47,47] pos=absolute
+                                div [889.5,6967.1,47,47] pos=absolute
+                                  img [889.5,6967.1,47,47] ov=clip ; fit=cover  SRC=/assets/img/zDmlYxwB0njanYGa5BucwrtABU.png
+                        div "Frame 15" [879.5,7060.1,381,123] flex=column gap:17px j:flex-start a:flex-start pad:0px
+                          div "Talking Avatars" [879.5,7060.1,381,33] flex=column gap:normal j:center a:normal pad:0px
+                            p [879.5,7029.1,381,95.1]
+                              span [879.5,7029.1,184.3,95.1] bgi=linear-gradient(98.1351deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%) ; font=BDO Grotesk Medium 400 26.17px/95.07px ls:-1.45px rgb(0, 0, 0) ; clip=text  TEXT«Drape Diffusion»
+                          div "An AI agent that enhances background visuals in images and videos for improved quality and aesthetics." [879.5,7110.1,381,73] flex=column gap:normal j:flex-start a:normal pad:0px
+                            p [879.5,7110.1,381,49.4] font=BDO Grotesk Medium 400 17.45px/24.71px ls:normal rgb(183, 183, 183)  TEXT«Change Backgrounds of your clothing and Try on different Fashion Models»
+                        div "Assistive chip-dark" [879.5,7218.1,381,32] flex=row gap:10px j:flex-start a:center pad:0px ; ov=hidden
+                          div "state-layer" [879.5,7218.1,82.7,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [895.5,7224.1,50.7,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [895.5,7224.1,50.7,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«Fashion»
+                          div "state-layer" [972.2,7218.1,86.8,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [988.2,7224.1,54.8,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [988.2,7224.1,54.8,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«Clothing»
+                          div "state-layer" [1069,7218.1,113.9,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [1084.9,7224.1,81.9,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [1084.9,7224.1,81.9,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«eCommerce»
+                svg "Group 6" [840,6899.6,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+                  svg [840,6899.6,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+              div [840,7334.6,460,405] flex=row gap:10px j:center a:center pad:0px ; ov=hidden
+                div [840,7335.1,460,405] pos=absolute ; flex=row gap:10px j:center a:center pad:0px ; radius=30px ; ov=hidden ; z=1
+                  div "Frame 281" [840,7390.1,460,295] flex=row gap:17px j:flex-start a:flex-start pad:0px
+                    div "Group 7" [840,7390.1,460,295] flex=row gap:10px j:center a:center pad:0px
+                      div "Frame 16" [879.5,7390.1,381,295] flex=column gap:35px j:flex-start a:flex-start pad:0px
+                        div "Frame 12" [879.5,7390.1,70,70] flex=row gap:15px j:flex-start a:flex-start pad:0px
+                          div "Group 10" [879.5,7390.1,70,70]
+                            div "Ellipse 10" [879.5,7390.1,70,70] pos=absolute ; bg=rgb(31, 31, 31) ; radius=100%
+                            div "Raising hand" [889.5,7402.1,47,46] pos=absolute ; ov=hidden
+                              div "Image" [889.5,7402.1,47,47] pos=absolute
+                                div [889.5,7402.1,47,47] pos=absolute
+                                  img [889.5,7402.1,47,47] ov=clip ; fit=cover  SRC=/assets/img/SxN3dexeRR77pEcLpRHRdn7me0s.png
+                        div "Frame 15" [879.5,7495.1,381,123] flex=column gap:17px j:flex-start a:flex-start pad:0px
+                          div "Talking Avatars" [879.5,7495.1,381,33] flex=column gap:normal j:center a:normal pad:0px
+                            p [879.5,7464.1,381,95.1]
+                              span [879.5,7464.1,208.8,95.1] bgi=linear-gradient(98.1351deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%) ; font=BDO Grotesk Medium 400 26.17px/95.07px ls:-1.45px rgb(0, 0, 0) ; clip=text  TEXT«Request an Agent»
+                          div "An AI agent that enhances background visuals in images and videos for improved quality and aesthetics." [879.5,7545.1,381,73] flex=column gap:normal j:flex-start a:normal pad:0px
+                            p [879.5,7545.1,381,49.4] font=BDO Grotesk Medium 400 17.45px/24.71px ls:normal rgb(183, 183, 183)  TEXT«Click here to send an email and request a specific agent for your needs.»
+                        div "Assistive chip-dark" [879.5,7653.1,381,32] flex=row gap:10px j:flex-start a:center pad:0px ; ov=hidden
+                          div "state-layer" [879.5,7653.1,148.6,32] flex=row gap:8px j:center a:center pad:5.99687px 15.9917px ; bg=rgb(78, 78, 78) ; radius=8px
+                            div "label-text" [895.5,7659.1,116.6,20] flex=column gap:normal j:center a:normal pad:0px
+                              p [895.5,7659.1,116.6,20] font=BDO Grotesk Light 400 13.99px/19.99px ls:0.1px rgb(230, 224, 233) center  TEXT«Request an Agent»
+                svg "Group 6" [840,7334.6,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+                  svg [840,7334.6,460,405] ov=hidden  SVG=/assets/svg/308cd8945e.svg
+    div "Group 105" [40,1072.7,1360,763] flex=row gap:10px j:center a:center pad:0px
+      div "div.new-home_primary-feature_card" [40,1072.7,1360,763] flex=row gap:0px j:center a:center pad:0px ; bg=rgb(15, 15, 15) ; radius=16px ; ov=hidden
+        div "Rectangle 12" [40,1072.7,660,763] flex=column gap:10px j:center a:center pad:0px 40px ; bg=rgb(25, 25, 25) ; radius=15px ; ov=hidden
+          div "DYNAMIcC IMAGES_1 1" [-184.4,1104.8,1082.4,729.2] pos=absolute ; flex=row gap:10px j:center a:center pad:0px ; radius=12px ; tf=matrix(1, 0, 0, 1, -541.195, -364.609) ; z=0
+            div [-184.4,1104.8,1082.4,729.2] pos=absolute ; radius=12px
+              img [-184.4,1104.8,1082.4,729.2] radius=12px ; ov=clip ; fit=contain  SRC=/assets/img/dJX6V4n6FUqBPGQkR4VF75JlyXU.svg
+        div "div.new-home_primary-feature_card-content" [700,1075.2,700,758] flex=column gap:normal j:space-between a:flex-start pad:80px 60px ; z=0
+          div "div.new-home_primary-feature_card-content-top" [760,1155.2,580,115.2] flex=column gap:0px j:center a:flex-start pad:0px
+            div "Heading 2 → Description to" [760,1155.2,580,43.2] flex=column gap:normal j:center a:normal pad:0px
+              p [760,1155.2,580,43.2] font=BDO Grotesk Medium 400 34px/43.2px ls:-0.72px rgb(104, 104, 104)  TEXT«Mixture of Experts»
+            div "Heading 2 → Sitemap" [760,1198.4,580,72] flex=column gap:normal j:center a:normal pad:0px
+              p [760,1198.4,580,72] font=BDO Grotesk Medium 400 60px/72px ls:-1.8px rgb(255, 255, 255)  TEXT«Multimodal AI»
+          div "div.w-layout-grid" [760,1603.2,580,150] flex=column gap:0px j:center a:flex-start pad:0px
+            div "Think of these agents as your remote team. They work 24/7 to generate new media for your products, that stick with your customers" [760,1603.2,580,150] flex=column gap:normal j:flex-start a:normal pad:0px
+              p [760,1603.2,580,150] font=BDO Grotesk Medium 400 20px/30px ls:normal rgb(190, 188, 188)  TEXT«We've created a ground up new way of thinking about AI + eCommerce. Our Large Action Model lets you create images, change descriptions, make ads, search trends and supercharge your brand in ways never possible before.»
+    div "Group 106" [40,1865.7,1360,643] flex=row gap:36px j:center a:center pad:0px ; z=1
+      div "Frame 267" [40,1865.7,662,643] flex=row gap:0px j:center a:center pad:0px
+        div "Section" [40,1865.7,662,643] flex=column gap:0px j:center a:center pad:0px ; bg=rgb(15, 15, 15) ; radius=16px ; ov=hidden
+          div [40,1865.7,662,388.4] flex=row gap:10px j:center a:center pad:0px ; bg=rgb(25, 25, 25) ; ov=hidden
+            div "Frame 199" [205.5,1937.1,331,245.6] flex=column gap:20px j:flex-start a:flex-start pad:0px
+              div "Frame 198" [205.5,1937.1,331,91.8] flex=column gap:12px j:flex-start a:flex-start pad:0px
+                div "Assets" [205.5,1937.1,331,16.8] flex=column gap:normal j:center a:normal pad:0px
+                  p [205.5,1937.1,331,16.8] font=BDO Grotesk Regular 400 14px/16.8px ls:normal rgb(255, 255, 255)  TEXT«Assets»
+                div "Frame 111" [205.5,1965.9,331,63] flex=row gap:22px j:flex-start a:center pad:11px ; bg=rgb(11, 11, 11) ; radius=8px
+                  div "Frame 93" [216.5,1976.9,309,41] flex=row gap:normal j:space-between a:center pad:0px
+                    div "Frame 92" [216.5,1977.4,126,40] flex=row gap:12px j:flex-start a:center pad:0px
+                      div "Rectangle 3" [216.5,1977.4,40,40] radius=4px
+                        div [216.5,1977.4,40,40] pos=absolute ; radius=4px
+                          img [216.5,1977.4,40,40] radius=4px ; ov=clip ; fit=cover  SRC=/assets/img/Ttz88qnmOpLu4QsaaywaPqAHLU.png
+                      div "1080 x 1080" [268.5,1985.9,74,23] flex=column gap:normal j:center a:normal pad:0px
+                        p [268.5,1964.5,74,65.8] font=BDO Grotesk Regular 400 12.07px/65.8px ls:normal rgb(151, 147, 147)  TEXT«1080 x 1080»
+                    svg "Frame" [483.5,1976.9,42,41] ov=hidden  SVG=/assets/svg/1c60cf8d6e.svg
+                      svg [483.5,1976.9,42,41] ov=hidden  SVG=/assets/svg/1c60cf8d6e.svg
+              div "Frame 197" [205.5,2048.9,331,133.8] flex=column gap:12px j:flex-start a:flex-start pad:0px
+                div "Describe your product" [205.5,2048.9,331,16.8] flex=column gap:normal j:center a:normal pad:0px
+                  p [205.5,2048.9,331,16.8] font=BDO Grotesk Regular 400 14px/16.8px ls:normal rgb(255, 255, 255)  TEXT«Describe your product»
+                div "Group 45" [205.5,2077.7,331,105]
+                  div "Rectangle 21" [205.5,2077.7,331,105] pos=absolute ; bg=rgb(11, 11, 11) ; radius=8px
+                  div "A white washing machine" [213.5,2090.7,311.1,12] pos=absolute ; flex=column gap:normal j:center a:normal pad:0px
+                    p [213.5,2090.7,311.1,12] font=BDO Grotesk Regular 400 10px/12px ls:normal rgb(255, 255, 255)  TEXT«A foxtale Overnight Glow Mask»
+            div "Frame" [86,2119.1,48,48] pos=absolute ; z=1
+              svg [86,2119.1,48,48] ov=hidden  SVG=/assets/svg/d6cf4af506.svg
+                svg [86,2119.1,48,48] ov=hidden  SVG=/assets/svg/d6cf4af506.svg
+            div "Frame" [551,1897.7,48,48] pos=absolute ; z=1
+              svg [551,1897.7,48,48] ov=hidden  SVG=/assets/svg/fff229f617.svg
+                svg [551,1897.7,48,48] ov=hidden  SVG=/assets/svg/fff229f617.svg
+          div "div.new-home_secondary-feature_card-content" [40,2254.1,662,254.6] flex=column gap:10px j:center a:center pad:63px 40px
+            div [80,2317.1,582,91.6] flex=column gap:10px j:center a:center pad:0px ; ov=hidden
+              div "Heading 2" [80,2317.1,582,33.6] flex=row gap:0px j:center a:center pad:0px
+                div "Cross-team" [80,2317.1,582,33.6] flex=column gap:normal j:center a:normal pad:0px
+                  p [80,2317.1,582,33.6] font=BDO Grotesk Medium 400 27.34px/33.6px ls:-0.56px rgb(104, 104, 104)  TEXT«Built for teams»
+              div "Heading 2" [80,2360.7,582,48] flex=row gap:0px j:center a:center pad:0px
+                div "Collaboration" [80,2360.7,582,48] flex=column gap:normal j:center a:normal pad:0px
+                  p [80,2360.7,582,48] font=Inter 500 38.44px/48px ls:-1.1532px rgb(255, 255, 255)  TEXT«Collaboration»
+            div "p.text-size-medium" [80,2418.7,582,27] flex=column gap:0px j:center a:center pad:0px
+              div "Collaborate with the team and clients. Share projects and leave comments to streamline communication and get your designs approved." [80,2418.7,582,27] flex=column gap:normal j:center a:normal pad:0px
+                p [80,2418.7,582,27] font=BDO Grotesk Medium 400 17.44px/27px ls:normal rgb(104, 104, 104)  TEXT«Easily share, approve and work with easy communications»
+      div "Section" [738,1865.7,662,643] pos=absolute ; flex=column gap:0px j:center a:center pad:0px ; bg=rgb(15, 15, 15) ; radius=16px ; ov=hidden
+        div "div#w-node-ff71f9ac-fcdb-e480-dbbc-60fce0cb05fa-2dabfb64" [738,1865.7,662,361.4] flex=column gap:0px j:center a:center pad:0px ; bg=rgb(25, 25, 25) ; ov=hidden
+          div "Group 107" [738,1905.8,662,281.3] flex=row gap:0px j:center a:center pad:20px 50px 20px 20px
+            div "Rectangle 29" [782.5,1925.8,247,241.3] radius=5px
+              div [782.5,1925.8,247,241.3] pos=absolute ; radius=5px
+                img [782.5,1925.8,247,241.3] radius=5px ; ov=clip ; fit=contain  SRC=/assets/img/1CJhVGTeTtwWSbzBrnNXaexyM.png
+            div "Frame 260" [1029.5,1938.5,296,215.8] flex=column gap:9px j:flex-start a:center pad:13px ; bg=rgb(0, 0, 0) ; radius=8px
+              div "Group 61" [1042.5,1951.5,270,24] flex=row gap:10px j:center a:center pad:0px
+                div "Text to 3D" [1042.5,1956.3,236,14.4] flex=column gap:normal j:center a:normal pad:0px
+                  p [1042.5,1956.3,236,14.4] font=BDO Grotesk Regular 400 12px/14.4px ls:normal rgb(255, 255, 255)  TEXT«Text to 3D»
+                svg "Frame" [1288.5,1951.5,24,24] ov=hidden  SVG=/assets/svg/975ca359fc.svg
+                  svg [1288.5,1951.5,24,24] ov=hidden  SVG=/assets/svg/975ca359fc.svg
+              div "Rectangle 28" [1042.5,1984.5,270,70.3] radius=8px
+                div [1042.5,1984.5,270,70.3] pos=absolute ; radius=8px
+                  img [1042.5,1984.5,270,70.3] radius=8px ; ov=clip  SRC=/assets/img/fVhY2F0YA7I6XA4XaND1bLXIU.png
+              div "Frame 219" [1042.5,2063.9,270,38.4] flex=row gap:12px j:flex-start a:flex-end pad:12px ; bg=rgba(255, 255, 255, 0.11) ; radius=8px
+                div "Generate" [1054.5,2075.9,246,14.4] flex=column gap:normal j:center a:normal pad:0px
+                  p [1054.5,2075.9,246,14.4] font=BDO Grotesk Regular 400 12px/14.4px ls:normal rgb(154, 154, 154) center  TEXT«Generate»
+              div "oversized sweater stylized hand painted 3D game asset" [1042.5,2111.3,270,30] flex=column gap:normal j:flex-start a:normal pad:0px
+                p [1042.5,2111.3,270,30] font=BDO Grotesk Regular 400 10px/15px ls:normal rgb(255, 255, 255)  TEXT«oversized sweater stylized hand painted 3D game asset»
+        div "div.new-home_secondary-feature_card-content" [738,2227.1,662,281.6] flex=column gap:10px j:center a:center pad:63px 40px
+          div [778,2290.1,582,91.6] flex=column gap:10px j:center a:center pad:0px ; ov=hidden
+            div "Heading 2" [778,2290.1,582,33.6] flex=row gap:0px j:center a:center pad:0px
+              div "Export to" [778,2290.1,582,33.6] flex=column gap:normal j:center a:normal pad:0px
+                p [778,2290.1,582,33.6] font=BDO Grotesk Medium 400 27.78px/33.6px ls:-0.56px rgb(104, 104, 104)  TEXT«Be social»
+            div "Heading 2" [778,2333.7,582,48] flex=row gap:0px j:center a:center pad:0px
+              div "Figma & Webflow" [778,2333.7,582,48] flex=column gap:normal j:center a:normal pad:0px
+                p [778,2333.7,582,48] font=BDO Grotesk Medium 400 37.66px/48px ls:-1.1298px rgb(255, 255, 255) left  TEXT«Sharing»
+          div "p.text-size-medium" [778,2391.7,582,54] flex=row gap:0px j:center a:center pad:0px
+            div "Site Builder works with the tools you already love and respects your process. Copy any element or page and paste wherever you need." [778,2391.7,582,54] flex=column gap:normal j:center a:normal pad:0px
+              p [778,2391.7,582,54] font=BDO Grotesk Medium 400 17.58px/27px ls:normal rgb(104, 104, 104)  TEXT«Connect & share to your brand accounts across social media in just a click»

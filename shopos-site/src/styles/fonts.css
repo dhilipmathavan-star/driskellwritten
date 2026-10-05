@@ -1,0 +1,10 @@
+/* Font files self-hosted from the original site. Family names match the original
+   so computed styles line up 1:1. */
+@font-face { font-family: "BDO Grotesk Light"; src: url("/assets/fonts/CDkwy56fwfniljd9ARC1verdQ8.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "BDO Grotesk Regular"; src: url("/assets/fonts/3wTIwzEaZcwTqUgmEwMDYbpmpx0.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "BDO Grotesk Medium"; src: url("/assets/fonts/IHGsSfg11OdfhvzTKQvoyshNQ.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "BDO Grotesk DemiBold"; src: url("/assets/fonts/RpPmXJaugtdY2ArK8fm8MaFldRg.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "BDO Grotesk Bold"; src: url("/assets/fonts/XzxnvjI7gSZkUQSNGfBE4GQgj0A.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Satoshi"; src: url("/assets/fonts/GHM6WVH6MILNYOOCXHXB5GTSGNTMGXZR.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("/assets/fonts/GrgcKwrN6d3Uz8EwcLHZxwEfC4.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("/assets/fonts/UjlFhCnUjxhNfep4oYBPqnEssyo.woff2") format("woff2"); font-weight: 500; font-display: swap; }
