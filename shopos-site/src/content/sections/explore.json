@@ -4,62 +4,214 @@
   "subtitle": "Explore our AI agents which cut short your most of the business expenses",
   "columns": [
     {
-      "show": ["d", "l", "t", "m"],
+      "show": [
+        "d",
+        "l",
+        "t",
+        "m"
+      ],
       "cards": [
         {
           "prompt": "Random background generations of a my product Serum",
-          "bubble": { "src": "/assets/img/miUkjO0F10TK2w2DytyG090Y6k.svg", "h": 67 },
-          "media": { "type": "image", "src": "/assets/img/tB3TOBWdCaaxVPJ96pXQMdCJSA.gif", "radius": 10, "size": [222.3, 222.3], "fit": "cover", "sizeM": [222.3, 222.3], "fitM": "contain" }
+          "bubble": {
+            "src": "/assets/img/miUkjO0F10TK2w2DytyG090Y6k.svg",
+            "h": 67
+          },
+          "media": {
+            "type": "image",
+            "src": "/assets/img/tB3TOBWdCaaxVPJ96pXQMdCJSA.gif",
+            "radius": 10,
+            "size": [
+              222.3,
+              222.3
+            ],
+            "fit": "cover",
+            "sizeM": [
+              222.3,
+              222.3
+            ],
+            "fitM": "contain"
+          }
         },
         {
           "prompt": "A living room, sofa with 2 separate seaters, wooden shelf and coffee table",
-          "bubble": { "src": "/assets/img/tqFI5t1zP6qs9n1XLh1z0dFFAE.svg", "h": 66 },
-          "media": { "type": "image", "src": "/assets/img/XbvQn8KBPaHtYLCtCS9K1ps1DE.svg", "radius": 20, "size": [264.3, 264.3], "fit": "contain", "sizeM": [227.2, 227.2], "fitM": "contain" }
+          "bubble": {
+            "src": "/assets/img/tqFI5t1zP6qs9n1XLh1z0dFFAE.svg",
+            "h": 66
+          },
+          "media": {
+            "type": "image",
+            "src": "/assets/img/XbvQn8KBPaHtYLCtCS9K1ps1DE.svg",
+            "radius": 20,
+            "size": [
+              264.3,
+              264.3
+            ],
+            "fit": "contain",
+            "sizeM": [
+              227.2,
+              227.2
+            ],
+            "fitM": "contain"
+          }
         },
         {
           "prompt": "Need a code for my cosmetics brand's landing page",
-          "bubble": { "src": "/assets/img/yIboqy9mWg41YQ7j3hCmc0ZWld0.svg", "h": 67 },
-          "media": { "type": "image", "src": "/assets/img/DQjWjo47hvH3UOid3AkyCXez0o.png", "radius": 0, "size": [303.8, 303.8], "fit": "contain", "sizeM": [247, 247], "fitM": "contain" }
+          "bubble": {
+            "src": "/assets/img/yIboqy9mWg41YQ7j3hCmc0ZWld0.svg",
+            "h": 67
+          },
+          "media": {
+            "type": "image",
+            "src": "/assets/img/DQjWjo47hvH3UOid3AkyCXez0o.png",
+            "radius": 0,
+            "size": [
+              303.8,
+              303.8
+            ],
+            "fit": "contain",
+            "sizeM": [
+              247,
+              247
+            ],
+            "fitM": "contain",
+            "srcset": "/assets/img/DQjWjo47hvH3UOid3AkyCXez0o-512.png 512w, /assets/img/DQjWjo47hvH3UOid3AkyCXez0o.png 1348w",
+            "sizes": "305px"
+          }
         }
       ]
     },
     {
-      "show": ["d", "l", "t"],
+      "show": [
+        "d",
+        "l",
+        "t"
+      ],
       "cards": [
         {
           "prompt": "Oversized sweater, stylized, hand painted 3D game asset",
-          "bubble": { "src": "/assets/img/NHtpHtNQNd8tgebdIJNCnojEw.svg", "h": 67 },
-          "media": { "type": "video", "src": "/assets/video/JdX3exOa5ro1YCYAuiwyF3EYfM.mp4", "radius": 20, "fill": true, "fit": "contain" }
+          "bubble": {
+            "src": "/assets/img/NHtpHtNQNd8tgebdIJNCnojEw.svg",
+            "h": 67
+          },
+          "media": {
+            "type": "video",
+            "src": "/assets/video/JdX3exOa5ro1YCYAuiwyF3EYfM.mp4",
+            "radius": 20,
+            "fill": true,
+            "fit": "contain"
+          }
         },
         {
           "prompt": "I need person describing my nike shoes",
-          "bubble": { "src": "/assets/img/hP2o4RYg9qwfgclnNChU38RJ8g.svg", "h": 67 },
-          "media": { "type": "video", "src": "/assets/video/pEQsN7G58Lu9xbi35yrVH3PhEA.mp4", "radius": 0, "size": [315, 227], "fit": "cover" }
+          "bubble": {
+            "src": "/assets/img/hP2o4RYg9qwfgclnNChU38RJ8g.svg",
+            "h": 67
+          },
+          "media": {
+            "type": "video",
+            "src": "/assets/video/pEQsN7G58Lu9xbi35yrVH3PhEA.mp4",
+            "radius": 0,
+            "size": [
+              315,
+              227
+            ],
+            "fit": "cover"
+          }
         },
         {
           "prompt": "Boy wearing a school bag walking with his dad, holding his hand",
-          "bubble": { "src": "/assets/img/1PtFfexdx0Y4mwYpDHOO6EEjZk.svg", "h": 67 },
-          "media": { "type": "image", "src": "/assets/img/25U6sqvLgTVA0FsM5OV2NrL9tXE.png", "radius": 0, "size": [222.3, 222.3], "fit": "cover" }
+          "bubble": {
+            "src": "/assets/img/1PtFfexdx0Y4mwYpDHOO6EEjZk.svg",
+            "h": 67
+          },
+          "media": {
+            "type": "image",
+            "src": "/assets/img/25U6sqvLgTVA0FsM5OV2NrL9tXE.png",
+            "radius": 0,
+            "size": [
+              222.3,
+              222.3
+            ],
+            "fit": "cover",
+            "srcset": "/assets/img/25U6sqvLgTVA0FsM5OV2NrL9tXE-512.png 512w, /assets/img/25U6sqvLgTVA0FsM5OV2NrL9tXE.png 896w",
+            "sizes": "222.3px"
+          }
         }
       ]
     },
     {
-      "show": ["d", "l", "m"],
+      "show": [
+        "d",
+        "l",
+        "m"
+      ],
       "cards": [
         {
           "prompt": "Female wearing formal suit in multiple backgrounds",
-          "bubble": { "src": "/assets/img/FQnpvOciw6pGUK3mINdhhJ4aQ.svg", "h": 73 },
-          "media": { "type": "image", "src": "/assets/img/wtNrkh7bH6Cx9T2EYwdFPdJQKw.gif", "radius": 0, "size": [222.3, 222.3], "fit": "cover", "sizeM": [222.3, 222.3], "fitM": "contain" }
+          "bubble": {
+            "src": "/assets/img/FQnpvOciw6pGUK3mINdhhJ4aQ.svg",
+            "h": 73
+          },
+          "media": {
+            "type": "image",
+            "src": "/assets/img/wtNrkh7bH6Cx9T2EYwdFPdJQKw.gif",
+            "radius": 0,
+            "size": [
+              222.3,
+              222.3
+            ],
+            "fit": "cover",
+            "sizeM": [
+              222.3,
+              222.3
+            ],
+            "fitM": "contain"
+          }
         },
         {
           "prompt": "Need a product description for Wooden Baby Cradle",
-          "bubble": { "src": "/assets/img/QR25qAhdZwCrqOOvevQlkbafOs.svg", "h": 77 },
-          "media": { "type": "image", "src": "/assets/img/1LPxfKipHVmyacS4EO2Gxyf890.png", "radius": 0, "size": [301.3, 301.3], "fit": "contain", "sizeM": [237.1, 237.1], "fitM": "contain" }
+          "bubble": {
+            "src": "/assets/img/QR25qAhdZwCrqOOvevQlkbafOs.svg",
+            "h": 77
+          },
+          "media": {
+            "type": "image",
+            "src": "/assets/img/1LPxfKipHVmyacS4EO2Gxyf890.png",
+            "radius": 0,
+            "size": [
+              301.3,
+              301.3
+            ],
+            "fit": "contain",
+            "sizeM": [
+              237.1,
+              237.1
+            ],
+            "fitM": "contain"
+          }
         },
         {
           "prompt": "Make a video ad for Baby Cradle",
-          "bubble": { "src": "/assets/img/hFZ6yJavw0PgLAy5YYmIXBCbkaA.svg", "h": 78 },
-          "media": { "type": "image", "src": "/assets/img/W6ugHQF164MmaZKY84RgDaaQZ0.gif", "radius": 0, "size": [247, 247], "fit": "contain", "sizeM": [279.1, 279.1], "fitM": "contain" }
+          "bubble": {
+            "src": "/assets/img/hFZ6yJavw0PgLAy5YYmIXBCbkaA.svg",
+            "h": 78
+          },
+          "media": {
+            "type": "image",
+            "src": "/assets/img/W6ugHQF164MmaZKY84RgDaaQZ0.gif",
+            "radius": 0,
+            "size": [
+              247,
+              247
+            ],
+            "fit": "contain",
+            "sizeM": [
+              279.1,
+              279.1
+            ],
+            "fitM": "contain"
+          }
         }
       ]
     }

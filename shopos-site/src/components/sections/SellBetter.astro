@@ -229,6 +229,10 @@ const sets = [0, 1];
     pointer-events: none; z-index: 2;
   }
 
+  /* The original promotes these to their own layers (will-change: transform); that switches
+     their text to greyscale antialiasing, so mirror it for identical rendering. */
+  .sb-mm, .sb-mm__media, .sb-small, .agent__chiprows { will-change: transform; }
+
   /* ---------- AI agents card ---------- */
   .sb-agents { flex: 1 0 0px; width: 1px; display: flex; flex-direction: row; align-items: center; justify-content: center; }
   .sb-agents__content {

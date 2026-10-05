@@ -3,7 +3,7 @@
 // prompt/result cards (2 columns on tablet, 1 stacked column on mobile).
 interface Media {
   type: 'image' | 'video'; src: string; radius: number; fit: string;
-  size?: number[]; fill?: boolean; sizeM?: number[]; fitM?: string;
+  size?: number[]; fill?: boolean; srcset?: string; sizes?: string; sizeM?: number[]; fitM?: string;
 }
 interface Card { prompt: string; bubble: { src: string; h: number }; media: Media }
 interface Props {
@@ -42,7 +42,7 @@ const mediaStyle = (m: Media) => {
                   <video class="explore__media" style={mediaStyle(card.media)} src={card.media.src}
                     muted loop playsinline autoplay preload="metadata" data-autoplay aria-hidden="true"></video>
                 ) : (
-                  <img class="explore__media" style={mediaStyle(card.media)} src={card.media.src} alt="" />
+                  <img class="explore__media" style={mediaStyle(card.media)} src={card.media.src} srcset={card.media.srcset} sizes={card.media.sizes} alt="" />
                 )}
               </div>
             </div>
