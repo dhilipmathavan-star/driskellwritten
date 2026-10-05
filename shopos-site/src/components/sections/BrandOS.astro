@@ -79,7 +79,7 @@ const { content } = Astro.props;
   .bos__rowline { width: 100%; height: 47px; display: flex; flex-direction: row; align-items: center; gap: 74px; padding-left: 30px; }
   .bos__dot { flex-shrink: 0; width: 24px; height: 24px; border-radius: 100%; }
   .bos__rowmain { flex: 1 0 0; min-width: 0; height: 47px; display: flex; flex-direction: row; align-items: center; gap: 38px; }
-  .bos__name { flex: 1 0 0; min-width: 0; font: 32px/39px var(--f-medium); font-weight: 400; letter-spacing: -1.6px; color: rgb(42, 42, 42); }
+  .bos__name { flex: 1 0 0; min-width: 0; height: 39px; display: flex; flex-direction: column; justify-content: center; font: 32px/41px var(--f-medium); font-weight: 400; letter-spacing: -1.6px; color: rgb(42, 42, 42); }
   .bos__pill { flex-shrink: 0; width: 134px; height: 47px; padding: 0 25px; display: flex; align-items: center; justify-content: center; background: rgb(234, 234, 234); border-radius: 8px; }
   .bos__pill span { display: block; width: 84px; font: 20px/22px var(--f-medium); letter-spacing: -1px; color: rgb(110, 110, 110); text-align: center; }
   .bos__pill--alt span { font-family: "BDO Grotesk", sans-serif; font-weight: 500; }
@@ -119,14 +119,5 @@ const { content } = Astro.props;
     }
     .bos__item::before { content: ""; display: block; width: 100%; height: 1px; background: rgb(214, 214, 214); }
     .bos__itemname { width: 100%; padding: 0 20px; font: 600 24px/28.8px var(--f-inter); color: #000; text-align: left; }
-  }
-</style>
-
-<style is:global>
-  /* Inter SemiBold (latin) — used by the tablet/mobile agent list; not in fonts.css yet */
-  @font-face {
-    font-family: "Inter"; font-weight: 600; font-style: normal; font-display: swap;
-    src: url("/assets/fonts/yDtI2UI8XcEg1W2je9XPN3Noo.woff2") format("woff2");
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2070, U+2074-207E, U+2080-208E, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
 </style>
