@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import { chromium } from 'playwright';
 import { PNG } from 'pngjs';
 import pixelmatch from 'pixelmatch';
-const OFFS = [0, 16, 32, 48, 64, 96, 128, 160, 200, 250, 300, 400, 600];
+const OFFS = Array.from({ length: 26 }, (_, i) => i * 16);
 const STEPS = [
   ['upload', '[data-framer-name="Button/Button Copy"]', '.hero__btn--upload'],
   ['chip2', '[data-framer-name="Frame 9"]', '[data-chip="1"]'],
@@ -13,11 +13,12 @@ const OUT = 'motioncheck/02-tap'; fs.mkdirSync(OUT, { recursive: true });
 async function run(url, isOrig) {
   const b = await chromium.launch(isOrig ? { proxy: { server: process.env.HTTPS_PROXY } } : {});
   const p = await (await b.newContext({ viewport: { width: 1440, height: 900 } })).newPage();
+  p.on('framenavigated', (f) => { if (f === p.mainFrame()) console.log('nav', isOrig, f.url()); });
   await p.clock.install({ time: new Date('2026-01-01T00:00:00Z') });
   await p.goto(url, { waitUntil: 'load', timeout: 120000 });
   await p.addStyleTag({ content: 'video{visibility:hidden!important}' });
   await p.clock.pauseAt((await p.evaluate(() => Date.now())) + 300);
-  const tick = () => p.evaluate(() => { const now = performance.now(); for (const a of document.getAnimations()) { if (a.__s === undefined) { a.__s = now - (a.currentTime ?? 0); a.pause(); } try { a.currentTime = now - a.__s; } catch {} } });
+  const tick = () => p.evaluate(() => { const now = performance.now(); for (const a of document.getAnimations()) { if (a.__s === undefined) { a.__s = now - (a.currentTime ?? 0); a.pause(); } try { a.currentTime = now - a.__s; } catch {} } }).catch((e) => console.log('tick err', isOrig, e.message.slice(0, 60)));
   for (let i = 0; i < 500; i++) { await p.clock.runFor(16); await tick(); }
   const frames = {};
   for (const [name, so, sc] of STEPS) {
@@ -45,4 +46,6 @@ for (const [name] of STEPS) {
     fs.writeFileSync(`${OUT}/${k}-compare.png`, PNG.sync.write(cmp));
   }
   console.log(name, res.join(' '));
+  const dif = (a, b) => { const A = PNG.sync.read(a), B = PNG.sync.read(b); return (pixelmatch(A.data, B.data, null, A.width, A.height, { threshold: 0.12 }) / (A.width * A.height) * 100); };
+  for (const sh of [0, -16, -32, -48]) { let tot = 0; const r = []; for (const off of OFFS) { const k2 = `${name}-${off + sh}`; if (!c[k2]) continue; const d = dif(o[`${name}-${off}`], c[k2]); tot += d; r.push(d.toFixed(2)); } console.log('  shift', sh, 'sum', tot.toFixed(2), r.join(' ')); }
 }

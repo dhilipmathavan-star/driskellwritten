@@ -119,7 +119,7 @@ const acc = content.accelerator;
   //   inputRange [0, c−1, c, c+h] → ["initial","initial","animate","animate"] (motion interpolate,
   //   string mixer jumps to "animate" as soon as scrollY ≥ c−1), so the streak is at opacity 1
   //   while Group 129's top is ≤ innerHeight + 2 px, else opacity 0 — both ways (animateOnce false),
-  //   each change animated with Lo (0.1s, cubic-bezier(0.44, 0, 0.56, 1)) → CSS transition below.
+  //   each change animated with Lo (0.1s, cubic-bezier(0.44, 0, 0.56, 1)) via WAAPI below.
   //
   // HYDRATION_SHIFT: on the live original the IntersectionObserver fires (~1.05s after load)
   // before blocks 02 (+2px) and 12 (+18.1px) reach their final heights, so the stored top0 is
@@ -133,6 +133,7 @@ const acc = content.accelerator;
   if (streak && group && !isStatic()) {
     let top0: number | null = null;
     let state: 'initial' | 'animate' = 'initial';
+    let fade: Animation | undefined;
     const offsetTop = (el: HTMLElement | null) => { let n = 0; while (el && el instanceof HTMLElement) { n += el.offsetTop; el = el.offsetParent as HTMLElement | null; } return n; };
     const update = () => {
       if (isStatic()) return;
@@ -140,7 +141,16 @@ const acc = content.accelerator;
       if (top0 !== null) streak.style.transform = `perspective(1200px) translateY(${0.2 * (sy - top0)}px)`;
       const c = offsetTop(group) - 1 - 0 - 1 * innerHeight;
       const next = c > 1 ? (sy >= c - 1 ? 'animate' : 'initial') : 'animate';
-      if (next !== state) { state = next; streak.classList.toggle('is-on', state === 'animate'); }
+      if (next !== state) {
+        state = next;
+        // tween Lo from the current opacity; like motion (frame-synced start time) the animation
+        // is anchored to the current frame's timestamp rather than the next one.
+        const from = Number(getComputedStyle(streak).opacity), to = state === 'animate' ? 1 : 0;
+        fade?.cancel();
+        streak.style.opacity = String(to);
+        fade = streak.animate([{ opacity: from }, { opacity: to }], { duration: 100, easing: 'cubic-bezier(0.44, 0, 0.56, 1)' });
+        if (document.timeline.currentTime !== null) fade.startTime = document.timeline.currentTime;
+      }
     };
     const io = new IntersectionObserver((entries) => {
       top0 = entries[0].boundingClientRect.top - (matchMedia('(min-width: 1440px)').matches ? HYDRATION_SHIFT_DESKTOP : 0);
@@ -170,9 +180,7 @@ const acc = content.accelerator;
     flex: none; width: 1px; height: 355px; opacity: 0; overflow: hidden;
     background-image: linear-gradient(140deg, rgb(255, 59, 186) 0%, rgb(243, 173, 255) 59.9099%, rgb(98, 72, 255) 100%);
     transform: perspective(1200px); will-change: transform;
-    transition: opacity 0.1s cubic-bezier(0.44, 0, 0.56, 1); /* Lo, page.pretty.js:11624 */
   }
-  .uth__streak.is-on { opacity: 1; }
   html.no-motion .uth__streak { opacity: 0; transition: none; }
 
   .uth__head { position: relative; width: 100%; height: 246px; flex: none; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; }
