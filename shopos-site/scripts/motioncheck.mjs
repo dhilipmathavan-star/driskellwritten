@@ -29,6 +29,7 @@ const TIMES = String(arg('times', '0,250,500,1000,2000')).split(',').map(Number)
 const ORIGINAL = 'https://shopos.framer.website/';
 const CLONE = arg('clone', 'http://127.0.0.1:4322/');
 const SEL = { orig: arg('orig'), clone: arg('clone-sel') };
+const PIN = argv.includes('--pin-tickers');
 const PAD = Number(arg('pad', 0)); // extra px around the block clip
 const OUT = path.join(ROOT, 'motioncheck', `${REF}-${TRIGGER}${arg('tag') ? '-' + arg('tag') : ''}`);
 fs.mkdirSync(OUT, { recursive: true });
@@ -66,6 +67,7 @@ async function run(browser, url, isOrig) {
     const frames = {}; let t = 0;
     for (const target of TIMES) {
       while (t < target) { const d = Math.min(16, target - t); await page.clock.runFor(d); t += d; await tick(); }
+      if (PIN) await page.evaluate((T) => { for (const a of document.getAnimations()) if (a.__tk) a.currentTime = T; }, target);
       await tick();
       await page.waitForTimeout(30);
       frames[target] = await page.screenshot({ clip: await clipFn() });
@@ -91,6 +93,9 @@ async function run(browser, url, isOrig) {
     const bb = await page.locator(isOrig ? SEL.orig : SEL.clone).first().boundingBox();
     await page.mouse.move(bb.x + bb.width / 2, bb.y + bb.height / 2, { steps: 1 });
   }
+  // --pin-tickers: infinite ticker loops start at phase 0 at the trigger in both pages
+  // (their phase otherwise depends on when each page hydrated)
+  if (PIN) await page.evaluate(() => { for (const a of document.getAnimations()) if (a.effect?.getTiming().iterations === Infinity && a.effect?.target?.tagName === 'UL') { a.__tk = 1; a.pause(); a.currentTime = 0; } });
   const frames = await film(clip);
   await ctx.close();
   return frames;

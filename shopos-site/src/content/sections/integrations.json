@@ -19,8 +19,16 @@
       "text": "Collaborate with team members or clients in real-time",
       "media": {
         "type": "ticker",
-        "duration": 18.25,
-        "copies": 3,
+        "_tickerSource": "Ticker instance props, reference/source/page.pretty.js:23522-23600 (driven by src/scripts/ticker.js)",
+        "ticker": {
+          "speed": 60,
+          "direction": "left",
+          "gap": 10,
+          "padding": 10,
+          "alignment": "center",
+          "hoverFactor": 1,
+          "fadeOptions": { "fadeContent": true, "overflow": false, "fadeWidth": 25, "fadeInset": 0, "fadeAlpha": 0 }
+        },
         "items": [
           { "src": "/assets/img/9ssTkATwQt20xyFoefcdKAEpnM.png", "alt": "" },
           { "src": "/assets/img/ZpLq2t3U0XliztZgOVpVUS1ME.png", "alt": "" },

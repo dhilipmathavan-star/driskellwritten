@@ -19,6 +19,7 @@
     "mobile": "max-width: 809px"
   },
   "sections": [
+    { "ref": "01", "id": "loader", "component": "Loader" },
     { "ref": "02", "id": "hero", "component": "Hero" },
     { "ref": "03", "id": "video-intro", "component": "VideoBand", "content": "video-intro" },
     { "ref": "04", "id": "explore", "component": "Explore" },

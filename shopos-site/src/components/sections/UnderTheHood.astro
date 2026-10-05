@@ -104,21 +104,54 @@ const acc = content.accelerator;
 </section>
 
 <script>
-  // Gradient streak travelling down the vertical line, linked to scroll (Framer scroll
-  // transform: translateY = 16px - 0.2 × line top in the viewport; fades in once visible).
+  // Exact port of the Home-level withFX on `Group 129 › Section` (page.pretty.js:26110–26125):
+  //   __framer__speed 80, offset 0, adjustPosition, parallaxTransformEnabled,
+  //   styleAppearEffectEnabled, targets [{ ref: Group 129, target: "animate" }], threshold 1,
+  //   animateOnce false, enter Io = { opacity: 0, transformPerspective: 1200, … } (11612),
+  //   animate { transition: Lo = tween 0.1s ease [0.44, 0, 0.56, 1] } (11624), style perspective 1200.
+  //
+  // Parallax (framer.pretty.js:5340 `dl` / 5336 `ul`): on the element's first IntersectionObserver
+  // callback top0 = entry.boundingClientRect.top is stored (element is visibility:hidden until then,
+  // adjustPosition); afterwards y = (top0 − offset)·(speed/100 − 1) − scrollY·(speed/100 − 1)
+  //                             = 0.2 · (scrollY − top0).
+  // Appear (framer.pretty.js:5694 `Cl` + 5490 `_l` / 5546 `bl`, ES = 1 at 17669): every scroll
+  //   c = offsetTop(Group 129) − 1 − offset(0) − threshold(1)·innerHeight
+  //   inputRange [0, c−1, c, c+h] → ["initial","initial","animate","animate"] (motion interpolate,
+  //   string mixer jumps to "animate" as soon as scrollY ≥ c−1), so the streak is at opacity 1
+  //   while Group 129's top is ≤ innerHeight + 2 px, else opacity 0 — both ways (animateOnce false),
+  //   each change animated with Lo (0.1s, cubic-bezier(0.44, 0, 0.56, 1)) → CSS transition below.
+  //
+  // HYDRATION_SHIFT: on the live original the IntersectionObserver fires (~1.05s after load)
+  // before blocks 02 (+2px) and 12 (+18.1px) reach their final heights, so the stored top0 is
+  // 20.4px smaller than the settled layout (measured: translateY = 0.2·scrollY − 3007.8 at 1440;
+  // settled untransformed top 15059.4). The clone's layout is final from the start, so the same
+  // measurement is corrected by that amount at the desktop breakpoint to land on the same offset.
+  const HYDRATION_SHIFT_DESKTOP = 20.4;
   const streak = document.querySelector<HTMLElement>('[data-uth-streak]');
+  const group = streak?.closest<HTMLElement>('[data-ref="16"]');
   const isStatic = () => document.documentElement.classList.contains('no-motion') || new URLSearchParams(location.search).has('static');
-  if (streak && !isStatic()) {
-    const line = streak.parentElement!;
-    let ticking = false;
+  if (streak && group && !isStatic()) {
+    let top0: number | null = null;
+    let state: 'initial' | 'animate' = 'initial';
+    const offsetTop = (el: HTMLElement | null) => { let n = 0; while (el && el instanceof HTMLElement) { n += el.offsetTop; el = el.offsetParent as HTMLElement | null; } return n; };
     const update = () => {
-      ticking = false;
       if (isStatic()) return;
-      const top = line.getBoundingClientRect().top;
-      streak.style.transform = `perspective(1200px) translateY(${(16.4 - 0.2 * top).toFixed(1)}px)`;
-      if (top < innerHeight) streak.classList.add('is-on');
+      const sy = scrollY;
+      if (top0 !== null) streak.style.transform = `perspective(1200px) translateY(${0.2 * (sy - top0)}px)`;
+      const c = offsetTop(group) - 1 - 0 - 1 * innerHeight;
+      const next = c > 1 ? (sy >= c - 1 ? 'animate' : 'initial') : 'animate';
+      if (next !== state) { state = next; streak.classList.toggle('is-on', state === 'animate'); }
     };
-    addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+    const io = new IntersectionObserver((entries) => {
+      top0 = entries[0].boundingClientRect.top - (matchMedia('(min-width: 1440px)').matches ? HYDRATION_SHIFT_DESKTOP : 0);
+      streak.style.visibility = 'initial';
+      io.disconnect();
+      update();
+    });
+    streak.style.visibility = 'hidden';
+    io.observe(streak);
+    // motion's scroll() reads/updates inside the scroll event's frame — no extra rAF hop
+    addEventListener('scroll', update, { passive: true });
     addEventListener('resize', update);
     update();
   }
@@ -136,7 +169,8 @@ const acc = content.accelerator;
   .uth__streak {
     flex: none; width: 1px; height: 355px; opacity: 0; overflow: hidden;
     background-image: linear-gradient(140deg, rgb(255, 59, 186) 0%, rgb(243, 173, 255) 59.9099%, rgb(98, 72, 255) 100%);
-    transition: opacity .6s ease; will-change: transform;
+    transform: perspective(1200px); will-change: transform;
+    transition: opacity 0.1s cubic-bezier(0.44, 0, 0.56, 1); /* Lo, page.pretty.js:11624 */
   }
   .uth__streak.is-on { opacity: 1; }
   html.no-motion .uth__streak { opacity: 0; transition: none; }

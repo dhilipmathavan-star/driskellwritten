@@ -3,12 +3,32 @@
   "tag": "Testimonials",
   "heading": "What our users say",
   "ticker": {
-    "speed": 60,
-    "copies": 3,
+    "_source": "Ticker instances + breakpoint overrides, reference/source/page.pretty.js:28020-28486 (col 1), 28493-28703 (col 2), 28710-28920 (col 3); driven by src/scripts/ticker.js",
     "columns": [
-      { "direction": "forward", "items": ["sanket", "sanket", "sanket", "sanket", "madhur", "suparna", "madhur"] },
-      { "direction": "reverse", "items": ["satyen", "akash", "riley"] },
-      { "direction": "forward", "items": ["rafiq", "lorraine", "casey"] }
+      {
+        "items": ["sanket", "sanket", "sanket", "sanket", "madhur", "suparna", "madhur"],
+        "props": {
+          "speed": 60, "direction": "top", "gap": 10, "padding": 10, "alignment": "center", "hoverFactor": 1,
+          "fadeOptions": { "fadeContent": true, "overflow": false, "fadeWidth": 25, "fadeInset": 0, "fadeAlpha": 0 },
+          "overrides": { "tablet": { "direction": "left", "gap": 30 }, "mobile": { "direction": "left" } }
+        }
+      },
+      {
+        "items": ["satyen", "akash", "riley"],
+        "props": {
+          "speed": 60, "direction": "bottom", "gap": 10, "padding": 10, "alignment": "center", "hoverFactor": 1,
+          "fadeOptions": { "fadeContent": true, "overflow": false, "fadeWidth": 25, "fadeInset": 0, "fadeAlpha": 0 },
+          "overrides": { "tablet": { "direction": "right", "gap": 30 }, "mobile": { "direction": "right" } }
+        }
+      },
+      {
+        "items": ["rafiq", "lorraine", "casey"],
+        "props": {
+          "speed": 60, "direction": "top", "gap": 10, "padding": 10, "alignment": "center", "hoverFactor": 1,
+          "fadeOptions": { "fadeContent": true, "overflow": false, "fadeWidth": 25, "fadeInset": 0, "fadeAlpha": 0 },
+          "overrides": { "tablet": { "direction": "left", "gap": 30 }, "mobile": { "direction": "left" } }
+        }
+      }
     ]
   },
   "testimonials": {

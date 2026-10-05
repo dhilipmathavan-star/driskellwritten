@@ -2,22 +2,23 @@
 // Testimonials — original blocks 17 (tag + heading) and 18 (three ticker columns).
 // Desktop/laptop: three vertical tickers (alternating up / down).
 // Tablet/mobile: three horizontal tickers stacked (alternating left / right).
-// Each list is rendered `copies` times so the loop is seamless; copies > 0 are aria-hidden.
-// Under html.no-motion the lists rest at their start position (first card at the top/left).
+// Each column is one instance of the original's Ticker component; its props (incl. the
+// per-breakpoint direction/gap overrides) are in testimonials.json and src/scripts/ticker.js
+// measures, duplicates and animates the list exactly like the source.
+// Under html.no-motion the lists rest at their start position.
 interface Testimonial { name: string; quote: string; padY: number }
-interface Column { direction: 'forward' | 'reverse'; items: string[] }
+interface Column { items: string[]; props: Record<string, unknown> }
 interface Props {
   content: {
     refs: { heading: string; tickers: string };
     tag: string;
     heading: string;
-    ticker: { speed: number; copies: number; columns: Column[] };
+    ticker: { columns: Column[] };
     testimonials: Record<string, Testimonial>;
   };
 }
 const { content } = Astro.props;
 const { ticker, testimonials } = content;
-const copies = Array.from({ length: ticker.copies }, (_, i) => i);
 ---
 <section class="testimonials" aria-labelledby="testimonials-heading">
   <div class="t-head" data-ref={content.refs.heading}>
@@ -25,23 +26,21 @@ const copies = Array.from({ length: ticker.copies }, (_, i) => i);
     <h2 class="t-title" id="testimonials-heading">{content.heading}</h2>
   </div>
 
-  <div class="t-grid" data-ref={content.refs.tickers} style={`--speed:${ticker.speed};`}>
+  <div class="t-grid" data-ref={content.refs.tickers}>
     {ticker.columns.map((col) => (
-      <div class={`t-col t-col--${col.direction}`}>
-        <ul class="t-list" style={`--n:${col.items.length};`}>
-          {copies.flatMap((copy) =>
-            col.items.map((id) => {
-              const t = testimonials[id];
-              return (
-                <li class="t-item" aria-hidden={copy > 0 ? 'true' : undefined}>
-                  <figure class="t-card" style={`--py:${t.padY}px;`}>
-                    <figcaption class="t-name">{t.name}</figcaption>
-                    <blockquote class="t-quote"><p>{t.quote}</p></blockquote>
-                  </figure>
-                </li>
-              );
-            }),
-          )}
+      <div class="t-col" data-ticker={JSON.stringify(col.props)}>
+        <ul class="t-list">
+          {col.items.map((id) => {
+            const t = testimonials[id];
+            return (
+              <li class="t-item">
+                <figure class="t-card" style={`--py:${t.padY}px;`}>
+                  <figcaption class="t-name">{t.name}</figcaption>
+                  <blockquote class="t-quote"><p>{t.quote}</p></blockquote>
+                </figure>
+              </li>
+            );
+          })}
         </ul>
       </div>
     ))}
@@ -78,18 +77,17 @@ const copies = Array.from({ length: ticker.copies }, (_, i) => i);
 
   /* ---- block 18: tickers ---- */
   .t-grid {
-    --stride: 329; /* card box (319) + list gap (10) */
     display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 10px;
     padding: 80px 51px 0; overflow: hidden;
   }
   .t-col {
     position: relative; flex: 1 0 0; width: 1px; height: 1000px;
     display: flex; align-items: center; padding: 10px; overflow: hidden;
+    opacity: 0; /* Ticker <section>: hidden until ticker.js has measured (page.pretty.js:282) */
     -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, #000 12.5%, #000 87.5%, rgba(0, 0, 0, 0) 100%);
     mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, #000 12.5%, #000 87.5%, rgba(0, 0, 0, 0) 100%);
   }
   .t-list {
-    --dist: calc(var(--n) * var(--stride) * 1px);
     position: relative; display: flex; flex-direction: column; align-items: center; gap: 10px;
     width: 100%; height: 100%; will-change: transform;
   }
@@ -111,16 +109,6 @@ const copies = Array.from({ length: ticker.copies }, (_, i) => i);
     white-space: pre-wrap; word-break: break-word; overflow-wrap: break-word;
   }
 
-  /* motion: 60px/s, one list length per loop */
-  html:not(.no-motion) .t-list {
-    animation: tst-up calc(var(--n) * var(--stride) * 1s / var(--speed)) linear infinite;
-  }
-  html:not(.no-motion) .t-col--reverse .t-list { animation-name: tst-down; }
-  @keyframes tst-up { from { transform: translateY(0); } to { transform: translateY(calc(-1 * var(--dist))); } }
-  @keyframes tst-down { from { transform: translateY(calc(-1 * var(--dist))); } to { transform: translateY(0); } }
-  @keyframes tst-left { from { transform: translateX(0); } to { transform: translateX(calc(-1 * var(--dist))); } }
-  @keyframes tst-right { from { transform: translateX(calc(-1 * var(--dist))); } to { transform: translateX(0); } }
-  @media (prefers-reduced-motion: reduce) { html .t-list { animation: none !important; } }
 
   /* laptop */
   @media (min-width: 1200px) and (max-width: 1439px) {
@@ -137,16 +125,16 @@ const copies = Array.from({ length: ticker.copies }, (_, i) => i);
       mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #000 12.5%, #000 87.5%, rgba(0, 0, 0, 0) 100%);
     }
     .t-list { flex-direction: row; }
-    html:not(.no-motion) .t-list { animation-name: tst-left; }
-    html:not(.no-motion) .t-col--reverse .t-list { animation-name: tst-right; }
   }
   @media (min-width: 810px) and (max-width: 1199px) {
-    .t-grid { --stride: 399; } /* 369 + 30 */
     .t-list { gap: 30px; }
   }
   @media (max-width: 809px) {
-    .t-grid { --stride: 379; } /* 369 + 10 */
     .t-col { width: 126%; }
     .t-title { width: 100%; }
   }
 </style>
+
+<script>
+  import '../../scripts/ticker.js';
+</script>

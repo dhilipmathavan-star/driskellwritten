@@ -26,6 +26,12 @@
       "label": "Generate",
       "icon": "/assets/img/7GXcGMkrrkTHiXZgp1TOfMMjDA.svg",
       "link": "app"
+    },
+    "preview": {
+      "src": "/assets/img/uOGoZjeqWeZlRF1Hd6kYLwlVME.png",
+      "alt": "",
+      "width": 154,
+      "height": 122
     }
   },
   "chips": [
@@ -35,7 +41,8 @@
       "iconW": 24,
       "groupW": 169,
       "mobileW": 255,
-      "textW": 139
+      "textW": 139,
+      "value": "Unveiling cutting-edge techniques for in-depth product research and market analysis."
     },
     {
       "label": "Photoshoots & images",
@@ -43,7 +50,8 @@
       "iconW": 22,
       "groupW": 204,
       "mobileW": 255,
-      "textW": 176
+      "textW": 176,
+      "value": "Mastering the art of product photography and image curation to captivate and engage."
     },
     {
       "label": "Storefront Optimizations",
@@ -51,7 +59,8 @@
       "iconW": 23,
       "groupW": 215,
       "mobileW": 245,
-      "textW": 188
+      "textW": 188,
+      "value": "Implementing storefront optimizations for maximized visibility and consumer interaction."
     }
   ],
   "background": {

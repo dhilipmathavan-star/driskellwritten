@@ -52,6 +52,7 @@ node scripts/motioncheck.mjs --ref 22 --trigger hover  --orig '<css selector>' -
   `--offset N` scrolls N px less, `--tag x` names the output folder.
 - Output: `motioncheck/<ref>-<trigger>[-tag]/<t>-compare.png` (original | clone | diff) and
   `summary.json`. **Read the compare images** and confirm the states match at every t.
+- `--pin-tickers`: start every infinite ticker loop at phase 0 at the trigger in both pages (their phase otherwise depends on hydration timing).
 - Videos are hidden in both. Real network still loads images, so allow a settle time.
 - Your scripts/animations must still respect `html.no-motion` (`?static`), which the static
   `scripts/crosscheck.mjs` uses — after your changes, rerun crosscheck for your blocks at

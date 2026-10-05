@@ -10,10 +10,21 @@
     "body": "Think of these agents as your remote team. They work 24/7 to generate new media for your products, that stick with your customers",
     "cardBackground": "/assets/svg/sb-agent-card.svg",
     "vertical": {
-      "comment": "desktop + laptop: vertical ticker, scrolls up at `speed` px/s",
-      "gap": 30,
-      "itemSize": 405,
-      "speed": 100,
+      "comment": "desktop + laptop Ticker instance, props from reference/source/page.pretty.js:18297-18321 + 20109 (driven by src/scripts/ticker.js)",
+      "ticker": {
+        "speed": 100,
+        "direction": "top",
+        "gap": 30,
+        "alignment": "center",
+        "hoverFactor": 1,
+        "padding": 10,
+        "paddingPerSide": true,
+        "paddingTop": 10,
+        "paddingRight": 10,
+        "paddingBottom": 10,
+        "paddingLeft": 10,
+        "fadeOptions": { "fadeContent": true, "overflow": false, "fadeWidth": 25, "fadeInset": 0, "fadeAlpha": 0 }
+      },
       "items": [
         {
           "title": "Apparel Shoots",
@@ -111,10 +122,16 @@
       ]
     },
     "horizontal": {
-      "comment": "tablet + mobile: horizontal ticker, scrolls left at `speed` px/s; chips laid out in rows",
-      "gap": 10,
-      "itemSize": 260,
-      "speed": 100,
+      "comment": "tablet + mobile Ticker instances (identical props), page.pretty.js:14075-14100 + 16173 (mobile) and 16186-16210 + 18284 (tablet); chips laid out in rows",
+      "ticker": {
+        "speed": 100,
+        "direction": "left",
+        "gap": 10,
+        "alignment": "center",
+        "hoverFactor": 1,
+        "padding": 10,
+        "fadeOptions": { "fadeContent": true, "overflow": false, "fadeWidth": 25, "fadeInset": 0, "fadeAlpha": 0 }
+      },
       "items": [
         {
           "title": "Talking Avatars",

@@ -1,9 +1,10 @@
 ---
 // Block 11 — light rounded panel with a blurred brand-gradient halo: "The Complete / Brand OS"
 // and the list of agents. Desktop/laptop: table rows with type pills; tablet/mobile: plain list.
-interface Agent { name: string; compactName: string; type: string; typeAltFont?: boolean }
+interface Preview { src: string; srcset: string; width: number; height: number }
+interface Agent { name: string; compactName: string; type: string; typeAltFont?: boolean; preview: Preview }
 interface Props {
-  content: { ref: string; title: { muted: string; strong: string }; agents: Agent[] };
+  content: { ref: string; title: { muted: string; strong: string }; agents: Agent[]; previewSizes: string };
 }
 const { content } = Astro.props;
 ---
@@ -20,13 +21,14 @@ const { content } = Astro.props;
       </h2>
     </div>
 
-    <div class="bos__table">
+    <div class="bos__table" data-bos-hov>
       <div class="bos__cols">
         <div class="bos__left">
           <ul class="bos__rows">
             {content.agents.map((a) => (
               <li class="bos__row">
-                <div class="bos__rowline">
+                <div class="bos__rowline" data-bos-row
+                  data-src={a.preview.src} data-srcset={a.preview.srcset} data-w={a.preview.width} data-h={a.preview.height}>
                   <span class="bos__dot" aria-hidden="true"></span>
                   <div class="bos__rowmain">
                     <h3 class="bos__name">{a.name}</h3>
@@ -37,7 +39,7 @@ const { content } = Astro.props;
             ))}
           </ul>
         </div>
-        <div class="bos__right" aria-hidden="true"></div>
+        <div class="bos__right" aria-hidden="true" data-bos-stage data-sizes={content.previewSizes}></div>
       </div>
     </div>
 
@@ -48,6 +50,140 @@ const { content } = Astro.props;
     </ul>
   </div>
 </section>
+
+<script>
+  // Port of the original "Hov" component (page.pretty.js:3596–5412, used at Home 22695, variant
+  // "Variant 1" = AHU2Eql1O). Each row (Frame 287…297, "data-highlight") has
+  //   onMouseEnter → setVariant(row variant 2…12)   onMouseLeave → setVariant("Variant 1")
+  // (page.pretty.js:3624–3659, 3711–3712, 3830–3831, …). A variant change:
+  //   • the row's "Ellipse 28" backgroundColor rgba(0,0,0,0) ↔ rgb(0,0,0) (variants, 3715–3727)
+  //   • the preview image (framer-1a5mpj0, rendered only for variants 2–12, 3660–3672/5214)
+  //     mounts/unmounts instantly, swaps src and moves to the variant's top/bottom (CSS 5398–5409);
+  //     when one row variant changes straight into another (leave + enter in the same event),
+  //     framer-motion's layout projection animates the box from the old to the new position.
+  // Transition for all of it: MotionConfig `bn` = spring { stiffness: 500, damping: 60, mass: 1 }
+  // (page.pretty.js:3571). Colour: spring over [0,100] then mixColor (motion.pretty.js:5870, 5741 —
+  // alpha mixes linearly). Layout: spring over [0,1000], velocity 0 (motion.pretty.js:2757–2762).
+  // React commits the variant in a scheduler task (MessageChannel), so leave+enter of one pointer
+  // move are batched into a single variant change — mirrored below.
+  const isStatic = () => document.documentElement.classList.contains('no-motion');
+
+  // framer-motion spring generator (motion.pretty.js:436 `Le`), t in ms.
+  function spring(from: number, to: number, { stiffness = 500, damping = 60, mass = 1 } = {}) {
+    const g = to - from;
+    const h = damping / (2 * Math.sqrt(stiffness * mass));
+    const w = Math.sqrt(stiffness / mass) / 1000;
+    const granular = Math.abs(g) < 5;
+    const restSpeed = granular ? 0.01 : 2, restDelta = granular ? 0.005 : 0.5;
+    let pos: (t: number) => number, vel: (t: number) => number;
+    if (h < 1) {
+      const x = w * Math.sqrt(1 - h * h), S = (h * w * g) / x, C = h * w * S + g * x, W = h * w * g - S * x;
+      pos = (t) => to - Math.exp(-h * w * t) * (S * Math.sin(x * t) + g * Math.cos(x * t));
+      vel = (t) => Math.exp(-h * w * t) * (C * Math.sin(x * t) + W * Math.cos(x * t));
+    } else if (h === 1) {
+      pos = (t) => to - Math.exp(-w * t) * (g + w * g * t);
+      vel = (t) => Math.exp(-w * t) * (w * w * g * t);
+    } else {
+      const e = w * Math.sqrt(h * h - 1), T = (h * w * g) / e, n = h * w * T - g * e, r = h * w * g - T * e;
+      pos = (t) => { const a = Math.min(e * t, 300); return to - (Math.exp(-h * w * t) * (h * w * g * Math.sinh(a) + e * g * Math.cosh(a))) / e; };
+      vel = (t) => { const a = Math.min(e * t, 300); return Math.exp(-h * w * t) * (n * Math.sinh(a) + r * Math.cosh(a)); };
+    }
+    return (t: number) => {
+      const p = pos(t);
+      const done = Math.abs(vel(t) * 1000) <= restSpeed && Math.abs(to - p) <= restDelta;
+      return { value: done ? to : p, done };
+    };
+  }
+  // rAF-driven runner; start time = when the change is committed (motion's time.now()).
+  function run(gen: ReturnType<typeof spring>, onUpdate: (v: number) => void, onDone?: () => void) {
+    const start = performance.now();
+    let id = 0, stopped = false;
+    const step = () => {
+      const ts = performance.now();
+      if (stopped) return;
+      const { value, done } = gen(Math.max(0, ts - start));
+      onUpdate(value);
+      if (done) onDone?.(); else id = requestAnimationFrame(step);
+    };
+    id = requestAnimationFrame(step);
+    return () => { stopped = true; cancelAnimationFrame(id); };
+  }
+
+  for (const hov of document.querySelectorAll<HTMLElement>('[data-bos-hov]')) {
+    const rows = [...hov.querySelectorAll<HTMLElement>('[data-bos-row]')];
+    const stage = hov.querySelector<HTMLElement>('[data-bos-stage]')!;
+    const dots = rows.map((r) => r.querySelector<HTMLElement>('.bos__dot')!);
+    const alpha = dots.map(() => 0);
+    const stopDot: (null | (() => void))[] = dots.map(() => null);
+    let committed = 0; // 0 = "Variant 1"; k = row k (variant k + 1)
+    let pending = 0;
+    let img: HTMLDivElement | null = null;
+    let stopLayout: null | (() => void) = null;
+    let layoutDelta = { x: 0, y: 0 };
+
+    const setDot = (i: number, a: number) => { alpha[i] = a; dots[i].style.backgroundColor = `rgba(0, 0, 0, ${Math.round(a * 1e5) / 1e5})`; };
+    const animateDot = (i: number, target: number) => {
+      stopDot[i]?.();
+      const from = alpha[i];
+      if (from === target) return;
+      // colour keyframes are mapped onto a [0,100] spring, then mixed (alpha linear)
+      stopDot[i] = run(spring(0, 100), (v) => setDot(i, from + (target - from) * (v / 100)), () => { stopDot[i] = null; });
+    };
+    // transformTemplate: Sn = translate(-50%, -50%) for variants 8 & 9, else xn = translateX(-50%)
+    const template = (k: number) => (k === 7 || k === 8 ? 'translate(-50%, -50%)' : 'translateX(-50%)');
+    const applyLayout = (k: number, p: number) => {
+      const dx = layoutDelta.x * (1 - p / 1000), dy = layoutDelta.y * (1 - p / 1000);
+      img!.style.transform = p >= 1000 ? `${template(k)} ` : `${template(k)} translate3d(${dx}px, ${dy}px, 0px)`;
+    };
+    const buildImg = () => {
+      const el = document.createElement('div');
+      el.className = 'bos__preview';
+      el.innerHTML = '<div class="bos__preview-wrap"><img decoding="auto" loading="lazy" alt=""></div>';
+      return el;
+    };
+    const setSrc = (k: number) => {
+      const r = rows[k - 1], im = img!.querySelector('img')!;
+      im.width = Number(r.dataset.w); im.height = Number(r.dataset.h);
+      im.sizes = stage.dataset.sizes!; im.srcset = r.dataset.srcset!; im.src = r.dataset.src!;
+      img!.dataset.v = String(k);
+    };
+
+    const commit = () => {
+      const prev = committed, next = pending;
+      if (prev === next) return;
+      committed = next;
+      if (prev) animateDot(prev - 1, 0);
+      if (next) animateDot(next - 1, 1);
+      if (!next) { stopLayout?.(); stopLayout = null; img?.remove(); img = null; return; }
+      if (!prev || !img) {
+        img = buildImg(); stage.append(img); setSrc(next);
+        img.style.transform = `${template(next)} `;
+        return;
+      }
+      // layout animation: snapshot the current visual box, re-layout, animate the delta away
+      const before = img.getBoundingClientRect();
+      stopLayout?.();
+      setSrc(next);
+      img.style.transform = `${template(next)} `;
+      const after = img.getBoundingClientRect();
+      layoutDelta = { x: before.left - after.left, y: before.top - after.top };
+      applyLayout(next, 0);
+      stopLayout = run(spring(0, 1000), (v) => applyLayout(next, v), () => { stopLayout = null; });
+    };
+    const mc = new MessageChannel();
+    let scheduled = false;
+    mc.port1.onmessage = () => { scheduled = false; commit(); };
+    const setVariant = (k: number) => {
+      if (isStatic()) return;
+      pending = k;
+      if (!scheduled) { scheduled = true; mc.port2.postMessage(0); }
+    };
+    rows.forEach((r, i) => {
+      r.addEventListener('mouseenter', () => setVariant(i + 1));
+      r.addEventListener('mouseleave', () => setVariant(0));
+    });
+  }
+</script>
 
 <style>
   .bos { position: relative; width: 100%; display: flex; justify-content: center; align-items: center; border-radius: 100px; }
@@ -69,7 +205,22 @@ const { content } = Astro.props;
   .bos__table { position: relative; z-index: 1; width: 100%; height: 1247px; overflow: hidden; background: #fff; }
   .bos__cols { width: 100%; display: flex; flex-direction: row; justify-content: center; align-items: flex-start; gap: 10px; }
   .bos__left { flex: 0 0 55%; overflow: hidden; padding-left: 51px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-  .bos__right { flex: 0 0 45%; height: 1742px; }
+  .bos__right { flex: 0 0 45%; height: 1742px; position: relative; overflow: hidden; } /* framer-4581bv */
+  /* Hov preview image (page.pretty.js:5397–5409): framer-1a5mpj0 + variant overrides */
+  .bos__right :global(.bos__preview) { position: absolute; width: 451px; height: auto; aspect-ratio: 1.1086142322097379 / 1; left: 50%; opacity: 1; }
+  .bos__right :global(.bos__preview-wrap) { position: absolute; inset: 0; border-radius: inherit; }
+  .bos__right :global(.bos__preview img) { display: block; width: 100%; height: 100%; border-radius: inherit; object-position: center center; object-fit: cover; }
+  .bos__right :global(.bos__preview[data-v="1"]) { top: 0px; }
+  .bos__right :global(.bos__preview[data-v="2"]) { top: 114px; }
+  .bos__right :global(.bos__preview[data-v="3"]) { top: 228px; }
+  .bos__right :global(.bos__preview[data-v="4"]) { top: 269px; }
+  .bos__right :global(.bos__preview[data-v="5"]) { top: 369px; }
+  .bos__right :global(.bos__preview[data-v="6"]) { top: 453px; }
+  .bos__right :global(.bos__preview[data-v="7"]) { top: 45%; }
+  .bos__right :global(.bos__preview[data-v="8"]) { top: 52%; }
+  .bos__right :global(.bos__preview[data-v="9"]) { bottom: 531px; }
+  .bos__right :global(.bos__preview[data-v="10"]) { bottom: 521px; }
+  .bos__right :global(.bos__preview[data-v="11"]) { bottom: 484px; }
   .bos__rows { width: 100%; display: flex; flex-direction: column; gap: 32px; }
   .bos__rows::after, .bos__row::before {
     content: ""; display: block; height: 3px; flex-shrink: 0;

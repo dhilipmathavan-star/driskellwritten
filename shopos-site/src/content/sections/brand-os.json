@@ -8,58 +8,125 @@
     {
       "name": "Dynamic Images",
       "compactName": "Dynamic Images",
-      "type": "Image"
+      "type": "Image",
+      "preview": {
+        "src": "/assets/img/YxVcLEaPKxqgaWSeXeapQH3Zg.svg",
+        "srcset": "/assets/img/YxVcLEaPKxqgaWSeXeapQH3Zg.svg 512w, /assets/img/YxVcLEaPKxqgaWSeXeapQH3Zg.svg 592w",
+        "width": 592,
+        "height": 534
+      }
     },
     {
       "name": "Ad Baker",
       "compactName": "Ad Baker",
-      "type": "Video"
+      "type": "Video",
+      "preview": {
+        "src": "/assets/img/bJ0rLISDihfJFYdzpvDRDDMWQ.png",
+        "srcset": "/assets/img/bJ0rLISDihfJFYdzpvDRDDMWQ-512.png 512w, /assets/img/bJ0rLISDihfJFYdzpvDRDDMWQ-1024.png 1024w, /assets/img/bJ0rLISDihfJFYdzpvDRDDMWQ.png 1184w",
+        "width": 1184,
+        "height": 1068
+      }
     },
     {
       "name": "Talking Avatars",
       "compactName": "Talking Avatars",
-      "type": "Video"
+      "type": "Video",
+      "preview": {
+        "src": "/assets/img/hxFz1RpPSvHHqzGpKDV8bYTVNU.png",
+        "srcset": "/assets/img/hxFz1RpPSvHHqzGpKDV8bYTVNU-512.png 512w, /assets/img/hxFz1RpPSvHHqzGpKDV8bYTVNU-1024.png 1024w, /assets/img/hxFz1RpPSvHHqzGpKDV8bYTVNU.png 1184w",
+        "width": 1184,
+        "height": 1068
+      }
     },
     {
       "name": "Product Videos",
       "compactName": "Product Videos",
-      "type": "Video"
+      "type": "Video",
+      "preview": {
+        "src": "/assets/img/C7OaLhoBOrlxI5JMaJjW7MYdGU.png",
+        "srcset": "/assets/img/C7OaLhoBOrlxI5JMaJjW7MYdGU-512.png 512w, /assets/img/C7OaLhoBOrlxI5JMaJjW7MYdGU-1024.png 1024w, /assets/img/C7OaLhoBOrlxI5JMaJjW7MYdGU.png 1184w",
+        "width": 1184,
+        "height": 1068
+      }
     },
     {
       "name": "Background Enhancement",
       "compactName": "Background Enhancement",
-      "type": "Image"
+      "type": "Image",
+      "preview": {
+        "src": "/assets/img/kc5vgwkBxcgh125C3Mf48YhMbUM.png",
+        "srcset": "/assets/img/kc5vgwkBxcgh125C3Mf48YhMbUM-512.png 512w, /assets/img/kc5vgwkBxcgh125C3Mf48YhMbUM-1024.png 1024w, /assets/img/kc5vgwkBxcgh125C3Mf48YhMbUM.png 1184w",
+        "width": 1184,
+        "height": 1068
+      }
     },
     {
       "name": "Text to 3D",
       "compactName": "Text to 3d",
       "type": "3D",
-      "typeAltFont": true
+      "typeAltFont": true,
+      "preview": {
+        "src": "/assets/img/OeutiogZ8O2KRXnqoztuW80w68.png",
+        "srcset": "/assets/img/OeutiogZ8O2KRXnqoztuW80w68-512.png 512w, /assets/img/OeutiogZ8O2KRXnqoztuW80w68-1024.png 1024w, /assets/img/OeutiogZ8O2KRXnqoztuW80w68.png 1184w",
+        "width": 1184,
+        "height": 1068
+      }
     },
     {
       "name": "Product Voiceovers",
       "compactName": "Product Voiceovers",
-      "type": "Audio"
+      "type": "Audio",
+      "preview": {
+        "src": "/assets/img/jtfFxj7V7opSI9uiSxiScnqP8w.png",
+        "srcset": "/assets/img/jtfFxj7V7opSI9uiSxiScnqP8w-512.png 512w, /assets/img/jtfFxj7V7opSI9uiSxiScnqP8w-1024.png 1024w, /assets/img/jtfFxj7V7opSI9uiSxiScnqP8w.png 1184w",
+        "width": 1184,
+        "height": 1068
+      }
     },
     {
       "name": "Description & details",
       "compactName": "Description & details",
-      "type": "Text"
+      "type": "Text",
+      "preview": {
+        "src": "/assets/img/rB3l6lJNaKn0AVVpBta1T3ve7w.png",
+        "srcset": "/assets/img/rB3l6lJNaKn0AVVpBta1T3ve7w-512.png 512w, /assets/img/rB3l6lJNaKn0AVVpBta1T3ve7w-1024.png 1024w, /assets/img/rB3l6lJNaKn0AVVpBta1T3ve7w.png 1184w",
+        "width": 1184,
+        "height": 1068
+      }
     },
     {
       "name": "Apparel Try On",
       "compactName": "Appeal Try On",
-      "type": "Image"
+      "type": "Image",
+      "preview": {
+        "src": "/assets/img/MuwKMf8QnoFgAoIDxuJBSt2nRI.png",
+        "srcset": "/assets/img/MuwKMf8QnoFgAoIDxuJBSt2nRI-512.png 512w, /assets/img/MuwKMf8QnoFgAoIDxuJBSt2nRI-1024.png 1024w, /assets/img/MuwKMf8QnoFgAoIDxuJBSt2nRI.png 1184w",
+        "width": 1184,
+        "height": 1068
+      }
     },
     {
       "name": "Market Researcher",
       "compactName": "Market Research",
-      "type": "Text"
+      "type": "Text",
+      "preview": {
+        "src": "/assets/img/qgaZTNnOZqsci0gQJQT3mGYDHWg.png",
+        "srcset": "/assets/img/qgaZTNnOZqsci0gQJQT3mGYDHWg-512.png 512w, /assets/img/qgaZTNnOZqsci0gQJQT3mGYDHWg-1024.png 1024w, /assets/img/qgaZTNnOZqsci0gQJQT3mGYDHWg.png 1184w",
+        "width": 1184,
+        "height": 1068
+      }
     },
     {
       "name": "Seller Store Manager",
       "compactName": "Seller Store Manager",
-      "type": "Text"
+      "type": "Text",
+      "preview": {
+        "src": "/assets/img/co8pVuUfWNvgBVCrVULHLM3n5A.png",
+        "srcset": "/assets/img/co8pVuUfWNvgBVCrVULHLM3n5A-512.png 512w, /assets/img/co8pVuUfWNvgBVCrVULHLM3n5A-1024.png 1024w, /assets/img/co8pVuUfWNvgBVCrVULHLM3n5A.png 1184w",
+        "width": 1184,
+        "height": 1068
+      }
     }
-  ]
+  ],
+  "previewSizes": "451px"
 }

@@ -591,7 +591,7 @@
   },
   "06": {
    "status": "ok",
-   "mismatchPct": 0.05,
+   "mismatchPct": 0.02,
    "origTop": 4294,
    "cloneTop": 4294,
    "origHeight": 2549,
@@ -800,7 +800,7 @@
   },
   "06": {
    "status": "ok",
-   "mismatchPct": 0.06,
+   "mismatchPct": 0.03,
    "origTop": 4294,
    "cloneTop": 4294,
    "origHeight": 2549,

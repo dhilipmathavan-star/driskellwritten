@@ -6,7 +6,8 @@ interface Img { src: string; srcset: string; sizes: string }
 interface Icon { src: string; style: 'circle' | 'circle-alt' | 'plain' }
 interface VItem { title: string; description: string; chips: string[]; icon: Icon; layout: 'centered' | 'offset' }
 interface HItem { title: string; description: string; chipRows: string[][]; icon: Icon; titleWraps?: boolean; gap?: number }
-interface Ticker<T> { gap: number; itemSize: number; speed: number; items: T[] }
+// `ticker` = the original Ticker component's props; motion by src/scripts/ticker.js.
+interface Ticker<T> { ticker: Record<string, unknown>; items: T[] }
 interface Props {
   content: {
     ref: string;
@@ -29,17 +30,8 @@ interface Props {
 const { content } = Astro.props;
 const { heading, agents, multimodal, collaboration, sharing } = content;
 const { vertical: vt, horizontal: ht } = agents;
-
-// One loop = one full set of items; the list is rendered twice so the loop is seamless.
-const loopOf = (t: Ticker<unknown>) => t.items.length * (t.itemSize + t.gap);
-const vLoop = loopOf(vt);
-const hLoop = loopOf(ht);
-const tickerVars =
-  `--v-gap:${vt.gap}px;--v-loop:${vLoop}px;--v-dur:${(vLoop / vt.speed).toFixed(2)}s;` +
-  `--h-gap:${ht.gap}px;--h-loop:${hLoop}px;--h-dur:${(hLoop / ht.speed).toFixed(2)}s;`;
-const sets = [0, 1];
 ---
-<section class="sb" data-ref={content.ref} style={tickerVars}>
+<section class="sb" data-ref={content.ref}>
   <h2 class="sb-heading">
     <span class="sb-heading__plain">{heading.plain}</span>
     <span class="sb-heading__wrap"><span class="sb-heading__grad grad-text">{heading.gradient}</span></span>
@@ -59,10 +51,10 @@ const sets = [0, 1];
         <div class="sb-agents__panel">
           <!-- desktop + laptop: vertical ticker -->
           <div class="sb-ticker sb-ticker--v">
-            <div class="sb-ticker__mask">
+            <div class="sb-ticker__mask" data-ticker={JSON.stringify(vt.ticker)}>
               <ul class="sb-ticker__list">
-                {sets.map((set) => vt.items.map((item) => (
-                  <li class={`agent agent--v agent--${item.layout}`} aria-hidden={set ? 'true' : undefined}>
+                {vt.items.map((item) => (
+                  <li class={`agent agent--v agent--${item.layout}`}>
                     <img class="agent__bg" src={agents.cardBackground} alt="" aria-hidden="true" />
                     <div class="agent__inner">
                       <div class="agent__content">
@@ -79,16 +71,16 @@ const sets = [0, 1];
                       </div>
                     </div>
                   </li>
-                )))}
+                ))}
               </ul>
             </div>
           </div>
           <!-- tablet + mobile: horizontal ticker -->
           <div class="sb-ticker sb-ticker--h">
-            <div class="sb-ticker__mask">
+            <div class="sb-ticker__mask" data-ticker={JSON.stringify(ht.ticker)}>
               <ul class="sb-ticker__list">
-                {sets.map((set) => ht.items.map((item) => (
-                  <li class="agent agent--h" aria-hidden={set ? 'true' : undefined} style={item.gap ? `--agent-gap:${item.gap}px` : undefined}>
+                {ht.items.map((item) => (
+                  <li class="agent agent--h" style={item.gap ? `--agent-gap:${item.gap}px` : undefined}>
                     <img class="agent__bg" src={agents.cardBackground} alt="" aria-hidden="true" />
                     <div class="agent__inner">
                       <div class="agent__content">
@@ -107,7 +99,7 @@ const sets = [0, 1];
                       </div>
                     </div>
                   </li>
-                )))}
+                ))}
               </ul>
             </div>
           </div>
@@ -250,9 +242,11 @@ const sets = [0, 1];
   /* ---------- ticker ---------- */
   .sb-ticker { position: relative; flex: 1 0 0px; height: 1px; width: 100%; min-width: 0; }
   .sb-ticker--h { display: none; }
+  /* = the Ticker's <section>; opacity 0 until src/scripts/ticker.js has measured it
+     (page.pretty.js:282). Mask/padding/gap are re-applied inline from the JSON props. */
   .sb-ticker__mask {
     display: flex; width: 100%; height: 100%; max-width: 100%; max-height: 100%; place-items: center;
-    padding: 10px; overflow: hidden;
+    padding: 10px; overflow: hidden; opacity: 0;
   }
   .sb-ticker--v .sb-ticker__mask {
     -webkit-mask-image: linear-gradient(rgba(0,0,0,0) 0%, #000 12.5%, #000 87.5%, rgba(0,0,0,0) 100%);
@@ -266,13 +260,8 @@ const sets = [0, 1];
     display: flex; width: 100%; height: 100%; max-width: 100%; max-height: 100%; place-items: center;
     position: relative; will-change: transform;
   }
-  .sb-ticker--v .sb-ticker__list { flex-direction: column; gap: var(--v-gap); }
-  .sb-ticker--h .sb-ticker__list { flex-direction: row; gap: var(--h-gap); }
-  html:not(.no-motion) .sb-ticker--v .sb-ticker__list { animation: sb-ticker-y var(--v-dur) linear infinite; }
-  html:not(.no-motion) .sb-ticker--h .sb-ticker__list { animation: sb-ticker-x var(--h-dur) linear infinite; }
-  @media (prefers-reduced-motion: reduce) { .sb-ticker__list { animation: none !important; } }
-  @keyframes sb-ticker-y { from { transform: translateY(0); } to { transform: translateY(calc(-1 * var(--v-loop))); } }
-  @keyframes sb-ticker-x { from { transform: translateX(0); } to { transform: translateX(calc(-1 * var(--h-loop))); } }
+  .sb-ticker--v .sb-ticker__list { flex-direction: column; gap: 30px; }
+  .sb-ticker--h .sb-ticker__list { flex-direction: row; gap: 10px; }
 
   /* ---------- agent card (shared) ---------- */
   .agent { position: relative; flex-shrink: 0; overflow: hidden; display: flex; align-items: center; justify-content: center; }
@@ -311,7 +300,8 @@ const sets = [0, 1];
   .agent--offset .agent__content { position: absolute; left: 42px; top: 52.5px; }
   .agent--v .agent__text { gap: 17px; }
   .agent--v .agent__title { width: 381px; height: 33px; display: flex; flex-direction: column; justify-content: center; line-height: 95.07px; white-space: nowrap; }
-  .agent--v .agent__title > span { display: inline; }
+  /* original: inline-block span sized to the text (314px), so the gradient spans the text only */
+  .agent--v .agent__title > span { display: inline-block; align-self: flex-start; }
   .agent--v .agent__desc { width: 381px; height: 73px; font-size: 17.45px; line-height: 24.71px; }
   .agent--v .agent__chips { align-self: stretch; justify-content: flex-start; }
 
@@ -502,3 +492,7 @@ const sets = [0, 1];
     .share-mock__panel { width: 80%; }
   }
 </style>
+
+<script>
+  import '../../scripts/ticker.js';
+</script>

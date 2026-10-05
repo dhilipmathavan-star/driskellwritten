@@ -9,6 +9,7 @@
     "crosscheck": "node scripts/crosscheck.mjs"
   },
   "dependencies": {
+    "@studio-freight/lenis": "1.0.29",
     "astro": "^5.18.2"
   },
   "devDependencies": {

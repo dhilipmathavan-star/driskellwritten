@@ -1,6 +1,6 @@
 ---
 // Original block 02: top nav + hero headline, prompt box and capability chips.
-interface Chip { label: string; icon: string; iconW: number; groupW: number; textW: number; mobileW: number }
+interface Chip { label: string; value: string; icon: string; iconW: number; groupW: number; textW: number; mobileW: number }
 interface Props {
   content: {
     ref: string;
@@ -12,6 +12,7 @@ interface Props {
       label: string; name: string; placeholder: string;
       upload: { label: string; icon: string };
       generate: { label: string; icon: string; link: string };
+      preview: { src: string; alt: string; width: number; height: number };
     };
     chips: Chip[];
     background: { lines: string };
@@ -48,12 +49,15 @@ const { logo, cta, title, prompt, chips, background } = content;
     </h1>
     <p class="hero__sub">{content.subtitle}</p>
 
-    <div class="hero__tool">
+    <div class="hero__tool" data-incopy>
       <div class="hero__box">
         <form class="hero__form" action={links[prompt.generate.link]} method="get" target="_blank">
           <label class="sr-only" for="hero-prompt">{prompt.label}</label>
           <input id="hero-prompt" class="hero__input" type="text" name={prompt.name} placeholder={prompt.placeholder} autocomplete="off" />
         </form>
+        <div class="hero__preview" hidden>
+          <img src={prompt.preview.src} alt={prompt.preview.alt} width={prompt.preview.width} height={prompt.preview.height} />
+        </div>
         <div class="hero__actions">
           <button class="hero__btn hero__btn--upload" type="button">
             <span class="hero__btnin">
@@ -71,8 +75,8 @@ const { logo, cta, title, prompt, chips, background } = content;
       </div>
 
       <ul class="hero__chips">
-        {chips.map((c) => (
-          <li class="hero__chip" style={`--mw:${c.mobileW}px`}>
+        {chips.map((c, i) => (
+          <li class="hero__chip" style={`--mw:${c.mobileW}px`} role="button" tabindex="0" data-chip={i} data-value={c.value}>
             <span class="hero__chipgrp" style={`width:${c.groupW}px`}>
               <span class="hero__chiptxt" style={`width:${c.textW}px`}>{c.label}</span>
               <img src={c.icon} alt="" aria-hidden="true" width={c.iconW} height="25" />
@@ -148,9 +152,22 @@ const { logo, cta, title, prompt, chips, background } = content;
   /* prompt tool */
   .hero__tool { width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; }
   .hero__box {
+    position: relative; isolation: isolate;
     width: 713px; max-width: 100%; display: flex; flex-direction: column; justify-content: center; gap: 10px;
-    padding: 13px; background: var(--c-surface); border-radius: 13px;
+    padding: 13px; border-radius: 13px;
   }
+  /* The box fill lives on ::before so its height can follow the In Copy layout animation
+     while the content (e.g. the newly mounted preview) is already at its final place. */
+  .hero__box::before {
+    content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+    background: var(--c-surface); border-radius: inherit;
+  }
+  /* In Copy preview tile: .framer-16osr1u / .framer-5pbs7r / .framer-10rtmkt — 154×122, Framer fit "fit" (page.pretty.js:11385–11395) */
+  .hero__preview { display: flex; justify-content: flex-start; align-items: center; gap: 10px; width: 100%; }
+  .hero__preview[hidden] { display: none; }
+  .hero__preview img { flex: none; width: 154px; height: 122px; object-fit: contain; object-position: center; }
+  .hero__preview[data-tap] img { cursor: pointer; } /* .framer-5pbs7r cursor: pointer (:11389) */
+  .hero__chip { cursor: pointer; } /* .framer-xdup9o/.framer-11fhsf3/.framer-fy1gfq cursor: pointer (:11396) */
   .hero__form { display: flex; flex-direction: column; border-radius: 8px; }
   .hero__input {
     width: 100%; height: 50px; margin-bottom: 10px; padding: 15px; border: 0; border-radius: 4px; outline: none;
@@ -222,3 +239,121 @@ const { logo, cta, title, prompt, chips, background } = content;
     .hero__chipgrp { justify-content: space-between; gap: 0; }
   }
 </style>
+
+<script>
+  // "In Copy" prompt box (page.pretty.js:9640–11436, used at Home :12161 with variant NXG1DYgwu;
+  // tablet override MEb6EIsqv, phone T2tG8rugH at :12158–12159).
+  // It has no hover/appear/typing animation: no enabledGestures (so no hover variants), and the
+  // inputs are static forms (Zi :8614, Gi :8507, ra :8722, la :8830). Its motion is tap-driven:
+  // Upload Image / the preview / the three chips switch variants (onTap → setVariant, :9779–9877)
+  // and every element (all have layoutId) layout-animates with the component transition
+  //   so = { type: "spring", stiffness: 500, damping: 60, mass: 1, delay: 0 }   (:9681)
+  // Tap tables below are extracted verbatim from the onTap defaults + per-variant overrides
+  // (Upload :10080–10121, chips :11070–11096 / :11172–11199 / :11275–11302, preview :10003).
+
+  // Variant ids → names (:9692 / property controls :11440)
+  // NXG1DYgwu V1 · mSyd8Sk7L V2 · f9UkvwOvx V3 · QK4b2pyXa V4 · yogyBTllu V5 · FxGBQUxnU V6 · yVAFlFS3k V7 · pyjaxMTf1 V8
+  // MEb6EIsqv Tab … ob9ldV2ml Tab8 · T2tG8rugH Phone … M0bJZL41c Phone8
+  const UPLOAD = { default: 'mSyd8Sk7L', over: { avtQzUOTl: 'MPhBtACv4', EposLM7n4: 'GLr_5Af77', f9UkvwOvx: 'FxGBQUxnU', FxGBQUxnU: 'f9UkvwOvx', GLr_5Af77: 'EposLM7n4', jfbx1xFx1: 'M0bJZL41c', JjRgxlpoy: 'OWewQJPFf', M0bJZL41c: 'jfbx1xFx1', mBYt_OAJi: 'MEb6EIsqv', MEb6EIsqv: 'mBYt_OAJi', MPhBtACv4: 'avtQzUOTl', mSyd8Sk7L: 'NXG1DYgwu', NPpFOK2GP: 'tlvMZGNzC', ob9ldV2ml: 'WwoGfVDC3', OWewQJPFf: 'JjRgxlpoy', pyjaxMTf1: 'yogyBTllu', QK4b2pyXa: 'yVAFlFS3k', T2tG8rugH: 'wyVQoXWDN', tlvMZGNzC: 'NPpFOK2GP', WwoGfVDC3: 'pyjaxMTf1', wyVQoXWDN: 'T2tG8rugH', yogyBTllu: 'pyjaxMTf1', yVAFlFS3k: 'QK4b2pyXa' } };
+  const CHIPS = [
+    { default: 'f9UkvwOvx', over: { avtQzUOTl: 'OWewQJPFf', EposLM7n4: 'NPpFOK2GP', FxGBQUxnU: 'FxGBQUxnU', GLr_5Af77: 'tlvMZGNzC', jfbx1xFx1: 'NPpFOK2GP', JjRgxlpoy: 'JjRgxlpoy', M0bJZL41c: 'NPpFOK2GP', mBYt_OAJi: 'OWewQJPFf', MEb6EIsqv: 'JjRgxlpoy', MPhBtACv4: 'JjRgxlpoy', mSyd8Sk7L: 'FxGBQUxnU', NPpFOK2GP: 'NPpFOK2GP', ob9ldV2ml: 'JjRgxlpoy', OWewQJPFf: 'OWewQJPFf', T2tG8rugH: 'NPpFOK2GP', tlvMZGNzC: 'tlvMZGNzC', WwoGfVDC3: 'JjRgxlpoy', wyVQoXWDN: 'tlvMZGNzC', yVAFlFS3k: 'FxGBQUxnU' } },
+    { default: 'QK4b2pyXa', over: { avtQzUOTl: 'avtQzUOTl', EposLM7n4: 'EposLM7n4', FxGBQUxnU: 'yVAFlFS3k', GLr_5Af77: 'GLr_5Af77', jfbx1xFx1: 'EposLM7n4', JjRgxlpoy: 'MPhBtACv4', M0bJZL41c: 'GLr_5Af77', mBYt_OAJi: 'avtQzUOTl', MEb6EIsqv: 'MPhBtACv4', MPhBtACv4: 'MPhBtACv4', mSyd8Sk7L: 'yVAFlFS3k', NPpFOK2GP: 'EposLM7n4', ob9ldV2ml: 'avtQzUOTl', OWewQJPFf: 'avtQzUOTl', pyjaxMTf1: 'yVAFlFS3k', T2tG8rugH: 'EposLM7n4', tlvMZGNzC: 'GLr_5Af77', WwoGfVDC3: 'MPhBtACv4', wyVQoXWDN: 'GLr_5Af77', yVAFlFS3k: 'yVAFlFS3k' } },
+    { default: 'yogyBTllu', over: { avtQzUOTl: 'ob9ldV2ml', EposLM7n4: 'jfbx1xFx1', FxGBQUxnU: 'pyjaxMTf1', GLr_5Af77: 'M0bJZL41c', jfbx1xFx1: 'tlvMZGNzC', JjRgxlpoy: 'WwoGfVDC3', M0bJZL41c: 'M0bJZL41c', mBYt_OAJi: 'ob9ldV2ml', MEb6EIsqv: 'WwoGfVDC3', MPhBtACv4: 'WwoGfVDC3', mSyd8Sk7L: 'pyjaxMTf1', NPpFOK2GP: 'jfbx1xFx1', ob9ldV2ml: 'ob9ldV2ml', OWewQJPFf: 'ob9ldV2ml', pyjaxMTf1: 'pyjaxMTf1', T2tG8rugH: 'jfbx1xFx1', tlvMZGNzC: 'M0bJZL41c', WwoGfVDC3: 'WwoGfVDC3', wyVQoXWDN: 'M0bJZL41c', yVAFlFS3k: 'pyjaxMTf1' } },
+  ];
+  const PREVIEW_TAP = 'mSyd8Sk7L'; // .framer-5pbs7r onTap: ne (:10003)
+  // Which children each variant mounts (:9752–9776, :9879–9905)
+  const has = (list: string[]) => (v: string) => list.includes(v);
+  const showGi = has(['f9UkvwOvx', 'FxGBQUxnU', 'JjRgxlpoy', 'NPpFOK2GP', 'tlvMZGNzC']); // A() → "Unveiling"
+  const showRa = has(['QK4b2pyXa', 'yVAFlFS3k', 'MPhBtACv4', 'EposLM7n4', 'GLr_5Af77']); // ye() → "mastering"
+  const showLa = has(['yogyBTllu', 'pyjaxMTf1', 'WwoGfVDC3', 'jfbx1xFx1', 'M0bJZL41c']); // be() → "implement"
+  const showZi = (v: string) => !['f9UkvwOvx', 'QK4b2pyXa', 'yogyBTllu', 'FxGBQUxnU', 'yVAFlFS3k', 'pyjaxMTf1', 'JjRgxlpoy', 'MPhBtACv4', 'WwoGfVDC3', 'NPpFOK2GP', 'EposLM7n4', 'jfbx1xFx1', 'tlvMZGNzC', 'GLr_5Af77', 'M0bJZL41c'].includes(v); // te()
+  const showWrap = has(['mSyd8Sk7L', 'mBYt_OAJi', 'wyVQoXWDN']); // j() → .framer-16osr1u (tappable preview)
+  const showTile = has(['FxGBQUxnU', 'yVAFlFS3k', 'pyjaxMTf1', 'OWewQJPFf', 'avtQzUOTl', 'ob9ldV2ml', 'tlvMZGNzC', 'GLr_5Af77', 'M0bJZL41c']); // ve() → .framer-10rtmkt
+
+  // framer-motion spring (motion.pretty.js:436–520) for a layout animation, which animates its
+  // progress 0 → 1000 (motion.pretty.js:2757); restSpeed 2 / restDelta 0.5 defaults (:5783–5784).
+  function springEasing(stiffness: number, damping: number, mass: number) {
+    const from = 0, to = 1000, g = to - from, v0 = 0;
+    const zeta = damping / (2 * Math.sqrt(stiffness * mass));
+    const w = Math.sqrt(stiffness / mass) / 1000; // per ms
+    let pos: (t: number) => number, vel: (t: number) => number;
+    if (zeta < 1) {
+      const wd = w * Math.sqrt(1 - zeta * zeta), A = (v0 + zeta * w * g) / wd;
+      const C = zeta * w * A + g * wd, D = zeta * w * g - A * wd;
+      pos = (t) => to - Math.exp(-zeta * w * t) * (A * Math.sin(wd * t) + g * Math.cos(wd * t));
+      vel = (t) => Math.exp(-zeta * w * t) * (C * Math.sin(wd * t) + D * Math.cos(wd * t));
+    } else if (zeta === 1) {
+      pos = (t) => to - Math.exp(-w * t) * (g + (v0 + w * g) * t);
+      vel = (t) => Math.exp(-w * t) * (w * (v0 + w * g) * t - v0);
+    } else {
+      const e = w * Math.sqrt(zeta * zeta - 1), k = (v0 + zeta * w * g) / e;
+      const n = zeta * w * k - g * e, r = zeta * w * g - k * e;
+      pos = (t) => { const m = Math.min(e * t, 300); return to - (Math.exp(-zeta * w * t) * ((v0 + zeta * w * g) * Math.sinh(m) + e * g * Math.cosh(m))) / e; };
+      vel = (t) => { const m = Math.min(e * t, 300); return Math.exp(-zeta * w * t) * (n * Math.sinh(m) + r * Math.cosh(m)); };
+    }
+    const pts: number[] = [];
+    let t = 0;
+    for (; t < 10000; t += 10) {
+      const x = pos(t);
+      if (Math.abs(vel(t) * 1000) <= 2 && Math.abs(to - x) <= 0.5) break;
+      pts.push(x / to);
+    }
+    pts.push(1);
+    return { duration: t, easing: `linear(${pts.map((p) => +p.toFixed(5)).join(', ')})` };
+  }
+  const SPRING = springEasing(500, 60, 1); // so (:9681)
+
+  const root = document.querySelector<HTMLElement>('[data-incopy]');
+  if (root) {
+    const isStatic = document.documentElement.classList.contains('no-motion') || new URLSearchParams(location.search).has('static');
+    const box = root.querySelector<HTMLElement>('.hero__box')!;
+    const input = root.querySelector<HTMLInputElement>('.hero__input')!;
+    const preview = root.querySelector<HTMLElement>('.hero__preview')!;
+    const actions = root.querySelector<HTMLElement>('.hero__actions')!;
+    const chipsRow = root.querySelector<HTMLElement>('.hero__chips')!;
+    const chips = [...root.querySelectorAll<HTMLElement>('[data-chip]')];
+    const presets = chips.map((c) => c.dataset.value ?? '');
+    const placeholder = input.placeholder;
+    // Initial variant per breakpoint (Home :12158–12166)
+    const mq = (q: string) => matchMedia(q).matches;
+    let variant = mq('(max-width: 809px)') ? 'T2tG8rugH' : mq('(min-width: 810px) and (max-width: 1199px)') ? 'MEb6EIsqv' : 'NXG1DYgwu';
+
+    const apply = (v: string, prev: string) => {
+      // Zi stays mounted between variants that both show it (keeps typed text); the preset forms
+      // are controlled inputs with a fixed value.
+      const preset = showGi(v) ? presets[0] : showRa(v) ? presets[1] : showLa(v) ? presets[2] : null;
+      if (preset !== null) { input.value = preset; input.readOnly = true; input.placeholder = ''; }
+      else { if (!showZi(prev) || input.readOnly) input.value = ''; input.readOnly = false; input.placeholder = placeholder; }
+      const tile = showWrap(v) || showTile(v);
+      preview.hidden = !tile;
+      if (showWrap(v)) preview.dataset.tap = ''; else delete preview.dataset.tap;
+    };
+
+    const setVariant = (next: string) => {
+      if (next === variant) return;
+      const before = { box: box.getBoundingClientRect(), actions: actions.getBoundingClientRect(), chips: chipsRow.getBoundingClientRect() };
+      apply(next, variant);
+      variant = next;
+      if (isStatic) return;
+      const after = { box: box.getBoundingClientRect(), actions: actions.getBoundingClientRect(), chips: chipsRow.getBoundingClientRect() };
+      const opts = { duration: SPRING.duration, easing: SPRING.easing };
+      const dTop = before.box.top - after.box.top, dBottom = before.box.bottom - after.box.bottom;
+      if (dTop || dBottom) {
+        box.animate({ top: [`${dTop}px`, '0px'], bottom: [`${-dBottom}px`, '0px'] }, { ...opts, pseudoElement: '::before' });
+      }
+      for (const [el, a, b] of [[actions, before.actions, after.actions], [chipsRow, before.chips, after.chips]] as const) {
+        const dy = a.top - b.top, dx = a.left - b.left;
+        if (dx || dy) el.animate({ transform: [`translate(${dx}px, ${dy}px)`, 'translate(0px, 0px)'] }, opts);
+      }
+    };
+
+    const tap = (table: { default: string; over: Record<string, string> }) => () => setVariant(table.over[variant] ?? table.default);
+    root.querySelector('.hero__btn--upload')!.addEventListener('click', tap(UPLOAD));
+    chips.forEach((chip, i) => {
+      const go = tap(CHIPS[i]);
+      chip.addEventListener('click', go);
+      chip.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
+    });
+    preview.addEventListener('click', () => { if (showWrap(variant)) setVariant(PREVIEW_TAP); });
+  }
+</script>

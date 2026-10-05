@@ -1,9 +1,11 @@
 ---
-// Footer — original blocks 22 (social dock), 23 (full-width hairline) and 24 (copyright).
-// Dock hover (Framer spring, damping 60 / mass 2 / stiffness 400): the hovered button grows
-// 48 → 72px and lifts, a white indicator dot appears under it and the label tooltip fades in
-// above it while sliding up 20px.
-interface Social { label: string; href?: string; link?: string; icon: string; iconSize: [number, number] }
+// Footer — original blocks 22 (social dock: Framer "Dock", page.pretty.js:7230–7409, Home 29330),
+// 23 (full-width hairline) and 24 (copyright). Blocks 23/24 have no motion in the source.
+// The dock hover is a Framer layout animation — see the <script> for the port.
+interface Social {
+  label: string; href?: string; link?: string; icon: string; iconSize: [number, number];
+  border: 'hover' | 'always';
+}
 interface Props {
   content: {
     refs: { social: string; line: string; copyright: string };
@@ -25,9 +27,9 @@ const { content, links } = Astro.props;
           const external = /^https?:/.test(href);
           return (
             <li class="dock-item">
-              <a class="dock-link" href={href} aria-label={s.label}
+              <a class="dock-link" href={href} aria-label={s.label} data-border={s.border}
                 {...(external ? { target: '_blank', rel: 'noopener' } : {})}>
-                <span class="dock-btn">
+                <span class="dock-btn" data-on={s.border === 'always' ? '' : undefined}>
                   <img src={s.icon} alt="" aria-hidden="true" width={s.iconSize[0]} height={s.iconSize[1]}
                     style={`width:${s.iconSize[0]}px;height:${s.iconSize[1]}px;`} />
                 </span>
@@ -50,8 +52,194 @@ const { content, links } = Astro.props;
   </div>
 </footer>
 
+<script>
+  // Port of the Dock hover. Source:
+  //  • Dock (page.pretty.js:7230–7409): Container (layoutId bkNSLkUT0) → 4 component containers
+  //    (layoutIds …-container) inside MotionConfig `Hr` = spring { stiffness 500, damping 60, mass 1 }.
+  //  • Each icon is its own component — "Button Copy" X (5810–6070), "Button" Substack (6742–7116),
+  //    "Button Copy 2" Instagram (5413–5724), "Button Copy 5" Mail (6076–6405) — with hover gesture
+  //    (onMouseEnter/onMouseLeave, framer.pretty.js:9407) inside MotionConfig spring
+  //    { stiffness 400, damping 60, mass 2 } (`Kn`/`Or`/`Pn`/`ir`).
+  //    Hover CSS (e.g. 6058–6062): Icon height min-content; Container justify flex-end;
+  //    Button width 48 → 72 (aspect 1); Indicator (8×8 white dot, rendered only while hovered,
+  //    no exit animation) order 2; Tooltip left 48% → 49%, top −36 → −56px, translateX(−50%).
+  //    Variants: Tooltip opacity 0 → 1 (+ boxShadow → none); X/Instagram Button get
+  //    data-border + --border-* 0 → 1px rgb(34,34,34) (Substack/Mail always have it).
+  //  • Every element has layoutId + layoutDependency, so the class change is animated by
+  //    framer-motion's projection: progress spring 0 → 1000, velocity 0 (motion.pretty.js:2746–2762),
+  //    each box mixed linearly from its current visual box to the new layout box relative to its
+  //    projecting parent (2708–2731). The dock + component containers use `Hr`, everything inside an
+  //    icon uses `Kn`. Verified frame-by-frame on the original (both springs match to <2ms).
+  //  Here the same boxes are written as real layout sizes every frame (visually identical to the
+  //  original's transform + scale-correction output).
+  const root = document.documentElement;
+  const isStatic = () => root.classList.contains('no-motion') || new URLSearchParams(location.search).has('static');
+
+  type Phys = { stiffness: number; damping: number; mass: number };
+  const DOCK: Phys = { stiffness: 500, damping: 60, mass: 1 }; // `Hr` page.pretty.js:7262
+  const ICON: Phys = { stiffness: 400, damping: 60, mass: 2 }; // `Kn` page.pretty.js:5849
+
+  // framer-motion spring (motion.pretty.js:436–520 `Le`), explicit physics, velocity 0. t in ms.
+  function springGen(from: number, to: number, { stiffness, damping, mass }: Phys) {
+    const g = to - from;
+    const h = damping / (2 * Math.sqrt(stiffness * mass));
+    const w = Math.sqrt(stiffness / mass) / 1000;
+    const granular = Math.abs(g) < 5;
+    const restSpeed = granular ? 0.01 : 2, restDelta = granular ? 0.005 : 0.5;
+    let pos: (t: number) => number, vel: (t: number) => number;
+    if (h < 1) {
+      const x = w * Math.sqrt(1 - h * h), S = (h * w * g) / x;
+      pos = (t) => to - Math.exp(-h * w * t) * (S * Math.sin(x * t) + g * Math.cos(x * t));
+      const C = h * w * S + g * x, W = h * w * g - S * x;
+      vel = (t) => Math.exp(-h * w * t) * (C * Math.sin(x * t) + W * Math.cos(x * t));
+    } else if (h === 1) {
+      pos = (t) => to - Math.exp(-w * t) * (g + w * g * t);
+      vel = (t) => Math.exp(-w * t) * (w * w * g * t);
+    } else {
+      const e = w * Math.sqrt(h * h - 1);
+      pos = (t) => to - (Math.exp(-h * w * t) * (h * w * g * Math.sinh(Math.min(e * t, 300)) + e * g * Math.cosh(Math.min(e * t, 300)))) / e;
+      const k = (h * w * g) / e, n = h * w * k - g * e, r = h * w * g - k * e;
+      vel = (t) => Math.exp(-h * w * t) * (n * Math.sinh(Math.min(e * t, 300)) + r * Math.cosh(Math.min(e * t, 300)));
+    }
+    return (t: number) => {
+      if (t <= 0) return { value: from, done: false };
+      const v = pos(t);
+      const done = Math.abs(vel(t) * 1000) <= restSpeed && Math.abs(to - v) <= restDelta;
+      return { value: done ? to : v, done };
+    };
+  }
+  // accelerated values (opacity) go to WAAPI as linear() sampled from a [0,100] spring
+  // (motion.pretty.js:551–558 `je`, 737–746 `ot`, 5785–5791 `Xc`)
+  function springToWaapi(p: Phys) {
+    const gen = springGen(0, 100, p);
+    let d = 0;
+    while (!gen(d).done && d < 2e4) d += 50;
+    const n = Math.max(Math.round(d / 10), 2), pts: number[] = [];
+    for (let i = 0; i < n; i++) pts.push(Math.round((gen(d * (i / (n - 1))).value / 100) * 1e4) / 1e4);
+    return { duration: d, easing: `linear(${pts.join(', ')})` };
+  }
+
+  // layout boxes (px, relative to the projecting parent), page.pretty.js:6045–6062 + tree 1440-22
+  const REST = { w: 48, by: 8, bs: 48, tx: 0.48 * 48, ty: -36 };
+  const HOVER = { w: 72, by: -24, bs: 72, tx: 0.49 * 72, ty: -56 };
+  type Box = typeof REST;
+  const KEYS = Object.keys(REST) as (keyof Box)[];
+
+  interface Anim { from: number; to: number; start: number; gen: ReturnType<typeof springGen> }
+  const progress = (a: Anim, now: number) => {
+    const r = a.gen(now - a.start);
+    return { p: r.value / 1000, done: r.done };
+  };
+
+  function initDock(dock: HTMLElement) {
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const tipSpring = springToWaapi(ICON);
+    const items = [...dock.querySelectorAll<HTMLElement>('.dock-item')].map((li) => {
+      const link = li.querySelector<HTMLElement>('.dock-link')!;
+      return {
+        li, link,
+        btn: link.querySelector<HTMLElement>('.dock-btn')!,
+        tip: link.querySelector<HTMLElement>('.dock-tip')!,
+        borderOnHover: link.dataset.border === 'hover',
+        hovered: false,
+        // component container width (Dock tree, `Hr`)
+        cw: 48, cwA: null as Anim | null,
+        // icon internals (`Kn`): current visual box + animation
+        box: { ...REST } as Box, boxFrom: { ...REST } as Box, boxTo: { ...REST } as Box, boxA: null as Anim | null,
+        // --border-* variables (JS spring, `Kn`): width px and colour progress
+        bw: 0, bwA: null as Anim | null, bc: 0, bcA: null as Anim | null,
+        tipAnim: null as Animation | null,
+      };
+    });
+    type Item = typeof items[number];
+    let raf = 0;
+
+    const render = (it: Item) => {
+      it.li.style.width = `${it.cw}px`;
+      it.link.style.width = `${it.box.w}px`;
+      it.btn.style.top = `${it.box.by}px`;
+      it.btn.style.width = it.btn.style.height = `${it.box.bs}px`;
+      it.tip.style.left = `${it.box.tx}px`;
+      it.tip.style.top = `${it.box.ty}px`;
+      if (it.borderOnHover) {
+        // colour rgba(0,0,0,0) → rgb(34,34,34): channels mixed in squared space, alpha linear
+        const c = Math.round(Math.sqrt(it.bc * 34 * 34));
+        it.btn.style.setProperty('--bw', `${it.bw}px`);
+        it.btn.style.setProperty('--bc', `rgba(${c}, ${c}, ${c}, ${Math.round(it.bc * 1e5) / 1e5})`);
+      }
+    };
+    const frame = () => {
+      raf = 0;
+      const now = performance.now();
+      let again = false;
+      for (const it of items) {
+        if (it.cwA) {
+          const { p, done } = progress(it.cwA, now);
+          it.cw = it.cwA.from + (it.cwA.to - it.cwA.from) * p;
+          if (done) it.cwA = null; else again = true;
+        }
+        if (it.boxA) {
+          const { p, done } = progress(it.boxA, now);
+          for (const k of KEYS) it.box[k] = it.boxFrom[k] + (it.boxTo[k] - it.boxFrom[k]) * p;
+          if (done) it.boxA = null; else again = true;
+        }
+        if (it.bwA) {
+          const r = it.bwA.gen(now - it.bwA.start); it.bw = r.value;
+          if (r.done) it.bwA = null; else again = true;
+        }
+        if (it.bcA) {
+          const r = it.bcA.gen(now - it.bcA.start);
+          it.bc = it.bcA.from + (it.bcA.to - it.bcA.from) * (r.value / 100);
+          if (r.done) it.bcA = null; else again = true;
+        }
+        render(it);
+      }
+      if (again) raf = requestAnimationFrame(frame);
+    };
+
+    const setHover = (it: Item, on: boolean) => {
+      if (it.hovered === on) return;
+      it.hovered = on;
+      const now = performance.now();
+      it.link.classList.toggle('is-hover', on); // dot shown / hidden at once (no exit animation)
+      if (it.borderOnHover) it.btn.toggleAttribute('data-on', on); // data-border only while hovered
+      const target = on ? HOVER : REST;
+      if (reduce) {
+        it.cw = target.w; it.box = { ...target }; it.bw = on ? 1 : 0; it.bc = on ? 1 : 0;
+        it.tip.style.opacity = on ? '1' : '0';
+        render(it);
+        return;
+      }
+      // Dock tree (`Hr`): component container 48 ↔ 72, from its current visual width
+      it.cwA = { from: it.cw, to: target.w, start: now, gen: springGen(0, 1000, DOCK) };
+      // icon internals (`Kn`): every box from where it is now to the new layout
+      it.boxFrom = { ...it.box }; it.boxTo = { ...target };
+      it.boxA = { from: 0, to: 1000, start: now, gen: springGen(0, 1000, ICON) };
+      if (it.borderOnHover) {
+        it.bwA = { from: it.bw, to: on ? 1 : 0, start: now, gen: springGen(it.bw, on ? 1 : 0, ICON) };
+        it.bcA = { from: it.bc, to: on ? 1 : 0, start: now, gen: springGen(0, 100, ICON) };
+      }
+      // tooltip opacity (accelerated → WAAPI) from its current value
+      const cur = parseFloat(getComputedStyle(it.tip).opacity);
+      it.tipAnim?.cancel();
+      it.tip.style.opacity = on ? '1' : '0';
+      it.tipAnim = it.tip.animate({ opacity: [cur, on ? 1 : 0] }, { duration: tipSpring.duration, easing: tipSpring.easing, fill: 'none' });
+      render(it);
+      if (!raf) raf = requestAnimationFrame(frame);
+    };
+
+    for (const it of items) {
+      it.link.addEventListener('mouseenter', () => setHover(it, true));
+      it.link.addEventListener('mouseleave', () => setHover(it, false));
+    }
+  }
+
+  if (!isStatic()) document.querySelectorAll<HTMLElement>('.dock').forEach(initDock);
+</script>
+
 <style>
   .site-footer { position: relative; width: 100%; }
+
 
   /* ---- block 22: social dock ---- */
   .ft-social {
@@ -65,43 +253,35 @@ const { content, links } = Astro.props;
     background: rgb(34, 34, 34); border-radius: 90px;
     box-shadow: rgba(0, 0, 0, 0.18) 0px 0.602187px 0.602187px -1.25px, rgba(0, 0, 0, 0.16) 0px 2.28853px 2.28853px -2.5px, rgba(0, 0, 0, 0.06) 0px 10px 10px -3.75px;
   }
-  .dock-item { flex: none; }
-  .dock-link {
-    --ease: cubic-bezier(.22, .9, .3, 1);
-    position: relative; display: block; width: 48px; height: 64px;
-    transition: width .45s var(--ease);
-  }
+  /* component container (width animated by the script) */
+  .dock-item { position: relative; flex: none; width: 48px; height: 64px; }
+  /* "Icon" + "Container": 64px tall, button/dot/tooltip positioned from its top-left */
+  .dock-link { position: absolute; left: 0; top: 0; display: block; width: 48px; height: 64px; cursor: pointer; }
   .dock-btn {
-    position: absolute; left: 0; right: 0; top: 8px; height: 48px;
+    position: absolute; left: 0; top: 8px; width: 48px; height: 48px;
     display: flex; align-items: center; justify-content: center; overflow: hidden;
     background: #000; border-radius: 90px;
-    box-shadow: inset 0 0 0 1px rgba(34, 34, 34, 0);
-    transition: top .45s var(--ease), height .45s var(--ease), box-shadow .45s var(--ease);
+  }
+  /* [data-border="true"]::after rule of the button components (e.g. page.pretty.js:6063) */
+  .dock-btn[data-on]::after {
+    content: ""; position: absolute; inset: 0; box-sizing: border-box; border-radius: inherit; pointer-events: none;
+    border: var(--bw, 1px) solid var(--bc, rgb(34, 34, 34));
   }
   .dock-btn img { flex: none; display: block; }
   .dock-dot {
-    position: absolute; left: 50%; bottom: 0; width: 8px; height: 8px; margin-left: -4px;
-    background: #fff; border-radius: 50%; opacity: 0;
-    transition: opacity .3s var(--ease);
+    display: none; position: absolute; left: 32px; top: 56px; width: 8px; height: 8px;
+    background: #fff; border-radius: 90px;
   }
+  .dock-link.is-hover .dock-dot { display: block; }
   .dock-tip {
-    position: absolute; left: 48%; top: -36px; z-index: 1; transform: translateX(-50%);
-    border-radius: 8px; pointer-events: none; opacity: 0; white-space: pre;
+    position: absolute; left: 23.04px; top: -36px; z-index: 1; transform: translateX(-50%);
+    border-radius: 8px; pointer-events: none; opacity: 0; white-space: pre; overflow: hidden;
     font-family: var(--f-inter); font-weight: 400; font-size: 16px; line-height: 24px; color: #fff;
     box-shadow: rgba(0, 0, 0, 0.18) 0px 0.602187px 0.602187px -1.25px, rgba(0, 0, 0, 0.16) 0px 2.28853px 2.28853px -2.5px, rgba(0, 0, 0, 0.06) 0px 10px 10px -3.75px;
-    transition: opacity .45s var(--ease), top .45s var(--ease), left .45s var(--ease);
   }
-  .dock-link:hover, .dock-link:focus-visible { width: 72px; }
-  .dock-link:hover .dock-btn, .dock-link:focus-visible .dock-btn {
-    top: -24px; height: 72px; box-shadow: inset 0 0 0 1px rgb(34, 34, 34);
-  }
-  .dock-link:hover .dock-dot, .dock-link:focus-visible .dock-dot { opacity: 1; }
-  .dock-link:hover .dock-tip, .dock-link:focus-visible .dock-tip { opacity: 1; top: -56px; left: 49%; }
+  .dock-link.is-hover .dock-tip { box-shadow: none; }
   .dock-link:focus-visible { outline: none; }
   .dock-link:focus-visible .dock-btn { outline: 2px solid #fff; outline-offset: 2px; }
-  @media (prefers-reduced-motion: reduce) {
-    .dock-link, .dock-btn, .dock-dot, .dock-tip { transition: none; }
-  }
 
   /* ---- block 23: hairline ---- */
   .ft-line { width: 100%; height: 3px; overflow: hidden; }
