@@ -137,7 +137,7 @@
   },
   "04": {
    "status": "ok",
-   "mismatchPct": 1.6,
+   "mismatchPct": 3.46,
    "origTop": 1101,
    "cloneTop": 1101,
    "origHeight": 2640,
@@ -319,7 +319,7 @@
   },
   "04": {
    "status": "ok",
-   "mismatchPct": 2.99,
+   "mismatchPct": 1.52,
    "origTop": 1324,
    "cloneTop": 1324,
    "origHeight": 1669,
@@ -492,7 +492,7 @@
   },
   "04": {
    "status": "ok",
-   "mismatchPct": 1.13,
+   "mismatchPct": 2.12,
    "origTop": 1725,
    "cloneTop": 1725,
    "origHeight": 1669,
@@ -665,7 +665,7 @@
   },
   "04": {
    "status": "ok",
-   "mismatchPct": 1.93,
+   "mismatchPct": 1.95,
    "origTop": 1725,
    "cloneTop": 1725,
    "origHeight": 1669,
