@@ -40,7 +40,7 @@ async function blockBox(page, isOrig, ref) {
     if (isOrig) {
       const root = document.querySelector('#main > div');
       const kids = [...root.children].filter((c) => { const s = getComputedStyle(c); const r = c.getBoundingClientRect(); return s.display !== 'none' && s.visibility !== 'hidden' && (r.width > 0 || r.height > 0); });
-      const sorted = kids.map((c, i) => ({ c, i, top: c.getBoundingClientRect().top + scrollY })).sort((a, b) => a.top - b.top || a.i - b.i);
+      const sorted = kids.map((c, i) => ({ c, i, top: getComputedStyle(c).position === 'fixed' ? 0 : c.getBoundingClientRect().top + scrollY })).sort((a, b) => a.top - b.top || a.i - b.i);
       el = sorted[Number(ref) - 1]?.c;
     } else el = document.querySelector(`[data-ref="${ref}"]`);
     if (!el) return null;

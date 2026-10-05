@@ -5,7 +5,9 @@ const fs = require('fs');
 const path = require('path');
 const REF = path.resolve(__dirname, '..');
 const OUT = path.resolve(REF, '..', 'src', 'content', 'sections');
-const BANDS = { 'video-intro': 3, 'video-mid': 5, 'video-strip': 9, 'video-outro': 21 };
+// video-strip (block 09) is hand-written from source CSS: its container is height:auto (intrinsic
+// video ratio), which the codec-less capture browser measured as a 150px fallback.
+const BANDS = { 'video-intro': 3, 'video-mid': 5, 'video-outro': 21 };
 const BP = { d: 1440, l: 1280, t: 834, m: 390 };
 const map = require(path.join(REF, 'asset-map.json'));
 const r = (n) => Math.round(n * 100) / 100;

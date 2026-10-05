@@ -1,196 +1,88 @@
 {
   "ref": "09",
+  "_source": "page.pretty.js:21815 (Group 109) + CSS .framer-z3r78i/.framer-270e18/.framer-1thg38t/.framer-tcyosh-container/.framer-17p1xh3/.framer-qg7fbq and their @media overrides",
+  "intrinsic": true,
   "height": {
-    "d": 150,
-    "l": 150,
-    "t": 150,
-    "m": 38.46
+    "d": 0,
+    "l": 0,
+    "t": 0,
+    "m": 0
   },
   "video": {
     "src": "/assets/video/DLoaywSY4mPJ80gpVnVs5ASwo.mp4",
     "box": {
-      "d": [
-        0,
-        0,
-        100,
-        150
-      ],
-      "l": [
-        0,
-        0,
-        100,
-        150
-      ],
-      "t": [
-        0,
-        0,
-        100,
-        150
-      ],
-      "m": [
-        0,
-        0,
-        100,
-        38.46
-      ]
+      "d": null,
+      "l": null,
+      "t": null,
+      "m": null
     }
   },
   "fades": {
     "d": [
       {
-        "gradient": "linear-gradient(rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%)",
-        "box": [
-          0,
-          -11,
-          100,
-          149
-        ],
+        "style": "background:linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);left:0;width:100%;top:-11px;height:149px",
         "z": 1
       },
       {
-        "gradient": "linear-gradient(rgba(51, 170, 255, 0) 0%, rgb(0, 0, 0) 100%)",
-        "box": [
-          0,
-          9,
-          100,
-          141
-        ],
+        "style": "background:linear-gradient(180deg, rgba(51, 170, 255, 0) 0%, rgb(0, 0, 0) 100%);left:0;width:100%;bottom:0;height:141px",
         "z": 1
       },
       {
-        "gradient": "linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%)",
-        "box": [
-          0,
-          0,
-          10,
-          150
-        ],
+        "style": "background:linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);left:0;top:0;width:10%;height:100%",
         "z": 0
       },
       {
-        "gradient": "linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%)",
-        "box": [
-          90.35,
-          0,
-          10,
-          150
-        ],
+        "style": "background:linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);top:0;width:10%;height:100%;left:1301px",
         "z": 0
       }
     ],
     "l": [
       {
-        "gradient": "linear-gradient(rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%)",
-        "box": [
-          0,
-          -11,
-          100,
-          149
-        ],
+        "style": "background:linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);left:0;width:100%;top:-11px;height:149px",
         "z": 1
       },
       {
-        "gradient": "linear-gradient(rgba(51, 170, 255, 0) 0%, rgb(0, 0, 0) 100%)",
-        "box": [
-          0,
-          9,
-          100,
-          141
-        ],
+        "style": "background:linear-gradient(180deg, rgba(51, 170, 255, 0) 0%, rgb(0, 0, 0) 100%);left:0;width:100%;bottom:0;height:141px",
         "z": 1
       },
       {
-        "gradient": "linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%)",
-        "box": [
-          0,
-          0,
-          10,
-          150
-        ],
+        "style": "background:linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);left:0;top:0;width:10%;height:100%",
         "z": 0
       },
       {
-        "gradient": "linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%)",
-        "box": [
-          84.38,
-          0,
-          10,
-          150
-        ],
+        "style": "background:linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);top:0;width:10%;height:100%;left:1080px",
         "z": 0
       }
     ],
     "t": [
       {
-        "gradient": "linear-gradient(rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%)",
-        "box": [
-          0,
-          0,
-          100,
-          149
-        ],
+        "style": "background:linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);left:0;width:100%;top:0;height:149px",
         "z": 1
       },
       {
-        "gradient": "linear-gradient(rgba(51, 170, 255, 0) 0%, rgb(0, 0, 0) 100%)",
-        "box": [
-          0,
-          12,
-          100,
-          141
-        ],
+        "style": "background:linear-gradient(180deg, rgba(51, 170, 255, 0) 0%, rgb(0, 0, 0) 100%);left:0;width:100%;bottom:-3px;height:141px",
         "z": 1
       },
       {
-        "gradient": "linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%)",
-        "box": [
-          0,
-          0,
-          10,
-          150
-        ],
+        "style": "background:linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);left:0;top:0;width:10%;height:100%",
         "z": 0
       }
     ],
     "m": [
       {
-        "gradient": "linear-gradient(rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 11.2613%)",
-        "box": [
-          0,
-          -0.51,
-          100,
-          11.03
-        ],
+        "style": "background:linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 11.261261261261257%);left:0;width:100%;top:-2px;height:43px",
         "z": 1
       },
       {
-        "gradient": "linear-gradient(rgba(51, 170, 255, 0) 0%, rgb(0, 0, 0) 100%)",
-        "box": [
-          0,
-          30.51,
-          100,
-          7.95
-        ],
+        "style": "background:linear-gradient(180deg, rgba(51, 170, 255, 0) 0%, rgb(0, 0, 0) 100%);left:0;width:100%;bottom:0;height:31px",
         "z": 1
       },
       {
-        "gradient": "linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%)",
-        "box": [
-          0,
-          0,
-          10,
-          38.46
-        ],
+        "style": "background:linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);left:0;top:0;width:10%;height:100%",
         "z": 0
       },
       {
-        "gradient": "linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%)",
-        "box": [
-          276.92,
-          0,
-          10,
-          38.46
-        ],
+        "style": "background:linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);top:0;width:10%;height:100%;left:1080px",
         "z": 0
       }
     ]

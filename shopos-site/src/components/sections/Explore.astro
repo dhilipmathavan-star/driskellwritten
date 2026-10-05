@@ -40,7 +40,7 @@ const mediaStyle = (m: Media) => {
               <div class={`explore__inner${card.media.fill ? ' explore__inner--fill' : ''}`}>
                 {card.media.type === 'video' ? (
                   <video class="explore__media" style={mediaStyle(card.media)} src={card.media.src}
-                    muted loop playsinline autoplay preload="metadata" data-autoplay aria-hidden="true"></video>
+                    muted loop playsinline data-autoplay aria-hidden="true"></video>
                 ) : (
                   <img class="explore__media" style={mediaStyle(card.media)} src={card.media.src} srcset={card.media.srcset} sizes={card.media.sizes} alt="" />
                 )}

@@ -26,6 +26,9 @@ const ORIGINAL = 'https://shopos.framer.website/';
 const CLONE = args.clone || 'http://localhost:4321/';
 const WIDTHS = String(args.widths || '1440,1280,834,390').split(',').map(Number);
 const REFS = args.refs ? String(args.refs).split(',').map((r) => r.padStart(2, '0')) : null;
+// Real Google Chrome when available: Playwright's Chromium can't decode H.264, so <video>
+// elements there fall back to 300×150 and any height:auto video container collapses.
+const CHROME = process.env.CHROME || (fs.existsSync('/usr/bin/google-chrome') ? '/usr/bin/google-chrome' : undefined);
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function shoot(browser, url, width, isOriginal) {
@@ -45,6 +48,7 @@ async function shoot(browser, url, width, isOriginal) {
       const root = document.querySelector('#main > div');
       const kids = [...root.children].filter((c) => { const s = getComputedStyle(c); const r = c.getBoundingClientRect(); return s.display !== 'none' && s.visibility !== 'hidden' && (r.width > 0 || r.height > 0); });
       return kids.map((c, i) => ({ i, ...box(c), fixed: getComputedStyle(c).position === 'fixed' }))
+        .map((b) => (b.fixed ? { ...b, top: 0 } : b))
         .sort((a, b) => a.top - b.top || a.i - b.i)
         .map((b, n) => ({ ref: String(n + 1).padStart(2, '0'), top: b.top, height: b.height, fixed: b.fixed }));
     }
@@ -66,8 +70,8 @@ function crop(png, top, height) {
 
 (async () => {
   // loopback can't go through the egress proxy, so the clone gets its own browser
-  const browser = await chromium.launch({ proxy: process.env.HTTPS_PROXY ? { server: process.env.HTTPS_PROXY } : undefined });
-  const local = await chromium.launch();
+  const browser = await chromium.launch({ executablePath: CHROME, proxy: process.env.HTTPS_PROXY ? { server: process.env.HTTPS_PROXY } : undefined });
+  const local = await chromium.launch({ executablePath: CHROME });
   // one result file per width+ref so parallel runs on different refs never clobber each other
   const RES = path.join(OUT, 'results');
   fs.mkdirSync(RES, { recursive: true });

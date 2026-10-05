@@ -14,13 +14,27 @@ if (isStatic || !('IntersectionObserver' in window)) {
   revealEls.forEach((el) => io.observe(el));
 }
 
-// Videos: play only while on screen
+// Videos — port of Framer's Video component (shared-lib.pretty.js:170–330, useInView =
+// motion.pretty.js:4650). On mount, effect `o ? W() : G()` calls play() on every video (playing:
+// true). The viewport effect then calls pause() for off-screen ones, but pause() is skipped
+// while that play() promise is pending (:197 `n.current ||`), so all videos start playing,
+// on screen or not. useInView only reports changes (index.pretty.js:58, initial state false),
+// so a video pauses only after it has been in view and leaves, and plays again when it
+// re-enters (amount "any" ⇒ threshold 0). No autoplay attribute, no restart on enter.
 const vids = document.querySelectorAll('video[data-autoplay]');
-if (!isStatic && 'IntersectionObserver' in window) {
-  const vio = new IntersectionObserver((entries) => {
-    for (const e of entries) e.isIntersecting ? e.target.play().catch(() => {}) : e.target.pause();
-  });
-  vids.forEach((v) => vio.observe(v));
+if (!isStatic) {
+  vids.forEach((v) => v.play().catch(() => {}));
+  if ('IntersectionObserver' in window) {
+    const inView = new WeakSet();
+    const vio = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting === inView.has(e.target)) continue; // only changes count
+        if (e.isIntersecting) { inView.add(e.target); e.target.play().catch(() => {}); }
+        else { inView.delete(e.target); e.target.pause(); }
+      }
+    }, { threshold: 0 });
+    vids.forEach((v) => vio.observe(v));
+  }
 }
 
 // Smooth Scroll — the original's Framer "Smooth Scroll" component (page.pretty.js:1122–1203),
