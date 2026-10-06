@@ -76,6 +76,7 @@ const { image } = content;
     const text = comp.querySelector('.loader__text');
     const leave = () => {
       comp.dataset.variant = 'leave';
+      document.dispatchEvent(new Event('loader:leave'));
       comp.querySelector('.loader__img')?.remove(); // GIF unmounted in Leave (:7585)
       text.animate(
         { backgroundColor: ['rgb(0, 0, 0)', 'rgba(0, 0, 0, 0)'] },

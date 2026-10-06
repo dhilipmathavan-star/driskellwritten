@@ -77,15 +77,19 @@ const { logo, nav, cta, title, prompt, logos, story, background } = content;
         </div>
       </div>
 
-      <ul class="hero__chips" aria-label="Partners">
-        {logos.map((l) => (
-          <li class="hero__chip">
-            <span class="hero__chipgrp">
-              <img src={l.src} alt={l.alt} width={l.width} height={l.height} style={`width:${Math.round((25 * l.width) / l.height)}px`} />
-            </span>
-          </li>
-        ))}
-      </ul>
+      <!-- Partner logo loop: sparkonomy.com hero marquee (two copies of the list, track moves -50%) -->
+      <div class="hero__marquee" data-marquee aria-label="Partners">
+        <div class="hero__mtrack">
+          {[false, true].map((dup) => (
+            <ul class="hero__mlist" aria-hidden={dup ? 'true' : undefined}>
+              {logos.map((l) => (
+                <li><img src={l.src} alt={dup ? '' : l.alt} width={l.width} height={l.height} loading="eager" decoding="async"
+                  style={`width:${Math.round((36 * l.width) / l.height)}px`} /></li>
+              ))}
+            </ul>
+          ))}
+        </div>
+      </div>
 
       <a class="hero__story" href={story.href}>
         <span>{story.label}</span>
@@ -94,6 +98,22 @@ const { logo, nav, cta, title, prompt, logos, story, background } = content;
     </div>
   </div>
 </section>
+
+<script>
+  // Marquee start, as on sparkonomy.com: the partner row reveals and the loop starts 1,700ms after
+  // the intro starts (here: when the loader leaves); the loop is paused while the hero is off-screen.
+  const mq = document.querySelector<HTMLElement>('[data-marquee]');
+  if (mq) {
+    const START_MS = 1700;
+    let started = false, visible = true;
+    const sync = () => mq.classList.toggle('is-running', started && visible);
+    const start = () => setTimeout(() => { mq.classList.add('is-in'); started = true; sync(); }, START_MS);
+    const loader = document.querySelector<HTMLElement>('[data-loader]');
+    if (!loader || loader.dataset.variant === 'leave' || new URLSearchParams(location.search).has('static')) start();
+    else document.addEventListener('loader:leave', start, { once: true });
+    new IntersectionObserver(([e]) => { visible = e.isIntersecting; sync(); }).observe(mq.closest('section') ?? mq);
+  }
+</script>
 
 <style>
   .hero {
@@ -225,6 +245,37 @@ const { logo, nav, cta, title, prompt, logos, story, background } = content;
   .hero__chip::after { content: ""; position: absolute; inset: 0; border: 1px solid rgb(27, 27, 27); border-radius: inherit; pointer-events: none; }
   .hero__chipgrp { display: flex; align-items: center; justify-content: center; gap: 10px; height: 25px; flex-shrink: 0; overflow: hidden; }
   .hero__chipgrp img { flex-shrink: 0; height: 25px; object-fit: contain; opacity: 0.85; }
+  /* Partner logo loop — values from sparkonomy.com:
+     @keyframes story-marquee { to { transform: translate(-50%) } }
+     .animate-story-marquee { animation: 24s linear infinite story-marquee }, [animation-play-state:paused] until started
+     wrapper: overflow hidden; mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+              md: width 100%, max-width 35rem; list: gap 3rem / padding-right 3rem (md), 2.5rem below md;
+     logos: height 2.25rem (h-9), width auto, opacity .75;
+     row reveal: opacity 0→1 + translateY(.5rem)→0, 900ms ease-out, 1,700ms after the intro starts. */
+  @keyframes story-marquee { to { transform: translate(-50%); } }
+  .hero__marquee {
+    width: 100%; max-width: 35rem; align-self: center; overflow: hidden;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+    opacity: 0; transform: translateY(0.5rem);
+    transition-property: opacity, transform; transition-duration: 900ms; transition-timing-function: ease-out;
+  }
+  .hero__marquee.is-in { opacity: 1; transform: none; }
+  .hero__mtrack { display: flex; width: max-content; animation: 24s linear infinite story-marquee; animation-play-state: paused; }
+  .hero__marquee.is-running .hero__mtrack { animation-play-state: running; }
+  .hero__mlist { display: flex; flex-shrink: 0; align-items: center; gap: 3rem; padding-right: 3rem; }
+  .hero__mlist li { flex-shrink: 0; }
+  .hero__mlist img { height: 2.25rem; object-fit: contain; opacity: 0.75; }
+  @media (max-width: 767px) {
+    .hero__marquee { max-width: none; width: calc(100% + 3rem); margin: 0 -1.5rem; }
+    .hero__mlist { gap: 2.5rem; padding-right: 2.5rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero__marquee { -webkit-mask-image: none; mask-image: none; opacity: 1; transform: none; transition: none; }
+    .hero__mtrack { width: auto; animation: none; justify-content: center; }
+    .hero__mlist { flex-wrap: wrap; justify-content: center; padding-right: 0; }
+    .hero__mlist[aria-hidden] { display: none; }
+  }
   /* READ OUR STORY: chip text colour, small spaced capitals */
   .hero__story {
     display: flex; flex-direction: column; align-items: center; gap: 6px; margin-top: -12px;

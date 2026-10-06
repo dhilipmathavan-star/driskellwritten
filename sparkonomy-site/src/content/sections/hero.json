@@ -51,28 +51,28 @@
   },
   "logos": [
     {
-      "src": "/assets/sparkonomy/google-for-startups.png",
-      "alt": "Google for Startups",
-      "width": 256,
-      "height": 131
-    },
-    {
-      "src": "/assets/sparkonomy/gemini.png",
-      "alt": "Gemini Early Access Program",
-      "width": 256,
-      "height": 91
-    },
-    {
-      "src": "/assets/sparkonomy/meta.png",
+      "src": "/assets/sparkonomy/partner-meta.png",
       "alt": "Built with Meta",
-      "width": 256,
-      "height": 91
+      "width": 452,
+      "height": 160
     },
     {
-      "src": "/assets/sparkonomy/youtube.png",
+      "src": "/assets/sparkonomy/partner-youtube.png",
       "alt": "Developed with YouTube",
-      "width": 256,
-      "height": 98
+      "width": 420,
+      "height": 160
+    },
+    {
+      "src": "/assets/sparkonomy/partner-google-for-startups.png",
+      "alt": "Google for Startups",
+      "width": 312,
+      "height": 160
+    },
+    {
+      "src": "/assets/sparkonomy/partner-gemini.png",
+      "alt": "Gemini Early Access Program",
+      "width": 452,
+      "height": 160
     }
   ],
   "story": {
