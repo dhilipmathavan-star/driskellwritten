@@ -1,0 +1,1275 @@
+{
+  "url": "https://www.sparkonomy.com/",
+  "capturedAt": "2026-10-06T10:32:50.183Z",
+  "cookieBanner": {
+    "classes": "cky-consent-container cky-banner-top",
+    "position": "fixed",
+    "top": "0px",
+    "bottom": "790.734px",
+    "left": "12px",
+    "right": "12px",
+    "zIndex": "9999999",
+    "box": [
+      12,
+      0,
+      1416,
+      109
+    ],
+    "bar": {
+      "text": "Sparkonomy uses cookies to learn your style\n\nand serve you better. Sound good?﻿\n\nReject All\nAccept All\nPowered by",
+      "bg": "rgb(0, 0, 0)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)",
+      "radius": "10px",
+      "font": "400 16px/24px roboto, \"roboto Fallback\"",
+      "padding": "4px",
+      "box": [
+        460,
+        0,
+        520,
+        109
+      ]
+    },
+    "title": {
+      "text": "",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgba(255, 255, 255, 0.8)",
+      "border": "0px solid rgb(229, 231, 235)",
+      "radius": "0px",
+      "font": "700 17px/21.25px roboto, \"roboto Fallback\"",
+      "padding": "0px",
+      "box": [
+        472,
+        12,
+        237,
+        0
+      ]
+    },
+    "description": {
+      "text": "Sparkonomy uses cookies to learn your style\n\nand serve you better. Sound good?",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgba(255, 255, 255, 0.8)",
+      "border": "0px none rgba(255, 255, 255, 0.8)",
+      "radius": "0px",
+      "font": "400 12px/16.2px roboto, \"roboto Fallback\"",
+      "padding": "0px",
+      "box": [
+        472,
+        14,
+        227,
+        51
+      ]
+    },
+    "reject": {
+      "text": "Reject All",
+      "bg": "rgb(107, 114, 128)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)",
+      "radius": "6px",
+      "font": "500 13px/13px roboto, \"roboto Fallback\"",
+      "padding": "4px",
+      "box": [
+        824,
+        22,
+        66,
+        38
+      ]
+    },
+    "accept": {
+      "text": "Accept All",
+      "bg": "rgb(107, 114, 128)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)",
+      "radius": "6px",
+      "font": "500 13px/13px roboto, \"roboto Fallback\"",
+      "padding": "4px",
+      "box": [
+        902,
+        22,
+        66,
+        38
+      ]
+    },
+    "customize": null,
+    "close": {
+      "text": "",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)",
+      "radius": "0px",
+      "font": "400 16px/0px roboto, \"roboto Fallback\"",
+      "padding": "4px",
+      "box": [
+        954,
+        -3,
+        24,
+        24
+      ]
+    },
+    "poweredBy": {
+      "text": "Powered by",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgba(255, 255, 255, 0.8)",
+      "border": "0px none rgba(255, 255, 255, 0.8)",
+      "radius": "0px",
+      "font": "400 16px/24px roboto, \"roboto Fallback\"",
+      "padding": "0px",
+      "box": [
+        488,
+        73,
+        464,
+        20
+      ]
+    },
+    "html": "<div class=\"cky-consent-container cky-banner-top\" role=\"region\" aria-label=\"\" tabindex=\"-1\"><div class=\"cky-consent-bar\" data-cky-tag=\"notice\" style=\"border-color: #2a2a2a; background-color: #121212;\"><button aria-label=\"Close\" class=\"cky-banner-btn-close\" data-cky-tag=\"close-button\"><img alt=\"\" src=\"https://cdn-cookieyes.com/assets/images/close.svg\"></button><div class=\"cky-notice-content-wrapper\"><div class=\"cky-notice\"><div class=\"cky-notice-group\"><div><p class=\"cky-title\" data-cky-tag=\"title\" aria-level=\"2\" role=\"heading\" style=\"color: #d0d0d0;\"></p><div class=\"cky-notice-des\" data-cky-tag=\"description\" style=\"color: #d0d0d0;\"><p>Sparkonomy uses cookies to learn your style</p><p>and serve you better. Sound good?<strong><span class=\"ql-cursor\">﻿</span></strong></p></div></div><div class=\"cky-notice-btn-wrapper\" data-cky-tag=\"notice-buttons\" role=\"group\"> <button class=\"cky-btn cky-btn-reject\" aria-label=\"Reject All\" data-cky-tag=\"reject-button\" style=\"color: #FFFFFF; border-color: #1578F7; background-color: #1578F7;\">Reject All</button> <button class=\"cky-btn cky-btn-accept\" aria-label=\"Accept All\" data-cky-tag=\"accept-button\" style=\"color: #FFFFFF; border-color: #1578F7; background-color: #1578F7;\">Accept All</button> </div></div></div></div><div style=\"padding:0 24px 12px 24px\"><div data-cky-tag=\"powered-by\" style=\"display: flex; align-items: center; color: #d0d0d0; background-color: transparent;\"><div style=\"display:flex;align-items:center;font-weight:400;font-size:12px;line-height:20px;text-align:right;border-radius:0 0 6px 6px;direction:ltr\">Powered by <a aria-label=\"Visit CookieYes website\" href=\"https://www.cookieyes.com/product/cookie-consent/?ref=cypbcyb&amp;utm_source=cookie-banner&amp;utm_medium=fl-branding\" rel=\"noopener\" style=\"margin-left:5px;line-height:0;color:inherit\" target=\"_blank\"><svg fill=\"none\" height=\"13\" viewBox=\"0 0 78 13\" width=\"78\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M5.48703 1.81738C8.08615 1.81738 10.0289 3.20915 10.659 5.48658H7.74485C7.29854 4.5756 6.45842 4.14542 5.46078 4.14542C3.83304 4.14542 2.70413 5.30944 2.70413 7.182C2.70413 9.05455 3.83304 10.2186 5.46078 10.2186C6.45842 10.2186 7.29854 9.76309 7.74485 8.87742H10.659C10.0289 11.1549 8.08615 12.5466 5.48703 12.5466C2.25782 12.5213 0 10.3198 0 7.15669C0 3.99359 2.25782 1.81738 5.48703 1.81738Z\" fill=\"currentColor\"></path><path d=\"M15.9612 12.5738C13.4146 12.5738 11.498 10.929 11.498 8.27203C11.498 5.61503 13.4671 3.97021 16.0137 3.97021C18.5603 3.97021 20.5293 5.61503 20.5293 8.27203C20.5293 10.929 18.5078 12.5738 15.9612 12.5738ZM15.9612 10.347C16.9063 10.347 17.7989 9.66379 17.7989 8.27203C17.7989 6.85496 16.9326 6.19704 15.9874 6.19704C15.016 6.19704 14.1759 6.85496 14.1759 8.27203C14.2022 9.66379 14.9898 10.347 15.9612 10.347Z\" fill=\"currentColor\"></path><path d=\"M25.8079 12.5738C23.2612 12.5738 21.3447 10.929 21.3447 8.27203C21.3447 5.61503 23.3138 3.97021 25.8604 3.97021C28.407 3.97021 30.376 5.61503 30.376 8.27203C30.376 10.929 28.3545 12.5738 25.8079 12.5738ZM25.8079 10.347C26.753 10.347 27.6456 9.66379 27.6456 8.27203C27.6456 6.85496 26.7792 6.19704 25.8341 6.19704C24.8627 6.19704 24.0226 6.85496 24.0226 8.27203C24.0226 9.66379 24.8365 10.347 25.8079 10.347Z\" fill=\"currentColor\"></path><path d=\"M31.3208 1.81738H33.9724V7.48566L36.5978 4.09481H39.8795L36.2828 8.2701L39.932 12.4454H36.6503L33.9987 8.92803V12.4454H31.3471V1.81738H31.3208Z\" fill=\"currentColor\"></path><path d=\"M40.5093 1.84342C40.5093 1.05898 41.1394 0.45166 42.0845 0.45166C43.0296 0.45166 43.6597 1.05898 43.6597 1.84342C43.6597 2.60257 43.0296 3.20988 42.0845 3.20988C41.1394 3.20988 40.5093 2.60257 40.5093 1.84342ZM40.7718 4.07025H43.4234V12.4208H40.7718V4.07025Z\" fill=\"currentColor\"></path><path d=\"M48.7784 12.5738C46.2318 12.5738 44.394 10.929 44.394 8.27203C44.394 5.61503 46.2055 3.97021 48.7784 3.97021C51.2988 3.97021 53.1103 5.58972 53.1103 8.14551C53.1103 8.37325 53.084 8.6516 53.0578 8.90465H47.0457C47.1507 9.99"
+  },
+  "styles": {
+    "navLink": {
+      "selector": "header nav[aria-label=\"Main\"] a",
+      "text": "Creator Payments",
+      "box": [
+        104,
+        20
+      ],
+      "background-image": "none",
+      "background-color": "rgba(0, 0, 0, 0)",
+      "background-size": "auto",
+      "background-position": "0% 0%",
+      "color": "rgba(255, 255, 255, 0.6)",
+      "font-family": "roboto, \"roboto Fallback\"",
+      "font-size": "13px",
+      "font-weight": "400",
+      "line-height": "19.5px",
+      "letter-spacing": "normal",
+      "text-transform": "none",
+      "padding": "0px",
+      "border-radius": "0px",
+      "border": "0px solid rgb(229, 231, 235)",
+      "box-shadow": "none",
+      "opacity": "1",
+      "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1)",
+      "animation": "none"
+    },
+    "navCta": {
+      "selector": "header nav[aria-label=\"Main\"] a.rounded-full",
+      "text": "Claim your Creator Record",
+      "box": [
+        193,
+        40
+      ],
+      "background-image": "linear-gradient(110deg, rgb(222, 0, 117) 0%, rgb(222, 0, 117) 8%, rgb(129, 52, 175) 45%, rgb(129, 52, 175) 100%)",
+      "background-color": "rgba(0, 0, 0, 0)",
+      "background-size": "200% 100%",
+      "background-position": "19.9397% 0px",
+      "color": "rgb(255, 255, 255)",
+      "font-family": "roboto, \"roboto Fallback\"",
+      "font-size": "13px",
+      "font-weight": "600",
+      "line-height": "19.5px",
+      "letter-spacing": "normal",
+      "text-transform": "none",
+      "padding": "10px 20px",
+      "border-radius": "9999px",
+      "border": "0px solid rgb(229, 231, 235)",
+      "box-shadow": "none",
+      "opacity": "1",
+      "transition": "opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1)",
+      "animation": "3.5s ease-in-out infinite alternate cta-sweep"
+    },
+    "heroCta": {
+      "selector": "#opening a.rounded-full",
+      "text": "Claim your free Creator Record",
+      "box": [
+        263,
+        51
+      ],
+      "background-image": "linear-gradient(110deg, rgb(222, 0, 117) 0%, rgb(222, 0, 117) 8%, rgb(129, 52, 175) 45%, rgb(129, 52, 175) 100%)",
+      "background-color": "rgba(0, 0, 0, 0)",
+      "background-size": "200% 100%",
+      "background-position": "13.9305% 0px",
+      "color": "rgb(255, 255, 255)",
+      "font-family": "roboto, \"roboto Fallback\"",
+      "font-size": "15px",
+      "font-weight": "600",
+      "line-height": "22.5px",
+      "letter-spacing": "normal",
+      "text-transform": "none",
+      "padding": "14px 28px",
+      "border-radius": "9999px",
+      "border": "0px solid rgb(229, 231, 235)",
+      "box-shadow": "none",
+      "opacity": "1",
+      "transition": "opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1)",
+      "animation": "3.5s ease-in-out infinite alternate cta-sweep"
+    },
+    "heroCard": {
+      "selector": "#opening [data-hero-reveal].rounded-\\[28px\\]",
+      "text": "NEW\nBe visible to AI.\nControl how it uses your identity.\nClaim your free Creator Record\n\nOpen Creator Graph\nBY SPARKONOMY",
+      "box": [
+        560,
+        351
+      ],
+      "background-color": "rgba(129, 52, 175, 0.2)",
+      "border-radius": "28px",
+      "padding": "40px 40px 28px",
+      "max-width": "560px",
+      "width": "560px"
+    },
+    "newBadge": {
+      "selector": "#opening span.absolute",
+      "text": "NEW",
+      "box": [
+        45,
+        19
+      ],
+      "background-image": "none",
+      "background-color": "rgb(221, 42, 123)",
+      "background-size": "auto",
+      "background-position": "0% 0%",
+      "color": "rgb(255, 255, 255)",
+      "font-family": "roboto, \"roboto Fallback\"",
+      "font-size": "11px",
+      "font-weight": "700",
+      "line-height": "11px",
+      "letter-spacing": "0.44px",
+      "text-transform": "uppercase",
+      "padding": "4px 10px",
+      "border-radius": "9999px",
+      "border": "0px solid rgb(229, 231, 235)",
+      "box-shadow": "none",
+      "opacity": "1",
+      "transition": "all",
+      "animation": "none"
+    },
+    "readStory": {
+      "selector": "#opening button",
+      "text": "READ OUR STORY",
+      "box": [
+        133,
+        32
+      ],
+      "background-image": "none",
+      "background-color": "rgba(0, 0, 0, 0)",
+      "background-size": "auto",
+      "background-position": "0% 0%",
+      "color": "rgba(224, 221, 255, 0.447)",
+      "font-family": "roboto, \"roboto Fallback\"",
+      "font-size": "12px",
+      "font-weight": "400",
+      "line-height": "18px",
+      "letter-spacing": "2.64px",
+      "text-transform": "uppercase",
+      "padding": "0px",
+      "border-radius": "0px",
+      "border": "0px solid rgb(229, 231, 235)",
+      "box-shadow": "none",
+      "opacity": "1",
+      "transition": "all",
+      "animation": "1.4s cubic-bezier(0.33, 0, 0.2, 1) infinite scroll-cue, 1.4s ease-in-out infinite cue-pulse"
+    },
+    "wordmark": {
+      "selector": "#opening h1",
+      "text": "Sparkonomy\nSparkonomy",
+      "box": [
+        535,
+        96
+      ],
+      "font-size": "96px",
+      "font-weight": "700",
+      "line-height": "96px",
+      "letter-spacing": "-0.96px",
+      "font-family": "roboto, \"roboto Fallback\""
+    },
+    "tagline": {
+      "selector": "#opening > p",
+      "text": "Sparking Creator livelihoods.",
+      "box": [
+        305,
+        32
+      ],
+      "font-size": "24px",
+      "font-weight": "400",
+      "line-height": "32px",
+      "color": "rgba(255, 255, 255, 0.9)",
+      "font-family": "roboto, \"roboto Fallback\""
+    },
+    "headerInner": {
+      "selector": "header > div.relative",
+      "text": "Creator Payments\nAbout\nContact\nBlogs\nClaim your Creator Record",
+      "box": [
+        1344,
+        80
+      ],
+      "max-width": "1344px",
+      "padding": "20px 32px",
+      "height": "79.5px"
+    },
+    "headerScrim": {
+      "selector": "header > div[aria-hidden]",
+      "text": "",
+      "box": [
+        1440,
+        112
+      ],
+      "background-image": "linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0))",
+      "height": "112px"
+    },
+    "navCtaHover": {
+      "selector": "header nav[aria-label=\"Main\"] a.rounded-full",
+      "text": "Claim your Creator Record",
+      "box": [
+        193,
+        40
+      ],
+      "opacity": "0.9"
+    },
+    "navLinkHover": {
+      "selector": "header nav[aria-label=\"Main\"] a",
+      "text": "Creator Payments",
+      "box": [
+        104,
+        20
+      ],
+      "color": "rgb(255, 255, 255)"
+    },
+    "recordCta": {
+      "selector": "#ocg a.rounded-full",
+      "text": "Claim your free Creator Record",
+      "box": [
+        263,
+        51
+      ],
+      "background-image": "linear-gradient(110deg, rgb(222, 0, 117) 0%, rgb(222, 0, 117) 8%, rgb(129, 52, 175) 45%, rgb(129, 52, 175) 100%)",
+      "background-color": "rgba(0, 0, 0, 0)",
+      "background-size": "200% 100%",
+      "background-position": "25.5843% 0px",
+      "color": "rgb(255, 255, 255)",
+      "font-family": "roboto, \"roboto Fallback\"",
+      "font-size": "15px",
+      "font-weight": "600",
+      "line-height": "22.5px",
+      "letter-spacing": "normal",
+      "text-transform": "none",
+      "padding": "14px 28px",
+      "border-radius": "9999px",
+      "border": "0px solid rgb(229, 231, 235)",
+      "box-shadow": "none",
+      "opacity": "1",
+      "transition": "opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1)",
+      "animation": "3.5s ease-in-out infinite alternate cta-sweep"
+    },
+    "recordCardOuter": {
+      "selector": "#ocg .rounded-3xl.p-px",
+      "text": "Chulbuli Dixit\n\n@chulbulidixit\n\n✓ Machine-Sourced\n✓ Machine-Visible\n✓ Creator-Controlled\nAI Usage\nConditional\nName\nAllowed\nImage\nConditional\nLikeness\nProhibited\nVoice\nConditional\nMovement\nConditional\n",
+      "box": [
+        340,
+        497
+      ],
+      "background-image": "linear-gradient(160deg, rgba(151, 71, 255, 0.7), rgba(222, 0, 117, 0.5) 55%, rgba(151, 71, 255, 0.6))",
+      "border-radius": "24px",
+      "padding": "1px"
+    },
+    "recordCardInner": {
+      "selector": "#ocg .rounded-\\[23px\\]",
+      "text": "Chulbuli Dixit\n\n@chulbulidixit\n\n✓ Machine-Sourced\n✓ Machine-Visible\n✓ Creator-Controlled\nAI Usage\nConditional\nName\nAllowed\nImage\nConditional\nLikeness\nProhibited\nVoice\nConditional\nMovement\nConditional\n",
+      "box": [
+        338,
+        495
+      ],
+      "background-color": "rgb(50, 25, 53)",
+      "border-radius": "23px",
+      "padding": "24px",
+      "width": "338px"
+    },
+    "stancePill": {
+      "selector": "#ocg span.w-\\[108px\\]",
+      "text": "Conditional",
+      "box": [
+        108,
+        26
+      ],
+      "color": "rgb(229, 182, 7)",
+      "border": "1px solid rgb(229, 182, 7)",
+      "background-color": "rgba(229, 182, 7, 0.08)",
+      "border-radius": "9999px",
+      "font-size": "12px",
+      "padding": "3px 0px",
+      "width": "108px"
+    },
+    "socialHover": {
+      "selector": "footer a[aria-label=\"X\"]",
+      "text": "",
+      "box": [
+        24,
+        24
+      ],
+      "color": "rgb(255, 255, 255)"
+    },
+    "footerLink": {
+      "selector": "footer a.text-sm",
+      "text": "Open Creator Graph",
+      "box": [
+        123,
+        20
+      ],
+      "color": "rgba(255, 255, 255, 0.5)",
+      "font-size": "14px",
+      "line-height": "20px",
+      "font-weight": "400"
+    },
+    "footerHeading": {
+      "selector": "footer p.font-medium",
+      "text": "Compliant with",
+      "box": [
+        494,
+        20
+      ],
+      "color": "rgb(255, 255, 255)",
+      "font-size": "14px",
+      "line-height": "20px",
+      "font-weight": "500"
+    },
+    "footerInner": {
+      "selector": "footer > div",
+      "text": "Compliant with\n\nProducts\n\nOpen Creator Graph\nCreator Payments\n\nCompany\n\nAbout Us\nContact Us\nBlogs\n\nTerms & Policies\n\nPrivacy Policy\nTerms of Services\nRefund Policy\nCookie Policy\n\n© Sparkonomy Pte. Ltd",
+      "box": [
+        1344,
+        346
+      ],
+      "max-width": "1344px",
+      "padding": "56px 0px 0px",
+      "border-top": "1px solid rgba(255, 255, 255, 0.1)",
+      "grid-template-columns": "none"
+    },
+    "footerGrid": {
+      "selector": "footer > div > div",
+      "text": "Compliant with\n\nProducts\n\nOpen Creator Graph\nCreator Payments\n\nCompany\n\nAbout Us\nContact Us\nBlogs\n\nTerms & Policies\n\nPrivacy Policy\nTerms of Services\nRefund Policy\nCookie Policy",
+      "box": [
+        1344,
+        140
+      ],
+      "display": "grid",
+      "grid-template-columns": "494.25px 308.906px 308.906px 111.938px",
+      "gap": "40px"
+    }
+  },
+  "desktopGeometry": {
+    "roots": {
+      "top": 900,
+      "height": 2295,
+      "travel": 1395,
+      "beats": 2,
+      "mode": "accumulate",
+      "beatMs": null,
+      "flow": false,
+      "styleHeight": "255svh",
+      "marginTop": null,
+      "stops": [
+        1148,
+        1532
+      ],
+      "windows": [
+        {
+          "in0": 0.06,
+          "in1": 0.14794838709677416
+        },
+        {
+          "in0": 0.3348387096774193,
+          "in1": 0.42278709677419346
+        }
+      ]
+    },
+    "people": {
+      "top": 2295,
+      "height": 3780,
+      "travel": 2880,
+      "beats": 5,
+      "mode": "accumulate",
+      "beatMs": 500,
+      "flow": false,
+      "styleHeight": "420svh",
+      "marginTop": "-100svh",
+      "stops": [
+        2683,
+        3086,
+        3489,
+        3892,
+        4294
+      ],
+      "windows": [
+        {
+          "in0": 0.06,
+          "in1": 0.10475999999999999
+        },
+        {
+          "in0": 0.199875,
+          "in1": 0.244635
+        },
+        {
+          "in0": 0.33975,
+          "in1": 0.38451
+        },
+        {
+          "in0": 0.479625,
+          "in1": 0.524385
+        },
+        {
+          "in0": 0.6194999999999999,
+          "in1": 0.66426
+        }
+      ]
+    },
+    "reality": {
+      "top": 5175,
+      "height": 3780,
+      "travel": 2880,
+      "beats": 5,
+      "mode": "soften",
+      "beatMs": 1000,
+      "flow": false,
+      "styleHeight": "420svh",
+      "marginTop": "-100svh",
+      "stops": [
+        5563,
+        5966,
+        6369,
+        6772,
+        7174
+      ],
+      "windows": [
+        {
+          "in0": 0.06,
+          "in1": 0.10475999999999999
+        },
+        {
+          "in0": 0.199875,
+          "in1": 0.244635
+        },
+        {
+          "in0": 0.33975,
+          "in1": 0.38451
+        },
+        {
+          "in0": 0.479625,
+          "in1": 0.524385
+        },
+        {
+          "in0": 0.6194999999999999,
+          "in1": 0.66426
+        }
+      ]
+    },
+    "love": {
+      "top": 8055,
+      "height": 2295,
+      "travel": 1395,
+      "beats": 2,
+      "mode": "accumulate",
+      "beatMs": null,
+      "flow": false,
+      "styleHeight": "255svh",
+      "marginTop": "-100svh",
+      "stops": [
+        8303,
+        8687
+      ],
+      "windows": [
+        {
+          "in0": 0.06,
+          "in1": 0.14794838709677416
+        },
+        {
+          "in0": 0.3348387096774193,
+          "in1": 0.42278709677419346
+        }
+      ]
+    },
+    "turn": {
+      "top": 9450,
+      "height": 2295,
+      "travel": 1395,
+      "beats": 2,
+      "mode": "accumulate",
+      "beatMs": null,
+      "flow": false,
+      "styleHeight": "255svh",
+      "marginTop": "-100svh",
+      "stops": [
+        9698,
+        10082
+      ],
+      "windows": [
+        {
+          "in0": 0.06,
+          "in1": 0.14794838709677416
+        },
+        {
+          "in0": 0.3348387096774193,
+          "in1": 0.42278709677419346
+        }
+      ]
+    },
+    "mission": {
+      "top": 10845,
+      "height": 1800,
+      "travel": 900,
+      "beats": 1,
+      "mode": "accumulate",
+      "beatMs": null,
+      "flow": false,
+      "styleHeight": "200svh",
+      "marginTop": "-100svh",
+      "stops": [
+        11038
+      ],
+      "windows": [
+        {
+          "in0": 0.06,
+          "in1": 0.1848
+        }
+      ]
+    },
+    "ocg": {
+      "top": 12645,
+      "height": 1253,
+      "travel": 353,
+      "beats": 3,
+      "mode": "accumulate",
+      "beatMs": null,
+      "flow": true,
+      "styleHeight": null,
+      "marginTop": null,
+      "stops": null,
+      "windows": [
+        {
+          "in0": 0.06,
+          "in1": 0.12674285714285713
+        },
+        {
+          "in0": 0.26857142857142857,
+          "in1": 0.3353142857142857
+        },
+        {
+          "in0": 0.4771428571428571,
+          "in1": 0.5438857142857142
+        }
+      ]
+    },
+    "future": {
+      "top": 13898,
+      "height": 2790,
+      "travel": 1890,
+      "beats": 3,
+      "mode": "accumulate",
+      "beatMs": null,
+      "flow": false,
+      "styleHeight": "310svh",
+      "marginTop": null,
+      "stops": [
+        14194,
+        14588,
+        14983
+      ],
+      "windows": [
+        {
+          "in0": 0.06,
+          "in1": 0.12674285714285713
+        },
+        {
+          "in0": 0.26857142857142857,
+          "in1": 0.3353142857142857
+        },
+        {
+          "in0": 0.4771428571428571,
+          "in1": 0.5438857142857142
+        }
+      ]
+    }
+  },
+  "desktopDocHeight": 17082,
+  "ocg": {
+    "top": 12645,
+    "height": 1253,
+    "h2Top": 12741,
+    "centerTop": 13597,
+    "centerH": 205,
+    "pinTop": "348",
+    "pinned": "sticky"
+  },
+  "recordCardText": "Chulbuli Dixit\n\n@chulbulidixit\n\n✓ Machine-Sourced\n✓ Machine-Visible\n✓ Creator-Controlled\nAI Usage\nConditional\nName\nAllowed\nImage\nConditional\nLikeness\nProhibited\nVoice\nConditional\nMovement\nConditional\nSignature\nProhibited\n\nDeclared and cryptographically timestamped\n\n25 September 2026, 14:32:07 UTC",
+  "canvas": {
+    "width": 1440,
+    "height": 900,
+    "cssW": 1440,
+    "cssH": 900,
+    "context": "webgl2"
+  },
+  "cookieBanner_mobile": {
+    "box": [
+      12,
+      0,
+      366,
+      127
+    ],
+    "text": "Sparkonomy uses cookies to learn your style\n\nand serve you better. Sound good?﻿\n\nReject All\nAccept All\nPowered by"
+  },
+  "menu_mobile": {
+    "hidden": false,
+    "bg": "rgb(0, 0, 0)",
+    "height": "844px",
+    "padding": "16px 24px 40px",
+    "bodyOverflow": "hidden",
+    "buttonAria": "true",
+    "buttonLabel": "Close menu",
+    "links": [
+      {
+        "text": "Creator Payments",
+        "href": "/creator/earn",
+        "target": null,
+        "font": "400 18px/28px",
+        "color": "rgba(255, 255, 255, 0.85)",
+        "borderBottom": "1px solid rgba(255, 255, 255, 0.1)",
+        "padding": "16px 0px"
+      },
+      {
+        "text": "About",
+        "href": "/about",
+        "target": null,
+        "font": "400 18px/28px",
+        "color": "rgba(255, 255, 255, 0.85)",
+        "borderBottom": "1px solid rgba(255, 255, 255, 0.1)",
+        "padding": "16px 0px"
+      },
+      {
+        "text": "Contact",
+        "href": "/contact",
+        "target": null,
+        "font": "400 18px/28px",
+        "color": "rgba(255, 255, 255, 0.85)",
+        "borderBottom": "1px solid rgba(255, 255, 255, 0.1)",
+        "padding": "16px 0px"
+      },
+      {
+        "text": "Blogs",
+        "href": "/blogs",
+        "target": null,
+        "font": "400 18px/28px",
+        "color": "rgba(255, 255, 255, 0.85)",
+        "borderBottom": "1px solid rgba(255, 255, 255, 0.1)",
+        "padding": "16px 0px"
+      },
+      {
+        "text": "Claim your Creator Record",
+        "href": "https://creatorgraph.sparkonomy.com",
+        "target": "_blank",
+        "font": "600 15px/22.5px",
+        "color": "rgb(255, 255, 255)",
+        "borderBottom": "0px solid rgb(229, 231, 235)",
+        "padding": "14px 20px"
+      }
+    ],
+    "labels": [
+      "BUILT WITH",
+      "COMPLIANT WITH"
+    ],
+    "logos": [
+      "Built with Meta",
+      "Developed with YouTube",
+      "Google for Startups",
+      "Gemini Early Access Program",
+      "DPDP",
+      "CCPA",
+      "PDPA",
+      "GDPR"
+    ]
+  },
+  "mobileGeometry": {
+    "roots": {
+      "top": 844,
+      "height": 2152,
+      "travel": 1308,
+      "beats": 2,
+      "mode": "accumulate",
+      "beatMs": null,
+      "flow": false,
+      "styleHeight": "255svh",
+      "marginTop": null,
+      "stops": [
+        1077,
+        1436
+      ],
+      "windows": [
+        {
+          "in0": 0.06,
+          "in1": 0.14794838709677416
+        },
+        {
+          "in0": 0.3348387096774193,
+          "in1": 0.42278709677419346
+        }
+      ]
+    },
+    "people": {
+      "top": 2152,
+      "height": 3545,
+      "travel": 2701,
+      "beats": 5,
+      "mode": "accumulate",
+      "beatMs": 500,
+      "flow": false,
+      "styleHeight": "420svh",
+      "marginTop": "-100svh",
+      "stops": [
+        2516,
+        2894,
+        3272,
+        3650,
+        4027
+      ],
+      "windows": [
+        {
+          "in0": 0.06,
+          "in1": 0.10475999999999999
+        },
+        {
+          "in0": 0.199875,
+          "in1": 0.244635
+        },
+        {
+          "in0": 0.33975,
+          "in1": 0.38451
+        },
+        {
+          "in0": 0.479625,
+          "in1": 0.524385
+        },
+        {
+          "in0": 0.6194999999999999,
+          "in1": 0.66426
+        }
+      ]
+    },
+    "reality": {
+      "top": 4853,
+      "height": 3545,
+      "travel": 2701,
+      "beats": 5,
+      "mode": "soften",
+      "beatMs": 1000,
+      "flow": false,
+      "styleHeight": "420svh",
+      "marginTop": "-100svh",
+      "stops": [
+        5217,
+        5595,
+        5973,
+        6350,
+        6728
+      ],
+      "windows": [
+        {
+          "in0": 0.06,
+          "in1": 0.10475999999999999
+        },
+        {
+          "in0": 0.199875,
+          "in1": 0.244635
+        },
+        {
+          "in0": 0.33975,
+          "in1": 0.38451
+        },
+        {
+          "in0": 0.479625,
+          "in1": 0.524385
+        },
+        {
+          "in0": 0.6194999999999999,
+          "in1": 0.66426
+        }
+      ]
+    },
+    "love": {
+      "top": 7554,
+      "height": 2152,
+      "travel": 1308,
+      "beats": 2,
+      "mode": "accumulate",
+      "beatMs": null,
+      "flow": false,
+      "styleHeight": "255svh",
+      "marginTop": "-100svh",
+      "stops": [
+        7787,
+        8146
+      ],
+      "windows": [
+        {
+          "in0": 0.06,
+          "in1": 0.14794838709677416
+        },
+        {
+          "in0": 0.3348387096774193,
+          "in1": 0.42278709677419346
+        }
+      ]
+    },
+    "turn": {
+      "top": 8862,
+      "height": 2152,
+      "travel": 1308,
+      "beats": 2,
+      "mode": "accumulate",
+      "beatMs": null,
+      "flow": false,
+      "styleHeight": "255svh",
+      "marginTop": "-100svh",
+      "stops": [
+        9095,
+        9454
+      ],
+      "windows": [
+        {
+          "in0": 0.06,
+          "in1": 0.14794838709677416
+        },
+        {
+          "in0": 0.3348387096774193,
+          "in1": 0.42278709677419346
+        }
+      ]
+    },
+    "mission": {
+      "top": 10170,
+      "height": 1688,
+      "travel": 844,
+      "beats": 1,
+      "mode": "accumulate",
+      "beatMs": null,
+      "flow": false,
+      "styleHeight": "200svh",
+      "marginTop": "-100svh",
+      "stops": [
+        10351
+      ],
+      "windows": [
+        {
+          "in0": 0.06,
+          "in1": 0.1848
+        }
+      ]
+    },
+    "ocg": {
+      "top": 11858,
+      "height": 913,
+      "travel": 69,
+      "beats": 3,
+      "mode": "accumulate",
+      "beatMs": null,
+      "flow": true,
+      "styleHeight": null,
+      "marginTop": null,
+      "stops": null,
+      "windows": [
+        {
+          "in0": 0.06,
+          "in1": 0.12674285714285713
+        },
+        {
+          "in0": 0.26857142857142857,
+          "in1": 0.3353142857142857
+        },
+        {
+          "in0": 0.4771428571428571,
+          "in1": 0.5438857142857142
+        }
+      ]
+    },
+    "future": {
+      "top": 12772,
+      "height": 2616,
+      "travel": 1772,
+      "beats": 3,
+      "mode": "accumulate",
+      "beatMs": null,
+      "flow": false,
+      "styleHeight": "310svh",
+      "marginTop": null,
+      "stops": [
+        13049,
+        13419,
+        13789
+      ],
+      "windows": [
+        {
+          "in0": 0.06,
+          "in1": 0.12674285714285713
+        },
+        {
+          "in0": 0.26857142857142857,
+          "in1": 0.3353142857142857
+        },
+        {
+          "in0": 0.4771428571428571,
+          "in1": 0.5438857142857142
+        }
+      ]
+    }
+  },
+  "mobileDocHeight": 15984,
+  "ocg_mobile": {
+    "top": 11858,
+    "h2Bottom": 12165,
+    "cardTop": 13789,
+    "height": 913
+  },
+  "cookieBanner_tablet": {
+    "box": [
+      12,
+      0,
+      810,
+      109
+    ],
+    "text": "Sparkonomy uses cookies to learn your style\n\nand serve you better. Sound good?﻿\n\nReject All\nAccept All\nPowered by"
+  },
+  "tabletGeometry": {
+    "roots": {
+      "top": 1112,
+      "height": 2836,
+      "travel": 1724,
+      "beats": 2,
+      "mode": "accumulate",
+      "beatMs": null,
+      "flow": false,
+      "styleHeight": "255svh",
+      "marginTop": null,
+      "stops": [
+        1419,
+        1893
+      ],
+      "windows": [
+        {
+          "in0": 0.06,
+          "in1": 0.14794838709677416
+        },
+        {
+          "in0": 0.3348387096774193,
+          "in1": 0.42278709677419346
+        }
+      ]
+    },
+    "people": {
+      "top": 2836,
+      "height": 4670,
+      "travel": 3558,
+      "beats": 5,
+      "mode": "accumulate",
+      "beatMs": 500,
+      "flow": false,
+      "styleHeight": "420svh",
+      "marginTop": "-100svh",
+      "stops": [
+        3315,
+        3813,
+        4310,
+        4808,
+        5306
+      ],
+      "windows": [
+        {
+          "in0": 0.06,
+          "in1": 0.10475999999999999
+        },
+        {
+          "in0": 0.199875,
+          "in1": 0.244635
+        },
+        {
+          "in0": 0.33975,
+          "in1": 0.38451
+        },
+        {
+          "in0": 0.479625,
+          "in1": 0.524385
+        },
+        {
+          "in0": 0.6194999999999999,
+          "in1": 0.66426
+        }
+      ]
+    },
+    "reality": {
+      "top": 6394,
+      "height": 4670,
+      "travel": 3558,
+      "beats": 5,
+      "mode": "soften",
+      "beatMs": 1000,
+      "flow": false,
+      "styleHeight": "420svh",
+      "marginTop": "-100svh",
+      "stops": [
+        6873,
+        7371,
+        7869,
+        8366,
+        8864
+      ],
+      "windows": [
+        {
+          "in0": 0.06,
+          "in1": 0.10475999999999999
+        },
+        {
+          "in0": 0.199875,
+          "in1": 0.244635
+        },
+        {
+          "in0": 0.33975,
+          "in1": 0.38451
+        },
+        {
+          "in0": 0.479625,
+          "in1": 0.524385
+        },
+        {
+          "in0": 0.6194999999999999,
+          "in1": 0.66426
+        }
+      ]
+    },
+    "love": {
+      "top": 9952,
+      "height": 2836,
+      "travel": 1724,
+      "beats": 2,
+      "mode": "accumulate",
+      "beatMs": null,
+      "flow": false,
+      "styleHeight": "255svh",
+      "marginTop": "-100svh",
+      "stops": [
+        10259,
+        10733
+      ],
+      "windows": [
+        {
+          "in0": 0.06,
+          "in1": 0.14794838709677416
+        },
+        {
+          "in0": 0.3348387096774193,
+          "in1": 0.42278709677419346
+        }
+      ]
+    },
+    "turn": {
+      "top": 11676,
+      "height": 2836,
+      "travel": 1724,
+      "beats": 2,
+      "mode": "accumulate",
+      "beatMs": null,
+      "flow": false,
+      "styleHeight": "255svh",
+      "marginTop": "-100svh",
+      "stops": [
+        11983,
+        12457
+      ],
+      "windows": [
+        {
+          "in0": 0.06,
+          "in1": 0.14794838709677416
+        },
+        {
+          "in0": 0.3348387096774193,
+          "in1": 0.42278709677419346
+        }
+      ]
+    },
+    "mission": {
+      "top": 13400,
+      "height": 2224,
+      "travel": 1112,
+      "beats": 1,
+      "mode": "accumulate",
+      "beatMs": null,
+      "flow": false,
+      "styleHeight": "200svh",
+      "marginTop": "-100svh",
+      "stops": [
+        13638
+      ],
+      "windows": [
+        {
+          "in0": 0.06,
+          "in1": 0.1848
+        }
+      ]
+    },
+    "ocg": {
+      "top": 15624,
+      "height": 1301,
+      "travel": 189,
+      "beats": 3,
+      "mode": "accumulate",
+      "beatMs": null,
+      "flow": true,
+      "styleHeight": null,
+      "marginTop": null,
+      "stops": null,
+      "windows": [
+        {
+          "in0": 0.06,
+          "in1": 0.12674285714285713
+        },
+        {
+          "in0": 0.26857142857142857,
+          "in1": 0.3353142857142857
+        },
+        {
+          "in0": 0.4771428571428571,
+          "in1": 0.5438857142857142
+        }
+      ]
+    },
+    "future": {
+      "top": 16924,
+      "height": 3447,
+      "travel": 2335,
+      "beats": 3,
+      "mode": "accumulate",
+      "beatMs": null,
+      "flow": false,
+      "styleHeight": "310svh",
+      "marginTop": null,
+      "stops": [
+        17290,
+        17777,
+        18264
+      ],
+      "windows": [
+        {
+          "in0": 0.06,
+          "in1": 0.12674285714285713
+        },
+        {
+          "in0": 0.26857142857142857,
+          "in1": 0.3353142857142857
+        },
+        {
+          "in0": 0.4771428571428571,
+          "in1": 0.5438857142857142
+        }
+      ]
+    }
+  },
+  "tabletDocHeight": 20766,
+  "ocg_tablet": {
+    "top": 15624,
+    "h2Bottom": 15825,
+    "cardTop": 18264,
+    "height": 1301
+  }
+}

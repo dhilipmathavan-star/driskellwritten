@@ -330,7 +330,7 @@ async function captureViewport(browser, name, vp, opts = {}) {
     for (const sec of data.sections) {
       const el = props.get(String(i))?.asElement(); i++;
       const label = sec.framerName || sec.id || sec.ariaLabel || sec.tag;
-      const f = `${name === 'desktop' ? '' : name + '-'}${String(sec.index).padStart(2, '0')}-${slug(label)}.png`;
+      const f = `_dom-nodes/${name === 'desktop' ? '' : name + '-'}${String(sec.index).padStart(2, '0')}-${slug(label)}.png`; // DOM-node shots; logical-section shots come from tools/logical-shots.cjs
       try {
         if (!el) throw new Error('no handle');
         await el.scrollIntoViewIfNeeded(); await sleep(700);
@@ -395,9 +395,10 @@ async function captureViewport(browser, name, vp, opts = {}) {
 (async () => {
   fs.mkdirSync(path.join(SHOTS, '_motion'), { recursive: true });
   fs.mkdirSync(path.join(SHOTS, '_states'), { recursive: true });
+  fs.mkdirSync(path.join(SHOTS, '_dom-nodes'), { recursive: true });
   const local = /^https?:\/\/(localhost|127\.0\.0\.1)\b/.test(URL_);
   const proxy = process.env.HTTPS_PROXY && !local ? { server: process.env.HTTPS_PROXY } : undefined;
-  const browser = await playwright.chromium.launch({ proxy });
+  const browser = await playwright.chromium.launch({ proxy, executablePath: fs.existsSync('/usr/bin/google-chrome') ? '/usr/bin/google-chrome' : undefined });
   try {
     for (const [name, vp] of Object.entries(VIEWPORTS)) {
       process.stdout.write(`capturing ${name}…\n`);

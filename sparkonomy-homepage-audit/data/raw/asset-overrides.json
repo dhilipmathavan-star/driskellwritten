@@ -1,0 +1,153 @@
+{
+  "https://www.sparkonomy.com/_next/image?url=%2Flogos%2Flogo_header_white.png&w=2048&q=75": {
+    "category": "logos",
+    "name": "logo-sparkonomy-wordmark-white",
+    "label": "Sparkonomy wordmark (header, white)"
+  },
+  "https://www.sparkonomy.com/_next/image?url=%2Flogos%2Fhamburger_icon.png&w=256&q=75": {
+    "category": "icons",
+    "name": "icon-hamburger-menu",
+    "label": "Hamburger menu icon (mobile header)"
+  },
+  "https://www.sparkonomy.com/_next/image?url=%2Flogos%2FMeta_White.png&w=256&q=75": {
+    "category": "logos",
+    "name": "logo-partner-meta-built-with-meta",
+    "label": "Partner logo: Built with Meta"
+  },
+  "https://www.sparkonomy.com/_next/image?url=%2Flogos%2FYt_White.png&w=256&q=75": {
+    "category": "logos",
+    "name": "logo-partner-developed-with-youtube",
+    "label": "Partner logo: Developed with YouTube"
+  },
+  "https://www.sparkonomy.com/_next/image?url=%2Flogos%2FGoogle_White.png&w=256&q=75": {
+    "category": "logos",
+    "name": "logo-partner-google-for-startups",
+    "label": "Partner logo: Google for Startups"
+  },
+  "https://www.sparkonomy.com/_next/image?url=%2Flogos%2FGemini_White.png&w=256&q=75": {
+    "category": "logos",
+    "name": "logo-partner-gemini-early-access",
+    "label": "Partner logo: Gemini Early Access Program"
+  },
+  "https://www.sparkonomy.com/_next/image?url=%2Flogos%2FDPDP_White.png&w=96&q=75": {
+    "category": "logos",
+    "name": "logo-compliance-dpdp",
+    "label": "Compliance badge: DPDP"
+  },
+  "https://www.sparkonomy.com/_next/image?url=%2Flogos%2FCCPA_White.png&w=96&q=75": {
+    "category": "logos",
+    "name": "logo-compliance-ccpa",
+    "label": "Compliance badge: CCPA"
+  },
+  "https://www.sparkonomy.com/_next/image?url=%2Flogos%2FPDPA-White.png&w=96&q=75": {
+    "category": "logos",
+    "name": "logo-compliance-pdpa",
+    "label": "Compliance badge: PDPA"
+  },
+  "https://www.sparkonomy.com/_next/image?url=%2Flogos%2FGDPR_White.png&w=96&q=75": {
+    "category": "logos",
+    "name": "logo-compliance-gdpr",
+    "label": "Compliance badge: GDPR"
+  },
+  "https://www.sparkonomy.com/logos/ocg-mark.webp": {
+    "category": "logos",
+    "name": "logo-open-creator-graph-mark",
+    "label": "Open Creator Graph mark (hero launch card)"
+  },
+  "https://www.sparkonomy.com/_next/image?url=%2FCD.png&w=96&q=75": {
+    "category": "images",
+    "name": "image-creator-avatar-chulbuli-dixit",
+    "label": "Example Creator avatar (Creator Record card)"
+  },
+  "https://www.sparkonomy.com/_next/image?url=%2FCertified-1.png&w=256&q=75": {
+    "category": "illustrations",
+    "name": "illustration-certified-stamp",
+    "label": "\"Certified\" rubber-stamp graphic (Creator Record card)"
+  },
+  "https://www.sparkonomy.com/_next/image?url=%2Flogos%2Flogo_header_gray.png&w=1080&q=75": {
+    "category": "logos",
+    "name": "logo-sparkonomy-wordmark-footer",
+    "label": "Sparkonomy wordmark (footer, grey/purple)"
+  },
+  "https://www.sparkonomy.com/home-192x192Px.png": {
+    "category": "logos",
+    "name": "favicon-192x192",
+    "label": "Favicon 192×192"
+  },
+  "https://www.sparkonomy.com/home-512x512Px.png": {
+    "category": "logos",
+    "name": "favicon-512x512",
+    "label": "Favicon 512×512"
+  },
+  "https://www.sparkonomy.com/home-180x180Px.png": {
+    "category": "logos",
+    "name": "apple-touch-icon-180x180",
+    "label": "Apple touch icon 180×180"
+  },
+  "https://www.sparkonomy.com/og-home-v2.png": {
+    "category": "images",
+    "name": "image-og-home-v2",
+    "label": "Open Graph / Twitter share image"
+  },
+  "svg:cf5aa4378a": {
+    "category": "icons",
+    "name": "icon-chevron-down-read-our-story",
+    "label": "Chevron under READ OUR STORY"
+  },
+  "svg:d7375e9158": {
+    "category": "icons",
+    "name": "icon-verified-badge",
+    "label": "Verified tick next to Creator name"
+  },
+  "svg:5dee2d96a0": {
+    "category": "icons",
+    "name": "icon-social-x",
+    "label": "Social icon: X"
+  },
+  "svg:9de3756110": {
+    "category": "icons",
+    "name": "icon-social-instagram",
+    "label": "Social icon: Instagram"
+  },
+  "svg:02e119198c": {
+    "category": "icons",
+    "name": "icon-social-youtube",
+    "label": "Social icon: YouTube"
+  },
+  "svg:5427dab4dd": {
+    "category": "icons",
+    "name": "icon-social-linkedin",
+    "label": "Social icon: LinkedIn"
+  },
+  "svg:da78b3f195": {
+    "category": "icons",
+    "name": "icon-social-reddit",
+    "label": "Social icon: Reddit"
+  },
+  "svg:54be1695cd": {
+    "category": "logos",
+    "name": "logo-thirdparty-cookieyes",
+    "label": "Third-party: CookieYes wordmark (\"Powered by\" in cookie banner)"
+  },
+  "https://cdn-cookieyes.com/assets/images/close.svg": {
+    "category": "icons",
+    "name": "icon-thirdparty-cookieyes-close",
+    "label": "Third-party: CookieYes banner close icon"
+  },
+  "_extra": [
+    {
+      "url": "https://www.sparkonomy.com/sparkonomy.png",
+      "category": "logos",
+      "kind": "json-ld-logo",
+      "alt": "Organization logo (JSON-LD)",
+      "sections": [
+        "head (JSON-LD Organization.logo)"
+      ]
+    }
+  ],
+  "https://www.sparkonomy.com/sparkonomy.png": {
+    "category": "logos",
+    "name": "logo-sparkonomy-schema-512",
+    "label": "Organization logo referenced by JSON-LD (not rendered)"
+  }
+}

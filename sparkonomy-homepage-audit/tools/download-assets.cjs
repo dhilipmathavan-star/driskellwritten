@@ -26,6 +26,8 @@ const largestFromSrcset = (ss) => {
   return c[0]?.u || null;
 };
 const stripQuery = (u) => { try { const x = new URL(u); x.search = ''; return x.href; } catch { return u; } };
+// Next.js image optimiser URLs (/_next/image?url=%2Fpath.png&w=..&q=..): fetch the untouched original first
+const originalOf = (u) => { try { const x = new URL(u); if (x.pathname === '/_next/image' && x.searchParams.get('url')) return new URL(x.searchParams.get('url'), x.origin).href; } catch {} return null; };
 const LOGO_RE = /logo|brand|partner|client|trusted|backed|investor|featured|press|award|badge|certif/i;
 
 const items = new Map(); // key -> record
@@ -46,7 +48,7 @@ for (const [vp, cap] of views) {
       const abs = new URL(best, cap.data.url).href;
       const small = Math.max(...img.rendered) <= 48;
       const cat = LOGO_RE.test(`${img.alt} ${img.src} ${img.path}`) || (logoish && img.rendered[1] <= 120) ? 'logos' : small ? 'icons' : 'images';
-      add(abs, { kind: 'img', url: abs, candidates: [...new Set([stripQuery(abs), abs, img.src, img.currentSrc].filter(Boolean))], category: cat, alts: [img.alt], natural: img.natural, rendered: img.rendered, sections: [secLabel], viewports: [vp], path: img.path });
+      add(abs, { kind: 'img', url: abs, candidates: [...new Set([originalOf(abs), abs, img.src, img.currentSrc].filter(Boolean))], category: cat, alts: [img.alt], natural: img.natural, rendered: img.rendered, sections: [secLabel], viewports: [vp], path: img.path });
     }
     for (const v of sec.videos) {
       for (const u of [v.src, ...v.sources.map((s) => s.src)].filter(Boolean)) add(u, { kind: 'video', url: u, candidates: [u], category: 'videos', alts: [], rendered: v.rendered, sections: [secLabel], viewports: [vp], meta: { autoplay: v.autoplay, loop: v.loop, muted: v.muted, controls: v.controls } });
@@ -67,10 +69,13 @@ for (const [vp, cap] of views) {
   }
   // head assets: favicons, touch icons, og:image
   for (const l of cap.data.linksHead) if (/icon/i.test(l.rel)) add(l.href, { kind: 'favicon', url: l.href, candidates: [l.href], category: 'logos', alts: [l.rel], rendered: null, sections: ['head'], viewports: [vp] });
-  for (const m of cap.data.meta) if (/og:image|twitter:image/i.test(m.name || '') && m.content) add(m.content, { kind: 'social-image', url: m.content, candidates: [m.content], category: 'images', alts: [m.name], rendered: null, sections: ['head'], viewports: [vp] });
+  for (const m of cap.data.meta) if (/^(og:image|og:image:url|og:image:secure_url|twitter:image)$/i.test(m.name || '') && /^https?:/.test(m.content || '')) add(m.content, { kind: 'social-image', url: m.content, candidates: [m.content], category: 'images', alts: [m.name], rendered: null, sections: ['head'], viewports: [vp] });
   // anything image/media the network saw that the DOM pass missed
-  for (const n of cap.network) if (['image', 'media'].includes(n.type) && !items.has(n.url) && ![...items.values()].some((i) => i.candidates.includes(n.url))) add(n.url, { kind: 'network-' + n.type, url: n.url, candidates: [stripQuery(n.url), n.url], category: n.type === 'media' ? 'videos' : 'images', alts: [], rendered: null, sections: ['network-only'], viewports: [vp] });
+  for (const n of cap.network) if (['image', 'media'].includes(n.type) && !/googletagmanager\.com|google-analytics\.com|clarity\.ms|log\.cookieyes\.com|doubleclick\.net|facebook\.com\/tr/.test(n.url) && !items.has(n.url) && ![...items.values()].some((i) => i.candidates.includes(n.url))) add(n.url, { kind: 'network-' + n.type, url: n.url, candidates: [stripQuery(n.url), n.url], category: n.type === 'media' ? 'videos' : 'images', alts: [], rendered: null, sections: ['network-only'], viewports: [vp] });
 }
+
+// extra assets referenced outside the DOM pass (e.g. JSON-LD logo), declared in asset-overrides.json "_extra"
+for (const x of overrides._extra || []) add(x.url, { kind: x.kind || 'extra', url: x.url, candidates: [x.url], category: x.category || 'images', alts: [x.alt].filter(Boolean), rendered: null, sections: x.sections || ['head'], viewports: ['desktop'] });
 
 function hash(s) { return crypto.createHash('sha1').update(s).digest('hex').slice(0, 10); }
 const extFrom = (ct, u) => {
@@ -94,12 +99,13 @@ const dims = (buf, ext) => {
 
 (async () => {
   const local = views[0] && /^https?:\/\/(localhost|127\.0\.0\.1)\b/.test(views[0][1].data.url);
-  const browser = await playwright.chromium.launch();
+  const browser = await playwright.chromium.launch({ executablePath: fs.existsSync('/usr/bin/google-chrome') ? '/usr/bin/google-chrome' : undefined });
   const ctx = await browser.newContext({ proxy: process.env.HTTPS_PROXY && !local ? { server: process.env.HTTPS_PROXY } : undefined });
   const counters = Object.fromEntries(CATS.map((c) => [c, 0]));
   const out = [];
   for (const [key, it] of items) {
     const ov = overrides[it.url || key] || overrides[key] || {};
+    if (ov.skip) continue;
     const cat = ov.category || it.category;
     const n = String(++counters[cat]).padStart(2, '0');
     const prefix = { logos: 'logo', images: 'image', icons: 'icon', illustrations: 'illustration', videos: 'video', backgrounds: 'bg' }[cat];
@@ -114,7 +120,7 @@ const dims = (buf, ext) => {
     const ext = buf ? extFrom(ct, fetched || it.url) : null;
     const file = buf ? `${ov.name || `${prefix}-${n}${it.kind === 'inline-svg' ? '-inline' : '-' + baseName(fetched || it.url)}`}.${ext}` : null;
     if (buf) fs.writeFileSync(path.join(ASSETS, cat, file), buf);
-    out.push({ asset: `${prefix}-${n}`, file: file ? `assets/${cat}/${file}` : null, category: cat, kind: it.kind, originalUrl: it.url || 'inline <svg> in DOM', downloadedFrom: fetched, fileType: ext, bytes: buf ? buf.length : null, intrinsicDimensions: buf ? dims(buf, ext) : null, naturalDimensions: it.natural || null, renderedDimensions: it.rendered, alt: it.alts.filter(Boolean), sections: it.sections, viewports: it.viewports, domPath: it.path || null, meta: it.meta || null, error: buf ? null : err });
+    out.push({ asset: `${prefix}-${n}`, label: ov.label || null, file: file ? `assets/${cat}/${file}` : null, category: cat, kind: it.kind, originalUrl: it.url || 'inline <svg> in DOM', downloadedFrom: fetched, fileType: ext, bytes: buf ? buf.length : null, intrinsicDimensions: buf ? dims(buf, ext) : null, naturalDimensions: it.natural || null, renderedDimensions: it.rendered, alt: it.alts.filter(Boolean), sections: it.sections, viewports: it.viewports, domPath: it.path || null, meta: it.meta || null, error: buf ? null : err });
   }
   await browser.close();
   fs.writeFileSync(path.join(RAW, 'assets-downloaded.json'), JSON.stringify(out, null, 2));
