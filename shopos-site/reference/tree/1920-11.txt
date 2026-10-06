@@ -1,0 +1,128 @@
+# section 11 "null" top=9553
+div [0,0,1920,1807.4] flex=row gap:10px j:center a:center pad:0px ; radius=100px
+  div "Group 115" [0,0,1920,1807.4] flex=column gap:30px j:center a:center pad:100px 0px ; radius=100px
+    div "Group 85" [0,0,1920,1807.4] pos=absolute ; radius=100px ; z=1
+      div "Rectangle 44" [0,0,1920,1807.4] pos=absolute ; bgi=linear-gradient(90deg, rgb(253, 82, 200) 0%, rgb(106, 78, 255) 100%) ; radius=100px ; filter=blur(105.75px)
+      div "Rectangle 45" [0,0,1920,1807.4] pos=absolute ; flex=column gap:10px j:center a:center pad:0px ; bg=rgb(255, 255, 255) ; radius=60px
+    div [0,100,1920,330.4] flex=row gap:10px j:center a:center pad:0px 0px 100px ; ov=hidden
+      div "The Complete Brand OS" [0,100,1920,230.4] flex=column gap:normal j:flex-start a:normal pad:0px ; z=1
+        p [0,100,1920,115.2] font=BDO Grotesk Medium 400 96px/115.2px ls:-2.88px rgb(156, 156, 156) center  TEXT«The Complete»
+          span [1259.4,90,19.2,135]
+        p [0,215.2,1920,115.2] font=BDO Grotesk Medium 400 96px/115.2px ls:-2.88px rgb(42, 42, 42) center  TEXT«Brand OS»
+    div [240,460.4,1440,1247] z=1
+      div "Variant 1" [240,460.4,1440,1247] flex=row gap:10px j:center a:flex-start pad:0px ; bg=rgb(255, 255, 255) ; ov=hidden
+        div [235,460.4,792,1257] flex=column gap:10px j:center a:center pad:0px 0px 0px 51px ; ov=hidden
+          div "Frame 288" [286,460.4,741,1257] flex=column gap:32px j:flex-start a:flex-start pad:0px
+            svg "Line 10" [286,460.4,741,3] ov=hidden  SVG#29
+              svg [286,460.4,741,3] ov=hidden  SVG#29
+            div "Frame 287" [286,495.4,741,47] flex=row gap:74px j:flex-start a:center pad:0px 0px 0px 30px
+              div "Ellipse 28" [316,506.9,24,24] radius=100%
+              div "Frame 286" [414,495.4,613,47] flex=row gap:38px j:flex-start a:center pad:0px
+                div "Dynamic Images" [414,499.4,441,39] flex=column gap:normal j:center a:normal pad:0px
+                  p [414,458.4,441,121] font=BDO Grotesk Medium 400 32px/121px ls:-1.6px rgb(42, 42, 42)  TEXT«Dynamic Images»
+                div "Frame 285" [893,495.4,134,47] flex=row gap:10px j:center a:center pad:0px 25px ; bg=rgb(234, 234, 234) ; radius=8px
+                  div "Image" [918,507.9,84,22] flex=column gap:normal j:center a:normal pad:0px
+                    p [918,458.4,84,121] font=BDO Grotesk Medium 400 20px/121px ls:-1px rgb(110, 110, 110) center  TEXT«Image»
+            svg "Line 12" [286,574.4,741,3] ov=hidden  SVG#30
+              svg [286,574.4,741,3] ov=hidden  SVG#30
+            div "Frame 288" [286,609.4,741,47] flex=row gap:74px j:flex-start a:center pad:0px 0px 0px 30px
+              div "Ellipse 28" [316,620.9,24,24] radius=100%
+              div "Frame 286" [414,609.4,613,47] flex=row gap:38px j:flex-start a:center pad:0px
+                div "Ad Baker" [414,613.4,441,39] flex=column gap:normal j:center a:normal pad:0px
+                  p [414,572.4,441,121] font=BDO Grotesk Medium 400 32px/121px ls:-1.6px rgb(42, 42, 42)  TEXT«Ad Baker»
+                div "Frame 285" [893,609.4,134,47] flex=row gap:10px j:center a:center pad:0px 25px ; bg=rgb(234, 234, 234) ; radius=8px
+                  div "Video" [918,621.9,84,22] flex=column gap:normal j:center a:normal pad:0px
+                    p [918,572.4,84,121] font=BDO Grotesk Medium 400 20px/121px ls:-1px rgb(110, 110, 110) center  TEXT«Video»
+            svg "Line 13" [286,688.4,741,3] ov=hidden  SVG#31
+              svg [286,688.4,741,3] ov=hidden  SVG#31
+            div "Frame 289" [286,723.4,741,47] flex=row gap:74px j:flex-start a:center pad:0px 0px 0px 30px
+              div "Ellipse 28" [316,734.9,24,24] radius=100%
+              div "Frame 286" [414,723.4,613,47] flex=row gap:38px j:flex-start a:center pad:0px
+                div "Talking Avatars" [414,727.4,441,39] flex=column gap:normal j:center a:normal pad:0px
+                  p [414,686.4,441,121] font=BDO Grotesk Medium 400 32px/121px ls:-1.6px rgb(42, 42, 42)  TEXT«Talking Avatars»
+                div "Frame 285" [893,723.4,134,47] flex=row gap:10px j:center a:center pad:0px 25px ; bg=rgb(234, 234, 234) ; radius=8px
+                  div "Video" [918,735.9,84,22] flex=column gap:normal j:center a:normal pad:0px
+                    p [918,686.4,84,121] font=BDO Grotesk Medium 400 20px/121px ls:-1px rgb(110, 110, 110) center  TEXT«Video»
+            svg "Line 14" [286,802.4,741,3] ov=hidden  SVG#32
+              svg [286,802.4,741,3] ov=hidden  SVG#32
+            div "Frame 290" [286,837.4,741,47] flex=row gap:74px j:flex-start a:center pad:0px 0px 0px 30px
+              div "Ellipse 28" [316,848.9,24,24] radius=100%
+              div "Frame 286" [414,837.4,613,47] flex=row gap:38px j:flex-start a:center pad:0px
+                div "Product Videos" [414,841.4,441,39] flex=column gap:normal j:center a:normal pad:0px
+                  p [414,800.4,441,121] font=BDO Grotesk Medium 400 32px/121px ls:-1.6px rgb(42, 42, 42)  TEXT«Product Videos»
+                div "Frame 285" [893,837.4,134,47] flex=row gap:10px j:center a:center pad:0px 25px ; bg=rgb(234, 234, 234) ; radius=8px
+                  div "Video" [918,849.9,84,22] flex=column gap:normal j:center a:normal pad:0px
+                    p [918,800.4,84,121] font=BDO Grotesk Medium 400 20px/121px ls:-1px rgb(110, 110, 110) center  TEXT«Video»
+            svg "Line 15" [286,916.4,741,3] ov=hidden  SVG#33
+              svg [286,916.4,741,3] ov=hidden  SVG#33
+            div "Frame 291" [286,951.4,741,47] flex=row gap:74px j:flex-start a:center pad:0px 0px 0px 30px
+              div "Ellipse 28" [316,962.9,24,24] radius=100%
+              div "Frame 286" [414,951.4,613,47] flex=row gap:38px j:flex-start a:center pad:0px
+                div "Background Enhancement" [414,955.4,441,39] flex=column gap:normal j:center a:normal pad:0px
+                  p [414,954.4,441,41] font=BDO Grotesk Medium 400 32px/41px ls:-1.6px rgb(42, 42, 42)  TEXT«Background Enhancement»
+                div "Frame 285" [893,951.4,134,47] flex=row gap:10px j:center a:center pad:0px 25px ; bg=rgb(234, 234, 234) ; radius=8px
+                  div "Image" [918,963.9,84,22] flex=column gap:normal j:center a:normal pad:0px
+                    p [918,914.4,84,121] font=BDO Grotesk Medium 400 20px/121px ls:-1px rgb(110, 110, 110) center  TEXT«Image»
+            svg "Line 16" [286,1030.4,741,3] ov=hidden  SVG#34
+              svg [286,1030.4,741,3] ov=hidden  SVG#34
+            div "Frame 292" [286,1065.4,741,47] flex=row gap:74px j:flex-start a:center pad:0px 0px 0px 30px
+              div "Ellipse 28" [316,1076.9,24,24] radius=100%
+              div "Frame 286" [414,1065.4,613,47] flex=row gap:38px j:flex-start a:center pad:0px
+                div "Text to 3D" [414,1069.4,441,39] flex=column gap:normal j:center a:normal pad:0px
+                  p [414,1028.4,441,121] font=BDO Grotesk Medium 400 32px/121px ls:-1.6px rgb(42, 42, 42)  TEXT«Text to 3D»
+                div "Frame 285" [893,1065.4,134,47] flex=row gap:10px j:center a:center pad:0px 25px ; bg=rgb(234, 234, 234) ; radius=8px
+                  div "3D" [918,1077.9,84,22] flex=column gap:normal j:center a:normal pad:0px
+                    p [918,1028.4,84,121] font=BDO Grotesk 500 20px/121px ls:-1px rgb(110, 110, 110) center  TEXT«3D»
+            svg "Line 17" [286,1144.4,741,3] ov=hidden  SVG#35
+              svg [286,1144.4,741,3] ov=hidden  SVG#35
+            div "Frame 293" [286,1179.4,741,47] flex=row gap:74px j:flex-start a:center pad:0px 0px 0px 30px
+              div "Ellipse 28" [316,1190.9,24,24] radius=100%
+              div "Frame 286" [414,1179.4,613,47] flex=row gap:38px j:flex-start a:center pad:0px
+                div "Product Voiceovers" [414,1183.4,441,39] flex=column gap:normal j:center a:normal pad:0px
+                  p [414,1142.4,441,121] font=BDO Grotesk Medium 400 32px/121px ls:-1.6px rgb(42, 42, 42)  TEXT«Product Voiceovers»
+                div "Frame 285" [893,1179.4,134,47] flex=row gap:10px j:center a:center pad:0px 25px ; bg=rgb(234, 234, 234) ; radius=8px
+                  div "Audio" [918,1191.9,84,22] flex=column gap:normal j:center a:normal pad:0px
+                    p [918,1142.4,84,121] font=BDO Grotesk Medium 400 20px/121px ls:-1px rgb(110, 110, 110) center  TEXT«Audio»
+            svg "Line 18" [286,1258.4,741,3] ov=hidden  SVG#36
+              svg [286,1258.4,741,3] ov=hidden  SVG#36
+            div "Frame 294" [286,1293.4,741,47] flex=row gap:74px j:flex-start a:center pad:0px 0px 0px 30px
+              div "Ellipse 28" [316,1304.9,24,24] radius=100%
+              div "Frame 286" [414,1293.4,613,47] flex=row gap:38px j:flex-start a:center pad:0px
+                div "Description & details" [414,1297.4,441,39] flex=column gap:normal j:center a:normal pad:0px
+                  p [414,1256.4,441,121] font=BDO Grotesk Medium 400 32px/121px ls:-1.6px rgb(42, 42, 42)  TEXT«Description & details»
+                div "Frame 285" [893,1293.4,134,47] flex=row gap:10px j:center a:center pad:0px 25px ; bg=rgb(234, 234, 234) ; radius=8px
+                  div "Text" [918,1305.9,84,22] flex=column gap:normal j:center a:normal pad:0px
+                    p [918,1256.4,84,121] font=BDO Grotesk Medium 400 20px/121px ls:-1px rgb(110, 110, 110) center  TEXT«Text»
+            svg "Line 19" [286,1372.4,741,3] ov=hidden  SVG#37
+              svg [286,1372.4,741,3] ov=hidden  SVG#37
+            div "Frame 295" [286,1407.4,741,47] flex=row gap:74px j:flex-start a:center pad:0px 0px 0px 30px
+              div "Ellipse 28" [316,1418.9,24,24] radius=100%
+              div "Frame 286" [414,1407.4,613,47] flex=row gap:38px j:flex-start a:center pad:0px
+                div "Apparel Try On" [414,1411.4,441,39] flex=column gap:normal j:center a:normal pad:0px
+                  p [414,1370.4,441,121] font=BDO Grotesk Medium 400 32px/121px ls:-1.6px rgb(42, 42, 42)  TEXT«Apparel Try On»
+                div "Frame 285" [893,1407.4,134,47] flex=row gap:10px j:center a:center pad:0px 25px ; bg=rgb(234, 234, 234) ; radius=8px
+                  div "Image" [918,1419.9,84,22] flex=column gap:normal j:center a:normal pad:0px
+                    p [918,1370.4,84,121] font=BDO Grotesk Medium 400 20px/121px ls:-1px rgb(110, 110, 110) center  TEXT«Image»
+            svg "Line 20" [286,1486.4,741,3] ov=hidden  SVG#38
+              svg [286,1486.4,741,3] ov=hidden  SVG#38
+            div "Frame 296" [286,1521.4,741,47] flex=row gap:74px j:flex-start a:center pad:0px 0px 0px 30px
+              div "Ellipse 28" [316,1532.9,24,24] radius=100%
+              div "Frame 286" [414,1521.4,613,47] flex=row gap:38px j:flex-start a:center pad:0px
+                div "Market Researcher" [414,1525.4,441,39] flex=column gap:normal j:center a:normal pad:0px
+                  p [414,1484.4,441,121] font=BDO Grotesk Medium 400 32px/121px ls:-1.6px rgb(42, 42, 42)  TEXT«Market Researcher»
+                div "Frame 285" [893,1521.4,134,47] flex=row gap:10px j:center a:center pad:0px 25px ; bg=rgb(234, 234, 234) ; radius=8px
+                  div "Text" [918,1533.9,84,22] flex=column gap:normal j:center a:normal pad:0px
+                    p [918,1484.4,84,121] font=BDO Grotesk Medium 400 20px/121px ls:-1px rgb(110, 110, 110) center  TEXT«Text»
+            svg "Line 21" [286,1600.4,741,3] ov=hidden  SVG#39
+              svg [286,1600.4,741,3] ov=hidden  SVG#39
+            div "Frame 297" [286,1635.4,741,47] flex=row gap:74px j:flex-start a:center pad:0px 0px 0px 30px
+              div "Ellipse 28" [316,1646.9,24,24] radius=100%
+              div "Frame 286" [414,1635.4,613,47] flex=row gap:38px j:flex-start a:center pad:0px
+                div "Seller Store Manager" [414,1639.4,441,39] flex=column gap:normal j:center a:normal pad:0px
+                  p [414,1598.4,441,121] font=BDO Grotesk Medium 400 32px/121px ls:-1.6px rgb(42, 42, 42)  TEXT«Seller Store Manager»
+                div "Frame 285" [893,1635.4,134,47] flex=row gap:10px j:center a:center pad:0px 25px ; bg=rgb(234, 234, 234) ; radius=8px
+                  div "Text" [918,1647.9,84,22] flex=column gap:normal j:center a:normal pad:0px
+                    p [918,1598.4,84,121] font=BDO Grotesk Medium 400 20px/121px ls:-1px rgb(110, 110, 110) center  TEXT«Text»
+            svg "Line 11" [286,1714.4,741,3] ov=hidden  SVG#40
+              svg [286,1714.4,741,3] ov=hidden  SVG#40
+        div [1037,460.4,648,1742] ov=hidden

@@ -1,0 +1,8 @@
+# section 17 "Frame 21" top=17469
+div "Frame 21" [0,0,1440,165] flex=column gap:22px j:flex-start a:center pad:40px 0px 0px
+  div "Tag" [662.5,40,115,35] flex=row gap:11px j:center a:center pad:11.3417px 14.7442px ; bg=rgb(0, 0, 0) ; radius=11px ; ov=hidden
+    div "Version 2.0 is here" [676,39.9,88,35.2] flex=column gap:normal j:center a:normal pad:0px
+      p [676,39.9,88,35.2] font=BDO Grotesk Medium 400 14.74px/35.16px ls:-0.2948px rgb(255, 255, 255)  TEXT«Testimonials»
+  div "Frame 17" [414,97,612,68] flex=column gap:23px j:flex-start a:center pad:0px
+    div "H2" [414,97,612,68] flex=column gap:normal j:flex-start a:normal pad:0px
+      p [414,97,612,68] font=BDO Grotesk Medium 400 61.25px/68.05px ls:-1.8375px rgb(255, 255, 255) center  TEXT«What our users say»

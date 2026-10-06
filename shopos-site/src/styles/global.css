@@ -49,3 +49,13 @@ html.no-motion [data-reveal] { opacity: 1; transform: none; transition: none; }
 @media (prefers-reduced-motion: reduce) { [data-reveal] { opacity: 1; transform: none; transition: none; } }
 
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+
+/* ≥1440 (Framer "Desktop" and wider): every top-level block except the hero (02), Explore (04),
+   Brand OS (11), footer line (23) and copyright (24) is capped at 1440px and centred — measured
+   from the original at 1920/2560 (reference/tree/1920-*.txt, 2560-*.txt). The page root is
+   `.framer-72rtr7 { width: 1440px }` at this breakpoint with its children `max-width: 1440px`. */
+@media (min-width: 1440px) {
+  [data-ref]:not([data-ref="01"], [data-ref="02"], [data-ref="04"], [data-ref="11"], [data-ref="23"], [data-ref="24"], [data-ref="22"]) {
+    max-width: 1440px; margin-left: auto; margin-right: auto;
+  }
+}

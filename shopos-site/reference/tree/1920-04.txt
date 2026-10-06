@@ -1,0 +1,88 @@
+# section 4 "Group 115" top=1725
+div "Group 115" [0,0,1920,1669] flex=column gap:10px j:center a:center pad:40px ; bg=rgba(255, 255, 255, 0) ; radius=100px ; z=2
+  div [0,-272,1920,162] pos=absolute ; bgi=linear-gradient(rgba(84, 84, 84, 0) 0%, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%) ; ov=hidden ; z=4
+  div "Group 85" [0,0,1920,1669] pos=absolute ; bg=rgba(255, 255, 255, 0) ; radius=100px ; z=0
+    div "Rectangle 44" [0,0,1920,1669] pos=absolute ; bgi=linear-gradient(90deg, rgb(253, 82, 200) 0%, rgb(106, 78, 255) 100%) ; radius=50px ; filter=blur(100px)
+    div "Rectangle 45" [0,0,1920,1669] pos=absolute ; bg=rgb(247, 247, 247) ; radius=60px ; shadow=rgba(0, 0, 0, 0.25) 0px 1px 2px 0px
+  div "The Complete Brand OS" [40,137.8,1840,103.5] flex=column gap:normal j:flex-start a:normal pad:0px
+    p [40,137.8,1840,103.5] font=BDO Grotesk Medium 400 90px/103.5px ls:-2.7px rgb(42, 42, 42) center  TEXT«Explore»
+  div "Explore our AI agents which cut short your most of the business expenses" [40,251.3,1840,28] flex=column gap:normal j:flex-start a:normal pad:0px
+    p [40,251.3,1840,28] font=BDO Grotesk Regular 400 20px/28px ls:-0.4px rgb(130, 126, 126) center  TEXT«Explore our AI agents which cut short your most of the business expenses»
+  div [240,289.3,1440,1242] flex=row gap:60px j:center a:center pad:0px ; ov=hidden
+    div [240,334.8,440,1151] flex=column gap:60px j:center a:center pad:0px ; ov=hidden
+      div "Group 89" [240,334.8,440,344] flex=column gap:10px j:center a:center pad:0px
+        div "Rectangle 59" [240,334.8,440,267] flex=column gap:10px j:center a:center pad:10px ; bg=rgb(227, 225, 225) ; radius=9px
+          div "Rectangle 60" [250,344.8,420,247] flex=row gap:10px j:center a:center pad:0px ; bg=rgb(242, 242, 242) ; radius=7px
+            div "WhatsApp_Image_2024_04_25_at_20_53_44" [348.8,357.1,222.3,222.3] radius=10px
+              div [348.8,357.1,222.3,222.3] pos=absolute ; radius=10px
+                img [348.8,357.1,222.3,222.3] radius=10px ; ov=clip ; fit=cover  SRC=/assets/img/tB3TOBWdCaaxVPJ96pXQMdCJSA.gif
+        div "Group 88" [240,611.8,440,67] flex=row gap:10px j:center a:center pad:0px
+          div [240,611.8,440,67] pos=absolute
+            img [240,611.8,440,67] ov=clip ; fit=contain  SRC=/assets/img/miUkjO0F10TK2w2DytyG090Y6k.svg
+      div "Group 89" [240,738.8,440,343] flex=column gap:10px j:center a:center pad:0px
+        div "Rectangle 59" [240,738.8,440,267] flex=column gap:10px j:center a:center pad:10px ; bg=rgb(227, 225, 225) ; radius=9px
+          div "Rectangle 60" [250,748.8,420,247] flex=row gap:10px j:center a:center pad:0px ; bg=rgb(242, 242, 242) ; radius=7px
+            div "WhatsApp_Image_2024_04_25_at_20_53_44" [327.9,740.1,264.3,264.3] radius=20px
+              div [327.9,740.1,264.3,264.3] pos=absolute ; radius=20px
+                img [327.9,740.1,264.3,264.3] radius=20px ; ov=clip ; fit=contain  SRC=/assets/img/XbvQn8KBPaHtYLCtCS9K1ps1DE.svg
+        div "Group 88" [240,1015.8,440,66] flex=row gap:10px j:center a:center pad:0px
+          div [240,1015.8,440,66] pos=absolute
+            img [240,1015.8,440,66] ov=clip ; fit=contain  SRC=/assets/img/tqFI5t1zP6qs9n1XLh1z0dFFAE.svg
+      div "Group 89" [240,1141.8,440,344] flex=column gap:10px j:center a:center pad:0px
+        div "Rectangle 59" [240,1141.8,440,267] flex=column gap:10px j:center a:center pad:10px ; bg=rgb(227, 225, 225) ; radius=9px
+          div "Rectangle 60" [250,1151.8,420,247] flex=row gap:10px j:center a:center pad:0px ; bg=rgb(242, 242, 242) ; radius=7px
+            div "WhatsApp_Image_2024_04_25_at_20_53_44" [308.1,1123.4,303.8,303.8] pos=absolute
+              img [308.1,1123.4,303.8,303.8] ov=clip ; fit=contain  SRC=/assets/img/DQjWjo47hvH3UOid3AkyCXez0o.png
+        div "Group 88" [240,1418.8,440,67] flex=row gap:10px j:center a:center pad:0px
+          div [240,1418.8,440,67] pos=absolute
+            img [240,1418.8,440,67] ov=clip ; fit=contain  SRC=/assets/img/yIboqy9mWg41YQ7j3hCmc0ZWld0.svg
+    div [740,289.3,440,1242] flex=column gap:60px j:center a:center pad:90px 0px 0px ; ov=hidden
+      div "Group 89" [740,379.3,440,344] flex=column gap:10px j:center a:center pad:0px
+        div "Rectangle 59" [740,379.3,440,267] flex=column gap:10px j:center a:center pad:10px ; bg=rgb(227, 225, 225) ; radius=9px
+          div "Rectangle 60" [750,389.3,420,247] flex=row gap:10px j:center a:center pad:20px ; bg=rgb(242, 242, 242) ; radius=7px
+            video [770,409.3,380,207] radius=20px ; ov=clip ; fit=contain  SRC=/assets/video/JdX3exOa5ro1YCYAuiwyF3EYfM.mp4
+              video [770,409.3,380,207] radius=20px ; ov=clip ; fit=contain  SRC=/assets/video/JdX3exOa5ro1YCYAuiwyF3EYfM.mp4
+        div "Group 88" [740,656.3,440,67] flex=row gap:10px j:center a:center pad:0px
+          div [740,656.3,440,67] pos=absolute
+            img [740,656.3,440,67] ov=clip ; fit=contain  SRC=/assets/img/NHtpHtNQNd8tgebdIJNCnojEw.svg
+      div "Group 89" [740,783.3,440,344] flex=column gap:10px j:center a:center pad:0px
+        div "Rectangle 59" [740,783.3,440,267] flex=column gap:10px j:center a:center pad:10px ; bg=rgb(227, 225, 225) ; radius=9px
+          div "Rectangle 60" [750,793.3,420,247] flex=row gap:10px j:center a:center pad:0px ; bg=rgb(242, 242, 242) ; radius=7px
+            video [802.5,803.3,315,227] ov=clip ; fit=cover  SRC=/assets/video/pEQsN7G58Lu9xbi35yrVH3PhEA.mp4
+              video [802.5,803.3,315,227] ov=clip ; fit=cover  SRC=/assets/video/pEQsN7G58Lu9xbi35yrVH3PhEA.mp4
+        div "Group 88" [740,1060.3,440,67] flex=row gap:10px j:center a:center pad:0px
+          div [740,1060.3,440,67] pos=absolute
+            img [740,1060.3,440,67] ov=clip ; fit=contain  SRC=/assets/img/hP2o4RYg9qwfgclnNChU38RJ8g.svg
+      div "Group 89" [740,1187.3,440,344] flex=column gap:10px j:center a:center pad:0px
+        div "Rectangle 59" [740,1187.3,440,267] flex=column gap:10px j:center a:center pad:10px ; bg=rgb(227, 225, 225) ; radius=9px
+          div "Rectangle 60" [750,1197.3,420,247] flex=row gap:10px j:center a:center pad:0px ; bg=rgb(242, 242, 242) ; radius=7px
+            div "WhatsApp_Image_2024_04_25_at_20_53_44" [848.8,1209.6,222.3,222.3] pos=absolute
+              img [848.8,1209.6,222.3,222.3] ov=clip ; fit=cover  SRC=/assets/img/25U6sqvLgTVA0FsM5OV2NrL9tXE.png
+        div "Group 88" [740,1464.3,440,67] flex=row gap:10px j:center a:center pad:0px
+          div [740,1464.3,440,67] pos=absolute
+            img [740,1464.3,440,67] ov=clip ; fit=contain  SRC=/assets/img/1PtFfexdx0Y4mwYpDHOO6EEjZk.svg
+    div [1240,320.8,440,1179] flex=column gap:60px j:center a:center pad:0px ; ov=hidden
+      div "Group 89" [1240,320.8,440,350] flex=column gap:10px j:center a:center pad:0px
+        div "Rectangle 59" [1240,320.8,440,267] flex=column gap:10px j:center a:center pad:10px ; bg=rgb(227, 225, 225) ; radius=9px
+          div "Rectangle 60" [1250,330.8,420,247] flex=row gap:10px j:center a:center pad:0px ; bg=rgb(242, 242, 242) ; radius=7px
+            div "WhatsApp_Image_2024_04_25_at_20_53_44" [1348.8,343.1,222.3,222.3] pos=absolute
+              img [1348.8,343.1,222.3,222.3] ov=clip ; fit=cover  SRC=/assets/img/wtNrkh7bH6Cx9T2EYwdFPdJQKw.gif
+        div "Group 88" [1240,597.8,440,73] flex=row gap:10px j:center a:center pad:0px
+          div [1240,597.8,440,73] pos=absolute
+            img [1240,597.8,440,73] ov=clip ; fit=contain  SRC=/assets/img/FQnpvOciw6pGUK3mINdhhJ4aQ.svg
+      div "Group 89" [1240,730.8,440,354] flex=column gap:10px j:center a:center pad:0px
+        div "Rectangle 59" [1240,730.8,440,267] flex=column gap:10px j:center a:center pad:10px ; bg=rgb(227, 225, 225) ; radius=9px
+          div "Rectangle 60" [1250,740.8,420,247] flex=row gap:10px j:center a:center pad:0px ; bg=rgb(242, 242, 242) ; radius=7px
+            div "WhatsApp_Image_2024_04_25_at_20_53_44" [1309.3,713.6,301.3,301.3] pos=absolute
+              img [1309.3,713.6,301.3,301.3] ov=clip ; fit=contain  SRC=/assets/img/1LPxfKipHVmyacS4EO2Gxyf890.png
+        div "Group 88" [1240,1007.8,440,77] flex=row gap:10px j:center a:center pad:0px
+          div [1240,1007.8,440,77] pos=absolute
+            img [1240,1007.8,440,77] ov=clip ; fit=contain  SRC=/assets/img/QR25qAhdZwCrqOOvevQlkbafOs.svg
+      div "Group 89" [1240,1144.8,440,355] flex=column gap:10px j:center a:center pad:0px
+        div "Rectangle 59" [1240,1144.8,440,267] flex=column gap:10px j:center a:center pad:10px ; bg=rgb(227, 225, 225) ; radius=9px
+          div "Rectangle 60" [1250,1154.8,420,247] flex=row gap:10px j:center a:center pad:0px ; bg=rgb(242, 242, 242) ; radius=7px
+            div "WhatsApp_Image_2024_04_25_at_20_53_44" [1336.5,1154.8,247,247] pos=absolute
+              img [1336.5,1154.8,247,247] ov=clip ; fit=contain  SRC=/assets/img/W6ugHQF164MmaZKY84RgDaaQZ0.gif
+        div "Group 88" [1240,1421.8,440,78] flex=row gap:10px j:center a:center pad:0px
+          div [1240,1421.8,440,78] pos=absolute
+            img [1240,1421.8,440,78] ov=clip ; fit=contain  SRC=/assets/img/hFZ6yJavw0PgLAy5YYmIXBCbkaA.svg

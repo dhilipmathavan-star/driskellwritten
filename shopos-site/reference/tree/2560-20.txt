@@ -1,0 +1,9 @@
+# section 20 "Group 135" top=19094
+div "Group 135" [0,0,1440,214.6] flex=row gap:10px j:center a:flex-start pad:0px
+  div [577,0,286,70] tf=matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.000833333, 0, 0, 0, 1)
+    a "Left" [577,0,286,70] flex=column gap:10px j:center a:center pad:20px 28px ; bg=rgba(255, 255, 255, 0.05) ; radius=118px  HREF=http://app.houseofmodels.ai/
+      div "Glow" [577,0,286,70] pos=absolute ; bgi=radial-gradient(25% 42.2325% at 30.8762% 74.1975%, rgb(243, 173, 255) 0%, rgba(255, 255, 255, 0) 100%) ; radius=72px ; filter=blur(15px) ; ov=hidden ; z=0
+      div "Stroke" [577,0,286,70] pos=absolute ; bgi=radial-gradient(18.619% 46.4247% at 30.8762% 74.1975%, rgb(252, 110, 255) 0%, rgba(255, 255, 255, 0) 100%) ; radius=72px ; ov=hidden ; z=0
+      div "Fill" [579,2,282,66] pos=absolute ; flex=row gap:10px j:center a:center pad:0px ; bg=rgb(0, 0, 0) ; radius=114px ; ov=hidden ; z=0
+      div "Show me how" [666.3,23,107.3,24] flex=column gap:normal j:flex-start a:normal pad:0px
+        p [666.3,23,107.3,24] font=BDO Grotesk Medium 400 20px/24px ls:-0.2px rgb(255, 255, 255) center  TEXT«Get Started»

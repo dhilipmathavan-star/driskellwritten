@@ -86,9 +86,18 @@ const { image } = content;
       const vh = (k) => `calc(var(--framer-viewport-height, 100vh) * ${k})`;
       bg.animate({ top: ['0px', '-120px'], height: [vh(1), vh(0.01)] }, { ...BG_MOVE, easing: EASE, fill: 'both' });
     };
+    // Scheduling as in the original: useOnVariantChange (framer.pretty.js:9073) arms the first
+    // timer from the Loader's mount effect. On the original that runs while the page is still
+    // hydrating, i.e. before the overlay's first paint (measured: logo removed ≈3.75 s and BG
+    // moving ≈4.08 s after the black overlay first paints). The equivalent moment here is when
+    // the overlay is parsed. delay() (framer.pretty.js:8932) is setTimeout(2000); its callback
+    // calls setVariant, which commits on the next frame, and the next timer is armed from that
+    // commit's effect.
     setTimeout(() => {
-      comp.dataset.variant = 'arrive';
-      setTimeout(leave, STEP_MS);
+      requestAnimationFrame(() => {
+        comp.dataset.variant = 'arrive'; // Arrive commit (no visual change)
+        setTimeout(() => requestAnimationFrame(leave), STEP_MS);
+      });
     }, STEP_MS);
   })();
 </script>

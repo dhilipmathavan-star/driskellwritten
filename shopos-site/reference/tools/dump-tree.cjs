@@ -75,7 +75,7 @@ function render(o, d = 0) {
 
 (async () => {
   fs.mkdirSync(out, { recursive: true });
-  const b = await chromium.launch({ proxy: process.env.HTTPS_PROXY ? { server: process.env.HTTPS_PROXY } : undefined });
+  const b = await chromium.launch({ executablePath: fs.existsSync('/usr/bin/google-chrome') ? '/usr/bin/google-chrome' : undefined, proxy: process.env.HTTPS_PROXY ? { server: process.env.HTTPS_PROXY } : undefined });
   const p = await b.newPage({ viewport: { width: W, height: 900 } });
   await p.goto(url, { waitUntil: 'networkidle', timeout: 90000 }).catch(() => {});
   const h = await p.evaluate(() => document.documentElement.scrollHeight);

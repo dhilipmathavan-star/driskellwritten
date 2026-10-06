@@ -1,0 +1,8 @@
+# section 9 "Group 109" top=7843
+div "Group 109" [0,0,1440,810] flex=column gap:10px j:center a:center pad:0px ; z=1
+  div [0,-11,1440,149] pos=absolute ; bgi=linear-gradient(rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%) ; ov=hidden ; z=1
+  div [0,669,1440,141] pos=absolute ; bgi=linear-gradient(rgba(51, 170, 255, 0) 0%, rgb(0, 0, 0) 100%) ; ov=hidden ; z=1
+  div [0,0,1440,810] z=0
+    video [0,0,1440,810] ov=clip ; fit=cover  SRC=/assets/video/DLoaywSY4mPJ80gpVnVs5ASwo.mp4
+  div [0,0,144,810] pos=absolute ; bgi=linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%) ; ov=hidden ; z=0
+  div [1301,0,144,810] pos=absolute ; bgi=linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%) ; ov=hidden ; z=0
