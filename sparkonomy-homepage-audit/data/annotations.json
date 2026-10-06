@@ -1,0 +1,813 @@
+{
+  "capturedAt": "2026-10-06 (capture 10:10–10:19 UTC; logical-section re-shoot same day) — live https://www.sparkonomy.com/",
+  "overview": "Sparkonomy's homepage is a single, dark, **scroll-driven story** (\"Sparking Creator livelihoods\") that introduces the company through the founders' YouTube/Google background and ends in its first product, **Open Creator Graph** — a free \"Creator Record\" that lets Creators be visible to AI and control how AI uses their identity. Every conversion point goes to the external app https://creatorgraph.sparkonomy.com.\n\n### Structure\n- A fixed, transparent **header** (wordmark, 4 links, gradient pill CTA; hamburger + full-screen menu below 768px) over a fixed full-viewport **WebGL fluid-ink canvas** and a radial vignette that stay behind everything.\n- **Hero** (not pinned): animated gradient \"Sparkonomy\" wordmark, tagline, a \"NEW\" launch card for Open Creator Graph with the CTA, a partner-logo marquee (Meta, YouTube, Google for Startups, Gemini) and a \"READ OUR STORY\" cue.\n- **Six pinned story screens** (`position: sticky` panels inside 200–420svh tall sections) whose lines reveal \"beat by beat\" as you scroll, with word-by-word colour \"ink\" effects.\n- **Creator Record** demo (normal flow): example record card for \"Chulbuli Dixit\" with per-facet AI-usage stances, plus the second CTA.\n- **Closing** pinned screen (\"And we're only getting started.\" / \"Let's spark together.\") and a black **footer**.\n\n### Character\nBlack canvas, white Roboto type at large sizes (64px headlines at 1440px), a two-colour brand gradient (magenta `#DE0075` → violet `#8134AF`) used for CTAs and word highlights, and constant ambient motion (fluid simulation, wordmark pulse, CTA gradient sweep). The page also **auto-plays**: after 10 seconds without input it starts scrolling itself through the story.\n\n### Facts\n- Document height at 1440×900: 17,082px (fully rendered; the first automated capture measured 17,374px before the lazy card settled). 390×844: 15,984px. 834×1112: 20,766px.\n- Headings: 1 H1 (\"Sparkonomy\"), 9 H2s, 1 H3. Links: 8 internal destinations (/, /creator/earn, /about, /contact, /blogs, /legal/privacy-policy, /legal/terms, /legal/refund-policy), 1 external app (https://creatorgraph.sparkonomy.com) linked 5 times, 5 social profiles (footer only).\n- Built with Next.js 16.0.7 (App Router, Turbopack), React 19, Tailwind CSS, Framer Motion; hosted behind Google Frontend; GTM + GA4 + Microsoft Clarity + CookieYes.",
+  "sections": {
+    "1": {
+      "name": "Header / navigation (incl. cookie banner + mobile menu)",
+      "dom": {
+        "captureSection": 3,
+        "selectors": [
+          "header",
+          "div#story-menu"
+        ],
+        "note": "`<header class=\"pointer-events-none fixed inset-x-0 top-0 z-40\">` + CookieYes `.cky-consent-container` (injected by a third-party script)"
+      },
+      "purpose": "Persistent brand mark and route to the four other site areas, plus the always-visible primary conversion CTA (\"Claim your Creator Record\") to the external Open Creator Graph app. On mobile the links collapse into a full-screen menu that also carries the partner and compliance badges. On first visit a CookieYes consent bar is overlaid at the top.",
+      "layout": "Fixed, full-width, transparent bar (z-index 40) with a 112px-tall top scrim (`linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.35), transparent)`). Inner row: `max-width: 84rem` (1344px), `padding: 20px 32px` (desktop) / `16px 20px` (mobile), `display:flex; justify-content:space-between; align-items:center`, height 79.5px. Left: wordmark image 26px tall (24px <768px). Right (≥768px): `<nav aria-label=\"Main\">` flex row, `gap: 28px`, four 13px text links then the gradient pill CTA. <768px: the nav is hidden and a 32×32 hamburger button (24px-wide PNG icon) toggles `#story-menu`, a `100svh` black panel (`padding: 16px 24px 40px`) under the bar.",
+      "background": "Transparent; legibility comes from the 112px black→transparent scrim. The header does not change on scroll (no background, shadow, shrink or hide-on-scroll — verified with screenshots at 900px and 1200px scroll). Mobile menu panel: solid `#000000`.",
+      "interaction": "- Nav links: `color rgba(255,255,255,.6)` → `#FFFFFF` on hover, `transition: color .15s cubic-bezier(.4,0,.2,1)`.\n- CTA pill: continuous `cta-sweep` gradient animation (3.5s ease-in-out infinite alternate); hover `opacity: .9` (150ms).\n- Hamburger: toggles `aria-expanded`, sr-only label switches \"Open menu\" ↔ \"Close menu\", icon swaps to an X drawn with two 24×1.5px white bars rotated ±45°. Menu opens/closes instantly (HTML `hidden` attribute, no transition), locks `body { overflow: hidden }`, closes on Escape, on link tap, or when the viewport becomes ≥768px.\n- `pointer-events: none` on the header wrapper so the WebGL canvas behind keeps receiving pointer moves; only links/buttons are `pointer-events: auto`.\n- Cookie banner (CookieYes): \"Reject All\"/\"Accept All\" buttons `rgb(107,114,128)` → `rgb(184,30,102)` + `filter: brightness(.9)` on hover; close (×) button; \"Powered by CookieYes\" link. The footer \"Cookie Policy\" button (`.cky-banner-element`) re-opens it.",
+      "visualAssets": "`logo_header_white.png` (991×188 wordmark, rendered 137×26), `hamburger_icon.png` (92×60, rendered 24px wide, mobile only). Mobile menu: 4 partner logos (26px tall, opacity .7) and 4 compliance badges (22px tall, opacity .55). Cookie banner: CookieYes `close.svg` and inline CookieYes wordmark SVG (78×13).",
+      "cta": "Claim your Creator Record → https://creatorgraph.sparkonomy.com (`target=\"_blank\" rel=\"noopener\"`); same CTA repeated full-width inside the mobile menu.",
+      "notes": "- The CookieYes bar (fixed top, `z-index: 9999999`, black, 10px radius, 520px wide on desktop / full width minus 12px gutters on mobile) sits on top of the header and on desktop hides the \"About\"/\"Contact\" links until dismissed; on mobile it covers the hero wordmark.\n- Logo link has `aria-label=\"Sparkonomy home\"` → `/`.\n- No language switcher, search, login or account entry on the homepage header.",
+      "copy": "HEADER (desktop ≥768px)\n[logo image alt=\"Sparkonomy\"]  (link aria-label \"Sparkonomy home\" → /)\nCreator Payments          → /creator/earn\nAbout                     → /about\nContact                   → /contact\nBlogs                     → /blogs\nClaim your Creator Record → https://creatorgraph.sparkonomy.com   (new tab)\n\nMOBILE (<768px)\n[hamburger button, sr-only text] Open menu   /   Close menu (when open)\n#story-menu:\n  Creator Payments\n  About\n  Contact\n  Blogs\n  Claim your Creator Record\n  BUILT WITH            (source text \"Built with\", CSS uppercase)\n    [Built with Meta] [Developed with YouTube] [Google for Startups] [Gemini Early Access Program]   (img alt texts)\n  COMPLIANT WITH        (source text \"Compliant with\", CSS uppercase)\n    [DPDP] [CCPA] [PDPA] [GDPR]\n\nCOOKIE BANNER (CookieYes, third-party, first visit)\nSparkonomy uses cookies to learn your style\nand serve you better. Sound good?\n[Reject All]  [Accept All]   [× aria-label \"Close\"]\nPowered by [CookieYes]  (link aria-label \"Visit CookieYes website\")",
+      "screenshots": {
+        "desktop": "01-header-nav.png",
+        "tablet": null,
+        "mobile": "_states/mobile-menu-open.png",
+        "extra": [
+          {
+            "file": "01-header-cookie-banner.png",
+            "caption": "Desktop, first visit: CookieYes bar overlapping the nav"
+          },
+          {
+            "file": "_states/nav-link-hover.png",
+            "caption": "Hover on \"Creator Payments\" (white) + CTA"
+          },
+          {
+            "file": "_states/mobile-menu-closed.png",
+            "caption": "Mobile 390px, menu closed",
+            "phone": true
+          },
+          {
+            "file": "_states/mobile-menu-open.png",
+            "caption": "Mobile 390px, menu open",
+            "phone": true
+          },
+          {
+            "file": "_states/cookie-banner-mobile.png",
+            "caption": "Mobile 390px, cookie banner",
+            "phone": true
+          }
+        ]
+      }
+    },
+    "2": {
+      "name": "Hero — \"Sparkonomy\" + Open Creator Graph launch card",
+      "dom": {
+        "captureSection": 4,
+        "selectors": [
+          "section#opening"
+        ]
+      },
+      "purpose": "Brand statement (animated wordmark + tagline \"Sparking Creator livelihoods.\") and the launch announcement for the first product, Open Creator Graph, with the primary CTA. Credibility via a \"built with\" partner-logo marquee (Meta, YouTube, Google for Startups, Gemini). Ends with a \"READ OUR STORY\" cue that starts the scroll story.",
+      "layout": "`section#opening`: `min-height: 100svh`, flex column, centred, `padding: 80px 24px 64px` (desktop) / `96px 24px 40px` (mobile), `text-align: center`. Stack: H1 wordmark (96px desktop / clamp(2.75rem,13vw,3.5rem) ≈ 50.7px at 390px) → tagline (24px desktop / 16px mobile, `margin-top: 16px`) → launch card (`max-width: 35rem` = 560px desktop, `23rem` = 368px mobile; `border-radius: 28px`; `padding: 40px 40px 28px` desktop / `36px 16px 32px` mobile; `margin-top: 36px`) → partner marquee (560px wide, `margin-top: 32px`; full-bleed on mobile, `margin-top: 48px`) → READ OUR STORY (`margin-top: 48px`). Before the intro completes, the card row is collapsed (`grid-template-rows: 0fr`) and a flex spacer above the H1 grows so the wordmark sits in the vertical centre (see Animations).",
+      "background": "Shared fixed WebGL fluid canvas (black base, colourful ink plumes) + fixed radial vignette `radial-gradient(ellipse 68% 54% at 50% 50%, rgba(0,0,0,.62) 0%, rgba(0,0,0,.34) 46%, rgba(0,0,0,0) 76%)`. Launch card: fill `#8134AF33` (violet at 20%), 1px gradient border `linear-gradient(133.52deg, #DE0075 5.08%, #8134AF 28.61%)` drawn with a mask (`mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0)`), plus a soft glow behind it (desktop only) `radial-gradient(50% 50% at 50% 50%, rgba(221,0,117,.22), rgba(129,52,175,.12) 45%, transparent 75%)` extending 160px/112px beyond the card.",
+      "interaction": "- Intro sequence on load (3,000ms timer or first wheel/touchmove/keydown): card row expands, card fades/slides in at +1,000ms, marquee row at +1,700ms, READ OUR STORY at +2,200ms; fluid background receives a 10-splat burst.\n- Wordmark: letters pulse (0.5s alternate, staggered 0.1s) and the word floats 10px up/down (2s alternate).\n- CTA: `cta-sweep` gradient animation, hover opacity .9.\n- Partner marquee: 24s linear infinite loop, starts 1,700ms after the intro, paused while the hero is off-screen.\n- READ OUR STORY: bounces 7px + colour pulse (1.4s loop); click starts the automatic \"story tour\" (auto-scroll through every beat).",
+      "visualAssets": "Open Creator Graph mark `/logos/ocg-mark.webp` (160×160, rendered 80×80 desktop / 72×72 mobile, preloaded, `loading=\"eager\"`, alt \"\"). Partner logos (white PNG via next/image, rendered 36px tall, opacity .75): Meta_White.png, Yt_White.png, Google_White.png, Gemini_White.png — list rendered twice for the seamless loop (second copy `aria-hidden`, alt \"\"). Inline SVG chevron 14×8 under READ OUR STORY.",
+      "cta": "Claim your free Creator Record → https://creatorgraph.sparkonomy.com (new tab). Secondary: \"READ OUR STORY\" button (no href; triggers the auto-scroll tour).",
+      "notes": "- The H1 contains an sr-only \"Sparkonomy\" plus an `aria-hidden` copy split into 10 coloured `<span>` letters, so DOM innerText reads \"Sparkonomy\\nSparkonomy\".\n- \"NEW\", \"BY SPARKONOMY\" and \"READ OUR STORY\" are uppercase via CSS; source strings are \"New\", \"by Sparkonomy\", \"Read our story\".\n- The hero is the only screen not pinned (normal flow, 100svh).",
+      "copy": "H1: Sparkonomy\nP:  Sparking Creator livelihoods.\n\nLAUNCH CARD\n  Badge: NEW                    (source \"New\")\n  [Open Creator Graph mark, alt \"\"]\n  H2: Be visible to AI.\n      Control how it uses your identity.\n  CTA: Claim your free Creator Record   → https://creatorgraph.sparkonomy.com (new tab)\n  Open Creator Graph   BY SPARKONOMY    (source \"by Sparkonomy\")\n\nPARTNER MARQUEE (img alt texts, in order)\n  Built with Meta · Developed with YouTube · Google for Startups · Gemini Early Access Program\n\nSCROLL CUE (button)\n  READ OUR STORY                (source \"Read our story\")  + chevron ⌄",
+      "screenshots": {
+        "desktop": "02-hero.png",
+        "tablet": "tablet-02-hero.png",
+        "mobile": "mobile-02-hero.png",
+        "extra": [
+          {
+            "file": "_components/hero-launch-card.png",
+            "caption": "Launch card (desktop crop)"
+          },
+          {
+            "file": "_components/partner-marquee.png",
+            "caption": "Partner logo marquee with 10%/90% edge fade mask"
+          }
+        ]
+      }
+    },
+    "3": {
+      "name": "Story 1 — \"For 15 years, we helped build YouTube from inside Google.\"",
+      "dom": {
+        "captureSection": 4,
+        "selectors": [
+          "section#roots"
+        ]
+      },
+      "purpose": "Founder credibility: the team's 15-year history building YouTube at Google, and the emotional hook — the Creators.",
+      "layout": "Scroll-pinned \"screen\": `section#roots` is 255svh tall (2,295px at 1440×900); its child is `position: sticky; top: 0; height: 100svh`, flex-centred, `padding: 0 24px`; text block `max-width: 64rem` (1024px; 46rem below 768px), centred. 2 beats: H2 (64px/76.8px bold desktop; 44px/52.8px mobile) then body (28.8px/43.2px desktop; 20px/30px mobile, `margin-top: 24px`).",
+      "background": "Transparent over the fixed fluid canvas + vignette.",
+      "interaction": "Beat 1 (H2) fades in and rises 16px between 6.0% and 14.8% of the section's scroll travel; beat 2 (body) between 33.5% and 42.3%. Body words then \"ink\" from white to `rgba(255,255,255,.75)` one by one (≈15 characters/second, 500ms per word). Whole screen fades out over the last 10% of its travel. Scrolling stirs the fluid background.",
+      "visualAssets": "None (typography only).",
+      "cta": "None",
+      "notes": "On mobile the line break moves: \"For 15 years, we / helped build / YouTube from / inside Google.\" (44px, natural wrap) and body \"But what stayed with us were / the Creators / who brought it to life.\"",
+      "copy": "H2: For 15 years, we helped build\n    YouTube from inside Google.\nP:  But what stayed with us were the Creators\n    who brought it to life.",
+      "screenshots": {
+        "desktop": "03-story-roots.png",
+        "tablet": "tablet-03-story-roots.png",
+        "mobile": "mobile-03-story-roots.png"
+      }
+    },
+    "4": {
+      "name": "Story 2 — \"Students. / Homemakers. / Doctors. / Farmers.\"",
+      "dom": {
+        "captureSection": 4,
+        "selectors": [
+          "section#people"
+        ]
+      },
+      "purpose": "Shows who Creators are — ordinary people from every walk of life who built a living on camera.",
+      "layout": "Pinned screen, 420svh (3,780px desktop), overlapping the previous screen by `margin-top: -100svh`. 5 beats: four stacked block lines inside one H2 (64px, `line-height: 1.55` = 99.2px desktop; 44px/74.8px mobile) then a body line (28.8px desktop / 20px mobile).",
+      "background": "Transparent over the fluid canvas + vignette.",
+      "interaction": "Each word-line appears on its own beat (windows start at 6.0%, 20.0%, 34.0%, 48.0%, 62.0% of travel, each 4.5% long); body words ink to white/75. In the automatic tour these beats glide 500ms apart (`data-tour-beat-ms=\"500\"`).",
+      "visualAssets": "None.",
+      "cta": "None",
+      "notes": "Alternating colours: Students. `#8134AF` (violet), Homemakers. `#DE0075` (magenta), Doctors. `#8134AF`, Farmers. `#DE0075`.",
+      "copy": "H2: Students.\n    Homemakers.\n    Doctors.\n    Farmers.\nP:  People who picked up a camera,\n    told stories and made a living.",
+      "screenshots": {
+        "desktop": "04-story-people.png",
+        "tablet": "tablet-04-story-people.png",
+        "mobile": "mobile-04-story-people.png",
+        "extra": [
+          {
+            "file": "_motion/beats-people-1of5.png",
+            "caption": "Beat 1 of 5"
+          },
+          {
+            "file": "_motion/beats-people-2of5.png",
+            "caption": "Beat 2 of 5"
+          },
+          {
+            "file": "_motion/beats-people-3of5.png",
+            "caption": "Beat 3 of 5"
+          },
+          {
+            "file": "_motion/beats-people-4of5.png",
+            "caption": "Beat 4 of 5"
+          }
+        ]
+      }
+    },
+    "5": {
+      "name": "Story 3 — \"And we saw what it takes.\"",
+      "dom": {
+        "captureSection": 4,
+        "selectors": [
+          "section#reality"
+        ]
+      },
+      "purpose": "Empathy for the solo Creator: no crew, no scriptwriter, no one else — just one person showing up every day.",
+      "layout": "Pinned screen, 420svh, `margin-top: -100svh`. 5 beats: H2 (64px), three 28.8px lines (\"No crew.\" / \"No scriptwriter.\" / \"No one else.\", `space-y` 4px desktop / 12px mobile, white 100%), then a 64px bold payoff (32px/36.8px mobile, `margin-top: 24px`).",
+      "background": "Transparent over the fluid canvas + vignette.",
+      "interaction": "Mode \"soften\": as each new beat enters, the previous middle line fades to 75% opacity. In the payoff, \"one person\" is magenta immediately; \"every day\" starts white and transitions to magenta (`color 600ms ease-in-out`, delays 900ms and 1,200ms after the line is fully revealed). Tour glide between these beats: 1,000ms.",
+      "visualAssets": "None.",
+      "cta": "None",
+      "notes": "Highlight colour `#DE0075` on \"one person\" and \"every day\".",
+      "copy": "H2: And we saw what it takes.\nP:  No crew.\nP:  No scriptwriter.\nP:  No one else.\nP:  Just one person\n    showing up every day.",
+      "screenshots": {
+        "desktop": "05-story-reality.png",
+        "tablet": "tablet-05-story-reality.png",
+        "mobile": "mobile-05-story-reality.png",
+        "extra": [
+          {
+            "file": "_motion/beats-reality-1of5.png",
+            "caption": "Beat 1 of 5"
+          },
+          {
+            "file": "_motion/beats-reality-2of5.png",
+            "caption": "Beat 2 of 5"
+          },
+          {
+            "file": "_motion/beats-reality-3of5.png",
+            "caption": "Beat 3 of 5"
+          },
+          {
+            "file": "_motion/beats-reality-4of5.png",
+            "caption": "Beat 4 of 5"
+          }
+        ]
+      }
+    },
+    "6": {
+      "name": "Story 4 — \"Creators built a new profession.\"",
+      "dom": {
+        "captureSection": 4,
+        "selectors": [
+          "section#love"
+        ]
+      },
+      "purpose": "States the problem: Creators built a profession, but too little was built for them.",
+      "layout": "Pinned screen, 255svh, `margin-top: -100svh`. 2 beats: H2 64px + body 28.8px (`margin-top: 24px`).",
+      "background": "Transparent over the fluid canvas + vignette.",
+      "interaction": "Same beat reveal (opacity 0→1, translateY 16px→0) and word-ink as Story 1.",
+      "visualAssets": "None.",
+      "cta": "None",
+      "notes": "—",
+      "copy": "H2: Creators built a new profession.\nP:  But too little was built for them.",
+      "screenshots": {
+        "desktop": "06-story-love.png",
+        "tablet": "tablet-06-story-love.png",
+        "mobile": "mobile-06-story-love.png"
+      }
+    },
+    "7": {
+      "name": "Story 5 — \"For years, we built the platform.\"",
+      "dom": {
+        "captureSection": 4,
+        "selectors": [
+          "section#turn"
+        ]
+      },
+      "purpose": "The turn: from building the platform (YouTube) to building for the Creators.",
+      "layout": "Pinned screen, 255svh, `margin-top: -100svh`. 2 beats: H2 64px; then a 43.92px bold line (clamp(2rem,3.05vw,2.75rem); 32px mobile), `max-width: 52rem`, `margin-top: 16px` (24px mobile).",
+      "background": "Transparent over the fluid canvas + vignette.",
+      "interaction": "Beat reveal as above.",
+      "visualAssets": "None.",
+      "cta": "None",
+      "notes": "Second line coloured `#DD2A7B` (pink). Mobile H2 breaks \"For years, / we built / the platform.\"",
+      "copy": "H2: For years, we built the platform.\nP:  Now we're building for the Creators\n    who bring it to life.",
+      "screenshots": {
+        "desktop": "07-story-turn.png",
+        "tablet": "tablet-07-story-turn.png",
+        "mobile": "mobile-07-story-turn.png"
+      }
+    },
+    "8": {
+      "name": "Story 6 — \"That's why we built Sparkonomy.\"",
+      "dom": {
+        "captureSection": 4,
+        "selectors": [
+          "section#mission"
+        ]
+      },
+      "purpose": "Mission statement.",
+      "layout": "Pinned screen, 200svh, `margin-top: -100svh`. 1 beat containing H2 (64px) + body (28.8px).",
+      "background": "Transparent over the fluid canvas + vignette.",
+      "interaction": "After the beat appears, the H2 words ink from white to magenta `#DE0075` word by word, then the body words ink from white to white/75 (body starts when the heading's ink timeline ends).",
+      "visualAssets": "None.",
+      "cta": "None",
+      "notes": "The heading ends fully magenta; captured mid-transition in `_motion/word-ink-mission-*.png`.",
+      "copy": "H2: That's why we built Sparkonomy.\nP:  We're here to help every Creator, wherever they are,\n    spark a successful livelihood.",
+      "screenshots": {
+        "desktop": "08-story-mission.png",
+        "tablet": "tablet-08-story-mission.png",
+        "mobile": "mobile-08-story-mission.png",
+        "extra": [
+          {
+            "file": "_motion/word-ink-mission-0700ms.png",
+            "caption": "Word ink, ~0.7s"
+          },
+          {
+            "file": "_motion/word-ink-mission-1800ms.png",
+            "caption": "~1.8s"
+          },
+          {
+            "file": "_motion/word-ink-mission-4300ms.png",
+            "caption": "~4.3s"
+          }
+        ]
+      }
+    },
+    "9": {
+      "name": "Creator Record — Open Creator Graph product demo",
+      "dom": {
+        "captureSection": 4,
+        "selectors": [
+          "section#ocg"
+        ]
+      },
+      "purpose": "Product proof: an example \"Creator Record\" (identity + AI-usage consent per facet, cryptographically timestamped and certified) next to the value proposition and the second primary CTA.",
+      "layout": "`section#ocg` is NOT pinned: normal flow, `min-height: 100svh`, `padding: 96px 24px`. Content `max-width: 54rem` (864px; 40rem mobile). H2 (2 lines, 64px) + body (28.8px). Below (`margin-top: 56px`): desktop/tablet ≥768px a 2-column grid `grid-template-columns: 21.25rem 1fr; gap: 56px; align-items: center` — card (340px) left, H3 + pitch + CTA right; the grid is `position: sticky` with `top = max(88px, (100vh − height)/2)` (348px at 900px tall) plus a 60svh spacer, so it holds in the middle while the heading scrolls away. Mobile: single column, card (max 25rem) then H3 + CTA.",
+      "background": "Transparent over the fluid canvas + vignette. Card: 1px gradient border `linear-gradient(160deg, rgba(151,71,255,.7), rgba(222,0,117,.5) 55%, rgba(151,71,255,.6))`, radius 24px; inner panel `#321935`, radius 23px, `padding: 24px`; blurred glow behind (`linear-gradient(133.52deg, #DE0075 5.08%, #8134AF 56.74%)`, `blur(40px)`, opacity .6).",
+      "interaction": "- Card is lazy-mounted when within 300px of the viewport (200px placeholder).\n- Desktop/tablet: card always expanded. Mobile: shows only header + claims + \"AI Usage\" summary until the H2 scrolls under the header (bottom < 72px), then expands (height animation 0.9s, ease `cubic-bezier(.22,1,.36,1)`; collapses in 0.54s when scrolled back past 160px); facet rows stagger in (0.08s apart, start delay 0.12s, each 0.45s: opacity 0→1, y 8→0); \"Certified\" stamp fades in (0.4s, delay 0.63s).\n- CTA sweep animation paused while the CTA is off-screen; hover opacity .9.",
+      "visualAssets": "Avatar `/CD.png` (40×40 round, rendered from 183×181 original), verified tick inline SVG 16×16 (`#334CCA` circle + white check), \"CERTIFIED\" stamp `/Certified-1.png` (rendered 112×70; original 3238×2018), stance pills.",
+      "cta": "Claim your free Creator Record → https://creatorgraph.sparkonomy.com (new tab).",
+      "notes": "- Stance colours: Allowed `#34C759`, Conditional `#E5B607`, Prohibited `#E5484D` — text, 1px border and an 8% tint fill (`…14` hex alpha); 108px-wide pills with a 6px dot.\n- The bundled data also defines a \"not declared\" stance (white) and a 5-step \"Day 1 … Day 30\" narrative that is not rendered on the homepage.\n- Example persona \"Chulbuli Dixit\" (@chulbulidixit) is illustrative demo content.",
+      "copy": "H2: We're starting with what\n    should already be yours.\nP:  Your identity.\n    The right to say how AI can use it.\n\nCREATOR RECORD CARD\n  [avatar] Chulbuli Dixit [verified tick]\n  @chulbulidixit\n  ✓ Machine-Sourced   ✓ Machine-Visible   ✓ Creator-Controlled\n  AI Usage       ● Conditional\n  Name           ● Allowed\n  Image          ● Conditional\n  Likeness       ● Prohibited\n  Voice          ● Conditional\n  Movement       ● Conditional\n  Signature      ● Prohibited\n  Declared and cryptographically timestamped\n  25 September 2026, 14:32:07 UTC\n  [stamp image alt=\"Certified\"]\n\nH3: Be visible to AI.\nP:  Control how it uses your identity.\nCTA: Claim your free Creator Record   → https://creatorgraph.sparkonomy.com (new tab)",
+      "screenshots": {
+        "desktop": "09-creator-record.png",
+        "tablet": "tablet-09-creator-record-intro.png",
+        "mobile": "mobile-09-creator-record.png",
+        "extra": [
+          {
+            "file": "09-creator-record-intro.png",
+            "caption": "Desktop: section heading entering"
+          },
+          {
+            "file": "_components/creator-record-card.png",
+            "caption": "Creator Record card (desktop crop)"
+          },
+          {
+            "file": "mobile-09-creator-record-intro.png",
+            "caption": "Mobile: card collapsed (summary only)",
+            "phone": true
+          },
+          {
+            "file": "mobile-09-creator-record.png",
+            "caption": "Mobile: card expanded after heading scrolls away",
+            "phone": true
+          }
+        ]
+      }
+    },
+    "10": {
+      "name": "Closing — \"And we're only getting started.\"",
+      "dom": {
+        "captureSection": 4,
+        "selectors": [
+          "section#future"
+        ]
+      },
+      "purpose": "Forward-looking sign-off and brand sign line \"Let's spark together.\"",
+      "layout": "Pinned screen, 310svh (no negative overlap, it follows the flow section). 3 beats: H2 64px (`max-width: 18rem` on mobile), body 28.8px (`margin-top: 24px`), sign line 43.92px bold (`margin-top: 36px`; 32px mobile).",
+      "background": "Transparent over the fluid canvas + vignette.",
+      "interaction": "Beat reveal + word ink as other story screens. This screen does not fade out at the end (it hands over to the footer).",
+      "visualAssets": "None.",
+      "cta": "None (no CTA in the closing screen; the header CTA remains visible).",
+      "notes": "\"spark\" coloured `#DE0075`.",
+      "copy": "H2: And we're only getting started.\nP:  So every Creator can build a life\n    doing what they love.\nP:  Let's spark together.",
+      "screenshots": {
+        "desktop": "10-closing.png",
+        "tablet": "tablet-10-closing.png",
+        "mobile": "mobile-10-closing.png"
+      }
+    },
+    "11": {
+      "name": "Footer",
+      "dom": {
+        "captureSection": 5,
+        "selectors": [
+          "footer"
+        ]
+      },
+      "purpose": "Secondary navigation (products, company, legal), compliance badges, copyright and social profiles.",
+      "layout": "`<footer>` `background: #000; padding: 0 40px 48px` (24px sides mobile), `position: relative; z-index: 10`. Inner `max-width: 84rem`, `border-top: 1px solid rgba(255,255,255,.1)`, `padding-top: 56px` (40px mobile). Desktop grid `grid-template-columns: 1.6fr 1fr 1fr auto; gap: 40px` → [wordmark + \"Compliant with\" badges] [Products] [Company] [Terms & Policies]. Then a 1px `rgba(255,255,255,.1)` divider (`margin-top: 56px`) and a centred column (`gap: 24px`): copyright, then 5 social icons (24×24, `gap: 28px`). Mobile: wordmark, then a 2-column grid (Products + Company stacked left, Terms & Policies right), then \"Compliant with\", divider, copyright, icons.",
+      "background": "Solid `#000000` (covers the fluid canvas).",
+      "interaction": "Links and social icons `rgba(255,255,255,.5)` → white on hover (`transition: color .15s cubic-bezier(.4,0,.2,1)`). \"Cookie Policy\" is a `<button class=\"cky-banner-element\">` that re-opens the CookieYes banner. External links open in a new tab (`rel=\"noopener\"` for Open Creator Graph, `rel=\"noopener noreferrer\"` for social).",
+      "visualAssets": "`logo_header_gray.png` (523×96, rendered 131×24; grey wordmark with a purple paw-print \"o\"), compliance badges DPDP/CCPA/PDPA/GDPR (white PNG, 36×36, opacity .55), 5 inline SVG social icons (X, Instagram, YouTube, LinkedIn, Reddit; `fill: currentColor`).",
+      "cta": "None (text links only).",
+      "notes": "Labels: column headings 14px/20px weight 500 white; links 14px/20px weight 400 white/50; copyright 14px white/50.",
+      "copy": "[wordmark image alt=\"Sparkonomy\"]\nCompliant with\n  [DPDP] [CCPA] [PDPA] [GDPR]\n\nProducts\n  Open Creator Graph        → https://creatorgraph.sparkonomy.com (new tab)\n  Creator Payments          → /creator/earn\nCompany\n  About Us                  → /about\n  Contact Us                → /contact\n  Blogs                     → /blogs\nTerms & Policies\n  Privacy Policy            → /legal/privacy-policy\n  Terms of Services         → /legal/terms\n  Refund Policy             → /legal/refund-policy\n  Cookie Policy             (button – opens CookieYes)\n\n© Sparkonomy Pte. Ltd. All rights reserved\n[X] [Instagram] [YouTube] [LinkedIn] [Reddit]   (icon links, aria-labels as shown)",
+      "screenshots": {
+        "desktop": "_components/footer.png",
+        "tablet": "_components/footer-tablet.png",
+        "mobile": "_components/footer-mobile.png",
+        "extra": [
+          {
+            "file": "11-footer.png",
+            "caption": "Desktop viewport at the end of the page"
+          }
+        ]
+      }
+    }
+  },
+  "header": "### Structure\n- `<header class=\"pointer-events-none fixed inset-x-0 top-0 z-40\">` — never changes on scroll (no sticky shrink, background or hide/show; compare screenshots at 0, 900 and 1200px).\n- Scrim: `<div aria-hidden class=\"absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black/75 via-black/35 to-transparent\">` (112px).\n- Row: `max-width: 1344px; padding: 20px 32px; display:flex; justify-content:space-between` (mobile `16px 20px`). Height 79.5px desktop.\n\n### Desktop navigation (≥768px)\n| Item | Exact label | URL | Style |\n|---|---|---|---|\n| Logo | (image, alt \"Sparkonomy\") | / | 26px tall (24px mobile), `aria-label=\"Sparkonomy home\"` |\n| Link | Creator Payments | /creator/earn | 13px/19.5px Roboto 400, rgba(255,255,255,.6) → #FFF hover |\n| Link | About | /about | same |\n| Link | Contact | /contact | same |\n| Link | Blogs | /blogs | same |\n| CTA | Claim your Creator Record | https://creatorgraph.sparkonomy.com (new tab) | gradient pill 193×40, 13px/600, padding 10px 20px |\n\nGap between items: 28px (`gap-7`).\n\n### Mobile menu (<768px)\n- Trigger: `<button aria-expanded aria-controls=\"story-menu\">` 32×32, PNG hamburger icon 24px wide; becomes an X (two rotated 24×1.5px bars). sr-only label \"Open menu\" / \"Close menu\".\n- Panel `#story-menu`: `height: 100svh; background: #000; padding: 16px 24px 40px`. Links 18px/28px, rgba(255,255,255,.85), `padding: 16px 0`, `border-bottom: 1px solid rgba(255,255,255,.1)`; full-width CTA (15px/600, `padding: 14px 20px`, margin-top 28px); \"BUILT WITH\" partner logos (centred, 26px tall, opacity .7, margin-top 40px); \"COMPLIANT WITH\" badges (22px, opacity .55). Labels 10px bold uppercase, letter-spacing .22em, white/35 and white/30.\n- Behaviour: instant show/hide (no animation), body scroll locked, closes on Escape / link tap / resize to ≥768px.\n\n### Cookie banner (CookieYes)\n- Container `.cky-consent-container.cky-banner-top`: `position: fixed; top: 0; left/right: 12px; z-index: 9999999`.\n- Bar: black, radius 10px, 520×109px centred on desktop (366×127 on a 390px phone). Text 12px/16.2px rgba(255,255,255,.8).\n- Copy: \"Sparkonomy uses cookies to learn your style / and serve you better. Sound good?\" — buttons \"Reject All\", \"Accept All\" (13px/500, radius 6px, `rgb(107,114,128)` → `rgb(184,30,102)` + brightness(.9) on hover), × close, \"Powered by CookieYes\".\n- On desktop it overlaps the nav links until dismissed.",
+  "hero": "### Content\n- **H1**: \"Sparkonomy\" — 96px/96px Roboto 700, letter-spacing −0.96px (−0.01em); 50.7px at 390px (`clamp(2.75rem, 13vw, 3.5rem)`).\n  - Each letter is a span coloured along a 3-stop ramp: S rgb(123 108 246) · p rgb(142 116 240) · a rgb(160 124 234) · r rgb(179 132 229) · k rgb(198 139 223) · o rgb(216 147 217) · n rgb(232 158 214) · o rgb(235 185 228) · m rgb(237 211 241) · y rgb(240 238 255), with `text-shadow: 0 0 20px rgba(108,99,255,.3)`.\n- **Tagline**: \"Sparking Creator livelihoods.\" — 24px/32px, rgba(255,255,255,.9) (16px on mobile).\n- **Launch card**: \"NEW\" badge (`#DD2A7B` pill, 11px bold uppercase, padding 4px 10px, top-left 14px), Open Creator Graph mark (80×80), H2 \"Be visible to AI. / Control how it uses your identity.\" (32px/40px bold; `min(20px, 5.2vw)` mobile), CTA \"Claim your free Creator Record\" (263×51), caption \"Open Creator Graph\" (16px/500) + \"BY SPARKONOMY\" (12px uppercase, letter-spacing .12em, white/50).\n- **Partner marquee**: 4 white logos, 36px tall, opacity .75, gap 48px (40px mobile), masked `linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent)`.\n- **Scroll cue**: \"READ OUR STORY\" 12px uppercase, letter-spacing .22em (2.64px), colour #FFFFFF4D + chevron.\n\n### Intro sequence (from the page bundle, verified with timed screenshots)\n| Time after hero mount | What happens |\n|---|---|\n| 0 ms | Only the wordmark is visible, vertically centred (launch row collapsed: `grid-template-rows: 0fr`, spacer `flex-grow: 1`). Wordmark pulse/float loops start. |\n| 200–900 ms | Tagline enters (`tailwindcss-animate` fade-in + slide-in-from-bottom 0.75rem, 700ms, delay 200ms). |\n| ~300–1500 ms | Fluid canvas mounts on `requestIdleCallback` (timeout 1,500ms; 300ms fallback). |\n| 3,000 ms (or first wheel / touchmove / keydown) | \"Ready\": row expands (`grid-template-rows` 1,000ms ease-in-out), spacer collapses (`flex-grow` 1,000ms), fluid gets a 10-splat burst. |\n| +1,000 ms | Launch card: opacity 0→1, translateY 8px→0, 900ms ease-out. |\n| +1,050 ms | Row `overflow: hidden` removed (card glow can bleed). |\n| +1,700 ms | Partner row reveals (900ms) and the marquee starts moving. |\n| +2,200 ms | READ OUR STORY reveals (900ms). |\n\nIn the captured run (proxied network) the tagline became visible at ~3.5s and the card at ~4.0s after navigation (see \"Page-load sequence\").",
+  "footer": "### Columns (desktop grid `1.6fr 1fr 1fr auto`, gap 40px)\n| Column | Heading | Links (exact text → URL) |\n|---|---|---|\n| 1 | — | Sparkonomy wordmark (grey, 24px tall) + \"Compliant with\" → DPDP, CCPA, PDPA, GDPR badges (36×36, opacity .55) |\n| 2 | Products | Open Creator Graph → https://creatorgraph.sparkonomy.com (new tab) · Creator Payments → /creator/earn |\n| 3 | Company | About Us → /about · Contact Us → /contact · Blogs → /blogs |\n| 4 | Terms & Policies | Privacy Policy → /legal/privacy-policy · Terms of Services → /legal/terms · Refund Policy → /legal/refund-policy · Cookie Policy (button, opens CookieYes) |\n\n### Bottom row\n- Divider: 1px rgba(255,255,255,.1), margin-top 56px (40px mobile).\n- \"© Sparkonomy Pte. Ltd. All rights reserved\" — 14px/20px, white/50, centred.\n- Social icons (24×24, gap 28px, white/50 → white): X https://x.com/SparkonomySays · Instagram https://www.instagram.com/sparkonomy.official/ · YouTube https://www.youtube.com/@Sparkonomy.official · LinkedIn https://www.linkedin.com/company/sparkonomy/ · Reddit https://www.reddit.com/user/Sparkonomy/\n\n### Spacing\n`padding: 0 40px 48px` (desktop) / `0 24px 48px` (mobile); inner `padding-top: 56px` / 40px; column link stacks `gap: 10px`; total height 394px at 1440px.\n\nNote the label differences vs. the header: header \"About\"/\"Contact\" vs footer \"About Us\"/\"Contact Us\" (same URLs).",
+  "typography": {
+    "notes": "### Font families\n- **Roboto** (variable, weights 100–900) — the only face used on the homepage. Self-hosted through `next/font`: `/_next/static/media/roboto_latin_wght-s.p.4075f395.woff2` (67,264 bytes, WOFF2, `font-display: swap`, preloaded). CSS family name `roboto`, applied on `<body>` via class `roboto_51c32070-module__YpxGXa__className`.\n- Fallback metric-matched face **\"roboto Fallback\"** = `local(Arial)` with `ascent-override: 92.43%; descent-override: 24.32%; line-gap-override: 0%; size-adjust: 100.37%` (prevents layout shift).\n- Also declared but **not used on the homepage**: `robotoTool`, `robotoBlog` (same Roboto file, aliases for other pages) and **Solitreo** 400 (`solitreo_latin_400-s.p.8dc56742.woff2`, 25,944 bytes) — preloaded on the homepage but never rendered (`document.fonts` status \"unloaded\").\n- Weights in use: 400, 500, 600, 700. No italics. Text is `-webkit-font-smoothing: antialiased` (Tailwind `antialiased` on the root wrapper).\n\n### Behaviour\n- Fluid sizes with `clamp()` above 768px (story headline `clamp(2.75rem, 4.45vw, 4rem)`, body `clamp(1.25rem, 2vw, 1.8rem)`, sub-headline `clamp(2rem, 3.05vw, 2.75rem)`); fixed sizes below 768px.\n- Orphan control: JS \"glue\" spans (`data-glue`) keep the last two words of each line together (`white-space: nowrap`) and are re-balanced by a ResizeObserver.\n- Uppercase is applied only with CSS `text-transform` (source copy is sentence case).",
+    "system": "ROLE                     DESKTOP 1440                    MOBILE 390               WEIGHT  TRACKING   COLOUR\nWordmark H1              96px / 96px                     50.7px / 55.8px          700     -0.01em    per-letter ramp #7B6CF6→#F0EEFF\nStory headline H2        64px / 76.8px (lh 1.2)          44px / 52.8px            700     normal (-0.01em mobile)  #FFFFFF\nPeople list H2           64px / 99.2px (lh 1.55)         44px / 74.8px (lh 1.7)   700     normal     #8134AF / #DE0075\nPayoff (\"Just one person…\")  64px / 76.8px              32px / 36.8px            700     normal     #FFFFFF + #DE0075\nSub-headline / sign line 43.92px / 50.5px (lh 1.15)      32px / 36.8px            700     normal     #FFFFFF / #DD2A7B\nH3 \"Be visible to AI.\"   43.92px / 50.5px                32px / 36.8px            700     normal     #FFFFFF\nHero card H2             32px / 40px                     20px / 25px              700     normal     #FFFFFF\nTagline                  24px / 32px                     16px / 24px              400     normal     rgba(255,255,255,.9)\nStory body               28.8px / 43.2px (lh 1.5)        20px / 30px              400     normal     ink → rgba(255,255,255,.75)\nOCG pitch                20px / 28px                     18px / 27px              400     normal     ink → rgba(255,255,255,.6)\nCTA (large)              15px / 22.5px                   15px                     600     normal     #FFFFFF\nCTA (header)             13px / 19.5px                   (in menu: 15px)          600     normal     #FFFFFF\nNav link                 13px / 19.5px                   menu: 18px / 28px        400     normal     rgba(255,255,255,.6) / .85\nFooter heading           14px / 20px                     14px                     500     normal     #FFFFFF\nFooter link / legal      14px / 20px                     14px                     400     normal     rgba(255,255,255,.5)\nCard name                15px / 22.5px                   15px                     700     normal     #FFFFFF\nCard rows                14px / 21px                     14px                     400     normal     rgba(255,255,255,.85)\nCard pills / handle      12px / 18px                     12px                     400     normal     stance colour / white .45\nCard claims              10.44px (min(11px, 3.6cqi))     ≈10.5px                   400     normal     rgba(255,255,255,.8)\nEyebrow \"READ OUR STORY\" 12px / 18px                     12px                     400     0.22em UPPERCASE  #FFFFFF4D (pulses to #C4BEFFCC)\nCaption \"BY SPARKONOMY\"  12px / 18px                     11px                     400     0.12em UPPERCASE  rgba(255,255,255,.5)\nBadge \"NEW\"              11px / 11px                     11px                     700     0.04em UPPERCASE  #FFFFFF on #DD2A7B\nMenu labels              —                               10px / 15px              700     0.22em UPPERCASE  rgba(255,255,255,.35/.30)"
+  },
+  "colours": [
+    {
+      "name": "Black (canvas)",
+      "hex": "#000000",
+      "rgb": "rgb(0, 0, 0)",
+      "usage": "Page/body background (`bg-black`), fluid-simulation base colour, footer, mobile menu panel, `theme-color` meta. Vignette uses black at 62%/34% opacity; header scrim black at 75%/35%."
+    },
+    {
+      "name": "White",
+      "hex": "#FFFFFF",
+      "rgb": "rgb(255, 255, 255)",
+      "usage": "All headlines, CTA labels, card name, starting colour of the word-ink effect. Opacity steps in use: 90% tagline, 85% menu links & card rows, 80% claims, 75% story body ink, 60% nav links & OCG pitch, 50% footer links/social/captions, 45% handle & stamp label, 35%/30% labels, 10% borders/dividers."
+    },
+    {
+      "name": "Magenta (INK.magenta)",
+      "hex": "#DE0075",
+      "rgb": "rgb(222, 0, 117)",
+      "usage": "Start of the CTA gradient (0–8%), card border gradient, highlighted words: \"Homemakers.\", \"Farmers.\", \"one person\", \"every day\", \"spark\", and the ink colour of \"That's why we built Sparkonomy.\""
+    },
+    {
+      "name": "Violet (INK.violet)",
+      "hex": "#8134AF",
+      "rgb": "rgb(129, 52, 175)",
+      "usage": "End of the CTA gradient (45–100%), \"Students.\" and \"Doctors.\", hero launch-card fill at 20% (`#8134AF33`), card glow."
+    },
+    {
+      "name": "Pink (INK.pink)",
+      "hex": "#DD2A7B",
+      "rgb": "rgb(221, 42, 123)",
+      "usage": "\"NEW\" badge background, \"Now we're building for the Creators who bring it to life.\" line, start of the `--pink-to-purple` CSS token (`linear-gradient(162deg, #dd2a7b 4.78%, #9747ff 89.95%)`)."
+    },
+    {
+      "name": "Purple (INK.purple)",
+      "hex": "#9747FF",
+      "rgb": "rgb(151, 71, 255)",
+      "usage": "Creator Record card border gradient (70%/60% alpha), end of `--pink-to-purple` token."
+    },
+    {
+      "name": "Indigo (INK.indigo)",
+      "hex": "#6C63FF",
+      "rgb": "rgb(108, 99, 255)",
+      "usage": "Wordmark pulse target colour and glow (`text-shadow: 0 0 10px #6c63ffb3`), READ OUR STORY glow."
+    },
+    {
+      "name": "Wordmark ramp start",
+      "hex": "#7B6CF6",
+      "rgb": "rgb(123, 108, 246)",
+      "usage": "First letter \"S\" of the hero wordmark (ramp → #E89AD4 at 65% → #F0EEFF)."
+    },
+    {
+      "name": "Wordmark ramp mid",
+      "hex": "#E89AD4",
+      "rgb": "rgb(232, 154, 212)",
+      "usage": "Ramp mid-stop (65%) of the wordmark letters."
+    },
+    {
+      "name": "Wordmark ramp end",
+      "hex": "#F0EEFF",
+      "rgb": "rgb(240, 238, 255)",
+      "usage": "Last letter \"y\" of the wordmark."
+    },
+    {
+      "name": "Cue lilac",
+      "hex": "#C4BEFF",
+      "rgb": "rgb(196, 190, 255)",
+      "usage": "Peak colour (80% alpha) of the READ OUR STORY pulse."
+    },
+    {
+      "name": "Record plum",
+      "hex": "#321935",
+      "rgb": "rgb(50, 25, 53)",
+      "usage": "Creator Record card inner background."
+    },
+    {
+      "name": "Allowed green",
+      "hex": "#34C759",
+      "rgb": "rgb(52, 199, 89)",
+      "usage": "\"Allowed\" stance pill (text, border, 8% fill)."
+    },
+    {
+      "name": "Conditional amber",
+      "hex": "#E5B607",
+      "rgb": "rgb(229, 182, 7)",
+      "usage": "\"Conditional\" stance pill (text, border, 8% fill)."
+    },
+    {
+      "name": "Prohibited red",
+      "hex": "#E5484D",
+      "rgb": "rgb(229, 72, 77)",
+      "usage": "\"Prohibited\" stance pill (text, border, 8% fill)."
+    },
+    {
+      "name": "Verified blue",
+      "hex": "#334CCA",
+      "rgb": "rgb(51, 76, 202)",
+      "usage": "Verified tick circle next to the Creator name."
+    },
+    {
+      "name": "CookieYes button grey (third-party)",
+      "hex": "#6B7280",
+      "rgb": "rgb(107, 114, 128)",
+      "usage": "Cookie banner \"Reject All\"/\"Accept All\" default background."
+    },
+    {
+      "name": "CookieYes button hover (third-party)",
+      "hex": "#B81E66",
+      "rgb": "rgb(184, 30, 102)",
+      "usage": "Cookie banner button hover background."
+    }
+  ],
+  "buttonsNotes": "All buttons/CTAs share one visual language: a fully rounded **gradient pill** for conversion, and plain text for everything else. There is no secondary/outline button style and no visible focus ring styling beyond the browser default (Tailwind preflight; not customised — focus appearance otherwise **Unable to determine** without keyboard testing).\n\n**Gradient used by every pill CTA**: `linear-gradient(110deg, #DE0075 0%, #DE0075 8%, #8134AF 45%, #8134AF 100%)`, `background-size: 200% 100%`, initial `background-position: 30% 0`, animated by `@keyframes cta-sweep { 0% { background-position: 60% 0 } to { background-position: 0 0 } }` over 3.5s ease-in-out, infinite, alternate (disabled with `prefers-reduced-motion`). Hover: `opacity: .9`, `transition: opacity .15s cubic-bezier(.4,0,.2,1)`. No border, no shadow. All pill CTAs link to https://creatorgraph.sparkonomy.com in a new tab.",
+  "buttons": [
+    {
+      "screenshot": "screenshots/_components/btn-nav-cta.png",
+      "Name": "Header CTA (primary pill, small)",
+      "Exact label": "Claim your Creator Record",
+      "Destination": "https://creatorgraph.sparkonomy.com — `target=\"_blank\" rel=\"noopener\"`",
+      "Size": "193 × 40 px",
+      "Padding": "10px 20px",
+      "Typography": "Roboto 600, 13px / 19.5px, #FFFFFF",
+      "Radius": "9999px (pill)",
+      "Background": "CTA gradient (see above), animated sweep",
+      "Hover": "opacity 1 → 0.9 (150ms) — see `_components/btn-nav-cta-hover.png`",
+      "Locations": "Header (≥768px); mobile menu (full-width variant, 15px, padding 14px 20px)"
+    },
+    {
+      "screenshot": "screenshots/_components/btn-hero-cta.png",
+      "Name": "Hero CTA (primary pill, large)",
+      "Exact label": "Claim your free Creator Record",
+      "Destination": "https://creatorgraph.sparkonomy.com — new tab",
+      "Size": "263 × 51 px",
+      "Padding": "14px 28px",
+      "Typography": "Roboto 600, 15px / 22.5px, #FFFFFF",
+      "Radius": "9999px",
+      "Background": "CTA gradient, animated sweep",
+      "Hover": "opacity 0.9",
+      "Locations": "Hero launch card"
+    },
+    {
+      "screenshot": "screenshots/_components/btn-record-cta.png",
+      "Name": "Creator Record CTA (primary pill, large)",
+      "Exact label": "Claim your free Creator Record",
+      "Destination": "https://creatorgraph.sparkonomy.com — new tab",
+      "Size": "263 × 51 px",
+      "Padding": "14px 28px",
+      "Typography": "Roboto 600, 15px / 22.5px",
+      "Radius": "9999px",
+      "Background": "CTA gradient; sweep paused while off-screen (`data-offscreen`)",
+      "Hover": "opacity 0.9",
+      "Locations": "Creator Record section"
+    },
+    {
+      "screenshot": "screenshots/_components/btn-read-our-story.png",
+      "Name": "Scroll cue (text button)",
+      "Exact label": "READ OUR STORY (source \"Read our story\") + chevron",
+      "Destination": "No URL — dispatches the `story:tour` event, which auto-scrolls through every story beat (with reduced motion: jumps to the end of the hero)",
+      "Size": "133 × 32 px",
+      "Padding": "0; chevron 14×8 SVG, gap 6px",
+      "Typography": "Roboto 400, 12px / 18px, letter-spacing 0.22em (2.64px), uppercase",
+      "Radius": "—",
+      "Background": "none; colour #FFFFFF4D pulsing to #C4BEFFCC with indigo glow",
+      "Hover": "No hover style",
+      "Locations": "Bottom of hero; animation `scroll-cue` 1.4s cubic-bezier(.33,0,.2,1) infinite (translateY 0→7px→0) + `cue-pulse` 1.4s"
+    },
+    {
+      "Name": "Text links (nav)",
+      "Exact label": "Creator Payments · About · Contact · Blogs",
+      "Destination": "/creator/earn · /about · /contact · /blogs",
+      "Typography": "13px/19.5px Roboto 400, rgba(255,255,255,.6)",
+      "Hover": "colour → #FFFFFF, 150ms",
+      "Locations": "Header"
+    },
+    {
+      "Name": "Text links (footer)",
+      "Exact label": "Open Creator Graph · Creator Payments · About Us · Contact Us · Blogs · Privacy Policy · Terms of Services · Refund Policy · Cookie Policy",
+      "Destination": "see Footer chapter; \"Cookie Policy\" is a `<button>` opening CookieYes",
+      "Typography": "14px/20px Roboto 400, rgba(255,255,255,.5)",
+      "Hover": "colour → #FFFFFF, 150ms",
+      "Locations": "Footer"
+    },
+    {
+      "Name": "Icon links (social)",
+      "Exact label": "aria-labels: X · Instagram · YouTube · LinkedIn · Reddit",
+      "Size": "24 × 24 px icons, gap 28px",
+      "Typography": "—",
+      "Hover": "rgba(255,255,255,.5) → #FFFFFF, 150ms",
+      "Locations": "Footer"
+    },
+    {
+      "Name": "Hamburger / close button",
+      "Exact label": "sr-only \"Open menu\" / \"Close menu\"",
+      "Size": "32 × 32 px (icon 24px wide)",
+      "Hover": "none",
+      "Locations": "Header <768px"
+    },
+    {
+      "screenshot": "screenshots/_components/cookie-banner.png",
+      "Name": "Cookie banner buttons (CookieYes, third-party)",
+      "Exact label": "Reject All · Accept All · × (aria-label \"Close\")",
+      "Size": "≈66 × 38 px",
+      "Typography": "Roboto 500, 13px / 13px, #FFFFFF",
+      "Radius": "6px",
+      "Background": "rgb(107,114,128)",
+      "Hover": "background rgb(184,30,102) + filter brightness(.9)",
+      "Locations": "CookieYes top bar"
+    },
+    {
+      "Name": "Non-interactive pills (for reference)",
+      "Exact label": "\"NEW\" badge; stance pills \"Allowed\" / \"Conditional\" / \"Prohibited\"",
+      "Size": "NEW 45×19; stance 108×26",
+      "Typography": "NEW 11px/700 uppercase .04em; stance 12px",
+      "Radius": "9999px",
+      "Background": "NEW #DD2A7B; stance: colour at 8% + 1px border in colour",
+      "Locations": "Hero card; Creator Record card"
+    }
+  ],
+  "animationsNotes": "Motion is central to this page. Sources: the page's own JS chunks (`414c2cf9ce43ae7e.js` story components, `c75f5b915cd1ec52.js` fluid wrapper, `4884221f851638c7.js` fluid engine, `517217656e425c14.js` content constants) and CSS (`0c8365a30c76d7c2.css`). All timings below are copied from that code; screenshots in `screenshots/_motion/` show them in action. Everything honours `prefers-reduced-motion: reduce` (static gradient background instead of WebGL, screens become normal-flow sections, no beats/ink/marquee/sweep).\n\n### Scroll architecture\n- Each story screen is a `<section data-tour-beats=\"N\">` with `height: (100 + 55·N + 45)svh` — 2 beats → 255svh, 5 → 420svh, 1 → 200svh, 3 → 310svh — containing a `position: sticky; top: 0; height: 100svh` stage. Consecutive screens overlap by `margin-top: -100svh`.\n- Scroll progress p ∈ [0,1] = (scrollY − sectionTop) / (sectionHeight − 100svh), tracked with Framer Motion `useScroll` / `useTransform`.\n- Beat windows: n = (0.84 − 45/(55N + 45))/N; beat i enters over [0.06 + i·n, 0.06 + i·n + min(0.32n, 0.14)] with smoothstep easing: `opacity 0→1`, `translateY 16px→0`. The whole stage fades out over p 0.9→1.0.\n- Measured beat stops at 1440×900 (scrollY where each beat is fully in): roots 1,148 / 1,532; people 2,683 / 3,086 / 3,489 / 3,892 / 4,294; reality 5,563 / 5,966 / 6,369 / 6,772 / 7,174; love 8,303 / 8,687; turn 9,698 / 10,082; mission 11,038; future 14,194 / 14,588 / 14,983.",
+  "animations": [
+    {
+      "Name": "WebGL fluid \"ink\" background",
+      "Where": "Whole page (fixed layer `div.fixed.inset-0.z-0` > 100vw × 100lvh container > `<canvas>`, WebGL2)",
+      "Trigger": "Mounted on requestIdleCallback (timeout 1,500ms; 300ms fallback); runs continuously via requestAnimationFrame",
+      "Timing": "Navier–Stokes-style simulation with the library defaults (\"baseline\" mode on the homepage): simResolution 128, dyeResolution 1024, densityDissipation 1, velocityDissipation 0.2, pressure 0.8 (20 iterations), curl 30, splatRadius 0.25, splatForce 6000, shading on, colorful on (colorUpdateSpeed 10, random hues), brightness 0.5, bloom on (8 iterations, resolution 256, intensity 0.8, threshold 0.6, soft knee 0.7), sunrays on (resolution 196, weight 1), background #000000. Canvas resolution capped at devicePixelRatio 1.",
+      "Interaction": "10-splat burst when the hero intro completes; pointer movement over the page paints ink (hover mode); scrolling \"stirs\" the fluid — every ≥50ms the accumulated scroll delta injects a vertical splat at the pointer position (force clamped ±6% of splatForce, colour strength min(1, |Δ|/40)). Touch handlers are passive.",
+      "Notes": "Engine API (start, stop, togglePause, multipleSplats, splatAtLocation, setConfig, downloadScreenshot) matches the open-source `webgl-fluid-enhanced` package (identification inferred; the package name is not in the bundle). A \"tuned\" mode exists in code (calmer ink, auto edge splats every 2,300ms, per-beat splats in brand colours) but the homepage passes `fluid: \"baseline\"`."
+    },
+    {
+      "Name": "Vignette",
+      "Where": "Fixed layer `z-[1]` over the canvas",
+      "Trigger": "Static",
+      "Timing": "`radial-gradient(ellipse 68% 54% at 50% 50%, rgba(0,0,0,.62) 0%, rgba(0,0,0,.34) 46%, rgba(0,0,0,0) 76%)`",
+      "Interaction": "—",
+      "Notes": "Darkens the centre so white text stays legible over the ink."
+    },
+    {
+      "Name": "Hero intro / reveal",
+      "Where": "section#opening",
+      "Trigger": "3,000ms after mount, or the first wheel / touchmove / keydown",
+      "Timing": "Row `grid-template-rows` 0fr→1fr 1,000ms ease-in-out; spacer `flex-grow` 1,000ms ease-in-out; card opacity+translateY(8px) 900ms ease-out delay 1,000ms; partner row delay 1,700ms; READ OUR STORY delay 2,200ms; tagline fade+slide 700ms delay 200ms (on load)",
+      "Interaction": "Page also forces `history.scrollRestoration = \"manual\"` and scrolls to top on load.",
+      "Notes": "See the 9-frame sequence `_motion/hero-desktop-*.png`."
+    },
+    {
+      "Name": "Wordmark pulse + float",
+      "Where": "H1 \"Sparkonomy\"",
+      "Trigger": "On load, infinite",
+      "Timing": "`wordmark-pulse` 0.5s ease-in-out infinite alternate per letter, delays 0, 0.1 … 0.9s (colour → #6C63FF, glow 0 0 10px #6c63ffb3); `wordmark-float` 2s ease-in-out infinite alternate (translateY 0 → −10px)",
+      "Interaction": "—",
+      "Notes": "Paused while the hero is off-screen (`[data-offscreen] *` → `animation-play-state: paused`)."
+    },
+    {
+      "Name": "CTA gradient sweep",
+      "Where": "All gradient pill CTAs",
+      "Trigger": "Infinite",
+      "Timing": "`cta-sweep` 3.5s ease-in-out infinite alternate (background-position 60% → 0%)",
+      "Interaction": "Hover: opacity .9 in 150ms",
+      "Notes": "Creator Record CTA pauses when off-screen."
+    },
+    {
+      "Name": "Partner logo marquee",
+      "Where": "Hero",
+      "Trigger": "Starts 1,700ms after the intro; paused when hero off-screen",
+      "Timing": "`story-marquee` 24s linear infinite (translateX 0 → −50% over two copies of the list)",
+      "Interaction": "—",
+      "Notes": "Edge fade via `mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent)`. Reduced motion: static wrapped row."
+    },
+    {
+      "Name": "Scroll cue",
+      "Where": "READ OUR STORY",
+      "Trigger": "Infinite",
+      "Timing": "`scroll-cue` 1.4s cubic-bezier(.33,0,.2,1) (translateY 0→7px at 35%→0) + `cue-pulse` 1.4s ease-in-out (colour #FFFFFF4D → #C4BEFFCC, glow 0 0 10px #6c63ff99)",
+      "Interaction": "Click → starts the automatic story tour",
+      "Notes": "—"
+    },
+    {
+      "Name": "Scroll-driven beat reveals",
+      "Where": "Story screens #roots, #people, #reality, #love, #turn, #mission, #future (+ #ocg heading/card)",
+      "Trigger": "Scroll position",
+      "Timing": "opacity 0→1 + translateY 16px→0 across each beat window (smoothstep); stage fades out over the last 10% of travel; \"soften\" mode (#reality) dims earlier lines to 75% opacity as the next enters; `will-change: transform` only while animating",
+      "Interaction": "Reverses when scrolling back up",
+      "Notes": "See `_motion/beats-people-*`, `_motion/beats-reality-*`."
+    },
+    {
+      "Name": "Word \"ink\" colour reveal",
+      "Where": "Story body lines, mission heading, OCG body/pitch",
+      "Trigger": "When the beat completes (scroll) or on intersection",
+      "Timing": "Each word starts white and blends (`color-mix`) into the line colour over 500ms; word k starts at 200ms + (character offset / 15)·1000ms (≈15 characters per second); progress = max(elapsed time, scroll progress × total)",
+      "Interaction": "—",
+      "Notes": "Mission heading inks to #DE0075; body lines to rgba(255,255,255,.75); \"every day\" uses a CSS transition `color 600ms ease-in-out` with delays 900ms + 300ms per word."
+    },
+    {
+      "Name": "Automatic story tour + beat snapping",
+      "Where": "Whole page",
+      "Trigger": "10s without wheel/touch/pointer/key input, or a click on READ OUR STORY",
+      "Timing": "Glides to the next beat stop with easeInOutCubic; duration clamp(1,000ms, |Δy|/viewportHeight × 900ms, 2,400ms) (people beats 500ms, reality beats 1,000ms); holds 3,000ms per beat and 5,000ms on the last beat of each screen and at the page end. Snapping: 300ms after manual scrolling stops between beats, it glides to the next beat in the scroll direction.",
+      "Interaction": "Any input cancels it; it restarts after another 10s idle. Disabled while the mobile menu is open (body overflow hidden) or the tab is hidden.",
+      "Notes": "Verified live: with no input, scrollY moved 0 → 1,047px about 14.6s after navigation and continued through the story."
+    },
+    {
+      "Name": "Creator Record card expand (mobile)",
+      "Where": "#ocg card <768px",
+      "Trigger": "Section heading bottom passes 72px from the top (collapses again >160px)",
+      "Timing": "height 0.9s open / 0.54s close, ease cubic-bezier(.22,1,.36,1); rows stagger 0.08s (delay 0.12s), each opacity 0→1 + y 8→0 in 0.45s; collapse stagger 0.03s reverse, 0.2s; \"Certified\" stamp fade 0.4s delay 0.63s",
+      "Interaction": "—",
+      "Notes": "Desktop/tablet: always expanded; whole grid pinned with `position: sticky`."
+    },
+    {
+      "Name": "Hover transitions",
+      "Where": "Links, social icons, CTAs",
+      "Trigger": "Hover",
+      "Timing": "color / opacity 150ms cubic-bezier(.4,0,.2,1)",
+      "Interaction": "—",
+      "Notes": "No transforms, shadows or underline animations."
+    }
+  ],
+  "responsive": "### Breakpoints\nTailwind defaults (640 / 768 / 1024 / 1280 / 1536px). The homepage effectively switches at **768px (`md`)** only; story type above 768px is fluid via `clamp()`.\n\n| | Desktop 1440×900 | Tablet 834×1112 | Mobile 390×844 |\n|---|---|---|---|\n| Header | Logo 26px + 4 links + pill CTA | same as desktop (≥768px) | Logo 24px + hamburger; full-screen menu |\n| Wordmark | 96px | 96px | 50.7px (13vw) |\n| Story H2 | 64px (4.45vw capped at 4rem) | 44px (clamp minimum) | 44px |\n| Story body | 28.8px | 20px | 20px |\n| Hero card | 560px wide, padding 40/40/28 | 560px | 368px max, padding 36/16/32 |\n| Partner marquee | 560px, gap 48px | 560px | full bleed, gap 40px |\n| Creator Record | 2-col grid (340px card + text), sticky | 2-col grid | stacked; card collapsed until heading passes |\n| Footer | 4-column grid | 4-column grid | wordmark + 2-col links + badges |\n| Page height | 17,082px | 20,766px | 15,984px |\n\n### Mobile specifics\n- Hamburger menu with partner + compliance badges (not shown in the desktop header).\n- Line breaks are art-directed per breakpoint (`<br class=\"md:hidden\">` / `hidden md:block`), e.g. \"For years, / we built / the platform.\" and \"But what stayed with us were / the Creators / who brought it to life.\"\n- Height units use `svh`/`lvh` so mobile browser chrome does not cause jumps; the fluid canvas is 100lvh.\n- Touch: fluid touch handlers are passive; touchstart cancels the auto-tour.\n- Cookie banner spans the full width (366×127px) and covers the top of the hero until dismissed.\n\n### Not verified\n- Landscape phones, very wide screens (>1536px) and 1024–1280px laptop widths were not captured: **Unable to determine** exact rendering there beyond what the CSS implies.",
+  "technical": "### Framework & build\n- **Next.js 16.0.7** (`window.next = {version: \"16.0.7\", appDir: true}`), App Router with React Server Components (`self.__next_f` flight payload), **Turbopack** production chunks (`turbopack-e1c03c7346098e89.js`). The page body bails out to client-side rendering (`<template data-dgst=\"BAILOUT_TO_CLIENT_SIDE_RENDERING\">`), but the story markup is server-rendered.\n- **React 19** — the client bundle carries `19.3.0-canary-52684925-20251110` (Next's vendored React); the module path references `react@19.2.5` / `react-dom@19.2.5`.\n- **Tailwind CSS** (v3.x inferred from the `--tw-*` preflight variables and `size-*` utilities; no version banner) + **tailwindcss-animate** (`animate-in fade-in slide-in-from-bottom-3`), shadcn/ui-style HSL tokens in `:root` (`--primary: 222.2 47.4% 11.2%`, `--primary-foreground: 210 40% 98%`).\n- **Framer Motion** (`motion.*` components, `useScroll`, `useTransform`, `useMotionValueEvent`) for scroll-linked beats; version **Unable to determine**.\n- WebGL2 fluid simulation (see Animations), loaded as a separate lazy chunk (`4884221f851638c7.js`, 55KB).\n- Polyfills: core-js 3.38.1. react-hot-toast (goober) is present in a shared chunk but not used on the homepage.\n- `/runtime-env.js` sets `window.__ENV__ = {\"API_BASE\":\"https://app-api.sparkonomy.com\"}`.\n\n### Hosting, delivery, headers\n- `server: Google Frontend`, `via: 1.1 google` → served from Google Cloud (exact product, e.g. Cloud Run vs App Engine, **Unable to determine**). `/logos/ocg-mark.webp` returns `server: UploadServer` (Google Cloud Storage signature). Third-party CDNs: Cloudflare (CookieYes).\n- HTML: `cache-control: s-maxage=31536000`, `x-nextjs-cache: HIT`, `x-nextjs-prerender: 1`, `x-nextjs-stale-time: 300` (prerendered/ISR), gzip, HTTP/3 advertised (`alt-svc: h3`).\n- Security headers: `strict-transport-security: max-age=63072000; includeSubDomains; preload`, `x-frame-options: SAMEORIGIN`, `x-content-type-options: nosniff`, `referrer-policy: strict-origin-when-cross-origin`. No Content-Security-Policy header observed.\n- `content-signal: ai-train=yes, ai-search=yes` (Cloudflare-style content-signals header permitting AI training and search).\n- Images via the Next.js optimiser (`/_next/image?url=…&w=…&q=75`, AVIF served to Chrome, 1x/2x `srcSet`); header logo `priority`; OCG mark preloaded and unoptimised.\n- Fonts: next/font self-hosting (Roboto variable, Solitreo) with `<link rel=\"preload\" as=\"font\" crossorigin>`.\n- Next `<Link>` prefetches RSC payloads for /contact, /about, /blogs, /creator/earn, /legal/* on load.\n- Desktop load: 85 requests (18 first-party JS chunks, 2 CSS files of 21,049 + 486 bytes transferred, 2 fonts, 13 first-party images, 33 RSC prefetch fetches).\n\n### Analytics, tags, consent\n- **Google Tag Manager** `GTM-K66374CX`.\n- **Google Analytics 4** `G-87CRRH8FXM` (inline `gtag('config', …, {send_page_view: false, cookie_flags: 'SameSite=None;Secure'})` + a manual `page_view` event) and a second GA4 stream `G-3G6S0WHSKP` seen in collect hits (configured inside GTM).\n- **Microsoft Clarity** project `dwiqlxestpk` (loaded via the npm integration, `?ref=npm`).\n- **CookieYes** consent banner (`cdn-cookieyes.com/client_data/373b191ed956d51fb9a13f028b26a8d6/…`); Google Consent Mode v2: the inline script sets every consent type to `granted` by default, while CookieYes's Consent Mode debug log at capture time reported Default/Update `denied` — the effective default state is therefore **Unable to determine** without a consent audit.\n- All first-party analytics are gated by `window.__SPARK_ANALYTICS__` (true only on www.sparkonomy.com / sparkonomy.com).\n- `facebook-domain-verification` meta present (no Meta Pixel requests observed).\n\n### SEO & metadata\n- `<title>`: \"Sparkonomy – Sparking Creator Livelihoods\"; meta description, keywords, `author` \"Team Sparkonomy\", `robots`/`googlebot` index, follow; canonical https://www.sparkonomy.com/; `lang=\"en\"`; `og:locale` en_IN; OG + Twitter card (`summary_large_image`) with `/og-home-v2.png` 1200×630.\n- JSON-LD: Organization (+ sameAs to the 5 social profiles), WebSite, WebPage (with `abstract`). The Organization logo is declared as 512×512 but `/sparkonomy.png` is actually 663×501.\n- Favicons 192×192, 512×512 and apple-touch-icon 180×180; `theme-color` #000000.\n- Two `<meta name=\"viewport\">` tags are emitted (one with `viewport-fit=cover`).\n\n### Accessibility observations\n- Good: sr-only H1 text with aria-hidden decorative letters, labelled icon links, `aria-expanded`/`aria-controls` on the menu toggle, Escape closes the menu, full `prefers-reduced-motion` fallback.\n- Risks: very low-contrast text (READ OUR STORY at white/30 on black ≈ 2.5:1 at rest; menu labels white/30–35), the auto-scrolling tour (moves content without a pause control other than interacting), heavy GPU use from the fluid simulation, and the cookie bar overlapping the navigation.",
+  "designSystem": "There is no public design-system documentation; the system below is reconstructed from the computed CSS and the bundled constants (`INK`, `CTA_LABEL`, `NAV`, `FOOTER` …).\n\n### Tokens\n- **Colour**: black canvas; white text with opacity steps (.9/.85/.8/.75/.6/.5/.45/.35/.3/.1); brand inks `#DE0075` magenta, `#8134AF` violet, `#DD2A7B` pink, `#9747FF` purple, `#6C63FF` indigo (plus `#FF4F95` pinkLight, `#22D3EE` cyan, `#FFB020` gold defined for the fluid \"tuned\" mode); semantic stance colours green/amber/red; CSS custom property `--pink-to-purple: linear-gradient(162deg, #dd2a7b 4.78%, #9747ff 89.95%)`; shadcn HSL tokens `--primary`, `--primary-foreground`, `--foreground-rgb: 255,255,255`, `--background-start-rgb`/`--background-end-rgb: 0,0,0`.\n- **Gradients**: CTA `110deg #DE0075 0–8% → #8134AF 45–100%`; card border `133.52deg #DE0075 5.08% → #8134AF 28.61%`; record border `160deg` purple/magenta; glows as radial gradients.\n- **Typography**: Roboto only; 4 weights (400/500/600/700); display 96, headline 64, sub-headline 44, card title 32, body-L 28.8, 24, 20, UI 15/14/13/12/11/10 (see Typography).\n- **Spacing**: Tailwind 4px scale; recurring values 16/24/28/32/40/48/56/96px. Containers: 84rem (1344px) header & footer, 64rem (1024px) story text, 54rem (864px) Creator Record, 35rem (560px) hero card, 21.25rem (340px) record card.\n- **Radius**: 9999px pills; 28px hero card; 24px/23px record card; 10px cookie bar (third-party); 6px cookie buttons.\n- **Elevation**: no box-shadows; depth comes from glows (radial gradients, `blur-2xl`) and gradient hairline borders built with CSS masks.\n- **Motion**: 150ms hover; 500ms word ink; 900–1,000ms reveals; 3.5s CTA sweep; 24s marquee; easing smoothstep (scroll), cubic-bezier(.4,0,.2,1) (Tailwind default), cubic-bezier(.22,1,.36,1) (card), easeInOutCubic (tour).\n\n### Components\n1. Fixed transparent header with scrim + gradient pill CTA; full-screen mobile menu.\n2. Pill CTA (two sizes) with animated gradient.\n3. \"Launch card\": translucent violet panel, gradient hairline border, NEW badge, product mark, title, CTA, caption.\n4. Logo marquee (masked edges, duplicated list).\n5. Pinned story screen (sticky 100svh stage, centred text, beat reveals, ink words, highlight colours).\n6. Creator Record card (avatar + verified tick, claims row, stance pills, timestamp, stamp).\n7. Footer (4-column grid, badges, social icons).\n8. Third-party CookieYes top bar.\n\n### Consistency notes\n- One CTA destination everywhere (Open Creator Graph app); two CTA labels (\"Claim your Creator Record\" in navigation, \"Claim your free Creator Record\" in content).\n- Header vs footer labels differ (\"About\" vs \"About Us\", \"Contact\" vs \"Contact Us\").\n- \"Terms of Services\" (footer) is grammatically non-standard.",
+  "logoNotes": "- **Sparkonomy wordmark** — two-weight logotype \"**Spark**onomy\" (bold \"Spark\", light \"onomy\"). Header version white (`/logos/logo_header_white.png`, 991×188 PNG, rendered 26px tall); footer version grey with a purple paw-print/spark mark replacing the \"o\" (`/logos/logo_header_gray.png`, 523×96, rendered 24px tall). Both are raster PNGs (no SVG logo on the page).\n- **Hero wordmark** is live text, not an image (H1 with per-letter gradient colours).\n- **Favicon / app icons** — grey \"S\" on a black-to-purple circle: 192×192, 512×512, apple-touch 180×180.\n- **JSON-LD logo** `/sparkonomy.png` — glowing indigo \"S\" on black (663×501; declared 512×512); not rendered on the page.\n- **Open Creator Graph mark** — circular network/constellation \"S\" in magenta/purple on white lines (`/logos/ocg-mark.webp`, 160×160).\n- **Partner logos** (white, transparent PNG, all labelled as program/affiliation badges): \"Built with Meta\", \"Developed with YouTube\", \"Google for Startups\", \"Gemini Early Access Program\".\n- **Compliance badges** (white circular seals): DPDP (India Digital Personal Data Protection Act), CCPA (California Consumer Privacy Act), PDPA (Singapore Personal Data Protection Act), GDPR (General Data Protection Regulation). The PDPA original is 2048×2048 while the others are 160×160.\n- **Third-party**: CookieYes wordmark (inline SVG in the cookie banner).\n- Originals were downloaded from the un-optimised source paths (the page itself serves them through `/_next/image` as AVIF).",
+  "assetsNotes": "Assets were downloaded from their **original source URLs** (for `/_next/image?url=…` optimiser URLs the decoded `url` path was fetched, e.g. `/logos/Meta_White.png`, so files are the untouched originals rather than resized AVIFs). Inline SVGs were serialised from the DOM. Naming and categories are set in `data/raw/asset-overrides.json`.\n\n- **logos/** — brand wordmarks, favicons, OCG mark, partner logos, compliance badges, CookieYes wordmark (third-party).\n- **images/** — Creator avatar (demo persona) and the Open Graph share image.\n- **icons/** — hamburger PNG, chevron, verified tick, 5 social icons, CookieYes close icon (third-party).\n- **illustrations/** — \"CERTIFIED\" stamp graphic.\n- **videos/** — none: the homepage has no `<video>`, Lottie or GIF. All motion is CSS/JS/WebGL.\n- **backgrounds/** — none as files: the background is a real-time WebGL simulation (no image) plus CSS gradients (vignette, header scrim, card glows), documented in the Colour and Animation chapters.\n\nExcluded: Google Tag Manager tracking pixel (`/td?id=GTM-…`) and analytics beacons.",
+  "socialNotes": "- All five profiles appear **only in the footer** as 24×24 inline-SVG icon links (no text), `target=\"_blank\" rel=\"noopener noreferrer\"`, colour rgba(255,255,255,.5) → white on hover.\n- The same five URLs are listed in the JSON-LD `Organization.sameAs`.\n- Handles: X **@SparkonomySays**; Instagram **sparkonomy.official**; YouTube **@Sparkonomy.official**; LinkedIn company **sparkonomy**; Reddit user **u/Sparkonomy**.\n- No Facebook, TikTok, Threads, Discord or WhatsApp links; no share buttons; no embedded feeds.",
+  "assetPurposes": {
+    "logo-01": "Primary brand wordmark in the fixed header (links to /). Rendered 137×26 desktop, 24px tall mobile.",
+    "icon-01": "Mobile (<768px) menu toggle icon inside the 32×32 header button.",
+    "logo-02": "\"Built with Meta\" affiliation logo — hero marquee (36px tall, opacity .75) and mobile menu \"Built with\" row.",
+    "logo-03": "\"Developed with YouTube\" affiliation logo — hero marquee and mobile menu.",
+    "logo-04": "\"Google for Startups\" programme logo — hero marquee and mobile menu.",
+    "logo-05": "\"Gemini Early Access Program\" logo — hero marquee and mobile menu.",
+    "logo-06": "DPDP (India) compliance seal — footer \"Compliant with\" (36×36, opacity .55) and mobile menu.",
+    "logo-07": "CCPA (California) compliance seal — footer and mobile menu.",
+    "logo-08": "PDPA (Singapore) compliance seal — footer and mobile menu (original is 2048×2048).",
+    "logo-09": "GDPR (EU) compliance seal — footer and mobile menu.",
+    "logo-10": "Open Creator Graph product mark at the top of the hero launch card (80×80 desktop, 72×72 mobile).",
+    "image-01": "Avatar of the example Creator \"Chulbuli Dixit\" on the Creator Record card (40×40 circle).",
+    "illustration-01": "\"CERTIFIED\" rubber-stamp graphic overlapping the bottom-left of the Creator Record card (112×70); fades in after the card expands.",
+    "icon-02": "Down chevron under the \"READ OUR STORY\" scroll cue.",
+    "icon-03": "Blue verified tick after the Creator name on the record card.",
+    "logo-11": "Footer wordmark (grey with purple paw-print \"o\"), 131×24.",
+    "icon-04": "Footer social link to https://x.com/SparkonomySays.",
+    "icon-05": "Footer social link to https://www.instagram.com/sparkonomy.official/.",
+    "icon-06": "Footer social link to https://www.youtube.com/@Sparkonomy.official.",
+    "icon-07": "Footer social link to https://www.linkedin.com/company/sparkonomy/.",
+    "icon-08": "Footer social link to https://www.reddit.com/user/Sparkonomy/.",
+    "logo-12": "Browser favicon (`<link rel=\"icon\" sizes=\"192x192\">`).",
+    "logo-13": "Large favicon / PWA-size icon (`<link rel=\"icon\" sizes=\"512x512\">`).",
+    "logo-14": "iOS home-screen icon (`apple-touch-icon`).",
+    "image-02": "Social share image for og:image and twitter:image (1200×630, alt \"Sparkonomy - AI Platform for Creators & Influencers\").",
+    "icon-09": "Third-party: close (×) icon of the CookieYes banner.",
+    "logo-15": "Third-party: CookieYes wordmark in the banner's \"Powered by\" line.",
+    "logo-16": "Organization logo referenced only by JSON-LD (not rendered); actual size 663×501 although declared 512×512."
+  },
+  "assetLocations": {
+    "logo-01": [
+      "1 Header / mobile menu"
+    ],
+    "icon-01": [
+      "1 Header / mobile menu (<768px)"
+    ],
+    "logo-02": [
+      "2 Hero (marquee)",
+      "1 Header / mobile menu (menu)"
+    ],
+    "logo-03": [
+      "2 Hero (marquee)",
+      "1 Header / mobile menu (menu)"
+    ],
+    "logo-04": [
+      "2 Hero (marquee)",
+      "1 Header / mobile menu (menu)"
+    ],
+    "logo-05": [
+      "2 Hero (marquee)",
+      "1 Header / mobile menu (menu)"
+    ],
+    "logo-06": [
+      "11 Footer",
+      "1 Header / mobile menu (menu)"
+    ],
+    "logo-07": [
+      "11 Footer",
+      "1 Header / mobile menu (menu)"
+    ],
+    "logo-08": [
+      "11 Footer",
+      "1 Header / mobile menu (menu)"
+    ],
+    "logo-09": [
+      "11 Footer",
+      "1 Header / mobile menu (menu)"
+    ],
+    "logo-10": [
+      "2 Hero (launch card)"
+    ],
+    "image-01": [
+      "9 Creator Record"
+    ],
+    "illustration-01": [
+      "9 Creator Record"
+    ],
+    "icon-02": [
+      "2 Hero"
+    ],
+    "icon-03": [
+      "9 Creator Record"
+    ],
+    "logo-11": [
+      "11 Footer"
+    ],
+    "icon-04": [
+      "11 Footer"
+    ],
+    "icon-05": [
+      "11 Footer"
+    ],
+    "icon-06": [
+      "11 Footer"
+    ],
+    "icon-07": [
+      "11 Footer"
+    ],
+    "icon-08": [
+      "11 Footer"
+    ],
+    "logo-12": [
+      "<head>"
+    ],
+    "logo-13": [
+      "<head>"
+    ],
+    "logo-14": [
+      "<head>"
+    ],
+    "image-02": [
+      "<head> (og:image, twitter:image)"
+    ],
+    "icon-09": [
+      "1 Cookie banner (CookieYes)"
+    ],
+    "logo-15": [
+      "1 Cookie banner (CookieYes)"
+    ],
+    "logo-16": [
+      "<head> JSON-LD only"
+    ]
+  }
+}

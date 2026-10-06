@@ -1,0 +1,1232 @@
+{
+  "summary": {
+    "notes": "### Font families\n- **Roboto** (variable, weights 100–900) — the only face used on the homepage. Self-hosted through `next/font`: `/_next/static/media/roboto_latin_wght-s.p.4075f395.woff2` (67,264 bytes, WOFF2, `font-display: swap`, preloaded). CSS family name `roboto`, applied on `<body>` via class `roboto_51c32070-module__YpxGXa__className`.\n- Fallback metric-matched face **\"roboto Fallback\"** = `local(Arial)` with `ascent-override: 92.43%; descent-override: 24.32%; line-gap-override: 0%; size-adjust: 100.37%` (prevents layout shift).\n- Also declared but **not used on the homepage**: `robotoTool`, `robotoBlog` (same Roboto file, aliases for other pages) and **Solitreo** 400 (`solitreo_latin_400-s.p.8dc56742.woff2`, 25,944 bytes) — preloaded on the homepage but never rendered (`document.fonts` status \"unloaded\").\n- Weights in use: 400, 500, 600, 700. No italics. Text is `-webkit-font-smoothing: antialiased` (Tailwind `antialiased` on the root wrapper).\n\n### Behaviour\n- Fluid sizes with `clamp()` above 768px (story headline `clamp(2.75rem, 4.45vw, 4rem)`, body `clamp(1.25rem, 2vw, 1.8rem)`, sub-headline `clamp(2rem, 3.05vw, 2.75rem)`); fixed sizes below 768px.\n- Orphan control: JS \"glue\" spans (`data-glue`) keep the last two words of each line together (`white-space: nowrap`) and are re-balanced by a ResizeObserver.\n- Uppercase is applied only with CSS `text-transform` (source copy is sentence case).",
+    "system": "ROLE                     DESKTOP 1440                    MOBILE 390               WEIGHT  TRACKING   COLOUR\nWordmark H1              96px / 96px                     50.7px / 55.8px          700     -0.01em    per-letter ramp #7B6CF6→#F0EEFF\nStory headline H2        64px / 76.8px (lh 1.2)          44px / 52.8px            700     normal (-0.01em mobile)  #FFFFFF\nPeople list H2           64px / 99.2px (lh 1.55)         44px / 74.8px (lh 1.7)   700     normal     #8134AF / #DE0075\nPayoff (\"Just one person…\")  64px / 76.8px              32px / 36.8px            700     normal     #FFFFFF + #DE0075\nSub-headline / sign line 43.92px / 50.5px (lh 1.15)      32px / 36.8px            700     normal     #FFFFFF / #DD2A7B\nH3 \"Be visible to AI.\"   43.92px / 50.5px                32px / 36.8px            700     normal     #FFFFFF\nHero card H2             32px / 40px                     20px / 25px              700     normal     #FFFFFF\nTagline                  24px / 32px                     16px / 24px              400     normal     rgba(255,255,255,.9)\nStory body               28.8px / 43.2px (lh 1.5)        20px / 30px              400     normal     ink → rgba(255,255,255,.75)\nOCG pitch                20px / 28px                     18px / 27px              400     normal     ink → rgba(255,255,255,.6)\nCTA (large)              15px / 22.5px                   15px                     600     normal     #FFFFFF\nCTA (header)             13px / 19.5px                   (in menu: 15px)          600     normal     #FFFFFF\nNav link                 13px / 19.5px                   menu: 18px / 28px        400     normal     rgba(255,255,255,.6) / .85\nFooter heading           14px / 20px                     14px                     500     normal     #FFFFFF\nFooter link / legal      14px / 20px                     14px                     400     normal     rgba(255,255,255,.5)\nCard name                15px / 22.5px                   15px                     700     normal     #FFFFFF\nCard rows                14px / 21px                     14px                     400     normal     rgba(255,255,255,.85)\nCard pills / handle      12px / 18px                     12px                     400     normal     stance colour / white .45\nCard claims              10.44px (min(11px, 3.6cqi))     ≈10.5px                   400     normal     rgba(255,255,255,.8)\nEyebrow \"READ OUR STORY\" 12px / 18px                     12px                     400     0.22em UPPERCASE  #FFFFFF4D (pulses to #C4BEFFCC)\nCaption \"BY SPARKONOMY\"  12px / 18px                     11px                     400     0.12em UPPERCASE  rgba(255,255,255,.5)\nBadge \"NEW\"              11px / 11px                     11px                     700     0.04em UPPERCASE  #FFFFFF on #DD2A7B\nMenu labels              —                               10px / 15px              700     0.22em UPPERCASE  rgba(255,255,255,.35/.30)"
+  },
+  "documentFonts": [
+    {
+      "family": "roboto",
+      "weight": "100 900",
+      "style": "normal",
+      "status": "loaded",
+      "display": "swap",
+      "unicodeRange": "U+0-10FFFF"
+    },
+    {
+      "family": "roboto Fallback",
+      "weight": "normal",
+      "style": "normal",
+      "status": "error",
+      "display": "auto",
+      "unicodeRange": "U+0-10FFFF"
+    },
+    {
+      "family": "robotoTool",
+      "weight": "100 900",
+      "style": "normal",
+      "status": "unloaded",
+      "display": "swap",
+      "unicodeRange": "U+0-10FFFF"
+    },
+    {
+      "family": "robotoTool Fallback",
+      "weight": "normal",
+      "style": "normal",
+      "status": "unloaded",
+      "display": "auto",
+      "unicodeRange": "U+0-10FFFF"
+    },
+    {
+      "family": "robotoBlog",
+      "weight": "100 900",
+      "style": "normal",
+      "status": "unloaded",
+      "display": "swap",
+      "unicodeRange": "U+0-10FFFF"
+    },
+    {
+      "family": "robotoBlog Fallback",
+      "weight": "normal",
+      "style": "normal",
+      "status": "unloaded",
+      "display": "auto",
+      "unicodeRange": "U+0-10FFFF"
+    },
+    {
+      "family": "solitreo",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded",
+      "display": "swap",
+      "unicodeRange": "U+0-10FFFF"
+    },
+    {
+      "family": "solitreo Fallback",
+      "weight": "normal",
+      "style": "normal",
+      "status": "unloaded",
+      "display": "auto",
+      "unicodeRange": "U+0-10FFFF"
+    }
+  ],
+  "fontFiles": [
+    {
+      "url": "https://www.sparkonomy.com/_next/static/media/roboto_latin_wght-s.p.4075f395.woff2",
+      "contentType": "font/woff2",
+      "status": 200,
+      "bytes": 67264
+    },
+    {
+      "url": "https://www.sparkonomy.com/_next/static/media/solitreo_latin_400-s.p.8dc56742.woff2",
+      "contentType": "font/woff2",
+      "status": 200,
+      "bytes": 25944
+    }
+  ],
+  "fontFaceRules": [
+    "@font-face{font-family:roboto;src:url(../media/roboto_latin_wght-s.p.4075f395.woff2)format(\"woff2\");font-display:swap;font-weight:100 900;font-style:normal}",
+    "@font-face{font-family:roboto Fallback;src:local(Arial);ascent-override:92.43%;descent-override:24.32%;line-gap-override:0.0%;size-adjust:100.37%}",
+    "@font-face{font-family:robotoTool;src:url(../media/roboto_latin_wght-s.p.4075f395.woff2)format(\"woff2\");font-display:swap;font-weight:100 900;font-style:normal}",
+    "@font-face{font-family:robotoTool Fallback;src:local(Arial);ascent-override:92.43%;descent-override:24.32%;line-gap-override:0.0%;size-adjust:100.37%}",
+    "@font-face{font-family:robotoBlog;src:url(../media/roboto_latin_wght-s.p.4075f395.woff2)format(\"woff2\");font-display:swap;font-weight:100 900;font-style:normal}",
+    "@font-face{font-family:robotoBlog Fallback;src:local(Arial);ascent-override:92.43%;descent-override:24.32%;line-gap-override:0.0%;size-adjust:100.37%}",
+    "@font-face{font-family:solitreo;src:url(../media/solitreo_latin_400-s.p.8dc56742.woff2)format(\"woff2\");font-display:swap;font-weight:400;font-style:normal}",
+    "@font-face{font-family:solitreo Fallback;src:local(Arial);ascent-override:94.0%;descent-override:58.75%;line-gap-override:0.0%;size-adjust:93.62%}"
+  ],
+  "headingStyles": [
+    {
+      "role": "H1",
+      "font": "roboto",
+      "weight": "700",
+      "size": "96px",
+      "lineHeight": "96px",
+      "letterSpacing": "-0.96px",
+      "color": "rgb(255, 255, 255)",
+      "examples": [
+        "Sparkonomy"
+      ]
+    },
+    {
+      "role": "H2",
+      "font": "roboto",
+      "weight": "700",
+      "size": "32px",
+      "lineHeight": "40px",
+      "letterSpacing": "normal",
+      "color": "rgb(255, 255, 255)",
+      "examples": [
+        "Be visible to AI."
+      ]
+    },
+    {
+      "role": "H2",
+      "font": "roboto",
+      "weight": "700",
+      "size": "64px",
+      "lineHeight": "76.8px",
+      "letterSpacing": "normal",
+      "color": "rgb(255, 255, 255)",
+      "examples": [
+        "For 15 years, we helped build",
+        "And we saw what it takes.",
+        "Creators built a new profession."
+      ]
+    },
+    {
+      "role": "H2",
+      "font": "roboto",
+      "weight": "700",
+      "size": "64px",
+      "lineHeight": "99.2px",
+      "letterSpacing": "normal",
+      "color": "rgb(255, 255, 255)",
+      "examples": [
+        "Students."
+      ]
+    },
+    {
+      "role": "H3",
+      "font": "roboto",
+      "weight": "700",
+      "size": "43.92px",
+      "lineHeight": "50.508px",
+      "letterSpacing": "normal",
+      "color": "rgb(255, 255, 255)",
+      "examples": [
+        "Be visible to AI."
+      ]
+    }
+  ],
+  "headingSizesByViewport": {
+    "desktop": [
+      {
+        "tag": "h1",
+        "size": "96px",
+        "lineHeight": "96px",
+        "weight": "700",
+        "text": "Sparkonomy"
+      },
+      {
+        "tag": "h2",
+        "size": "32px",
+        "lineHeight": "40px",
+        "weight": "700",
+        "text": "Be visible to AI. / Control how it uses your ident"
+      },
+      {
+        "tag": "h2",
+        "size": "64px",
+        "lineHeight": "76.8px",
+        "weight": "700",
+        "text": "For 15 years, we helped build / YouTube from insid"
+      },
+      {
+        "tag": "h2",
+        "size": "64px",
+        "lineHeight": "99.2px",
+        "weight": "700",
+        "text": "Students. / Homemakers. / Doctors. / Farmers."
+      },
+      {
+        "tag": "h2",
+        "size": "64px",
+        "lineHeight": "76.8px",
+        "weight": "700",
+        "text": "And we saw what it takes."
+      },
+      {
+        "tag": "h2",
+        "size": "64px",
+        "lineHeight": "76.8px",
+        "weight": "700",
+        "text": "Creators built a new profession."
+      },
+      {
+        "tag": "h2",
+        "size": "64px",
+        "lineHeight": "76.8px",
+        "weight": "700",
+        "text": "For years, we built the platform."
+      },
+      {
+        "tag": "h2",
+        "size": "64px",
+        "lineHeight": "76.8px",
+        "weight": "700",
+        "text": "That's why we built Sparkonomy."
+      },
+      {
+        "tag": "h2",
+        "size": "64px",
+        "lineHeight": "76.8px",
+        "weight": "700",
+        "text": "We're starting with what / should already be yours"
+      },
+      {
+        "tag": "h3",
+        "size": "43.92px",
+        "lineHeight": "50.508px",
+        "weight": "700",
+        "text": "Be visible to AI."
+      },
+      {
+        "tag": "h2",
+        "size": "64px",
+        "lineHeight": "76.8px",
+        "weight": "700",
+        "text": "And we're only getting started."
+      }
+    ],
+    "tablet": [
+      {
+        "tag": "h1",
+        "size": "96px",
+        "lineHeight": "96px",
+        "weight": "700",
+        "text": "Sparkonomy"
+      },
+      {
+        "tag": "h2",
+        "size": "32px",
+        "lineHeight": "40px",
+        "weight": "700",
+        "text": "Be visible to AI. / Control how it uses your ident"
+      },
+      {
+        "tag": "h2",
+        "size": "44px",
+        "lineHeight": "52.8px",
+        "weight": "700",
+        "text": "For 15 years, we helped build / YouTube from insid"
+      },
+      {
+        "tag": "h2",
+        "size": "44px",
+        "lineHeight": "68.2px",
+        "weight": "700",
+        "text": "Students. / Homemakers. / Doctors. / Farmers."
+      },
+      {
+        "tag": "h2",
+        "size": "44px",
+        "lineHeight": "52.8px",
+        "weight": "700",
+        "text": "And we saw what it takes."
+      },
+      {
+        "tag": "h2",
+        "size": "44px",
+        "lineHeight": "52.8px",
+        "weight": "700",
+        "text": "Creators built a new profession."
+      },
+      {
+        "tag": "h2",
+        "size": "44px",
+        "lineHeight": "52.8px",
+        "weight": "700",
+        "text": "For years, we built the platform."
+      },
+      {
+        "tag": "h2",
+        "size": "44px",
+        "lineHeight": "52.8px",
+        "weight": "700",
+        "text": "That's why we built Sparkonomy."
+      },
+      {
+        "tag": "h2",
+        "size": "44px",
+        "lineHeight": "52.8px",
+        "weight": "700",
+        "text": "We're starting with what / should already be yours"
+      },
+      {
+        "tag": "h3",
+        "size": "32px",
+        "lineHeight": "36.8px",
+        "weight": "700",
+        "text": "Be visible to AI."
+      },
+      {
+        "tag": "h2",
+        "size": "44px",
+        "lineHeight": "52.8px",
+        "weight": "700",
+        "text": "And we're only getting started."
+      }
+    ],
+    "mobile": [
+      {
+        "tag": "h1",
+        "size": "50.7px",
+        "lineHeight": "55.77px",
+        "weight": "700",
+        "text": "Sparkonomy"
+      },
+      {
+        "tag": "h2",
+        "size": "20px",
+        "lineHeight": "25px",
+        "weight": "700",
+        "text": "Be visible to AI. / Control how it uses your ident"
+      },
+      {
+        "tag": "h2",
+        "size": "44px",
+        "lineHeight": "52.8px",
+        "weight": "700",
+        "text": "For 15 years, we helped build YouTube from inside "
+      },
+      {
+        "tag": "h2",
+        "size": "44px",
+        "lineHeight": "74.8px",
+        "weight": "700",
+        "text": "Students. / Homemakers. / Doctors. / Farmers."
+      },
+      {
+        "tag": "h2",
+        "size": "44px",
+        "lineHeight": "52.8px",
+        "weight": "700",
+        "text": "And we saw what it takes."
+      },
+      {
+        "tag": "h2",
+        "size": "44px",
+        "lineHeight": "52.8px",
+        "weight": "700",
+        "text": "Creators built a new profession."
+      },
+      {
+        "tag": "h2",
+        "size": "44px",
+        "lineHeight": "52.8px",
+        "weight": "700",
+        "text": "For years, / we built the platform."
+      },
+      {
+        "tag": "h2",
+        "size": "44px",
+        "lineHeight": "52.8px",
+        "weight": "700",
+        "text": "That's why we built Sparkonomy."
+      },
+      {
+        "tag": "h2",
+        "size": "44px",
+        "lineHeight": "52.8px",
+        "weight": "700",
+        "text": "We're starting with what / should already be yours"
+      },
+      {
+        "tag": "h3",
+        "size": "32px",
+        "lineHeight": "36.8px",
+        "weight": "700",
+        "text": "Be visible to AI."
+      },
+      {
+        "tag": "h2",
+        "size": "44px",
+        "lineHeight": "52.8px",
+        "weight": "700",
+        "text": "And we're only getting started."
+      }
+    ]
+  },
+  "textStyleCensus": [
+    {
+      "family": "roboto, \"roboto Fallback\"",
+      "weight": "400",
+      "size": "28.8px",
+      "lineHeight": "43.2px",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "style": "normal",
+      "count": 70,
+      "tags": {
+        "p": 70
+      },
+      "colors": {
+        "rgb(255, 255, 255)": 59,
+        "rgba(255, 255, 255, 0.75)": 11
+      },
+      "samples": [
+        "But",
+        "what",
+        "stayed",
+        "with"
+      ]
+    },
+    {
+      "family": "roboto, \"roboto Fallback\"",
+      "weight": "700",
+      "size": "64px",
+      "lineHeight": "76.8px",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "style": "normal",
+      "count": 16,
+      "tags": {
+        "h2": 12,
+        "p": 4
+      },
+      "colors": {
+        "rgb(255, 255, 255)": 15,
+        "rgb(222, 0, 117)": 1
+      },
+      "samples": [
+        "For 15 years, we helped build YouTube from inside Google.",
+        "And we saw what it takes.",
+        "Just one person showing up every day.",
+        "one person"
+      ]
+    },
+    {
+      "family": "roboto, \"roboto Fallback\"",
+      "weight": "700",
+      "size": "96px",
+      "lineHeight": "96px",
+      "letterSpacing": "-0.96px",
+      "transform": "none",
+      "style": "normal",
+      "count": 11,
+      "tags": {
+        "h1": 11
+      },
+      "colors": {
+        "rgb(255, 255, 255)": 1,
+        "rgb(120, 106, 248)": 1,
+        "rgb(141, 115, 241)": 1,
+        "rgb(160, 124, 234)": 1,
+        "rgb(168, 127, 233)": 1,
+        "rgb(158, 121, 237)": 1,
+        "rgb(133, 110, 246)": 1,
+        "rgb(112, 101, 254)": 1,
+        "rgb(109, 100, 255)": 1,
+        "rgb(127, 116, 253)": 1,
+        "rgb(167, 161, 255)": 1
+      },
+      "samples": [
+        "Sparkonomy",
+        "S",
+        "p",
+        "a"
+      ]
+    },
+    {
+      "family": "roboto, \"roboto Fallback\"",
+      "weight": "400",
+      "size": "14px",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "style": "normal",
+      "count": 10,
+      "tags": {
+        "a": 8,
+        "button": 1,
+        "p": 1
+      },
+      "colors": {
+        "rgba(255, 255, 255, 0.5)": 10
+      },
+      "samples": [
+        "Open Creator Graph",
+        "Creator Payments",
+        "About Us",
+        "Contact Us"
+      ]
+    },
+    {
+      "family": "roboto, \"roboto Fallback\"",
+      "weight": "400",
+      "size": "12px",
+      "lineHeight": "18px",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "style": "normal",
+      "count": 8,
+      "tags": {
+        "p": 1,
+        "span": 1,
+        "li": 6
+      },
+      "colors": {
+        "rgba(255, 255, 255, 0.45)": 1,
+        "rgb(229, 182, 7)": 4,
+        "rgb(52, 199, 89)": 1,
+        "rgb(229, 72, 77)": 2
+      },
+      "samples": [
+        "@chulbulidixit",
+        "Conditional",
+        "Allowed",
+        "Conditional"
+      ]
+    },
+    {
+      "family": "roboto, \"roboto Fallback\"",
+      "weight": "400",
+      "size": "14px",
+      "lineHeight": "21px",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "style": "normal",
+      "count": 6,
+      "tags": {
+        "li": 6
+      },
+      "colors": {
+        "rgba(255, 255, 255, 0.85)": 6
+      },
+      "samples": [
+        "Name",
+        "Image",
+        "Likeness",
+        "Voice"
+      ]
+    },
+    {
+      "family": "roboto, \"roboto Fallback\"",
+      "weight": "400",
+      "size": "20px",
+      "lineHeight": "28px",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "style": "normal",
+      "count": 6,
+      "tags": {
+        "p": 6
+      },
+      "colors": {
+        "rgba(255, 255, 255, 0.6)": 6
+      },
+      "samples": [
+        "Control",
+        "how",
+        "it",
+        "uses"
+      ]
+    },
+    {
+      "family": "roboto, \"roboto Fallback\"",
+      "weight": "400",
+      "size": "13px",
+      "lineHeight": "19.5px",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "style": "normal",
+      "count": 4,
+      "tags": {
+        "a": 4
+      },
+      "colors": {
+        "rgba(255, 255, 255, 0.6)": 4
+      },
+      "samples": [
+        "Creator Payments",
+        "About",
+        "Contact",
+        "Blogs"
+      ]
+    },
+    {
+      "family": "roboto, \"roboto Fallback\"",
+      "weight": "700",
+      "size": "64px",
+      "lineHeight": "99.2px",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "style": "normal",
+      "count": 4,
+      "tags": {
+        "h2": 4
+      },
+      "colors": {
+        "rgb(129, 52, 175)": 2,
+        "rgb(222, 0, 117)": 2
+      },
+      "samples": [
+        "Students.",
+        "Homemakers.",
+        "Doctors.",
+        "Farmers."
+      ]
+    },
+    {
+      "family": "roboto, \"roboto Fallback\"",
+      "weight": "700",
+      "size": "43.92px",
+      "lineHeight": "50.508px",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "style": "normal",
+      "count": 4,
+      "tags": {
+        "p": 3,
+        "h3": 1
+      },
+      "colors": {
+        "rgb(221, 42, 123)": 1,
+        "rgb(255, 255, 255)": 2,
+        "rgb(222, 0, 117)": 1
+      },
+      "samples": [
+        "Now we're building for the Creators who bring it to life.",
+        "Be visible to AI.",
+        "Let's spark together.",
+        "spark"
+      ]
+    },
+    {
+      "family": "roboto, \"roboto Fallback\"",
+      "weight": "500",
+      "size": "14px",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "style": "normal",
+      "count": 4,
+      "tags": {
+        "p": 4
+      },
+      "colors": {
+        "rgb(255, 255, 255)": 4
+      },
+      "samples": [
+        "Compliant with",
+        "Products",
+        "Company",
+        "Terms & Policies"
+      ]
+    },
+    {
+      "family": "roboto, \"roboto Fallback\"",
+      "weight": "600",
+      "size": "15px",
+      "lineHeight": "22.5px",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "style": "normal",
+      "count": 3,
+      "tags": {
+        "a": 2,
+        "span": 1
+      },
+      "colors": {
+        "rgb(255, 255, 255)": 2,
+        "rgba(255, 255, 255, 0.9)": 1
+      },
+      "samples": [
+        "Claim your free Creator Record",
+        "AI Usage",
+        "Claim your free Creator Record"
+      ]
+    },
+    {
+      "family": "roboto, \"roboto Fallback\"",
+      "weight": "400",
+      "size": "10.44px",
+      "lineHeight": "15.66px",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "style": "normal",
+      "count": 3,
+      "tags": {
+        "li": 3
+      },
+      "colors": {
+        "rgba(255, 255, 255, 0.8)": 3
+      },
+      "samples": [
+        "✓ Machine-Sourced",
+        "✓ Machine-Visible",
+        "✓ Creator-Controlled"
+      ]
+    },
+    {
+      "family": "roboto, \"roboto Fallback\"",
+      "weight": "700",
+      "size": "32px",
+      "lineHeight": "40px",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "style": "normal",
+      "count": 2,
+      "tags": {
+        "h2": 2
+      },
+      "colors": {
+        "rgb(255, 255, 255)": 2
+      },
+      "samples": [
+        "Be visible to AI.",
+        "Control how it uses your identity."
+      ]
+    },
+    {
+      "family": "roboto, \"roboto Fallback\"",
+      "weight": "600",
+      "size": "13px",
+      "lineHeight": "19.5px",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "style": "normal",
+      "count": 1,
+      "tags": {
+        "a": 1
+      },
+      "colors": {
+        "rgb(255, 255, 255)": 1
+      },
+      "samples": [
+        "Claim your Creator Record"
+      ]
+    },
+    {
+      "family": "roboto, \"roboto Fallback\"",
+      "weight": "400",
+      "size": "24px",
+      "lineHeight": "32px",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "style": "normal",
+      "count": 1,
+      "tags": {
+        "p": 1
+      },
+      "colors": {
+        "rgba(255, 255, 255, 0.9)": 1
+      },
+      "samples": [
+        "Sparking Creator livelihoods."
+      ]
+    },
+    {
+      "family": "roboto, \"roboto Fallback\"",
+      "weight": "700",
+      "size": "11px",
+      "lineHeight": "11px",
+      "letterSpacing": "0.44px",
+      "transform": "uppercase",
+      "style": "normal",
+      "count": 1,
+      "tags": {
+        "span": 1
+      },
+      "colors": {
+        "rgb(255, 255, 255)": 1
+      },
+      "samples": [
+        "New"
+      ]
+    },
+    {
+      "family": "roboto, \"roboto Fallback\"",
+      "weight": "500",
+      "size": "16px",
+      "lineHeight": "24px",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "style": "normal",
+      "count": 1,
+      "tags": {
+        "p": 1
+      },
+      "colors": {
+        "rgb(255, 255, 255)": 1
+      },
+      "samples": [
+        "Open Creator Graph"
+      ]
+    },
+    {
+      "family": "roboto, \"roboto Fallback\"",
+      "weight": "400",
+      "size": "12px",
+      "lineHeight": "18px",
+      "letterSpacing": "1.44px",
+      "transform": "uppercase",
+      "style": "normal",
+      "count": 1,
+      "tags": {
+        "p": 1
+      },
+      "colors": {
+        "rgba(255, 255, 255, 0.5)": 1
+      },
+      "samples": [
+        "by Sparkonomy"
+      ]
+    },
+    {
+      "family": "roboto, \"roboto Fallback\"",
+      "weight": "400",
+      "size": "12px",
+      "lineHeight": "18px",
+      "letterSpacing": "2.64px",
+      "transform": "uppercase",
+      "style": "normal",
+      "count": 1,
+      "tags": {
+        "button": 1
+      },
+      "colors": {
+        "rgba(255, 255, 255, 0.3)": 1
+      },
+      "samples": [
+        "Read our story"
+      ]
+    },
+    {
+      "family": "roboto, \"roboto Fallback\"",
+      "weight": "700",
+      "size": "15px",
+      "lineHeight": "22.5px",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "style": "normal",
+      "count": 1,
+      "tags": {
+        "p": 1
+      },
+      "colors": {
+        "rgb(255, 255, 255)": 1
+      },
+      "samples": [
+        "Chulbuli Dixit"
+      ]
+    },
+    {
+      "family": "roboto, \"roboto Fallback\"",
+      "weight": "500",
+      "size": "11px",
+      "lineHeight": "16.5px",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "style": "normal",
+      "count": 1,
+      "tags": {
+        "p": 1
+      },
+      "colors": {
+        "rgba(255, 255, 255, 0.45)": 1
+      },
+      "samples": [
+        "Declared and cryptographically timestamped"
+      ]
+    },
+    {
+      "family": "roboto, \"roboto Fallback\"",
+      "weight": "700",
+      "size": "14px",
+      "lineHeight": "21px",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "style": "normal",
+      "count": 1,
+      "tags": {
+        "p": 1
+      },
+      "colors": {
+        "rgb(255, 255, 255)": 1
+      },
+      "samples": [
+        "25 September 2026, 14:32:07 UTC"
+      ]
+    }
+  ],
+  "measuredComponentStyles": {
+    "navLink": {
+      "selector": "header nav[aria-label=\"Main\"] a",
+      "text": "Creator Payments",
+      "box": [
+        104,
+        20
+      ],
+      "background-image": "none",
+      "background-color": "rgba(0, 0, 0, 0)",
+      "background-size": "auto",
+      "background-position": "0% 0%",
+      "color": "rgba(255, 255, 255, 0.6)",
+      "font-family": "roboto, \"roboto Fallback\"",
+      "font-size": "13px",
+      "font-weight": "400",
+      "line-height": "19.5px",
+      "letter-spacing": "normal",
+      "text-transform": "none",
+      "padding": "0px",
+      "border-radius": "0px",
+      "border": "0px solid rgb(229, 231, 235)",
+      "box-shadow": "none",
+      "opacity": "1",
+      "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1)",
+      "animation": "none"
+    },
+    "navCta": {
+      "selector": "header nav[aria-label=\"Main\"] a.rounded-full",
+      "text": "Claim your Creator Record",
+      "box": [
+        193,
+        40
+      ],
+      "background-image": "linear-gradient(110deg, rgb(222, 0, 117) 0%, rgb(222, 0, 117) 8%, rgb(129, 52, 175) 45%, rgb(129, 52, 175) 100%)",
+      "background-color": "rgba(0, 0, 0, 0)",
+      "background-size": "200% 100%",
+      "background-position": "19.9397% 0px",
+      "color": "rgb(255, 255, 255)",
+      "font-family": "roboto, \"roboto Fallback\"",
+      "font-size": "13px",
+      "font-weight": "600",
+      "line-height": "19.5px",
+      "letter-spacing": "normal",
+      "text-transform": "none",
+      "padding": "10px 20px",
+      "border-radius": "9999px",
+      "border": "0px solid rgb(229, 231, 235)",
+      "box-shadow": "none",
+      "opacity": "1",
+      "transition": "opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1)",
+      "animation": "3.5s ease-in-out infinite alternate cta-sweep"
+    },
+    "heroCta": {
+      "selector": "#opening a.rounded-full",
+      "text": "Claim your free Creator Record",
+      "box": [
+        263,
+        51
+      ],
+      "background-image": "linear-gradient(110deg, rgb(222, 0, 117) 0%, rgb(222, 0, 117) 8%, rgb(129, 52, 175) 45%, rgb(129, 52, 175) 100%)",
+      "background-color": "rgba(0, 0, 0, 0)",
+      "background-size": "200% 100%",
+      "background-position": "13.9305% 0px",
+      "color": "rgb(255, 255, 255)",
+      "font-family": "roboto, \"roboto Fallback\"",
+      "font-size": "15px",
+      "font-weight": "600",
+      "line-height": "22.5px",
+      "letter-spacing": "normal",
+      "text-transform": "none",
+      "padding": "14px 28px",
+      "border-radius": "9999px",
+      "border": "0px solid rgb(229, 231, 235)",
+      "box-shadow": "none",
+      "opacity": "1",
+      "transition": "opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1)",
+      "animation": "3.5s ease-in-out infinite alternate cta-sweep"
+    },
+    "heroCard": {
+      "selector": "#opening [data-hero-reveal].rounded-\\[28px\\]",
+      "text": "NEW\nBe visible to AI.\nControl how it uses your identity.\nClaim your free Creator Record\n\nOpen Creator Graph\nBY SPARKONOMY",
+      "box": [
+        560,
+        351
+      ],
+      "background-color": "rgba(129, 52, 175, 0.2)",
+      "border-radius": "28px",
+      "padding": "40px 40px 28px",
+      "max-width": "560px",
+      "width": "560px"
+    },
+    "newBadge": {
+      "selector": "#opening span.absolute",
+      "text": "NEW",
+      "box": [
+        45,
+        19
+      ],
+      "background-image": "none",
+      "background-color": "rgb(221, 42, 123)",
+      "background-size": "auto",
+      "background-position": "0% 0%",
+      "color": "rgb(255, 255, 255)",
+      "font-family": "roboto, \"roboto Fallback\"",
+      "font-size": "11px",
+      "font-weight": "700",
+      "line-height": "11px",
+      "letter-spacing": "0.44px",
+      "text-transform": "uppercase",
+      "padding": "4px 10px",
+      "border-radius": "9999px",
+      "border": "0px solid rgb(229, 231, 235)",
+      "box-shadow": "none",
+      "opacity": "1",
+      "transition": "all",
+      "animation": "none"
+    },
+    "readStory": {
+      "selector": "#opening button",
+      "text": "READ OUR STORY",
+      "box": [
+        133,
+        32
+      ],
+      "background-image": "none",
+      "background-color": "rgba(0, 0, 0, 0)",
+      "background-size": "auto",
+      "background-position": "0% 0%",
+      "color": "rgba(224, 221, 255, 0.447)",
+      "font-family": "roboto, \"roboto Fallback\"",
+      "font-size": "12px",
+      "font-weight": "400",
+      "line-height": "18px",
+      "letter-spacing": "2.64px",
+      "text-transform": "uppercase",
+      "padding": "0px",
+      "border-radius": "0px",
+      "border": "0px solid rgb(229, 231, 235)",
+      "box-shadow": "none",
+      "opacity": "1",
+      "transition": "all",
+      "animation": "1.4s cubic-bezier(0.33, 0, 0.2, 1) infinite scroll-cue, 1.4s ease-in-out infinite cue-pulse"
+    },
+    "wordmark": {
+      "selector": "#opening h1",
+      "text": "Sparkonomy\nSparkonomy",
+      "box": [
+        535,
+        96
+      ],
+      "font-size": "96px",
+      "font-weight": "700",
+      "line-height": "96px",
+      "letter-spacing": "-0.96px",
+      "font-family": "roboto, \"roboto Fallback\""
+    },
+    "tagline": {
+      "selector": "#opening > p",
+      "text": "Sparking Creator livelihoods.",
+      "box": [
+        305,
+        32
+      ],
+      "font-size": "24px",
+      "font-weight": "400",
+      "line-height": "32px",
+      "color": "rgba(255, 255, 255, 0.9)",
+      "font-family": "roboto, \"roboto Fallback\""
+    },
+    "headerInner": {
+      "selector": "header > div.relative",
+      "text": "Creator Payments\nAbout\nContact\nBlogs\nClaim your Creator Record",
+      "box": [
+        1344,
+        80
+      ],
+      "max-width": "1344px",
+      "padding": "20px 32px",
+      "height": "79.5px"
+    },
+    "headerScrim": {
+      "selector": "header > div[aria-hidden]",
+      "text": "",
+      "box": [
+        1440,
+        112
+      ],
+      "background-image": "linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0))",
+      "height": "112px"
+    },
+    "navCtaHover": {
+      "selector": "header nav[aria-label=\"Main\"] a.rounded-full",
+      "text": "Claim your Creator Record",
+      "box": [
+        193,
+        40
+      ],
+      "opacity": "0.9"
+    },
+    "navLinkHover": {
+      "selector": "header nav[aria-label=\"Main\"] a",
+      "text": "Creator Payments",
+      "box": [
+        104,
+        20
+      ],
+      "color": "rgb(255, 255, 255)"
+    },
+    "recordCta": {
+      "selector": "#ocg a.rounded-full",
+      "text": "Claim your free Creator Record",
+      "box": [
+        263,
+        51
+      ],
+      "background-image": "linear-gradient(110deg, rgb(222, 0, 117) 0%, rgb(222, 0, 117) 8%, rgb(129, 52, 175) 45%, rgb(129, 52, 175) 100%)",
+      "background-color": "rgba(0, 0, 0, 0)",
+      "background-size": "200% 100%",
+      "background-position": "25.5843% 0px",
+      "color": "rgb(255, 255, 255)",
+      "font-family": "roboto, \"roboto Fallback\"",
+      "font-size": "15px",
+      "font-weight": "600",
+      "line-height": "22.5px",
+      "letter-spacing": "normal",
+      "text-transform": "none",
+      "padding": "14px 28px",
+      "border-radius": "9999px",
+      "border": "0px solid rgb(229, 231, 235)",
+      "box-shadow": "none",
+      "opacity": "1",
+      "transition": "opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1)",
+      "animation": "3.5s ease-in-out infinite alternate cta-sweep"
+    },
+    "recordCardOuter": {
+      "selector": "#ocg .rounded-3xl.p-px",
+      "text": "Chulbuli Dixit\n\n@chulbulidixit\n\n✓ Machine-Sourced\n✓ Machine-Visible\n✓ Creator-Controlled\nAI Usage\nConditional\nName\nAllowed\nImage\nConditional\nLikeness\nProhibited\nVoice\nConditional\nMovement\nConditional\n",
+      "box": [
+        340,
+        497
+      ],
+      "background-image": "linear-gradient(160deg, rgba(151, 71, 255, 0.7), rgba(222, 0, 117, 0.5) 55%, rgba(151, 71, 255, 0.6))",
+      "border-radius": "24px",
+      "padding": "1px"
+    },
+    "recordCardInner": {
+      "selector": "#ocg .rounded-\\[23px\\]",
+      "text": "Chulbuli Dixit\n\n@chulbulidixit\n\n✓ Machine-Sourced\n✓ Machine-Visible\n✓ Creator-Controlled\nAI Usage\nConditional\nName\nAllowed\nImage\nConditional\nLikeness\nProhibited\nVoice\nConditional\nMovement\nConditional\n",
+      "box": [
+        338,
+        495
+      ],
+      "background-color": "rgb(50, 25, 53)",
+      "border-radius": "23px",
+      "padding": "24px",
+      "width": "338px"
+    },
+    "stancePill": {
+      "selector": "#ocg span.w-\\[108px\\]",
+      "text": "Conditional",
+      "box": [
+        108,
+        26
+      ],
+      "color": "rgb(229, 182, 7)",
+      "border": "1px solid rgb(229, 182, 7)",
+      "background-color": "rgba(229, 182, 7, 0.08)",
+      "border-radius": "9999px",
+      "font-size": "12px",
+      "padding": "3px 0px",
+      "width": "108px"
+    },
+    "socialHover": {
+      "selector": "footer a[aria-label=\"X\"]",
+      "text": "",
+      "box": [
+        24,
+        24
+      ],
+      "color": "rgb(255, 255, 255)"
+    },
+    "footerLink": {
+      "selector": "footer a.text-sm",
+      "text": "Open Creator Graph",
+      "box": [
+        123,
+        20
+      ],
+      "color": "rgba(255, 255, 255, 0.5)",
+      "font-size": "14px",
+      "line-height": "20px",
+      "font-weight": "400"
+    },
+    "footerHeading": {
+      "selector": "footer p.font-medium",
+      "text": "Compliant with",
+      "box": [
+        494,
+        20
+      ],
+      "color": "rgb(255, 255, 255)",
+      "font-size": "14px",
+      "line-height": "20px",
+      "font-weight": "500"
+    },
+    "footerInner": {
+      "selector": "footer > div",
+      "text": "Compliant with\n\nProducts\n\nOpen Creator Graph\nCreator Payments\n\nCompany\n\nAbout Us\nContact Us\nBlogs\n\nTerms & Policies\n\nPrivacy Policy\nTerms of Services\nRefund Policy\nCookie Policy\n\n© Sparkonomy Pte. Ltd",
+      "box": [
+        1344,
+        346
+      ],
+      "max-width": "1344px",
+      "padding": "56px 0px 0px",
+      "border-top": "1px solid rgba(255, 255, 255, 0.1)",
+      "grid-template-columns": "none"
+    },
+    "footerGrid": {
+      "selector": "footer > div > div",
+      "text": "Compliant with\n\nProducts\n\nOpen Creator Graph\nCreator Payments\n\nCompany\n\nAbout Us\nContact Us\nBlogs\n\nTerms & Policies\n\nPrivacy Policy\nTerms of Services\nRefund Policy\nCookie Policy",
+      "box": [
+        1344,
+        140
+      ],
+      "display": "grid",
+      "grid-template-columns": "494.25px 308.906px 308.906px 111.938px",
+      "gap": "40px"
+    }
+  }
+}

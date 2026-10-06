@@ -1,0 +1,1092 @@
+{
+  "url": "https://www.sparkonomy.com/",
+  "notes": "Assets were downloaded from their **original source URLs** (for `/_next/image?url=…` optimiser URLs the decoded `url` path was fetched, e.g. `/logos/Meta_White.png`, so files are the untouched originals rather than resized AVIFs). Inline SVGs were serialised from the DOM. Naming and categories are set in `data/raw/asset-overrides.json`.\n\n- **logos/** — brand wordmarks, favicons, OCG mark, partner logos, compliance badges, CookieYes wordmark (third-party).\n- **images/** — Creator avatar (demo persona) and the Open Graph share image.\n- **icons/** — hamburger PNG, chevron, verified tick, 5 social icons, CookieYes close icon (third-party).\n- **illustrations/** — \"CERTIFIED\" stamp graphic.\n- **videos/** — none: the homepage has no `<video>`, Lottie or GIF. All motion is CSS/JS/WebGL.\n- **backgrounds/** — none as files: the background is a real-time WebGL simulation (no image) plus CSS gradients (vignette, header scrim, card glows), documented in the Colour and Animation chapters.\n\nExcluded: Google Tag Manager tracking pixel (`/td?id=GTM-…`) and analytics beacons.",
+  "countsByCategory": {
+    "logos": 16,
+    "images": 2,
+    "icons": 9,
+    "illustrations": 1,
+    "videos": 0,
+    "backgrounds": 0
+  },
+  "assets": [
+    {
+      "asset": "logo-01",
+      "label": "Sparkonomy wordmark (header, white)",
+      "file": "assets/logos/logo-sparkonomy-wordmark-white.png",
+      "category": "logos",
+      "kind": "img",
+      "originalUrl": "https://www.sparkonomy.com/_next/image?url=%2Flogos%2Flogo_header_white.png&w=2048&q=75",
+      "downloadedFrom": "https://www.sparkonomy.com/logos/logo_header_white.png",
+      "fileType": "png",
+      "bytes": 13444,
+      "intrinsicDimensions": [
+        991,
+        188
+      ],
+      "naturalDimensions": [
+        991,
+        188
+      ],
+      "renderedDimensions": [
+        137,
+        26
+      ],
+      "alt": [
+        "Sparkonomy"
+      ],
+      "sections": [
+        "1 Header / mobile menu"
+      ],
+      "viewports": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ],
+      "domPath": "html.h-full > body.roboto_51c32070-module__YpxGXa__className.min-h-\\[100dvh\\] > div.min-h-\\[100dvh\\].bg-black:nth-of-type(2) > header.pointer-events-none.fixed > div.relative.mx-auto:nth-of-type(2) > a.pointer-events-auto.shrink-0 > img.h-\\[24px\\].w-auto",
+      "meta": null,
+      "error": null,
+      "captureSections": [
+        "3:header",
+        "2:div"
+      ],
+      "purpose": "Primary brand wordmark in the fixed header (links to /). Rendered 137×26 desktop, 24px tall mobile."
+    },
+    {
+      "asset": "icon-01",
+      "label": "Hamburger menu icon (mobile header)",
+      "file": "assets/icons/icon-hamburger-menu.png",
+      "category": "icons",
+      "kind": "img",
+      "originalUrl": "https://www.sparkonomy.com/_next/image?url=%2Flogos%2Fhamburger_icon.png&w=256&q=75",
+      "downloadedFrom": "https://www.sparkonomy.com/logos/hamburger_icon.png",
+      "fileType": "png",
+      "bytes": 153,
+      "intrinsicDimensions": [
+        92,
+        60
+      ],
+      "naturalDimensions": [
+        0,
+        0
+      ],
+      "renderedDimensions": [
+        0,
+        0
+      ],
+      "alt": [],
+      "sections": [
+        "1 Header / mobile menu (<768px)"
+      ],
+      "viewports": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ],
+      "domPath": "html.h-full > body.roboto_51c32070-module__YpxGXa__className.min-h-\\[100dvh\\] > div.min-h-\\[100dvh\\].bg-black:nth-of-type(2) > header.pointer-events-none.fixed > div.relative.mx-auto:nth-of-type(2) > button.pointer-events-auto.-mr-1 > img.h-auto.w-6",
+      "meta": null,
+      "error": null,
+      "captureSections": [
+        "3:header",
+        "2:div"
+      ],
+      "purpose": "Mobile (<768px) menu toggle icon inside the 32×32 header button."
+    },
+    {
+      "asset": "logo-02",
+      "label": "Partner logo: Built with Meta",
+      "file": "assets/logos/logo-partner-meta-built-with-meta.png",
+      "category": "logos",
+      "kind": "img",
+      "originalUrl": "https://www.sparkonomy.com/_next/image?url=%2Flogos%2FMeta_White.png&w=256&q=75",
+      "downloadedFrom": "https://www.sparkonomy.com/logos/Meta_White.png",
+      "fileType": "png",
+      "bytes": 20995,
+      "intrinsicDimensions": [
+        452,
+        160
+      ],
+      "naturalDimensions": [
+        128,
+        45
+      ],
+      "renderedDimensions": [
+        0,
+        0
+      ],
+      "alt": [
+        "Built with Meta"
+      ],
+      "sections": [
+        "2 Hero (marquee)",
+        "1 Header / mobile menu (menu)"
+      ],
+      "viewports": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ],
+      "domPath": "div#story-menu > div.mt-10.text-center:nth-of-type(1) > ul.mt-3.flex > li:nth-of-type(1) > img.h-\\[26px\\].w-auto",
+      "meta": null,
+      "error": null,
+      "captureSections": [
+        "3:header",
+        "4:main",
+        "2:div"
+      ],
+      "purpose": "\"Built with Meta\" affiliation logo — hero marquee (36px tall, opacity .75) and mobile menu \"Built with\" row."
+    },
+    {
+      "asset": "logo-03",
+      "label": "Partner logo: Developed with YouTube",
+      "file": "assets/logos/logo-partner-developed-with-youtube.png",
+      "category": "logos",
+      "kind": "img",
+      "originalUrl": "https://www.sparkonomy.com/_next/image?url=%2Flogos%2FYt_White.png&w=256&q=75",
+      "downloadedFrom": "https://www.sparkonomy.com/logos/Yt_White.png",
+      "fileType": "png",
+      "bytes": 21015,
+      "intrinsicDimensions": [
+        420,
+        160
+      ],
+      "naturalDimensions": [
+        128,
+        49
+      ],
+      "renderedDimensions": [
+        0,
+        0
+      ],
+      "alt": [
+        "Developed with YouTube"
+      ],
+      "sections": [
+        "2 Hero (marquee)",
+        "1 Header / mobile menu (menu)"
+      ],
+      "viewports": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ],
+      "domPath": "div#story-menu > div.mt-10.text-center:nth-of-type(1) > ul.mt-3.flex > li:nth-of-type(2) > img.h-\\[26px\\].w-auto",
+      "meta": null,
+      "error": null,
+      "captureSections": [
+        "3:header",
+        "4:main",
+        "2:div"
+      ],
+      "purpose": "\"Developed with YouTube\" affiliation logo — hero marquee and mobile menu."
+    },
+    {
+      "asset": "logo-04",
+      "label": "Partner logo: Google for Startups",
+      "file": "assets/logos/logo-partner-google-for-startups.png",
+      "category": "logos",
+      "kind": "img",
+      "originalUrl": "https://www.sparkonomy.com/_next/image?url=%2Flogos%2FGoogle_White.png&w=256&q=75",
+      "downloadedFrom": "https://www.sparkonomy.com/logos/Google_White.png",
+      "fileType": "png",
+      "bytes": 18532,
+      "intrinsicDimensions": [
+        312,
+        160
+      ],
+      "naturalDimensions": [
+        128,
+        66
+      ],
+      "renderedDimensions": [
+        0,
+        0
+      ],
+      "alt": [
+        "Google for Startups"
+      ],
+      "sections": [
+        "2 Hero (marquee)",
+        "1 Header / mobile menu (menu)"
+      ],
+      "viewports": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ],
+      "domPath": "div#story-menu > div.mt-10.text-center:nth-of-type(1) > ul.mt-3.flex > li:nth-of-type(3) > img.h-\\[26px\\].w-auto",
+      "meta": null,
+      "error": null,
+      "captureSections": [
+        "3:header",
+        "4:main",
+        "2:div"
+      ],
+      "purpose": "\"Google for Startups\" programme logo — hero marquee and mobile menu."
+    },
+    {
+      "asset": "logo-05",
+      "label": "Partner logo: Gemini Early Access Program",
+      "file": "assets/logos/logo-partner-gemini-early-access.png",
+      "category": "logos",
+      "kind": "img",
+      "originalUrl": "https://www.sparkonomy.com/_next/image?url=%2Flogos%2FGemini_White.png&w=256&q=75",
+      "downloadedFrom": "https://www.sparkonomy.com/logos/Gemini_White.png",
+      "fileType": "png",
+      "bytes": 25880,
+      "intrinsicDimensions": [
+        452,
+        160
+      ],
+      "naturalDimensions": [
+        128,
+        45
+      ],
+      "renderedDimensions": [
+        0,
+        0
+      ],
+      "alt": [
+        "Gemini Early Access Program"
+      ],
+      "sections": [
+        "2 Hero (marquee)",
+        "1 Header / mobile menu (menu)"
+      ],
+      "viewports": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ],
+      "domPath": "div#story-menu > div.mt-10.text-center:nth-of-type(1) > ul.mt-3.flex > li:nth-of-type(4) > img.h-\\[26px\\].w-auto",
+      "meta": null,
+      "error": null,
+      "captureSections": [
+        "3:header",
+        "4:main",
+        "2:div"
+      ],
+      "purpose": "\"Gemini Early Access Program\" logo — hero marquee and mobile menu."
+    },
+    {
+      "asset": "logo-06",
+      "label": "Compliance badge: DPDP",
+      "file": "assets/logos/logo-compliance-dpdp.png",
+      "category": "logos",
+      "kind": "img",
+      "originalUrl": "https://www.sparkonomy.com/_next/image?url=%2Flogos%2FDPDP_White.png&w=96&q=75",
+      "downloadedFrom": "https://www.sparkonomy.com/logos/DPDP_White.png",
+      "fileType": "png",
+      "bytes": 18339,
+      "intrinsicDimensions": [
+        160,
+        160
+      ],
+      "naturalDimensions": [
+        48,
+        48
+      ],
+      "renderedDimensions": [
+        0,
+        0
+      ],
+      "alt": [
+        "DPDP"
+      ],
+      "sections": [
+        "11 Footer",
+        "1 Header / mobile menu (menu)"
+      ],
+      "viewports": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ],
+      "domPath": "div#story-menu > div.mt-8:nth-of-type(2) > ul.mt-3.flex > li:nth-of-type(1) > img.h-\\[22px\\].w-auto",
+      "meta": null,
+      "error": null,
+      "captureSections": [
+        "3:header",
+        "5:footer",
+        "2:div"
+      ],
+      "purpose": "DPDP (India) compliance seal — footer \"Compliant with\" (36×36, opacity .55) and mobile menu."
+    },
+    {
+      "asset": "logo-07",
+      "label": "Compliance badge: CCPA",
+      "file": "assets/logos/logo-compliance-ccpa.png",
+      "category": "logos",
+      "kind": "img",
+      "originalUrl": "https://www.sparkonomy.com/_next/image?url=%2Flogos%2FCCPA_White.png&w=96&q=75",
+      "downloadedFrom": "https://www.sparkonomy.com/logos/CCPA_White.png",
+      "fileType": "png",
+      "bytes": 17973,
+      "intrinsicDimensions": [
+        160,
+        160
+      ],
+      "naturalDimensions": [
+        48,
+        48
+      ],
+      "renderedDimensions": [
+        0,
+        0
+      ],
+      "alt": [
+        "CCPA"
+      ],
+      "sections": [
+        "11 Footer",
+        "1 Header / mobile menu (menu)"
+      ],
+      "viewports": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ],
+      "domPath": "div#story-menu > div.mt-8:nth-of-type(2) > ul.mt-3.flex > li:nth-of-type(2) > img.h-\\[22px\\].w-auto",
+      "meta": null,
+      "error": null,
+      "captureSections": [
+        "3:header",
+        "5:footer",
+        "2:div"
+      ],
+      "purpose": "CCPA (California) compliance seal — footer and mobile menu."
+    },
+    {
+      "asset": "logo-08",
+      "label": "Compliance badge: PDPA",
+      "file": "assets/logos/logo-compliance-pdpa.png",
+      "category": "logos",
+      "kind": "img",
+      "originalUrl": "https://www.sparkonomy.com/_next/image?url=%2Flogos%2FPDPA-White.png&w=96&q=75",
+      "downloadedFrom": "https://www.sparkonomy.com/logos/PDPA-White.png",
+      "fileType": "png",
+      "bytes": 179583,
+      "intrinsicDimensions": [
+        2048,
+        2048
+      ],
+      "naturalDimensions": [
+        48,
+        48
+      ],
+      "renderedDimensions": [
+        0,
+        0
+      ],
+      "alt": [
+        "PDPA"
+      ],
+      "sections": [
+        "11 Footer",
+        "1 Header / mobile menu (menu)"
+      ],
+      "viewports": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ],
+      "domPath": "div#story-menu > div.mt-8:nth-of-type(2) > ul.mt-3.flex > li:nth-of-type(3) > img.h-\\[22px\\].w-auto",
+      "meta": null,
+      "error": null,
+      "captureSections": [
+        "3:header",
+        "5:footer",
+        "2:div"
+      ],
+      "purpose": "PDPA (Singapore) compliance seal — footer and mobile menu (original is 2048×2048)."
+    },
+    {
+      "asset": "logo-09",
+      "label": "Compliance badge: GDPR",
+      "file": "assets/logos/logo-compliance-gdpr.png",
+      "category": "logos",
+      "kind": "img",
+      "originalUrl": "https://www.sparkonomy.com/_next/image?url=%2Flogos%2FGDPR_White.png&w=96&q=75",
+      "downloadedFrom": "https://www.sparkonomy.com/logos/GDPR_White.png",
+      "fileType": "png",
+      "bytes": 19087,
+      "intrinsicDimensions": [
+        160,
+        160
+      ],
+      "naturalDimensions": [
+        48,
+        48
+      ],
+      "renderedDimensions": [
+        0,
+        0
+      ],
+      "alt": [
+        "GDPR"
+      ],
+      "sections": [
+        "11 Footer",
+        "1 Header / mobile menu (menu)"
+      ],
+      "viewports": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ],
+      "domPath": "div#story-menu > div.mt-8:nth-of-type(2) > ul.mt-3.flex > li:nth-of-type(4) > img.h-\\[22px\\].w-auto",
+      "meta": null,
+      "error": null,
+      "captureSections": [
+        "3:header",
+        "5:footer",
+        "2:div"
+      ],
+      "purpose": "GDPR (EU) compliance seal — footer and mobile menu."
+    },
+    {
+      "asset": "logo-10",
+      "label": "Open Creator Graph mark (hero launch card)",
+      "file": "assets/logos/logo-open-creator-graph-mark.webp",
+      "category": "logos",
+      "kind": "img",
+      "originalUrl": "https://www.sparkonomy.com/logos/ocg-mark.webp",
+      "downloadedFrom": "https://www.sparkonomy.com/logos/ocg-mark.webp",
+      "fileType": "webp",
+      "bytes": 23484,
+      "intrinsicDimensions": [
+        160,
+        160
+      ],
+      "naturalDimensions": [
+        160,
+        160
+      ],
+      "renderedDimensions": [
+        80,
+        80
+      ],
+      "alt": [],
+      "sections": [
+        "2 Hero (launch card)"
+      ],
+      "viewports": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ],
+      "domPath": "section#opening > div.grid.w-full:nth-of-type(2) > div.flex.min-h-0 > div.relative.mt-8:nth-of-type(1) > img.mx-auto.size-\\[72px\\]",
+      "meta": null,
+      "error": null,
+      "captureSections": [
+        "4:main",
+        "2:div"
+      ],
+      "purpose": "Open Creator Graph product mark at the top of the hero launch card (80×80 desktop, 72×72 mobile)."
+    },
+    {
+      "asset": "image-01",
+      "label": "Example Creator avatar (Creator Record card)",
+      "file": "assets/images/image-creator-avatar-chulbuli-dixit.png",
+      "category": "images",
+      "kind": "img",
+      "originalUrl": "https://www.sparkonomy.com/_next/image?url=%2FCD.png&w=96&q=75",
+      "downloadedFrom": "https://www.sparkonomy.com/CD.png",
+      "fileType": "png",
+      "bytes": 55919,
+      "intrinsicDimensions": [
+        183,
+        181
+      ],
+      "naturalDimensions": [
+        48,
+        47
+      ],
+      "renderedDimensions": [
+        40,
+        40
+      ],
+      "alt": [],
+      "sections": [
+        "9 Creator Record"
+      ],
+      "viewports": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ],
+      "domPath": "div:nth-of-type(1) > div.md\\:grid.md\\:grid-cols-\\[21\\.25rem_1fr\\] > div:nth-of-type(1) > div.relative.mx-auto > div.relative.rounded-3xl:nth-of-type(2) > div.relative.rounded-\\[23px\\] > div.flex.items-center:nth-of-type(1) > img.size-10.shrink-0",
+      "meta": null,
+      "error": null,
+      "captureSections": [
+        "4:main",
+        "2:div"
+      ],
+      "purpose": "Avatar of the example Creator \"Chulbuli Dixit\" on the Creator Record card (40×40 circle)."
+    },
+    {
+      "asset": "illustration-01",
+      "label": "\"Certified\" rubber-stamp graphic (Creator Record card)",
+      "file": "assets/illustrations/illustration-certified-stamp.png",
+      "category": "illustrations",
+      "kind": "img",
+      "originalUrl": "https://www.sparkonomy.com/_next/image?url=%2FCertified-1.png&w=256&q=75",
+      "downloadedFrom": "https://www.sparkonomy.com/Certified-1.png",
+      "fileType": "png",
+      "bytes": 677213,
+      "intrinsicDimensions": [
+        3238,
+        2018
+      ],
+      "naturalDimensions": [
+        128,
+        80
+      ],
+      "renderedDimensions": [
+        112,
+        70
+      ],
+      "alt": [
+        "Certified"
+      ],
+      "sections": [
+        "9 Creator Record"
+      ],
+      "viewports": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ],
+      "domPath": "div:nth-of-type(1) > div.md\\:grid.md\\:grid-cols-\\[21\\.25rem_1fr\\] > div:nth-of-type(1) > div.relative.mx-auto > div.relative.rounded-3xl:nth-of-type(2) > div.relative.rounded-\\[23px\\] > div.pointer-events-none.absolute:nth-of-type(6) > img.h-auto.w-28",
+      "meta": null,
+      "error": null,
+      "captureSections": [
+        "4:main",
+        "2:div"
+      ],
+      "purpose": "\"CERTIFIED\" rubber-stamp graphic overlapping the bottom-left of the Creator Record card (112×70); fades in after the card expands."
+    },
+    {
+      "asset": "icon-02",
+      "label": "Chevron under READ OUR STORY",
+      "file": "assets/icons/icon-chevron-down-read-our-story.svg",
+      "category": "icons",
+      "kind": "inline-svg",
+      "originalUrl": "inline <svg> in DOM",
+      "downloadedFrom": null,
+      "fileType": "svg",
+      "bytes": 240,
+      "intrinsicDimensions": [
+        14,
+        8
+      ],
+      "naturalDimensions": null,
+      "renderedDimensions": [
+        14,
+        8
+      ],
+      "alt": [],
+      "sections": [
+        "2 Hero"
+      ],
+      "viewports": [
+        "desktop"
+      ],
+      "domPath": "section#opening > div.grid.w-full:nth-of-type(2) > div.flex.min-h-0 > p.mt-10.text-\\[12px\\] > button.pointer-events-auto.flex > svg.pointer-events-none",
+      "meta": null,
+      "error": null,
+      "captureSections": [
+        "4:main"
+      ],
+      "purpose": "Down chevron under the \"READ OUR STORY\" scroll cue."
+    },
+    {
+      "asset": "icon-03",
+      "label": "Verified tick next to Creator name",
+      "file": "assets/icons/icon-verified-badge.svg",
+      "category": "icons",
+      "kind": "inline-svg",
+      "originalUrl": "inline <svg> in DOM",
+      "downloadedFrom": null,
+      "fileType": "svg",
+      "bytes": 333,
+      "intrinsicDimensions": [
+        16,
+        16
+      ],
+      "naturalDimensions": null,
+      "renderedDimensions": [
+        16,
+        16
+      ],
+      "alt": [],
+      "sections": [
+        "9 Creator Record"
+      ],
+      "viewports": [
+        "desktop"
+      ],
+      "domPath": "div:nth-of-type(1) > div.relative.mx-auto > div.relative.rounded-3xl:nth-of-type(2) > div.relative.rounded-\\[23px\\] > div.flex.items-center:nth-of-type(1) > div.min-w-0.flex-1 > p.flex.items-center:nth-of-type(1) > svg.pointer-events-none.shrink-0",
+      "meta": null,
+      "error": null,
+      "captureSections": [
+        "4:main"
+      ],
+      "purpose": "Blue verified tick after the Creator name on the record card."
+    },
+    {
+      "asset": "logo-11",
+      "label": "Sparkonomy wordmark (footer, grey/purple)",
+      "file": "assets/logos/logo-sparkonomy-wordmark-footer.png",
+      "category": "logos",
+      "kind": "img",
+      "originalUrl": "https://www.sparkonomy.com/_next/image?url=%2Flogos%2Flogo_header_gray.png&w=1080&q=75",
+      "downloadedFrom": "https://www.sparkonomy.com/logos/logo_header_gray.png",
+      "fileType": "png",
+      "bytes": 10763,
+      "intrinsicDimensions": [
+        523,
+        96
+      ],
+      "naturalDimensions": [
+        523,
+        96
+      ],
+      "renderedDimensions": [
+        131,
+        24
+      ],
+      "alt": [
+        "Sparkonomy"
+      ],
+      "sections": [
+        "11 Footer"
+      ],
+      "viewports": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ],
+      "domPath": "html.h-full > body.roboto_51c32070-module__YpxGXa__className.min-h-\\[100dvh\\] > div.min-h-\\[100dvh\\].bg-black:nth-of-type(2) > footer.relative.z-10 > div.mx-auto.max-w-\\[84rem\\] > div.flex.flex-col:nth-of-type(1) > div.flex.flex-col:nth-of-type(1) > img.h-6.w-auto",
+      "meta": null,
+      "error": null,
+      "captureSections": [
+        "5:footer",
+        "2:div"
+      ],
+      "purpose": "Footer wordmark (grey with purple paw-print \"o\"), 131×24."
+    },
+    {
+      "asset": "icon-04",
+      "label": "Social icon: X",
+      "file": "assets/icons/icon-social-x.svg",
+      "category": "icons",
+      "kind": "inline-svg",
+      "originalUrl": "inline <svg> in DOM",
+      "downloadedFrom": null,
+      "fileType": "svg",
+      "bytes": 313,
+      "intrinsicDimensions": [
+        24,
+        24
+      ],
+      "naturalDimensions": null,
+      "renderedDimensions": [
+        24,
+        24
+      ],
+      "alt": [],
+      "sections": [
+        "11 Footer"
+      ],
+      "viewports": [
+        "desktop"
+      ],
+      "domPath": "div.min-h-\\[100dvh\\].bg-black:nth-of-type(2) > footer.relative.z-10 > div.mx-auto.max-w-\\[84rem\\] > div.mt-6.flex:nth-of-type(3) > ul.flex.items-center > li:nth-of-type(1) > a.block.text-white\\/50 > svg.pointer-events-none.size-6",
+      "meta": null,
+      "error": null,
+      "captureSections": [
+        "5:footer"
+      ],
+      "purpose": "Footer social link to https://x.com/SparkonomySays."
+    },
+    {
+      "asset": "icon-05",
+      "label": "Social icon: Instagram",
+      "file": "assets/icons/icon-social-instagram.svg",
+      "category": "icons",
+      "kind": "inline-svg",
+      "originalUrl": "inline <svg> in DOM",
+      "downloadedFrom": null,
+      "fileType": "svg",
+      "bytes": 1793,
+      "intrinsicDimensions": [
+        24,
+        24
+      ],
+      "naturalDimensions": null,
+      "renderedDimensions": [
+        24,
+        24
+      ],
+      "alt": [],
+      "sections": [
+        "11 Footer"
+      ],
+      "viewports": [
+        "desktop"
+      ],
+      "domPath": "div.min-h-\\[100dvh\\].bg-black:nth-of-type(2) > footer.relative.z-10 > div.mx-auto.max-w-\\[84rem\\] > div.mt-6.flex:nth-of-type(3) > ul.flex.items-center > li:nth-of-type(2) > a.block.text-white\\/50 > svg.pointer-events-none.size-6",
+      "meta": null,
+      "error": null,
+      "captureSections": [
+        "5:footer"
+      ],
+      "purpose": "Footer social link to https://www.instagram.com/sparkonomy.official/."
+    },
+    {
+      "asset": "icon-06",
+      "label": "Social icon: YouTube",
+      "file": "assets/icons/icon-social-youtube.svg",
+      "category": "icons",
+      "kind": "inline-svg",
+      "originalUrl": "inline <svg> in DOM",
+      "downloadedFrom": null,
+      "fileType": "svg",
+      "bytes": 534,
+      "intrinsicDimensions": [
+        24,
+        24
+      ],
+      "naturalDimensions": null,
+      "renderedDimensions": [
+        24,
+        24
+      ],
+      "alt": [],
+      "sections": [
+        "11 Footer"
+      ],
+      "viewports": [
+        "desktop"
+      ],
+      "domPath": "div.min-h-\\[100dvh\\].bg-black:nth-of-type(2) > footer.relative.z-10 > div.mx-auto.max-w-\\[84rem\\] > div.mt-6.flex:nth-of-type(3) > ul.flex.items-center > li:nth-of-type(3) > a.block.text-white\\/50 > svg.pointer-events-none.size-6",
+      "meta": null,
+      "error": null,
+      "captureSections": [
+        "5:footer"
+      ],
+      "purpose": "Footer social link to https://www.youtube.com/@Sparkonomy.official."
+    },
+    {
+      "asset": "icon-07",
+      "label": "Social icon: LinkedIn",
+      "file": "assets/icons/icon-social-linkedin.svg",
+      "category": "icons",
+      "kind": "inline-svg",
+      "originalUrl": "inline <svg> in DOM",
+      "downloadedFrom": null,
+      "fileType": "svg",
+      "bytes": 656,
+      "intrinsicDimensions": [
+        24,
+        24
+      ],
+      "naturalDimensions": null,
+      "renderedDimensions": [
+        24,
+        24
+      ],
+      "alt": [],
+      "sections": [
+        "11 Footer"
+      ],
+      "viewports": [
+        "desktop"
+      ],
+      "domPath": "div.min-h-\\[100dvh\\].bg-black:nth-of-type(2) > footer.relative.z-10 > div.mx-auto.max-w-\\[84rem\\] > div.mt-6.flex:nth-of-type(3) > ul.flex.items-center > li:nth-of-type(4) > a.block.text-white\\/50 > svg.pointer-events-none.size-6",
+      "meta": null,
+      "error": null,
+      "captureSections": [
+        "5:footer"
+      ],
+      "purpose": "Footer social link to https://www.linkedin.com/company/sparkonomy/."
+    },
+    {
+      "asset": "icon-08",
+      "label": "Social icon: Reddit",
+      "file": "assets/icons/icon-social-reddit.svg",
+      "category": "icons",
+      "kind": "inline-svg",
+      "originalUrl": "inline <svg> in DOM",
+      "downloadedFrom": null,
+      "fileType": "svg",
+      "bytes": 1239,
+      "intrinsicDimensions": [
+        24,
+        24
+      ],
+      "naturalDimensions": null,
+      "renderedDimensions": [
+        24,
+        24
+      ],
+      "alt": [],
+      "sections": [
+        "11 Footer"
+      ],
+      "viewports": [
+        "desktop"
+      ],
+      "domPath": "div.min-h-\\[100dvh\\].bg-black:nth-of-type(2) > footer.relative.z-10 > div.mx-auto.max-w-\\[84rem\\] > div.mt-6.flex:nth-of-type(3) > ul.flex.items-center > li:nth-of-type(5) > a.block.text-white\\/50 > svg.pointer-events-none.size-6",
+      "meta": null,
+      "error": null,
+      "captureSections": [
+        "5:footer"
+      ],
+      "purpose": "Footer social link to https://www.reddit.com/user/Sparkonomy/."
+    },
+    {
+      "asset": "logo-12",
+      "label": "Favicon 192×192",
+      "file": "assets/logos/favicon-192x192.png",
+      "category": "logos",
+      "kind": "favicon",
+      "originalUrl": "https://www.sparkonomy.com/home-192x192Px.png",
+      "downloadedFrom": "https://www.sparkonomy.com/home-192x192Px.png",
+      "fileType": "png",
+      "bytes": 19981,
+      "intrinsicDimensions": [
+        192,
+        192
+      ],
+      "naturalDimensions": null,
+      "renderedDimensions": null,
+      "alt": [
+        "icon"
+      ],
+      "sections": [
+        "<head>"
+      ],
+      "viewports": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ],
+      "domPath": null,
+      "meta": null,
+      "error": null,
+      "captureSections": [
+        "head"
+      ],
+      "purpose": "Browser favicon (`<link rel=\"icon\" sizes=\"192x192\">`)."
+    },
+    {
+      "asset": "logo-13",
+      "label": "Favicon 512×512",
+      "file": "assets/logos/favicon-512x512.png",
+      "category": "logos",
+      "kind": "favicon",
+      "originalUrl": "https://www.sparkonomy.com/home-512x512Px.png",
+      "downloadedFrom": "https://www.sparkonomy.com/home-512x512Px.png",
+      "fileType": "png",
+      "bytes": 100414,
+      "intrinsicDimensions": [
+        512,
+        512
+      ],
+      "naturalDimensions": null,
+      "renderedDimensions": null,
+      "alt": [
+        "icon"
+      ],
+      "sections": [
+        "<head>"
+      ],
+      "viewports": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ],
+      "domPath": null,
+      "meta": null,
+      "error": null,
+      "captureSections": [
+        "head"
+      ],
+      "purpose": "Large favicon / PWA-size icon (`<link rel=\"icon\" sizes=\"512x512\">`)."
+    },
+    {
+      "asset": "logo-14",
+      "label": "Apple touch icon 180×180",
+      "file": "assets/logos/apple-touch-icon-180x180.png",
+      "category": "logos",
+      "kind": "favicon",
+      "originalUrl": "https://www.sparkonomy.com/home-180x180Px.png",
+      "downloadedFrom": "https://www.sparkonomy.com/home-180x180Px.png",
+      "fileType": "png",
+      "bytes": 18152,
+      "intrinsicDimensions": [
+        180,
+        180
+      ],
+      "naturalDimensions": null,
+      "renderedDimensions": null,
+      "alt": [
+        "apple-touch-icon"
+      ],
+      "sections": [
+        "<head>"
+      ],
+      "viewports": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ],
+      "domPath": null,
+      "meta": null,
+      "error": null,
+      "captureSections": [
+        "head"
+      ],
+      "purpose": "iOS home-screen icon (`apple-touch-icon`)."
+    },
+    {
+      "asset": "image-02",
+      "label": "Open Graph / Twitter share image",
+      "file": "assets/images/image-og-home-v2.png",
+      "category": "images",
+      "kind": "social-image",
+      "originalUrl": "https://www.sparkonomy.com/og-home-v2.png",
+      "downloadedFrom": "https://www.sparkonomy.com/og-home-v2.png",
+      "fileType": "png",
+      "bytes": 538092,
+      "intrinsicDimensions": [
+        1200,
+        630
+      ],
+      "naturalDimensions": null,
+      "renderedDimensions": null,
+      "alt": [
+        "og:image",
+        "twitter:image"
+      ],
+      "sections": [
+        "<head> (og:image, twitter:image)"
+      ],
+      "viewports": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ],
+      "domPath": null,
+      "meta": null,
+      "error": null,
+      "captureSections": [
+        "head"
+      ],
+      "purpose": "Social share image for og:image and twitter:image (1200×630, alt \"Sparkonomy - AI Platform for Creators & Influencers\")."
+    },
+    {
+      "asset": "icon-09",
+      "label": "Third-party: CookieYes banner close icon",
+      "file": "assets/icons/icon-thirdparty-cookieyes-close.svg",
+      "category": "icons",
+      "kind": "network-image",
+      "originalUrl": "https://cdn-cookieyes.com/assets/images/close.svg",
+      "downloadedFrom": "https://cdn-cookieyes.com/assets/images/close.svg",
+      "fileType": "svg",
+      "bytes": 1345,
+      "intrinsicDimensions": [
+        10,
+        10
+      ],
+      "naturalDimensions": null,
+      "renderedDimensions": null,
+      "alt": [],
+      "sections": [
+        "1 Cookie banner (CookieYes)"
+      ],
+      "viewports": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ],
+      "domPath": null,
+      "meta": null,
+      "error": null,
+      "captureSections": [
+        "network-only",
+        "1:div"
+      ],
+      "purpose": "Third-party: close (×) icon of the CookieYes banner."
+    },
+    {
+      "asset": "logo-15",
+      "label": "Third-party: CookieYes wordmark (\"Powered by\" in cookie banner)",
+      "file": "assets/logos/logo-thirdparty-cookieyes.svg",
+      "category": "logos",
+      "kind": "inline-svg",
+      "originalUrl": "inline <svg> in DOM",
+      "downloadedFrom": null,
+      "fileType": "svg",
+      "bytes": 3917,
+      "intrinsicDimensions": [
+        78,
+        13
+      ],
+      "naturalDimensions": null,
+      "renderedDimensions": [
+        78,
+        13
+      ],
+      "alt": [],
+      "sections": [
+        "1 Cookie banner (CookieYes)"
+      ],
+      "viewports": [
+        "tablet"
+      ],
+      "domPath": "body.roboto_51c32070-module__YpxGXa__className.min-h-\\[100dvh\\] > div.cky-consent-container.cky-banner-top:nth-of-type(2) > div.cky-consent-bar > div:nth-of-type(2) > div > div > a > svg",
+      "meta": null,
+      "error": null,
+      "captureSections": [
+        "1:div"
+      ],
+      "purpose": "Third-party: CookieYes wordmark in the banner's \"Powered by\" line."
+    },
+    {
+      "asset": "logo-16",
+      "label": "Organization logo referenced by JSON-LD (not rendered)",
+      "file": "assets/logos/logo-sparkonomy-schema-512.png",
+      "category": "logos",
+      "kind": "json-ld-logo",
+      "originalUrl": "https://www.sparkonomy.com/sparkonomy.png",
+      "downloadedFrom": "https://www.sparkonomy.com/sparkonomy.png",
+      "fileType": "png",
+      "bytes": 164443,
+      "intrinsicDimensions": [
+        663,
+        501
+      ],
+      "naturalDimensions": null,
+      "renderedDimensions": null,
+      "alt": [
+        "Organization logo (JSON-LD)"
+      ],
+      "sections": [
+        "<head> JSON-LD only"
+      ],
+      "viewports": [
+        "desktop"
+      ],
+      "domPath": null,
+      "meta": null,
+      "error": null,
+      "captureSections": [
+        "head (JSON-LD Organization.logo)"
+      ],
+      "purpose": "Organization logo referenced only by JSON-LD (not rendered); actual size 663×501 although declared 512×512."
+    }
+  ]
+}

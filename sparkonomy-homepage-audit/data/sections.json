@@ -1,0 +1,1391 @@
+{
+  "url": "https://www.sparkonomy.com/",
+  "capturedAt": "2026-10-06 (capture 10:10–10:19 UTC; logical-section re-shoot same day) — live https://www.sparkonomy.com/",
+  "viewportsCaptured": [
+    "desktop",
+    "tablet",
+    "mobile"
+  ],
+  "pageHeight": {
+    "desktop": 17082,
+    "tablet": 20766,
+    "mobile": 15984
+  },
+  "note": "Logical sections (from data/annotations.json). The DOM only has 5 top-level nodes; see automaticDomNodes.",
+  "sections": [
+    {
+      "position": 1,
+      "name": "Header / navigation (incl. cookie banner + mobile menu)",
+      "purpose": "Persistent brand mark and route to the four other site areas, plus the always-visible primary conversion CTA (\"Claim your Creator Record\") to the external Open Creator Graph app. On mobile the links collapse into a full-screen menu that also carries the partner and compliance badges. On first visit a CookieYes consent bar is overlaid at the top.",
+      "domNode": {
+        "selectors": [
+          "header",
+          "div#story-menu"
+        ],
+        "note": "`<header class=\"pointer-events-none fixed inset-x-0 top-0 z-40\">` + CookieYes `.cky-consent-container` (injected by a third-party script)",
+        "captureTopLevelNode": "header (automatic section 3)"
+      },
+      "geometryDesktop": {
+        "scrollTop": 0,
+        "height": 80,
+        "cssHeight": "fixed, 79.5px (+112px scrim)",
+        "pinned": "fixed",
+        "beats": 0
+      },
+      "background": "Transparent; legibility comes from the 112px black→transparent scrim. The header does not change on scroll (no background, shadow, shrink or hide-on-scroll — verified with screenshots at 900px and 1200px scroll). Mobile menu panel: solid `#000000`.",
+      "layout": "Fixed, full-width, transparent bar (z-index 40) with a 112px-tall top scrim (`linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.35), transparent)`). Inner row: `max-width: 84rem` (1344px), `padding: 20px 32px` (desktop) / `16px 20px` (mobile), `display:flex; justify-content:space-between; align-items:center`, height 79.5px. Left: wordmark image 26px tall (24px <768px). Right (≥768px): `<nav aria-label=\"Main\">` flex row, `gap: 28px`, four 13px text links then the gradient pill CTA. <768px: the nav is hidden and a 32×32 hamburger button (24px-wide PNG icon) toggles `#story-menu`, a `100svh` black panel (`padding: 16px 24px 40px`) under the bar.",
+      "visualAssets": "`logo_header_white.png` (991×188 wordmark, rendered 137×26), `hamburger_icon.png` (92×60, rendered 24px wide, mobile only). Mobile menu: 4 partner logos (26px tall, opacity .7) and 4 compliance badges (22px tall, opacity .55). Cookie banner: CookieYes `close.svg` and inline CookieYes wordmark SVG (78×13).",
+      "interaction": "- Nav links: `color rgba(255,255,255,.6)` → `#FFFFFF` on hover, `transition: color .15s cubic-bezier(.4,0,.2,1)`.\n- CTA pill: continuous `cta-sweep` gradient animation (3.5s ease-in-out infinite alternate); hover `opacity: .9` (150ms).\n- Hamburger: toggles `aria-expanded`, sr-only label switches \"Open menu\" ↔ \"Close menu\", icon swaps to an X drawn with two 24×1.5px white bars rotated ±45°. Menu opens/closes instantly (HTML `hidden` attribute, no transition), locks `body { overflow: hidden }`, closes on Escape, on link tap, or when the viewport becomes ≥768px.\n- `pointer-events: none` on the header wrapper so the WebGL canvas behind keeps receiving pointer moves; only links/buttons are `pointer-events: auto`.\n- Cookie banner (CookieYes): \"Reject All\"/\"Accept All\" buttons `rgb(107,114,128)` → `rgb(184,30,102)` + `filter: brightness(.9)` on hover; close (×) button; \"Powered by CookieYes\" link. The footer \"Cookie Policy\" button (`.cky-banner-element`) re-opens it.",
+      "cta": "Claim your Creator Record → https://creatorgraph.sparkonomy.com (`target=\"_blank\" rel=\"noopener\"`); same CTA repeated full-width inside the mobile menu.",
+      "notes": "- The CookieYes bar (fixed top, `z-index: 9999999`, black, 10px radius, 520px wide on desktop / full width minus 12px gutters on mobile) sits on top of the header and on desktop hides the \"About\"/\"Contact\" links until dismissed; on mobile it covers the hero wordmark.\n- Logo link has `aria-label=\"Sparkonomy home\"` → `/`.\n- No language switcher, search, login or account entry on the homepage header.",
+      "counts": {
+        "texts": 13,
+        "links": 11,
+        "buttons": 1,
+        "images": 10,
+        "svgs": 0
+      },
+      "screenshots": {
+        "desktop": "01-header-nav.png",
+        "tablet": null,
+        "mobile": "_states/mobile-menu-open.png",
+        "extra": [
+          {
+            "file": "01-header-cookie-banner.png",
+            "caption": "Desktop, first visit: CookieYes bar overlapping the nav"
+          },
+          {
+            "file": "_states/nav-link-hover.png",
+            "caption": "Hover on \"Creator Payments\" (white) + CTA"
+          },
+          {
+            "file": "_states/mobile-menu-closed.png",
+            "caption": "Mobile 390px, menu closed",
+            "phone": true
+          },
+          {
+            "file": "_states/mobile-menu-open.png",
+            "caption": "Mobile 390px, menu open",
+            "phone": true
+          },
+          {
+            "file": "_states/cookie-banner-mobile.png",
+            "caption": "Mobile 390px, cookie banner",
+            "phone": true
+          }
+        ]
+      }
+    },
+    {
+      "position": 2,
+      "name": "Hero — \"Sparkonomy\" + Open Creator Graph launch card",
+      "purpose": "Brand statement (animated wordmark + tagline \"Sparking Creator livelihoods.\") and the launch announcement for the first product, Open Creator Graph, with the primary CTA. Credibility via a \"built with\" partner-logo marquee (Meta, YouTube, Google for Startups, Gemini). Ends with a \"READ OUR STORY\" cue that starts the scroll story.",
+      "domNode": {
+        "selectors": [
+          "section#opening"
+        ],
+        "note": null,
+        "captureTopLevelNode": "main (automatic section 4)"
+      },
+      "geometryDesktop": {
+        "scrollTop": 0,
+        "height": 900,
+        "cssHeight": "min-height: 100svh",
+        "pinned": false,
+        "beats": 0
+      },
+      "background": "Shared fixed WebGL fluid canvas (black base, colourful ink plumes) + fixed radial vignette `radial-gradient(ellipse 68% 54% at 50% 50%, rgba(0,0,0,.62) 0%, rgba(0,0,0,.34) 46%, rgba(0,0,0,0) 76%)`. Launch card: fill `#8134AF33` (violet at 20%), 1px gradient border `linear-gradient(133.52deg, #DE0075 5.08%, #8134AF 28.61%)` drawn with a mask (`mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0)`), plus a soft glow behind it (desktop only) `radial-gradient(50% 50% at 50% 50%, rgba(221,0,117,.22), rgba(129,52,175,.12) 45%, transparent 75%)` extending 160px/112px beyond the card.",
+      "layout": "`section#opening`: `min-height: 100svh`, flex column, centred, `padding: 80px 24px 64px` (desktop) / `96px 24px 40px` (mobile), `text-align: center`. Stack: H1 wordmark (96px desktop / clamp(2.75rem,13vw,3.5rem) ≈ 50.7px at 390px) → tagline (24px desktop / 16px mobile, `margin-top: 16px`) → launch card (`max-width: 35rem` = 560px desktop, `23rem` = 368px mobile; `border-radius: 28px`; `padding: 40px 40px 28px` desktop / `36px 16px 32px` mobile; `margin-top: 36px`) → partner marquee (560px wide, `margin-top: 32px`; full-bleed on mobile, `margin-top: 48px`) → READ OUR STORY (`margin-top: 48px`). Before the intro completes, the card row is collapsed (`grid-template-rows: 0fr`) and a flex spacer above the H1 grows so the wordmark sits in the vertical centre (see Animations).",
+      "visualAssets": "Open Creator Graph mark `/logos/ocg-mark.webp` (160×160, rendered 80×80 desktop / 72×72 mobile, preloaded, `loading=\"eager\"`, alt \"\"). Partner logos (white PNG via next/image, rendered 36px tall, opacity .75): Meta_White.png, Yt_White.png, Google_White.png, Gemini_White.png — list rendered twice for the seamless loop (second copy `aria-hidden`, alt \"\"). Inline SVG chevron 14×8 under READ OUR STORY.",
+      "interaction": "- Intro sequence on load (3,000ms timer or first wheel/touchmove/keydown): card row expands, card fades/slides in at +1,000ms, marquee row at +1,700ms, READ OUR STORY at +2,200ms; fluid background receives a 10-splat burst.\n- Wordmark: letters pulse (0.5s alternate, staggered 0.1s) and the word floats 10px up/down (2s alternate).\n- CTA: `cta-sweep` gradient animation, hover opacity .9.\n- Partner marquee: 24s linear infinite loop, starts 1,700ms after the intro, paused while the hero is off-screen.\n- READ OUR STORY: bounces 7px + colour pulse (1.4s loop); click starts the automatic \"story tour\" (auto-scroll through every beat).",
+      "cta": "Claim your free Creator Record → https://creatorgraph.sparkonomy.com (new tab). Secondary: \"READ OUR STORY\" button (no href; triggers the auto-scroll tour).",
+      "notes": "- The H1 contains an sr-only \"Sparkonomy\" plus an `aria-hidden` copy split into 10 coloured `<span>` letters, so DOM innerText reads \"Sparkonomy\\nSparkonomy\".\n- \"NEW\", \"BY SPARKONOMY\" and \"READ OUR STORY\" are uppercase via CSS; source strings are \"New\", \"by Sparkonomy\", \"Read our story\".\n- The hero is the only screen not pinned (normal flow, 100svh).",
+      "counts": {
+        "texts": 11,
+        "links": 1,
+        "buttons": 1,
+        "images": 1,
+        "svgs": 1
+      },
+      "screenshots": {
+        "desktop": "02-hero.png",
+        "tablet": "tablet-02-hero.png",
+        "mobile": "mobile-02-hero.png",
+        "extra": [
+          {
+            "file": "_components/hero-launch-card.png",
+            "caption": "Launch card (desktop crop)"
+          },
+          {
+            "file": "_components/partner-marquee.png",
+            "caption": "Partner logo marquee with 10%/90% edge fade mask"
+          }
+        ]
+      }
+    },
+    {
+      "position": 3,
+      "name": "Story 1 — \"For 15 years, we helped build YouTube from inside Google.\"",
+      "purpose": "Founder credibility: the team's 15-year history building YouTube at Google, and the emotional hook — the Creators.",
+      "domNode": {
+        "selectors": [
+          "section#roots"
+        ],
+        "note": null,
+        "captureTopLevelNode": "main (automatic section 4)"
+      },
+      "geometryDesktop": {
+        "scrollTop": 900,
+        "height": 2295,
+        "cssHeight": "255svh",
+        "marginTop": null,
+        "pinned": true,
+        "beats": 2,
+        "beatMode": "accumulate",
+        "beatStopsY": [
+          1148,
+          1532
+        ]
+      },
+      "background": "Transparent over the fixed fluid canvas + vignette.",
+      "layout": "Scroll-pinned \"screen\": `section#roots` is 255svh tall (2,295px at 1440×900); its child is `position: sticky; top: 0; height: 100svh`, flex-centred, `padding: 0 24px`; text block `max-width: 64rem` (1024px; 46rem below 768px), centred. 2 beats: H2 (64px/76.8px bold desktop; 44px/52.8px mobile) then body (28.8px/43.2px desktop; 20px/30px mobile, `margin-top: 24px`).",
+      "visualAssets": "None (typography only).",
+      "interaction": "Beat 1 (H2) fades in and rises 16px between 6.0% and 14.8% of the section's scroll travel; beat 2 (body) between 33.5% and 42.3%. Body words then \"ink\" from white to `rgba(255,255,255,.75)` one by one (≈15 characters/second, 500ms per word). Whole screen fades out over the last 10% of its travel. Scrolling stirs the fluid background.",
+      "cta": "None",
+      "notes": "On mobile the line break moves: \"For 15 years, we / helped build / YouTube from / inside Google.\" (44px, natural wrap) and body \"But what stayed with us were / the Creators / who brought it to life.\"",
+      "counts": {
+        "texts": 2,
+        "links": 0,
+        "buttons": 0,
+        "images": 0,
+        "svgs": 0
+      },
+      "screenshots": {
+        "desktop": "03-story-roots.png",
+        "tablet": "tablet-03-story-roots.png",
+        "mobile": "mobile-03-story-roots.png",
+        "extra": []
+      }
+    },
+    {
+      "position": 4,
+      "name": "Story 2 — \"Students. / Homemakers. / Doctors. / Farmers.\"",
+      "purpose": "Shows who Creators are — ordinary people from every walk of life who built a living on camera.",
+      "domNode": {
+        "selectors": [
+          "section#people"
+        ],
+        "note": null,
+        "captureTopLevelNode": "main (automatic section 4)"
+      },
+      "geometryDesktop": {
+        "scrollTop": 2295,
+        "height": 3780,
+        "cssHeight": "420svh",
+        "marginTop": "-100svh",
+        "pinned": true,
+        "beats": 5,
+        "beatMode": "accumulate",
+        "beatStopsY": [
+          2683,
+          3086,
+          3489,
+          3892,
+          4294
+        ]
+      },
+      "background": "Transparent over the fluid canvas + vignette.",
+      "layout": "Pinned screen, 420svh (3,780px desktop), overlapping the previous screen by `margin-top: -100svh`. 5 beats: four stacked block lines inside one H2 (64px, `line-height: 1.55` = 99.2px desktop; 44px/74.8px mobile) then a body line (28.8px desktop / 20px mobile).",
+      "visualAssets": "None.",
+      "interaction": "Each word-line appears on its own beat (windows start at 6.0%, 20.0%, 34.0%, 48.0%, 62.0% of travel, each 4.5% long); body words ink to white/75. In the automatic tour these beats glide 500ms apart (`data-tour-beat-ms=\"500\"`).",
+      "cta": "None",
+      "notes": "Alternating colours: Students. `#8134AF` (violet), Homemakers. `#DE0075` (magenta), Doctors. `#8134AF`, Farmers. `#DE0075`.",
+      "counts": {
+        "texts": 5,
+        "links": 0,
+        "buttons": 0,
+        "images": 0,
+        "svgs": 0
+      },
+      "screenshots": {
+        "desktop": "04-story-people.png",
+        "tablet": "tablet-04-story-people.png",
+        "mobile": "mobile-04-story-people.png",
+        "extra": [
+          {
+            "file": "_motion/beats-people-1of5.png",
+            "caption": "Beat 1 of 5"
+          },
+          {
+            "file": "_motion/beats-people-2of5.png",
+            "caption": "Beat 2 of 5"
+          },
+          {
+            "file": "_motion/beats-people-3of5.png",
+            "caption": "Beat 3 of 5"
+          },
+          {
+            "file": "_motion/beats-people-4of5.png",
+            "caption": "Beat 4 of 5"
+          }
+        ]
+      }
+    },
+    {
+      "position": 5,
+      "name": "Story 3 — \"And we saw what it takes.\"",
+      "purpose": "Empathy for the solo Creator: no crew, no scriptwriter, no one else — just one person showing up every day.",
+      "domNode": {
+        "selectors": [
+          "section#reality"
+        ],
+        "note": null,
+        "captureTopLevelNode": "main (automatic section 4)"
+      },
+      "geometryDesktop": {
+        "scrollTop": 5175,
+        "height": 3780,
+        "cssHeight": "420svh",
+        "marginTop": "-100svh",
+        "pinned": true,
+        "beats": 5,
+        "beatMode": "soften",
+        "beatStopsY": [
+          5563,
+          5966,
+          6369,
+          6772,
+          7174
+        ]
+      },
+      "background": "Transparent over the fluid canvas + vignette.",
+      "layout": "Pinned screen, 420svh, `margin-top: -100svh`. 5 beats: H2 (64px), three 28.8px lines (\"No crew.\" / \"No scriptwriter.\" / \"No one else.\", `space-y` 4px desktop / 12px mobile, white 100%), then a 64px bold payoff (32px/36.8px mobile, `margin-top: 24px`).",
+      "visualAssets": "None.",
+      "interaction": "Mode \"soften\": as each new beat enters, the previous middle line fades to 75% opacity. In the payoff, \"one person\" is magenta immediately; \"every day\" starts white and transitions to magenta (`color 600ms ease-in-out`, delays 900ms and 1,200ms after the line is fully revealed). Tour glide between these beats: 1,000ms.",
+      "cta": "None",
+      "notes": "Highlight colour `#DE0075` on \"one person\" and \"every day\".",
+      "counts": {
+        "texts": 5,
+        "links": 0,
+        "buttons": 0,
+        "images": 0,
+        "svgs": 0
+      },
+      "screenshots": {
+        "desktop": "05-story-reality.png",
+        "tablet": "tablet-05-story-reality.png",
+        "mobile": "mobile-05-story-reality.png",
+        "extra": [
+          {
+            "file": "_motion/beats-reality-1of5.png",
+            "caption": "Beat 1 of 5"
+          },
+          {
+            "file": "_motion/beats-reality-2of5.png",
+            "caption": "Beat 2 of 5"
+          },
+          {
+            "file": "_motion/beats-reality-3of5.png",
+            "caption": "Beat 3 of 5"
+          },
+          {
+            "file": "_motion/beats-reality-4of5.png",
+            "caption": "Beat 4 of 5"
+          }
+        ]
+      }
+    },
+    {
+      "position": 6,
+      "name": "Story 4 — \"Creators built a new profession.\"",
+      "purpose": "States the problem: Creators built a profession, but too little was built for them.",
+      "domNode": {
+        "selectors": [
+          "section#love"
+        ],
+        "note": null,
+        "captureTopLevelNode": "main (automatic section 4)"
+      },
+      "geometryDesktop": {
+        "scrollTop": 8055,
+        "height": 2295,
+        "cssHeight": "255svh",
+        "marginTop": "-100svh",
+        "pinned": true,
+        "beats": 2,
+        "beatMode": "accumulate",
+        "beatStopsY": [
+          8303,
+          8687
+        ]
+      },
+      "background": "Transparent over the fluid canvas + vignette.",
+      "layout": "Pinned screen, 255svh, `margin-top: -100svh`. 2 beats: H2 64px + body 28.8px (`margin-top: 24px`).",
+      "visualAssets": "None.",
+      "interaction": "Same beat reveal (opacity 0→1, translateY 16px→0) and word-ink as Story 1.",
+      "cta": "None",
+      "notes": "—",
+      "counts": {
+        "texts": 2,
+        "links": 0,
+        "buttons": 0,
+        "images": 0,
+        "svgs": 0
+      },
+      "screenshots": {
+        "desktop": "06-story-love.png",
+        "tablet": "tablet-06-story-love.png",
+        "mobile": "mobile-06-story-love.png",
+        "extra": []
+      }
+    },
+    {
+      "position": 7,
+      "name": "Story 5 — \"For years, we built the platform.\"",
+      "purpose": "The turn: from building the platform (YouTube) to building for the Creators.",
+      "domNode": {
+        "selectors": [
+          "section#turn"
+        ],
+        "note": null,
+        "captureTopLevelNode": "main (automatic section 4)"
+      },
+      "geometryDesktop": {
+        "scrollTop": 9450,
+        "height": 2295,
+        "cssHeight": "255svh",
+        "marginTop": "-100svh",
+        "pinned": true,
+        "beats": 2,
+        "beatMode": "accumulate",
+        "beatStopsY": [
+          9698,
+          10082
+        ]
+      },
+      "background": "Transparent over the fluid canvas + vignette.",
+      "layout": "Pinned screen, 255svh, `margin-top: -100svh`. 2 beats: H2 64px; then a 43.92px bold line (clamp(2rem,3.05vw,2.75rem); 32px mobile), `max-width: 52rem`, `margin-top: 16px` (24px mobile).",
+      "visualAssets": "None.",
+      "interaction": "Beat reveal as above.",
+      "cta": "None",
+      "notes": "Second line coloured `#DD2A7B` (pink). Mobile H2 breaks \"For years, / we built / the platform.\"",
+      "counts": {
+        "texts": 2,
+        "links": 0,
+        "buttons": 0,
+        "images": 0,
+        "svgs": 0
+      },
+      "screenshots": {
+        "desktop": "07-story-turn.png",
+        "tablet": "tablet-07-story-turn.png",
+        "mobile": "mobile-07-story-turn.png",
+        "extra": []
+      }
+    },
+    {
+      "position": 8,
+      "name": "Story 6 — \"That's why we built Sparkonomy.\"",
+      "purpose": "Mission statement.",
+      "domNode": {
+        "selectors": [
+          "section#mission"
+        ],
+        "note": null,
+        "captureTopLevelNode": "main (automatic section 4)"
+      },
+      "geometryDesktop": {
+        "scrollTop": 10845,
+        "height": 1800,
+        "cssHeight": "200svh",
+        "marginTop": "-100svh",
+        "pinned": true,
+        "beats": 1,
+        "beatMode": "accumulate",
+        "beatStopsY": [
+          11038
+        ]
+      },
+      "background": "Transparent over the fluid canvas + vignette.",
+      "layout": "Pinned screen, 200svh, `margin-top: -100svh`. 1 beat containing H2 (64px) + body (28.8px).",
+      "visualAssets": "None.",
+      "interaction": "After the beat appears, the H2 words ink from white to magenta `#DE0075` word by word, then the body words ink from white to white/75 (body starts when the heading's ink timeline ends).",
+      "cta": "None",
+      "notes": "The heading ends fully magenta; captured mid-transition in `_motion/word-ink-mission-*.png`.",
+      "counts": {
+        "texts": 2,
+        "links": 0,
+        "buttons": 0,
+        "images": 0,
+        "svgs": 0
+      },
+      "screenshots": {
+        "desktop": "08-story-mission.png",
+        "tablet": "tablet-08-story-mission.png",
+        "mobile": "mobile-08-story-mission.png",
+        "extra": [
+          {
+            "file": "_motion/word-ink-mission-0700ms.png",
+            "caption": "Word ink, ~0.7s"
+          },
+          {
+            "file": "_motion/word-ink-mission-1800ms.png",
+            "caption": "~1.8s"
+          },
+          {
+            "file": "_motion/word-ink-mission-4300ms.png",
+            "caption": "~4.3s"
+          }
+        ]
+      }
+    },
+    {
+      "position": 9,
+      "name": "Creator Record — Open Creator Graph product demo",
+      "purpose": "Product proof: an example \"Creator Record\" (identity + AI-usage consent per facet, cryptographically timestamped and certified) next to the value proposition and the second primary CTA.",
+      "domNode": {
+        "selectors": [
+          "section#ocg"
+        ],
+        "note": null,
+        "captureTopLevelNode": "main (automatic section 4)"
+      },
+      "geometryDesktop": {
+        "scrollTop": 12645,
+        "height": 1253,
+        "cssHeight": "auto (min-height 100svh)",
+        "marginTop": null,
+        "pinned": false,
+        "beats": 3,
+        "beatMode": "accumulate",
+        "beatStopsY": null
+      },
+      "background": "Transparent over the fluid canvas + vignette. Card: 1px gradient border `linear-gradient(160deg, rgba(151,71,255,.7), rgba(222,0,117,.5) 55%, rgba(151,71,255,.6))`, radius 24px; inner panel `#321935`, radius 23px, `padding: 24px`; blurred glow behind (`linear-gradient(133.52deg, #DE0075 5.08%, #8134AF 56.74%)`, `blur(40px)`, opacity .6).",
+      "layout": "`section#ocg` is NOT pinned: normal flow, `min-height: 100svh`, `padding: 96px 24px`. Content `max-width: 54rem` (864px; 40rem mobile). H2 (2 lines, 64px) + body (28.8px). Below (`margin-top: 56px`): desktop/tablet ≥768px a 2-column grid `grid-template-columns: 21.25rem 1fr; gap: 56px; align-items: center` — card (340px) left, H3 + pitch + CTA right; the grid is `position: sticky` with `top = max(88px, (100vh − height)/2)` (348px at 900px tall) plus a 60svh spacer, so it holds in the middle while the heading scrolls away. Mobile: single column, card (max 25rem) then H3 + CTA.",
+      "visualAssets": "Avatar `/CD.png` (40×40 round, rendered from 183×181 original), verified tick inline SVG 16×16 (`#334CCA` circle + white check), \"CERTIFIED\" stamp `/Certified-1.png` (rendered 112×70; original 3238×2018), stance pills.",
+      "interaction": "- Card is lazy-mounted when within 300px of the viewport (200px placeholder).\n- Desktop/tablet: card always expanded. Mobile: shows only header + claims + \"AI Usage\" summary until the H2 scrolls under the header (bottom < 72px), then expands (height animation 0.9s, ease `cubic-bezier(.22,1,.36,1)`; collapses in 0.54s when scrolled back past 160px); facet rows stagger in (0.08s apart, start delay 0.12s, each 0.45s: opacity 0→1, y 8→0); \"Certified\" stamp fades in (0.4s, delay 0.63s).\n- CTA sweep animation paused while the CTA is off-screen; hover opacity .9.",
+      "cta": "Claim your free Creator Record → https://creatorgraph.sparkonomy.com (new tab).",
+      "notes": "- Stance colours: Allowed `#34C759`, Conditional `#E5B607`, Prohibited `#E5484D` — text, 1px border and an 8% tint fill (`…14` hex alpha); 108px-wide pills with a 6px dot.\n- The bundled data also defines a \"not declared\" stance (white) and a 5-step \"Day 1 … Day 30\" narrative that is not rendered on the homepage.\n- Example persona \"Chulbuli Dixit\" (@chulbulidixit) is illustrative demo content.",
+      "counts": {
+        "texts": 27,
+        "links": 1,
+        "buttons": 0,
+        "images": 0,
+        "svgs": 0
+      },
+      "screenshots": {
+        "desktop": "09-creator-record.png",
+        "tablet": "tablet-09-creator-record-intro.png",
+        "mobile": "mobile-09-creator-record.png",
+        "extra": [
+          {
+            "file": "09-creator-record-intro.png",
+            "caption": "Desktop: section heading entering"
+          },
+          {
+            "file": "_components/creator-record-card.png",
+            "caption": "Creator Record card (desktop crop)"
+          },
+          {
+            "file": "mobile-09-creator-record-intro.png",
+            "caption": "Mobile: card collapsed (summary only)",
+            "phone": true
+          },
+          {
+            "file": "mobile-09-creator-record.png",
+            "caption": "Mobile: card expanded after heading scrolls away",
+            "phone": true
+          }
+        ]
+      }
+    },
+    {
+      "position": 10,
+      "name": "Closing — \"And we're only getting started.\"",
+      "purpose": "Forward-looking sign-off and brand sign line \"Let's spark together.\"",
+      "domNode": {
+        "selectors": [
+          "section#future"
+        ],
+        "note": null,
+        "captureTopLevelNode": "main (automatic section 4)"
+      },
+      "geometryDesktop": {
+        "scrollTop": 13898,
+        "height": 2790,
+        "cssHeight": "310svh",
+        "marginTop": null,
+        "pinned": true,
+        "beats": 3,
+        "beatMode": "accumulate",
+        "beatStopsY": [
+          14194,
+          14588,
+          14983
+        ]
+      },
+      "background": "Transparent over the fluid canvas + vignette.",
+      "layout": "Pinned screen, 310svh (no negative overlap, it follows the flow section). 3 beats: H2 64px (`max-width: 18rem` on mobile), body 28.8px (`margin-top: 24px`), sign line 43.92px bold (`margin-top: 36px`; 32px mobile).",
+      "visualAssets": "None.",
+      "interaction": "Beat reveal + word ink as other story screens. This screen does not fade out at the end (it hands over to the footer).",
+      "cta": "None (no CTA in the closing screen; the header CTA remains visible).",
+      "notes": "\"spark\" coloured `#DE0075`.",
+      "counts": {
+        "texts": 3,
+        "links": 0,
+        "buttons": 0,
+        "images": 0,
+        "svgs": 0
+      },
+      "screenshots": {
+        "desktop": "10-closing.png",
+        "tablet": "tablet-10-closing.png",
+        "mobile": "mobile-10-closing.png",
+        "extra": []
+      }
+    },
+    {
+      "position": 11,
+      "name": "Footer",
+      "purpose": "Secondary navigation (products, company, legal), compliance badges, copyright and social profiles.",
+      "domNode": {
+        "selectors": [
+          "footer"
+        ],
+        "note": null,
+        "captureTopLevelNode": "footer (automatic section 5)"
+      },
+      "geometryDesktop": {
+        "scrollTop": 16688,
+        "height": 394,
+        "cssHeight": "auto",
+        "pinned": false,
+        "beats": 0
+      },
+      "background": "Solid `#000000` (covers the fluid canvas).",
+      "layout": "`<footer>` `background: #000; padding: 0 40px 48px` (24px sides mobile), `position: relative; z-index: 10`. Inner `max-width: 84rem`, `border-top: 1px solid rgba(255,255,255,.1)`, `padding-top: 56px` (40px mobile). Desktop grid `grid-template-columns: 1.6fr 1fr 1fr auto; gap: 40px` → [wordmark + \"Compliant with\" badges] [Products] [Company] [Terms & Policies]. Then a 1px `rgba(255,255,255,.1)` divider (`margin-top: 56px`) and a centred column (`gap: 24px`): copyright, then 5 social icons (24×24, `gap: 28px`). Mobile: wordmark, then a 2-column grid (Products + Company stacked left, Terms & Policies right), then \"Compliant with\", divider, copyright, icons.",
+      "visualAssets": "`logo_header_gray.png` (523×96, rendered 131×24; grey wordmark with a purple paw-print \"o\"), compliance badges DPDP/CCPA/PDPA/GDPR (white PNG, 36×36, opacity .55), 5 inline SVG social icons (X, Instagram, YouTube, LinkedIn, Reddit; `fill: currentColor`).",
+      "interaction": "Links and social icons `rgba(255,255,255,.5)` → white on hover (`transition: color .15s cubic-bezier(.4,0,.2,1)`). \"Cookie Policy\" is a `<button class=\"cky-banner-element\">` that re-opens the CookieYes banner. External links open in a new tab (`rel=\"noopener\"` for Open Creator Graph, `rel=\"noopener noreferrer\"` for social).",
+      "cta": "None (text links only).",
+      "notes": "Labels: column headings 14px/20px weight 500 white; links 14px/20px weight 400 white/50; copyright 14px white/50.",
+      "counts": {
+        "texts": 15,
+        "links": 13,
+        "buttons": 1,
+        "images": 9,
+        "svgs": 5
+      },
+      "screenshots": {
+        "desktop": "_components/footer.png",
+        "tablet": "_components/footer-tablet.png",
+        "mobile": "_components/footer-mobile.png",
+        "extra": [
+          {
+            "file": "11-footer.png",
+            "caption": "Desktop viewport at the end of the page"
+          }
+        ]
+      }
+    }
+  ],
+  "persistentLayers": [
+    {
+      "domNode": {
+        "tag": "div",
+        "className": "fixed inset-0 z-0 ",
+        "cssPath": "html.h-full > body.roboto_51c32070-module__YpxGXa__className.min-h-\\[100dvh\\] > div.min-h-\\[100dvh\\].bg-black:nth-of-type(2) > div.fixed.inset-0:nth-of-type(1)"
+      },
+      "zIndex": "0",
+      "background": "WebGL <canvas> (see Animations)",
+      "canvas": [
+        [
+          1440,
+          900
+        ]
+      ]
+    },
+    {
+      "domNode": {
+        "tag": "div",
+        "className": "pointer-events-none fixed inset-0 z-[1]",
+        "cssPath": "html.h-full > body.roboto_51c32070-module__YpxGXa__className.min-h-\\[100dvh\\] > div.min-h-\\[100dvh\\].bg-black:nth-of-type(2) > div.pointer-events-none.fixed:nth-of-type(2)"
+      },
+      "zIndex": "1",
+      "background": "radial-gradient(68% 54%, rgba(0, 0, 0, 0.62) 0%, rgba(0, 0, 0, 0.34) 46%, rgba(0, 0, 0, 0) 76%)",
+      "canvas": []
+    }
+  ],
+  "automaticDomNodes": [
+    {
+      "index": 1,
+      "tag": "div",
+      "className": "fixed inset-0 z-0 ",
+      "box": {
+        "top": 1532,
+        "left": 0,
+        "width": 1440,
+        "height": 900
+      },
+      "position": "fixed",
+      "zIndex": "0",
+      "screenshot": "_dom-nodes/01-div.png"
+    },
+    {
+      "index": 2,
+      "tag": "div",
+      "className": "pointer-events-none fixed inset-0 z-[1]",
+      "box": {
+        "top": 1532,
+        "left": 0,
+        "width": 1440,
+        "height": 900
+      },
+      "position": "fixed",
+      "zIndex": "1",
+      "screenshot": "_dom-nodes/02-div.png"
+    },
+    {
+      "index": 3,
+      "tag": "header",
+      "className": "pointer-events-none fixed inset-x-0 top-0 z-40",
+      "box": {
+        "top": 1532,
+        "left": 0,
+        "width": 1440,
+        "height": 80
+      },
+      "position": "fixed",
+      "zIndex": "40",
+      "screenshot": "_dom-nodes/03-header.png"
+    },
+    {
+      "index": 4,
+      "tag": "main",
+      "className": "pointer-events-none relative",
+      "box": {
+        "top": 0,
+        "left": 0,
+        "width": 1440,
+        "height": 16980
+      },
+      "position": "relative",
+      "zIndex": "auto",
+      "screenshot": "_dom-nodes/04-main.png"
+    },
+    {
+      "index": 5,
+      "tag": "footer",
+      "className": "relative z-10 bg-black px-6 pb-12 md:px-10",
+      "box": {
+        "top": 16980,
+        "left": 0,
+        "width": 1440,
+        "height": 394
+      },
+      "position": "relative",
+      "zIndex": "10",
+      "screenshot": "_dom-nodes/05-footer.png"
+    }
+  ],
+  "beatGeometry": {
+    "desktop": {
+      "roots": {
+        "top": 900,
+        "height": 2295,
+        "travel": 1395,
+        "beats": 2,
+        "mode": "accumulate",
+        "beatMs": null,
+        "flow": false,
+        "styleHeight": "255svh",
+        "marginTop": null,
+        "stops": [
+          1148,
+          1532
+        ],
+        "windows": [
+          {
+            "in0": 0.06,
+            "in1": 0.14794838709677416
+          },
+          {
+            "in0": 0.3348387096774193,
+            "in1": 0.42278709677419346
+          }
+        ]
+      },
+      "people": {
+        "top": 2295,
+        "height": 3780,
+        "travel": 2880,
+        "beats": 5,
+        "mode": "accumulate",
+        "beatMs": 500,
+        "flow": false,
+        "styleHeight": "420svh",
+        "marginTop": "-100svh",
+        "stops": [
+          2683,
+          3086,
+          3489,
+          3892,
+          4294
+        ],
+        "windows": [
+          {
+            "in0": 0.06,
+            "in1": 0.10475999999999999
+          },
+          {
+            "in0": 0.199875,
+            "in1": 0.244635
+          },
+          {
+            "in0": 0.33975,
+            "in1": 0.38451
+          },
+          {
+            "in0": 0.479625,
+            "in1": 0.524385
+          },
+          {
+            "in0": 0.6194999999999999,
+            "in1": 0.66426
+          }
+        ]
+      },
+      "reality": {
+        "top": 5175,
+        "height": 3780,
+        "travel": 2880,
+        "beats": 5,
+        "mode": "soften",
+        "beatMs": 1000,
+        "flow": false,
+        "styleHeight": "420svh",
+        "marginTop": "-100svh",
+        "stops": [
+          5563,
+          5966,
+          6369,
+          6772,
+          7174
+        ],
+        "windows": [
+          {
+            "in0": 0.06,
+            "in1": 0.10475999999999999
+          },
+          {
+            "in0": 0.199875,
+            "in1": 0.244635
+          },
+          {
+            "in0": 0.33975,
+            "in1": 0.38451
+          },
+          {
+            "in0": 0.479625,
+            "in1": 0.524385
+          },
+          {
+            "in0": 0.6194999999999999,
+            "in1": 0.66426
+          }
+        ]
+      },
+      "love": {
+        "top": 8055,
+        "height": 2295,
+        "travel": 1395,
+        "beats": 2,
+        "mode": "accumulate",
+        "beatMs": null,
+        "flow": false,
+        "styleHeight": "255svh",
+        "marginTop": "-100svh",
+        "stops": [
+          8303,
+          8687
+        ],
+        "windows": [
+          {
+            "in0": 0.06,
+            "in1": 0.14794838709677416
+          },
+          {
+            "in0": 0.3348387096774193,
+            "in1": 0.42278709677419346
+          }
+        ]
+      },
+      "turn": {
+        "top": 9450,
+        "height": 2295,
+        "travel": 1395,
+        "beats": 2,
+        "mode": "accumulate",
+        "beatMs": null,
+        "flow": false,
+        "styleHeight": "255svh",
+        "marginTop": "-100svh",
+        "stops": [
+          9698,
+          10082
+        ],
+        "windows": [
+          {
+            "in0": 0.06,
+            "in1": 0.14794838709677416
+          },
+          {
+            "in0": 0.3348387096774193,
+            "in1": 0.42278709677419346
+          }
+        ]
+      },
+      "mission": {
+        "top": 10845,
+        "height": 1800,
+        "travel": 900,
+        "beats": 1,
+        "mode": "accumulate",
+        "beatMs": null,
+        "flow": false,
+        "styleHeight": "200svh",
+        "marginTop": "-100svh",
+        "stops": [
+          11038
+        ],
+        "windows": [
+          {
+            "in0": 0.06,
+            "in1": 0.1848
+          }
+        ]
+      },
+      "ocg": {
+        "top": 12645,
+        "height": 1253,
+        "travel": 353,
+        "beats": 3,
+        "mode": "accumulate",
+        "beatMs": null,
+        "flow": true,
+        "styleHeight": null,
+        "marginTop": null,
+        "stops": null,
+        "windows": [
+          {
+            "in0": 0.06,
+            "in1": 0.12674285714285713
+          },
+          {
+            "in0": 0.26857142857142857,
+            "in1": 0.3353142857142857
+          },
+          {
+            "in0": 0.4771428571428571,
+            "in1": 0.5438857142857142
+          }
+        ]
+      },
+      "future": {
+        "top": 13898,
+        "height": 2790,
+        "travel": 1890,
+        "beats": 3,
+        "mode": "accumulate",
+        "beatMs": null,
+        "flow": false,
+        "styleHeight": "310svh",
+        "marginTop": null,
+        "stops": [
+          14194,
+          14588,
+          14983
+        ],
+        "windows": [
+          {
+            "in0": 0.06,
+            "in1": 0.12674285714285713
+          },
+          {
+            "in0": 0.26857142857142857,
+            "in1": 0.3353142857142857
+          },
+          {
+            "in0": 0.4771428571428571,
+            "in1": 0.5438857142857142
+          }
+        ]
+      }
+    },
+    "tablet": {
+      "roots": {
+        "top": 1112,
+        "height": 2836,
+        "travel": 1724,
+        "beats": 2,
+        "mode": "accumulate",
+        "beatMs": null,
+        "flow": false,
+        "styleHeight": "255svh",
+        "marginTop": null,
+        "stops": [
+          1419,
+          1893
+        ],
+        "windows": [
+          {
+            "in0": 0.06,
+            "in1": 0.14794838709677416
+          },
+          {
+            "in0": 0.3348387096774193,
+            "in1": 0.42278709677419346
+          }
+        ]
+      },
+      "people": {
+        "top": 2836,
+        "height": 4670,
+        "travel": 3558,
+        "beats": 5,
+        "mode": "accumulate",
+        "beatMs": 500,
+        "flow": false,
+        "styleHeight": "420svh",
+        "marginTop": "-100svh",
+        "stops": [
+          3315,
+          3813,
+          4310,
+          4808,
+          5306
+        ],
+        "windows": [
+          {
+            "in0": 0.06,
+            "in1": 0.10475999999999999
+          },
+          {
+            "in0": 0.199875,
+            "in1": 0.244635
+          },
+          {
+            "in0": 0.33975,
+            "in1": 0.38451
+          },
+          {
+            "in0": 0.479625,
+            "in1": 0.524385
+          },
+          {
+            "in0": 0.6194999999999999,
+            "in1": 0.66426
+          }
+        ]
+      },
+      "reality": {
+        "top": 6394,
+        "height": 4670,
+        "travel": 3558,
+        "beats": 5,
+        "mode": "soften",
+        "beatMs": 1000,
+        "flow": false,
+        "styleHeight": "420svh",
+        "marginTop": "-100svh",
+        "stops": [
+          6873,
+          7371,
+          7869,
+          8366,
+          8864
+        ],
+        "windows": [
+          {
+            "in0": 0.06,
+            "in1": 0.10475999999999999
+          },
+          {
+            "in0": 0.199875,
+            "in1": 0.244635
+          },
+          {
+            "in0": 0.33975,
+            "in1": 0.38451
+          },
+          {
+            "in0": 0.479625,
+            "in1": 0.524385
+          },
+          {
+            "in0": 0.6194999999999999,
+            "in1": 0.66426
+          }
+        ]
+      },
+      "love": {
+        "top": 9952,
+        "height": 2836,
+        "travel": 1724,
+        "beats": 2,
+        "mode": "accumulate",
+        "beatMs": null,
+        "flow": false,
+        "styleHeight": "255svh",
+        "marginTop": "-100svh",
+        "stops": [
+          10259,
+          10733
+        ],
+        "windows": [
+          {
+            "in0": 0.06,
+            "in1": 0.14794838709677416
+          },
+          {
+            "in0": 0.3348387096774193,
+            "in1": 0.42278709677419346
+          }
+        ]
+      },
+      "turn": {
+        "top": 11676,
+        "height": 2836,
+        "travel": 1724,
+        "beats": 2,
+        "mode": "accumulate",
+        "beatMs": null,
+        "flow": false,
+        "styleHeight": "255svh",
+        "marginTop": "-100svh",
+        "stops": [
+          11983,
+          12457
+        ],
+        "windows": [
+          {
+            "in0": 0.06,
+            "in1": 0.14794838709677416
+          },
+          {
+            "in0": 0.3348387096774193,
+            "in1": 0.42278709677419346
+          }
+        ]
+      },
+      "mission": {
+        "top": 13400,
+        "height": 2224,
+        "travel": 1112,
+        "beats": 1,
+        "mode": "accumulate",
+        "beatMs": null,
+        "flow": false,
+        "styleHeight": "200svh",
+        "marginTop": "-100svh",
+        "stops": [
+          13638
+        ],
+        "windows": [
+          {
+            "in0": 0.06,
+            "in1": 0.1848
+          }
+        ]
+      },
+      "ocg": {
+        "top": 15624,
+        "height": 1301,
+        "travel": 189,
+        "beats": 3,
+        "mode": "accumulate",
+        "beatMs": null,
+        "flow": true,
+        "styleHeight": null,
+        "marginTop": null,
+        "stops": null,
+        "windows": [
+          {
+            "in0": 0.06,
+            "in1": 0.12674285714285713
+          },
+          {
+            "in0": 0.26857142857142857,
+            "in1": 0.3353142857142857
+          },
+          {
+            "in0": 0.4771428571428571,
+            "in1": 0.5438857142857142
+          }
+        ]
+      },
+      "future": {
+        "top": 16924,
+        "height": 3447,
+        "travel": 2335,
+        "beats": 3,
+        "mode": "accumulate",
+        "beatMs": null,
+        "flow": false,
+        "styleHeight": "310svh",
+        "marginTop": null,
+        "stops": [
+          17290,
+          17777,
+          18264
+        ],
+        "windows": [
+          {
+            "in0": 0.06,
+            "in1": 0.12674285714285713
+          },
+          {
+            "in0": 0.26857142857142857,
+            "in1": 0.3353142857142857
+          },
+          {
+            "in0": 0.4771428571428571,
+            "in1": 0.5438857142857142
+          }
+        ]
+      }
+    },
+    "mobile": {
+      "roots": {
+        "top": 844,
+        "height": 2152,
+        "travel": 1308,
+        "beats": 2,
+        "mode": "accumulate",
+        "beatMs": null,
+        "flow": false,
+        "styleHeight": "255svh",
+        "marginTop": null,
+        "stops": [
+          1077,
+          1436
+        ],
+        "windows": [
+          {
+            "in0": 0.06,
+            "in1": 0.14794838709677416
+          },
+          {
+            "in0": 0.3348387096774193,
+            "in1": 0.42278709677419346
+          }
+        ]
+      },
+      "people": {
+        "top": 2152,
+        "height": 3545,
+        "travel": 2701,
+        "beats": 5,
+        "mode": "accumulate",
+        "beatMs": 500,
+        "flow": false,
+        "styleHeight": "420svh",
+        "marginTop": "-100svh",
+        "stops": [
+          2516,
+          2894,
+          3272,
+          3650,
+          4027
+        ],
+        "windows": [
+          {
+            "in0": 0.06,
+            "in1": 0.10475999999999999
+          },
+          {
+            "in0": 0.199875,
+            "in1": 0.244635
+          },
+          {
+            "in0": 0.33975,
+            "in1": 0.38451
+          },
+          {
+            "in0": 0.479625,
+            "in1": 0.524385
+          },
+          {
+            "in0": 0.6194999999999999,
+            "in1": 0.66426
+          }
+        ]
+      },
+      "reality": {
+        "top": 4853,
+        "height": 3545,
+        "travel": 2701,
+        "beats": 5,
+        "mode": "soften",
+        "beatMs": 1000,
+        "flow": false,
+        "styleHeight": "420svh",
+        "marginTop": "-100svh",
+        "stops": [
+          5217,
+          5595,
+          5973,
+          6350,
+          6728
+        ],
+        "windows": [
+          {
+            "in0": 0.06,
+            "in1": 0.10475999999999999
+          },
+          {
+            "in0": 0.199875,
+            "in1": 0.244635
+          },
+          {
+            "in0": 0.33975,
+            "in1": 0.38451
+          },
+          {
+            "in0": 0.479625,
+            "in1": 0.524385
+          },
+          {
+            "in0": 0.6194999999999999,
+            "in1": 0.66426
+          }
+        ]
+      },
+      "love": {
+        "top": 7554,
+        "height": 2152,
+        "travel": 1308,
+        "beats": 2,
+        "mode": "accumulate",
+        "beatMs": null,
+        "flow": false,
+        "styleHeight": "255svh",
+        "marginTop": "-100svh",
+        "stops": [
+          7787,
+          8146
+        ],
+        "windows": [
+          {
+            "in0": 0.06,
+            "in1": 0.14794838709677416
+          },
+          {
+            "in0": 0.3348387096774193,
+            "in1": 0.42278709677419346
+          }
+        ]
+      },
+      "turn": {
+        "top": 8862,
+        "height": 2152,
+        "travel": 1308,
+        "beats": 2,
+        "mode": "accumulate",
+        "beatMs": null,
+        "flow": false,
+        "styleHeight": "255svh",
+        "marginTop": "-100svh",
+        "stops": [
+          9095,
+          9454
+        ],
+        "windows": [
+          {
+            "in0": 0.06,
+            "in1": 0.14794838709677416
+          },
+          {
+            "in0": 0.3348387096774193,
+            "in1": 0.42278709677419346
+          }
+        ]
+      },
+      "mission": {
+        "top": 10170,
+        "height": 1688,
+        "travel": 844,
+        "beats": 1,
+        "mode": "accumulate",
+        "beatMs": null,
+        "flow": false,
+        "styleHeight": "200svh",
+        "marginTop": "-100svh",
+        "stops": [
+          10351
+        ],
+        "windows": [
+          {
+            "in0": 0.06,
+            "in1": 0.1848
+          }
+        ]
+      },
+      "ocg": {
+        "top": 11858,
+        "height": 913,
+        "travel": 69,
+        "beats": 3,
+        "mode": "accumulate",
+        "beatMs": null,
+        "flow": true,
+        "styleHeight": null,
+        "marginTop": null,
+        "stops": null,
+        "windows": [
+          {
+            "in0": 0.06,
+            "in1": 0.12674285714285713
+          },
+          {
+            "in0": 0.26857142857142857,
+            "in1": 0.3353142857142857
+          },
+          {
+            "in0": 0.4771428571428571,
+            "in1": 0.5438857142857142
+          }
+        ]
+      },
+      "future": {
+        "top": 12772,
+        "height": 2616,
+        "travel": 1772,
+        "beats": 3,
+        "mode": "accumulate",
+        "beatMs": null,
+        "flow": false,
+        "styleHeight": "310svh",
+        "marginTop": null,
+        "stops": [
+          13049,
+          13419,
+          13789
+        ],
+        "windows": [
+          {
+            "in0": 0.06,
+            "in1": 0.12674285714285713
+          },
+          {
+            "in0": 0.26857142857142857,
+            "in1": 0.3353142857142857
+          },
+          {
+            "in0": 0.4771428571428571,
+            "in1": 0.5438857142857142
+          }
+        ]
+      }
+    }
+  }
+}

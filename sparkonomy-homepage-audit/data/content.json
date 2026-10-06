@@ -1,0 +1,1059 @@
+{
+  "url": "https://www.sparkonomy.com/",
+  "title": "Sparkonomy – Sparking Creator Livelihoods",
+  "meta": [
+    {
+      "name": "charset",
+      "content": "utf-8"
+    },
+    {
+      "name": "viewport",
+      "content": "width=device-width, initial-scale=1, viewport-fit=cover"
+    },
+    {
+      "name": "viewport",
+      "content": "width=device-width, initial-scale=1"
+    },
+    {
+      "name": "facebook-domain-verification",
+      "content": "dq4gtmx7isvdg6evweg50e3rmarkil"
+    },
+    {
+      "name": "theme-color",
+      "content": "#000000"
+    },
+    {
+      "name": "next-size-adjust",
+      "content": null
+    },
+    {
+      "name": "description",
+      "content": "Sparkonomy is an AI platform for Creators and influencers, starting with Open Creator Graph—a free identity and AI consent record built for the AI era."
+    },
+    {
+      "name": "author",
+      "content": "Team Sparkonomy"
+    },
+    {
+      "name": "keywords",
+      "content": "sparkonomy,landing page,innovation,technology,creator,creators,influencer,influencers,social media influencer,social media influencers,instagrammer,instagrammers,youtuber,youtubers,content creator,content creators,social media,community,platform,creator economy,influencer platform,open creator graph,creator record,creator identity,AI visibility for creators,AI consent for creators,control how AI uses my content,AI for creators,creator livelihoods"
+    },
+    {
+      "name": "creator",
+      "content": "Sparkonomy"
+    },
+    {
+      "name": "publisher",
+      "content": "Sparkonomy"
+    },
+    {
+      "name": "robots",
+      "content": "index, follow"
+    },
+    {
+      "name": "googlebot",
+      "content": "index, follow, max-video-preview:-1, max-image-preview:standard, max-snippet:-1"
+    },
+    {
+      "name": "og:title",
+      "content": "Sparkonomy – Sparking Creator Livelihoods"
+    },
+    {
+      "name": "og:description",
+      "content": "Sparkonomy is an AI platform for Creators and influencers, starting with Open Creator Graph—a free identity and AI consent record built for the AI era."
+    },
+    {
+      "name": "og:url",
+      "content": "https://www.sparkonomy.com"
+    },
+    {
+      "name": "og:site_name",
+      "content": "Sparkonomy"
+    },
+    {
+      "name": "og:locale",
+      "content": "en_IN"
+    },
+    {
+      "name": "og:image",
+      "content": "https://www.sparkonomy.com/og-home-v2.png"
+    },
+    {
+      "name": "og:image:width",
+      "content": "1200"
+    },
+    {
+      "name": "og:image:height",
+      "content": "630"
+    },
+    {
+      "name": "og:image:alt",
+      "content": "Sparkonomy - AI Platform for Creators & Influencers"
+    },
+    {
+      "name": "og:type",
+      "content": "website"
+    },
+    {
+      "name": "twitter:card",
+      "content": "summary_large_image"
+    },
+    {
+      "name": "twitter:title",
+      "content": "Sparkonomy – Sparking Creator Livelihoods"
+    },
+    {
+      "name": "twitter:description",
+      "content": "Sparkonomy is an AI platform for Creators and influencers, starting with Open Creator Graph—a free identity and AI consent record built for the AI era."
+    },
+    {
+      "name": "twitter:image",
+      "content": "https://www.sparkonomy.com/og-home-v2.png"
+    }
+  ],
+  "sections": [
+    {
+      "position": 1,
+      "section": "Header / navigation (incl. cookie banner + mobile menu)",
+      "structured": "HEADER (desktop ≥768px)\n[logo image alt=\"Sparkonomy\"]  (link aria-label \"Sparkonomy home\" → /)\nCreator Payments          → /creator/earn\nAbout                     → /about\nContact                   → /contact\nBlogs                     → /blogs\nClaim your Creator Record → https://creatorgraph.sparkonomy.com   (new tab)\n\nMOBILE (<768px)\n[hamburger button, sr-only text] Open menu   /   Close menu (when open)\n#story-menu:\n  Creator Payments\n  About\n  Contact\n  Blogs\n  Claim your Creator Record\n  BUILT WITH            (source text \"Built with\", CSS uppercase)\n    [Built with Meta] [Developed with YouTube] [Google for Startups] [Gemini Early Access Program]   (img alt texts)\n  COMPLIANT WITH        (source text \"Compliant with\", CSS uppercase)\n    [DPDP] [CCPA] [PDPA] [GDPR]\n\nCOOKIE BANNER (CookieYes, third-party, first visit)\nSparkonomy uses cookies to learn your style\nand serve you better. Sound good?\n[Reject All]  [Accept All]   [× aria-label \"Close\"]\nPowered by [CookieYes]  (link aria-label \"Visit CookieYes website\")",
+      "textBlocks": [
+        {
+          "tag": "a",
+          "text": "Creator Payments",
+          "state": "visible on load",
+          "font": "400 13px/19.5px roboto",
+          "color": "rgba(255, 255, 255, 0.6)"
+        },
+        {
+          "tag": "a",
+          "text": "About",
+          "state": "visible on load",
+          "font": "400 13px/19.5px roboto",
+          "color": "rgba(255, 255, 255, 0.6)"
+        },
+        {
+          "tag": "a",
+          "text": "Contact",
+          "state": "visible on load",
+          "font": "400 13px/19.5px roboto",
+          "color": "rgba(255, 255, 255, 0.6)"
+        },
+        {
+          "tag": "a",
+          "text": "Blogs",
+          "state": "visible on load",
+          "font": "400 13px/19.5px roboto",
+          "color": "rgba(255, 255, 255, 0.6)"
+        },
+        {
+          "tag": "a",
+          "text": "Claim your Creator Record",
+          "state": "visible on load",
+          "font": "600 13px/19.5px roboto",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "a",
+          "text": "Creator Payments",
+          "state": "mobile only (<768px)",
+          "font": "400 18px/28px roboto",
+          "color": "rgba(255, 255, 255, 0.85)"
+        },
+        {
+          "tag": "a",
+          "text": "About",
+          "state": "mobile only (<768px)",
+          "font": "400 18px/28px roboto",
+          "color": "rgba(255, 255, 255, 0.85)"
+        },
+        {
+          "tag": "a",
+          "text": "Contact",
+          "state": "mobile only (<768px)",
+          "font": "400 18px/28px roboto",
+          "color": "rgba(255, 255, 255, 0.85)"
+        },
+        {
+          "tag": "a",
+          "text": "Blogs",
+          "state": "mobile only (<768px)",
+          "font": "400 18px/28px roboto",
+          "color": "rgba(255, 255, 255, 0.85)"
+        },
+        {
+          "tag": "a",
+          "text": "Claim your Creator Record",
+          "state": "mobile only (<768px)",
+          "font": "600 15px/22.5px roboto",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "p",
+          "text": "Built with",
+          "state": "mobile only (<768px)",
+          "font": "700 10px/15px roboto ls 2.2px uppercase",
+          "color": "rgba(255, 255, 255, 0.35)"
+        },
+        {
+          "tag": "p",
+          "text": "Compliant with",
+          "state": "mobile only (<768px)",
+          "font": "700 10px/15px roboto ls 2.2px uppercase",
+          "color": "rgba(255, 255, 255, 0.3)"
+        },
+        {
+          "tag": "cookie-banner",
+          "text": "Sparkonomy uses cookies to learn your style\nand serve you better. Sound good?",
+          "state": "first visit (CookieYes)",
+          "font": "400 12px/16.2px roboto",
+          "color": "rgba(255, 255, 255, 0.8)"
+        },
+        {
+          "tag": "cookie-button",
+          "text": "Reject All",
+          "state": "first visit (CookieYes)",
+          "font": "500 13px/13px roboto",
+          "color": "rgb(255, 255, 255) on rgb(107, 114, 128)"
+        },
+        {
+          "tag": "cookie-button",
+          "text": "Accept All",
+          "state": "first visit (CookieYes)",
+          "font": "500 13px/13px roboto",
+          "color": "rgb(255, 255, 255) on rgb(107, 114, 128)"
+        },
+        {
+          "tag": "cookie-banner",
+          "text": "Powered by CookieYes",
+          "state": "first visit (CookieYes)",
+          "font": "400 12px/20px",
+          "color": "rgb(208, 208, 208)"
+        }
+      ],
+      "links": [
+        {
+          "text": "Sparkonomy home",
+          "href": "/",
+          "target": null,
+          "rel": null,
+          "state": "visible"
+        },
+        {
+          "text": "Creator Payments",
+          "href": "/creator/earn",
+          "target": null,
+          "rel": null,
+          "state": "visible"
+        },
+        {
+          "text": "About",
+          "href": "/about",
+          "target": null,
+          "rel": null,
+          "state": "visible"
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "target": null,
+          "rel": null,
+          "state": "visible"
+        },
+        {
+          "text": "Blogs",
+          "href": "/blogs",
+          "target": null,
+          "rel": null,
+          "state": "visible"
+        },
+        {
+          "text": "Claim your Creator Record",
+          "href": "https://creatorgraph.sparkonomy.com",
+          "target": "_blank",
+          "rel": "noopener",
+          "state": "visible"
+        },
+        {
+          "text": "Creator Payments",
+          "href": "/creator/earn",
+          "target": null,
+          "rel": null,
+          "state": "mobile menu"
+        },
+        {
+          "text": "About",
+          "href": "/about",
+          "target": null,
+          "rel": null,
+          "state": "mobile menu"
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "target": null,
+          "rel": null,
+          "state": "mobile menu"
+        },
+        {
+          "text": "Blogs",
+          "href": "/blogs",
+          "target": null,
+          "rel": null,
+          "state": "mobile menu"
+        },
+        {
+          "text": "Claim your Creator Record",
+          "href": "https://creatorgraph.sparkonomy.com",
+          "target": "_blank",
+          "rel": "noopener",
+          "state": "mobile menu"
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Open menu",
+          "href": null
+        }
+      ],
+      "imageAlts": [
+        "Sparkonomy",
+        "Built with Meta",
+        "Developed with YouTube",
+        "Google for Startups",
+        "Gemini Early Access Program",
+        "DPDP",
+        "CCPA",
+        "PDPA",
+        "GDPR"
+      ]
+    },
+    {
+      "position": 2,
+      "section": "Hero — \"Sparkonomy\" + Open Creator Graph launch card",
+      "structured": "H1: Sparkonomy\nP:  Sparking Creator livelihoods.\n\nLAUNCH CARD\n  Badge: NEW                    (source \"New\")\n  [Open Creator Graph mark, alt \"\"]\n  H2: Be visible to AI.\n      Control how it uses your identity.\n  CTA: Claim your free Creator Record   → https://creatorgraph.sparkonomy.com (new tab)\n  Open Creator Graph   BY SPARKONOMY    (source \"by Sparkonomy\")\n\nPARTNER MARQUEE (img alt texts, in order)\n  Built with Meta · Developed with YouTube · Google for Startups · Gemini Early Access Program\n\nSCROLL CUE (button)\n  READ OUR STORY                (source \"Read our story\")  + chevron ⌄",
+      "textBlocks": [
+        {
+          "tag": "h1",
+          "text": "Sparkonomy",
+          "state": "visible on load",
+          "font": "700 96px/96px roboto ls -0.96px",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "p",
+          "text": "Sparking Creator livelihoods.",
+          "state": "visible on load",
+          "font": "400 24px/32px roboto",
+          "color": "rgba(255, 255, 255, 0.9)"
+        },
+        {
+          "tag": "span",
+          "text": "NEW",
+          "state": "visible on load",
+          "font": "700 11px/11px roboto ls 0.44px uppercase",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "span",
+          "text": "Be visible to AI.",
+          "state": "visible on load",
+          "font": "700 32px/40px roboto",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "span",
+          "text": "Control how it uses your identity.",
+          "state": "visible on load",
+          "font": "700 32px/40px roboto",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "a",
+          "text": "Claim your free Creator Record",
+          "state": "visible on load",
+          "font": "600 15px/22.5px roboto",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "span",
+          "text": "Open Creator Graph",
+          "state": "visible on load",
+          "font": "500 16px/24px roboto",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "span",
+          "text": "BY SPARKONOMY",
+          "state": "visible on load",
+          "font": "400 12px/18px roboto ls 1.44px uppercase",
+          "color": "rgba(255, 255, 255, 0.5)"
+        },
+        {
+          "tag": "button",
+          "text": "READ OUR STORY",
+          "state": "visible on load",
+          "font": "400 12px/18px roboto ls 2.64px uppercase",
+          "color": "rgba(255, 255, 255, 0.3)"
+        }
+      ],
+      "links": [
+        {
+          "text": "Claim your free Creator Record",
+          "href": "https://creatorgraph.sparkonomy.com",
+          "target": "_blank",
+          "rel": "noopener",
+          "state": "visible"
+        }
+      ],
+      "buttons": [
+        {
+          "text": "READ OUR STORY",
+          "href": null
+        }
+      ],
+      "imageAlts": []
+    },
+    {
+      "position": 3,
+      "section": "Story 1 — \"For 15 years, we helped build YouTube from inside Google.\"",
+      "structured": "H2: For 15 years, we helped build\n    YouTube from inside Google.\nP:  But what stayed with us were the Creators\n    who brought it to life.",
+      "textBlocks": [
+        {
+          "tag": "h2",
+          "text": "For 15 years, we helped build\nYouTube from inside Google.",
+          "state": "revealed on scroll",
+          "font": "700 64px/76.8px roboto",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "p",
+          "text": "But what stayed with us were the Creators who brought it to life.",
+          "state": "revealed on scroll",
+          "font": "400 28.8px/43.2px roboto",
+          "color": "rgba(255, 255, 255, 0.75)"
+        }
+      ],
+      "links": [],
+      "buttons": [],
+      "imageAlts": []
+    },
+    {
+      "position": 4,
+      "section": "Story 2 — \"Students. / Homemakers. / Doctors. / Farmers.\"",
+      "structured": "H2: Students.\n    Homemakers.\n    Doctors.\n    Farmers.\nP:  People who picked up a camera,\n    told stories and made a living.",
+      "textBlocks": [
+        {
+          "tag": "span",
+          "text": "Students.",
+          "state": "revealed on scroll",
+          "font": "700 64px/99.2px roboto",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "span",
+          "text": "Homemakers.",
+          "state": "revealed on scroll",
+          "font": "700 64px/99.2px roboto",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "span",
+          "text": "Doctors.",
+          "state": "revealed on scroll",
+          "font": "700 64px/99.2px roboto",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "span",
+          "text": "Farmers.",
+          "state": "revealed on scroll",
+          "font": "700 64px/99.2px roboto",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "p",
+          "text": "People who picked up a camera, told stories and made a living.",
+          "state": "revealed on scroll",
+          "font": "400 28.8px/43.2px roboto",
+          "color": "rgba(255, 255, 255, 0.75)"
+        }
+      ],
+      "links": [],
+      "buttons": [],
+      "imageAlts": []
+    },
+    {
+      "position": 5,
+      "section": "Story 3 — \"And we saw what it takes.\"",
+      "structured": "H2: And we saw what it takes.\nP:  No crew.\nP:  No scriptwriter.\nP:  No one else.\nP:  Just one person\n    showing up every day.",
+      "textBlocks": [
+        {
+          "tag": "h2",
+          "text": "And we saw what it takes.",
+          "state": "revealed on scroll",
+          "font": "700 64px/76.8px roboto",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "p",
+          "text": "No crew.",
+          "state": "revealed on scroll",
+          "font": "400 28.8px/43.2px roboto",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "p",
+          "text": "No scriptwriter.",
+          "state": "revealed on scroll",
+          "font": "400 28.8px/43.2px roboto",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "p",
+          "text": "No one else.",
+          "state": "revealed on scroll",
+          "font": "400 28.8px/43.2px roboto",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "p",
+          "text": "Just one person\nshowing up every day.",
+          "state": "revealed on scroll",
+          "font": "700 64px/76.8px roboto",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "links": [],
+      "buttons": [],
+      "imageAlts": []
+    },
+    {
+      "position": 6,
+      "section": "Story 4 — \"Creators built a new profession.\"",
+      "structured": "H2: Creators built a new profession.\nP:  But too little was built for them.",
+      "textBlocks": [
+        {
+          "tag": "h2",
+          "text": "Creators built a new profession.",
+          "state": "revealed on scroll",
+          "font": "700 64px/76.8px roboto",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "p",
+          "text": "But too little was built for them.",
+          "state": "revealed on scroll",
+          "font": "400 28.8px/43.2px roboto",
+          "color": "rgba(255, 255, 255, 0.75)"
+        }
+      ],
+      "links": [],
+      "buttons": [],
+      "imageAlts": []
+    },
+    {
+      "position": 7,
+      "section": "Story 5 — \"For years, we built the platform.\"",
+      "structured": "H2: For years, we built the platform.\nP:  Now we're building for the Creators\n    who bring it to life.",
+      "textBlocks": [
+        {
+          "tag": "h2",
+          "text": "For years, we built the platform.",
+          "state": "revealed on scroll",
+          "font": "700 64px/76.8px roboto",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "p",
+          "text": "Now we're building for the Creators\nwho bring it to life.",
+          "state": "revealed on scroll",
+          "font": "700 43.92px/50.508px roboto",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "links": [],
+      "buttons": [],
+      "imageAlts": []
+    },
+    {
+      "position": 8,
+      "section": "Story 6 — \"That's why we built Sparkonomy.\"",
+      "structured": "H2: That's why we built Sparkonomy.\nP:  We're here to help every Creator, wherever they are,\n    spark a successful livelihood.",
+      "textBlocks": [
+        {
+          "tag": "h2",
+          "text": "That's why we built Sparkonomy.",
+          "state": "revealed on scroll",
+          "font": "700 64px/76.8px roboto",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "p",
+          "text": "We're here to help every Creator, wherever they are,\nspark a successful livelihood.",
+          "state": "revealed on scroll",
+          "font": "400 28.8px/43.2px roboto",
+          "color": "rgba(255, 255, 255, 0.75)"
+        }
+      ],
+      "links": [],
+      "buttons": [],
+      "imageAlts": []
+    },
+    {
+      "position": 9,
+      "section": "Creator Record — Open Creator Graph product demo",
+      "structured": "H2: We're starting with what\n    should already be yours.\nP:  Your identity.\n    The right to say how AI can use it.\n\nCREATOR RECORD CARD\n  [avatar] Chulbuli Dixit [verified tick]\n  @chulbulidixit\n  ✓ Machine-Sourced   ✓ Machine-Visible   ✓ Creator-Controlled\n  AI Usage       ● Conditional\n  Name           ● Allowed\n  Image          ● Conditional\n  Likeness       ● Prohibited\n  Voice          ● Conditional\n  Movement       ● Conditional\n  Signature      ● Prohibited\n  Declared and cryptographically timestamped\n  25 September 2026, 14:32:07 UTC\n  [stamp image alt=\"Certified\"]\n\nH3: Be visible to AI.\nP:  Control how it uses your identity.\nCTA: Claim your free Creator Record   → https://creatorgraph.sparkonomy.com (new tab)",
+      "textBlocks": [
+        {
+          "tag": "span",
+          "text": "We're starting with what",
+          "state": "revealed on scroll",
+          "font": "700 64px/76.8px roboto",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "span",
+          "text": "should already be yours.",
+          "state": "revealed on scroll",
+          "font": "700 64px/76.8px roboto",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "p",
+          "text": "Your identity.\nThe right to say how AI can use it.",
+          "state": "revealed on scroll",
+          "font": "400 28.8px/43.2px roboto",
+          "color": "rgba(255, 255, 255, 0.75)"
+        },
+        {
+          "tag": "span",
+          "text": "Chulbuli Dixit",
+          "state": "revealed on scroll",
+          "font": "700 15px/22.5px roboto",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "p",
+          "text": "@chulbulidixit",
+          "state": "revealed on scroll",
+          "font": "400 12px/18px roboto",
+          "color": "rgba(255, 255, 255, 0.45)"
+        },
+        {
+          "tag": "li",
+          "text": "✓ Machine-Sourced",
+          "state": "revealed on scroll",
+          "font": "400 10.44px/15.66px roboto",
+          "color": "rgba(255, 255, 255, 0.8)"
+        },
+        {
+          "tag": "li",
+          "text": "✓ Machine-Visible",
+          "state": "revealed on scroll",
+          "font": "400 10.44px/15.66px roboto",
+          "color": "rgba(255, 255, 255, 0.8)"
+        },
+        {
+          "tag": "li",
+          "text": "✓ Creator-Controlled",
+          "state": "revealed on scroll",
+          "font": "400 10.44px/15.66px roboto",
+          "color": "rgba(255, 255, 255, 0.8)"
+        },
+        {
+          "tag": "span",
+          "text": "AI Usage",
+          "state": "revealed on scroll",
+          "font": "600 15px/22.5px roboto",
+          "color": "rgba(255, 255, 255, 0.9)"
+        },
+        {
+          "tag": "span",
+          "text": "Conditional",
+          "state": "revealed on scroll",
+          "font": "400 12px/18px roboto",
+          "color": "rgb(229, 182, 7)"
+        },
+        {
+          "tag": "span",
+          "text": "Name",
+          "state": "revealed on scroll",
+          "font": "400 14px/21px roboto",
+          "color": "rgba(255, 255, 255, 0.85)"
+        },
+        {
+          "tag": "span",
+          "text": "Allowed",
+          "state": "revealed on scroll",
+          "font": "400 12px/18px roboto",
+          "color": "rgb(52, 199, 89)"
+        },
+        {
+          "tag": "span",
+          "text": "Image",
+          "state": "revealed on scroll",
+          "font": "400 14px/21px roboto",
+          "color": "rgba(255, 255, 255, 0.85)"
+        },
+        {
+          "tag": "span",
+          "text": "Conditional",
+          "state": "revealed on scroll",
+          "font": "400 12px/18px roboto",
+          "color": "rgb(229, 182, 7)"
+        },
+        {
+          "tag": "span",
+          "text": "Likeness",
+          "state": "revealed on scroll",
+          "font": "400 14px/21px roboto",
+          "color": "rgba(255, 255, 255, 0.85)"
+        },
+        {
+          "tag": "span",
+          "text": "Prohibited",
+          "state": "revealed on scroll",
+          "font": "400 12px/18px roboto",
+          "color": "rgb(229, 72, 77)"
+        },
+        {
+          "tag": "span",
+          "text": "Voice",
+          "state": "revealed on scroll",
+          "font": "400 14px/21px roboto",
+          "color": "rgba(255, 255, 255, 0.85)"
+        },
+        {
+          "tag": "span",
+          "text": "Conditional",
+          "state": "revealed on scroll",
+          "font": "400 12px/18px roboto",
+          "color": "rgb(229, 182, 7)"
+        },
+        {
+          "tag": "span",
+          "text": "Movement",
+          "state": "revealed on scroll",
+          "font": "400 14px/21px roboto",
+          "color": "rgba(255, 255, 255, 0.85)"
+        },
+        {
+          "tag": "span",
+          "text": "Conditional",
+          "state": "revealed on scroll",
+          "font": "400 12px/18px roboto",
+          "color": "rgb(229, 182, 7)"
+        },
+        {
+          "tag": "span",
+          "text": "Signature",
+          "state": "revealed on scroll",
+          "font": "400 14px/21px roboto",
+          "color": "rgba(255, 255, 255, 0.85)"
+        },
+        {
+          "tag": "span",
+          "text": "Prohibited",
+          "state": "revealed on scroll",
+          "font": "400 12px/18px roboto",
+          "color": "rgb(229, 72, 77)"
+        },
+        {
+          "tag": "p",
+          "text": "Declared and cryptographically timestamped",
+          "state": "revealed on scroll",
+          "font": "500 11px/16.5px roboto",
+          "color": "rgba(255, 255, 255, 0.45)"
+        },
+        {
+          "tag": "p",
+          "text": "25 September 2026, 14:32:07 UTC",
+          "state": "revealed on scroll",
+          "font": "700 14px/21px roboto",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "h3",
+          "text": "Be visible to AI.",
+          "state": "revealed on scroll",
+          "font": "700 43.92px/50.508px roboto",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "p",
+          "text": "Control how it uses your identity.",
+          "state": "revealed on scroll",
+          "font": "400 20px/28px roboto",
+          "color": "rgba(255, 255, 255, 0.6)"
+        },
+        {
+          "tag": "a",
+          "text": "Claim your free Creator Record",
+          "state": "revealed on scroll",
+          "font": "600 15px/22.5px roboto",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "links": [
+        {
+          "text": "Claim your free Creator Record",
+          "href": "https://creatorgraph.sparkonomy.com",
+          "target": "_blank",
+          "rel": "noopener",
+          "state": "visible"
+        }
+      ],
+      "buttons": [],
+      "imageAlts": []
+    },
+    {
+      "position": 10,
+      "section": "Closing — \"And we're only getting started.\"",
+      "structured": "H2: And we're only getting started.\nP:  So every Creator can build a life\n    doing what they love.\nP:  Let's spark together.",
+      "textBlocks": [
+        {
+          "tag": "h2",
+          "text": "And we're only getting started.",
+          "state": "revealed on scroll",
+          "font": "700 64px/76.8px roboto",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "p",
+          "text": "So every Creator can build a life doing what they love.",
+          "state": "revealed on scroll",
+          "font": "400 28.8px/43.2px roboto",
+          "color": "rgba(255, 255, 255, 0.75)"
+        },
+        {
+          "tag": "p",
+          "text": "Let's spark together.",
+          "state": "revealed on scroll",
+          "font": "700 43.92px/50.508px roboto",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "links": [],
+      "buttons": [],
+      "imageAlts": []
+    },
+    {
+      "position": 11,
+      "section": "Footer",
+      "structured": "[wordmark image alt=\"Sparkonomy\"]\nCompliant with\n  [DPDP] [CCPA] [PDPA] [GDPR]\n\nProducts\n  Open Creator Graph        → https://creatorgraph.sparkonomy.com (new tab)\n  Creator Payments          → /creator/earn\nCompany\n  About Us                  → /about\n  Contact Us                → /contact\n  Blogs                     → /blogs\nTerms & Policies\n  Privacy Policy            → /legal/privacy-policy\n  Terms of Services         → /legal/terms\n  Refund Policy             → /legal/refund-policy\n  Cookie Policy             (button – opens CookieYes)\n\n© Sparkonomy Pte. Ltd. All rights reserved\n[X] [Instagram] [YouTube] [LinkedIn] [Reddit]   (icon links, aria-labels as shown)",
+      "textBlocks": [
+        {
+          "tag": "p",
+          "text": "Compliant with",
+          "state": "visible on load",
+          "font": "500 14px/20px roboto",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "p",
+          "text": "Products",
+          "state": "visible on load",
+          "font": "500 14px/20px roboto",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "a",
+          "text": "Open Creator Graph",
+          "state": "visible on load",
+          "font": "400 14px/20px roboto",
+          "color": "rgba(255, 255, 255, 0.5)"
+        },
+        {
+          "tag": "a",
+          "text": "Creator Payments",
+          "state": "visible on load",
+          "font": "400 14px/20px roboto",
+          "color": "rgba(255, 255, 255, 0.5)"
+        },
+        {
+          "tag": "p",
+          "text": "Company",
+          "state": "visible on load",
+          "font": "500 14px/20px roboto",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "a",
+          "text": "About Us",
+          "state": "visible on load",
+          "font": "400 14px/20px roboto",
+          "color": "rgba(255, 255, 255, 0.5)"
+        },
+        {
+          "tag": "a",
+          "text": "Contact Us",
+          "state": "visible on load",
+          "font": "400 14px/20px roboto",
+          "color": "rgba(255, 255, 255, 0.5)"
+        },
+        {
+          "tag": "a",
+          "text": "Blogs",
+          "state": "visible on load",
+          "font": "400 14px/20px roboto",
+          "color": "rgba(255, 255, 255, 0.5)"
+        },
+        {
+          "tag": "p",
+          "text": "Terms & Policies",
+          "state": "visible on load",
+          "font": "500 14px/20px roboto",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "a",
+          "text": "Privacy Policy",
+          "state": "visible on load",
+          "font": "400 14px/20px roboto",
+          "color": "rgba(255, 255, 255, 0.5)"
+        },
+        {
+          "tag": "a",
+          "text": "Terms of Services",
+          "state": "visible on load",
+          "font": "400 14px/20px roboto",
+          "color": "rgba(255, 255, 255, 0.5)"
+        },
+        {
+          "tag": "a",
+          "text": "Refund Policy",
+          "state": "visible on load",
+          "font": "400 14px/20px roboto",
+          "color": "rgba(255, 255, 255, 0.5)"
+        },
+        {
+          "tag": "button",
+          "text": "Cookie Policy",
+          "state": "visible on load",
+          "font": "400 14px/20px roboto",
+          "color": "rgba(255, 255, 255, 0.5)"
+        },
+        {
+          "tag": "p",
+          "text": "Compliant with",
+          "state": "mobile only (<768px)",
+          "font": "500 14px/20px roboto",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "p",
+          "text": "© Sparkonomy Pte. Ltd. All rights reserved",
+          "state": "visible on load",
+          "font": "400 14px/20px roboto",
+          "color": "rgba(255, 255, 255, 0.5)"
+        }
+      ],
+      "links": [
+        {
+          "text": "Open Creator Graph",
+          "href": "https://creatorgraph.sparkonomy.com",
+          "target": "_blank",
+          "rel": "noopener",
+          "state": "visible"
+        },
+        {
+          "text": "Creator Payments",
+          "href": "/creator/earn",
+          "target": null,
+          "rel": null,
+          "state": "visible"
+        },
+        {
+          "text": "About Us",
+          "href": "/about",
+          "target": null,
+          "rel": null,
+          "state": "visible"
+        },
+        {
+          "text": "Contact Us",
+          "href": "/contact",
+          "target": null,
+          "rel": null,
+          "state": "visible"
+        },
+        {
+          "text": "Blogs",
+          "href": "/blogs",
+          "target": null,
+          "rel": null,
+          "state": "visible"
+        },
+        {
+          "text": "Privacy Policy",
+          "href": "/legal/privacy-policy",
+          "target": null,
+          "rel": null,
+          "state": "visible"
+        },
+        {
+          "text": "Terms of Services",
+          "href": "/legal/terms",
+          "target": null,
+          "rel": null,
+          "state": "visible"
+        },
+        {
+          "text": "Refund Policy",
+          "href": "/legal/refund-policy",
+          "target": null,
+          "rel": null,
+          "state": "visible"
+        },
+        {
+          "text": "X",
+          "href": "https://x.com/SparkonomySays",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "state": "visible"
+        },
+        {
+          "text": "Instagram",
+          "href": "https://www.instagram.com/sparkonomy.official/",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "state": "visible"
+        },
+        {
+          "text": "YouTube",
+          "href": "https://www.youtube.com/@Sparkonomy.official",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "state": "visible"
+        },
+        {
+          "text": "LinkedIn",
+          "href": "https://www.linkedin.com/company/sparkonomy/",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "state": "visible"
+        },
+        {
+          "text": "Reddit",
+          "href": "https://www.reddit.com/user/Sparkonomy/",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "state": "visible"
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Cookie Policy",
+          "href": null
+        }
+      ],
+      "imageAlts": [
+        "Sparkonomy",
+        "DPDP",
+        "CCPA",
+        "PDPA",
+        "GDPR"
+      ]
+    }
+  ]
+}
