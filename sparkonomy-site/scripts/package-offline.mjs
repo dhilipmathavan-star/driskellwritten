@@ -12,7 +12,7 @@ import { build } from 'esbuild';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = path.join(ROOT, 'dist');
-const OUT = path.resolve(process.argv[2] || path.join(ROOT, 'offline', 'House-of-Models-site'));
+const OUT = path.resolve(process.argv[2] || path.join(ROOT, 'offline', 'Sparkonomy-site'));
 
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.cpSync(DIST, OUT, { recursive: true });
