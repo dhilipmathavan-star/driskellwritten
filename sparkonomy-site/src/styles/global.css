@@ -2,12 +2,12 @@
 
 :root {
   /* type */
-  --f-light: "BDO Grotesk Light", sans-serif;
-  --f-regular: "BDO Grotesk Regular", sans-serif;
-  --f-medium: "BDO Grotesk Medium", sans-serif;
-  --f-demibold: "BDO Grotesk DemiBold", sans-serif;
-  --f-bold: "BDO Grotesk Bold", sans-serif;
-  --f-satoshi: "Satoshi", sans-serif;
+  --f-light: "Hanken Grotesk Light", sans-serif;
+  --f-regular: "Hanken Grotesk Regular", sans-serif;
+  --f-medium: "Hanken Grotesk Medium", sans-serif;
+  --f-demibold: "Hanken Grotesk DemiBold", sans-serif;
+  --f-bold: "Hanken Grotesk Bold", sans-serif;
+  --f-satoshi: "Hanken Grotesk Bold", sans-serif;
   --f-inter: "Inter", sans-serif;
 
   /* colour */

@@ -7,21 +7,21 @@
   "steps": [
     {
       "label": "",
-      "icon": "/assets/img/SnOMPU6z1fTbyK6AXARZO3yyU4.svg",
+      "icon": "/assets/own/icon-crew.svg",
       "iconHeight": 26.7,
       "title": "No crew.",
       "body": ""
     },
     {
       "label": "",
-      "icon": "/assets/img/2wzFTufOIYFCvajBgjCmWDa4Q.svg",
+      "icon": "/assets/own/icon-script.svg",
       "iconHeight": 30.7,
       "title": "No scriptwriter.",
       "body": ""
     },
     {
       "label": "",
-      "icon": "/assets/img/EFpJnUQCLUuoPPsdBxZcAxXcK0.svg",
+      "icon": "/assets/own/icon-solo.svg",
       "iconHeight": 30.7,
       "title": "No one else.",
       "body": ""

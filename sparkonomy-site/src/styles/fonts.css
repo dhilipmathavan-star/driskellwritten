@@ -1,11 +1,12 @@
-/* Font files self-hosted from the original site. Family names match the original
-   so computed styles line up 1:1. */
-@font-face { font-family: "BDO Grotesk Light"; src: url("/assets/fonts/CDkwy56fwfniljd9ARC1verdQ8.woff2") format("woff2"); font-display: swap; }
-@font-face { font-family: "BDO Grotesk Regular"; src: url("/assets/fonts/3wTIwzEaZcwTqUgmEwMDYbpmpx0.woff2") format("woff2"); font-display: swap; }
-@font-face { font-family: "BDO Grotesk Medium"; src: url("/assets/fonts/IHGsSfg11OdfhvzTKQvoyshNQ.woff2") format("woff2"); font-display: swap; }
-@font-face { font-family: "BDO Grotesk DemiBold"; src: url("/assets/fonts/RpPmXJaugtdY2ArK8fm8MaFldRg.woff2") format("woff2"); font-display: swap; }
-@font-face { font-family: "BDO Grotesk Bold"; src: url("/assets/fonts/XzxnvjI7gSZkUQSNGfBE4GQgj0A.woff2") format("woff2"); font-display: swap; }
-@font-face { font-family: "Satoshi"; src: url("/assets/fonts/GHM6WVH6MILNYOOCXHXB5GTSGNTMGXZR.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+/* Display/text face: Hanken Grotesk (SIL Open Font License, see /assets/fonts-own/OFL.txt),
+   static instances of the variable font, one family per weight. Inter (OFL) for footer text. */
+@font-face { font-family: "Hanken Grotesk Light"; src: url("/assets/fonts-own/HankenGrotesk-Light.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Hanken Grotesk Regular"; src: url("/assets/fonts-own/HankenGrotesk-Regular.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Hanken Grotesk Medium"; src: url("/assets/fonts-own/HankenGrotesk-Medium.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Hanken Grotesk DemiBold"; src: url("/assets/fonts-own/HankenGrotesk-DemiBold.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Hanken Grotesk Bold"; src: url("/assets/fonts-own/HankenGrotesk-Bold.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Hanken Grotesk"; src: url("/assets/fonts-own/HankenGrotesk-Bold.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Hanken Grotesk"; src: url("/assets/fonts-own/HankenGrotesk-Medium.woff2") format("woff2"); font-weight: 500; font-display: swap; }
 @font-face { font-family: "Inter"; src: url("/assets/fonts/GrgcKwrN6d3Uz8EwcLHZxwEfC4.woff2") format("woff2"); font-weight: 400; font-display: swap; }
 @font-face { font-family: "Inter"; src: url("/assets/fonts/UjlFhCnUjxhNfep4oYBPqnEssyo.woff2") format("woff2"); font-weight: 500; font-display: swap; }
 @font-face { font-family: "Inter"; src: url("/assets/fonts/yDtI2UI8XcEg1W2je9XPN3Noo.woff2") format("woff2"); font-weight: 600; font-display: swap; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2070, U+2074-207E, U+2080-208E, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
