@@ -1,0 +1,85 @@
+{
+  "ref": "02",
+  "logo": {
+    "src": "/assets/sparkonomy/wordmark.png",
+    "alt": "Sparkonomy",
+    "href": "/",
+    "width": 137,
+    "height": 26
+  },
+  "nav": [
+    {
+      "label": "Creator Payments",
+      "link": "creatorPayments"
+    },
+    {
+      "label": "About",
+      "link": "about"
+    },
+    {
+      "label": "Contact",
+      "link": "contact"
+    },
+    {
+      "label": "Blogs",
+      "link": "blogs"
+    }
+  ],
+  "cta": {
+    "label": "Claim your Creator Record",
+    "link": "creatorGraph"
+  },
+  "title": {
+    "line1": "Sparkonomy",
+    "line2": "Be visible to AI."
+  },
+  "subtitle": "Sparking Creator livelihoods.",
+  "prompt": {
+    "badge": "NEW",
+    "label": "Control how it uses your identity.",
+    "placeholder": "Control how it uses your identity.",
+    "secondary": {
+      "label": "Open Creator Graph",
+      "by": "BY SPARKONOMY",
+      "icon": "/assets/sparkonomy/ocg-mark.webp",
+      "link": "creatorGraph"
+    },
+    "primary": {
+      "label": "Claim your free Creator Record",
+      "link": "creatorGraph"
+    }
+  },
+  "logos": [
+    {
+      "src": "/assets/sparkonomy/google-for-startups.png",
+      "alt": "Google for Startups",
+      "width": 256,
+      "height": 131
+    },
+    {
+      "src": "/assets/sparkonomy/gemini.png",
+      "alt": "Gemini Early Access Program",
+      "width": 256,
+      "height": 91
+    },
+    {
+      "src": "/assets/sparkonomy/meta.png",
+      "alt": "Built with Meta",
+      "width": 256,
+      "height": 91
+    },
+    {
+      "src": "/assets/sparkonomy/youtube.png",
+      "alt": "Developed with YouTube",
+      "width": 256,
+      "height": 98
+    }
+  ],
+  "story": {
+    "label": "READ OUR STORY",
+    "href": "#story"
+  },
+  "background": {
+    "lines": "/assets/svg/hero-lines.svg"
+  }
+}

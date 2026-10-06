@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "title": "Sparkonomy \u2013 Sparking Creator Livelihoods",
+    "description": "Sparking Creator livelihoods.",
+    "lang": "en",
+    "url": "https://www.sparkonomy.com/",
+    "favicon": "/assets/sparkonomy/favicon-512.png",
+    "ogImage": "/assets/sparkonomy/og.png",
+    "twitterCard": "summary_large_image"
+  },
+  "links": {
+    "home": "/",
+    "creatorGraph": "https://creatorgraph.sparkonomy.com",
+    "creatorPayments": "https://www.sparkonomy.com/creator/earn",
+    "about": "https://www.sparkonomy.com/about",
+    "contact": "https://www.sparkonomy.com/contact",
+    "blogs": "https://www.sparkonomy.com/blogs",
+    "privacy": "https://www.sparkonomy.com/legal/privacy-policy",
+    "terms": "https://www.sparkonomy.com/legal/terms",
+    "refund": "https://www.sparkonomy.com/legal/refund-policy",
+    "x": "https://x.com/SparkonomySays",
+    "instagram": "https://www.instagram.com/sparkonomy.official/",
+    "youtube": "https://www.youtube.com/@Sparkonomy.official",
+    "linkedin": "https://www.linkedin.com/company/sparkonomy/",
+    "reddit": "https://www.reddit.com/user/Sparkonomy/"
+  },
+  "breakpoints": {
+    "desktop": "min-width: 1440px",
+    "laptop": "(min-width: 1200px) and (max-width: 1439px)",
+    "tablet": "(min-width: 810px) and (max-width: 1199px)",
+    "mobile": "max-width: 809px"
+  },
+  "sections": [
+    {
+      "ref": "01",
+      "id": "loader",
+      "component": "Loader"
+    },
+    {
+      "ref": "02",
+      "id": "hero",
+      "component": "Hero"
+    },
+    {
+      "ref": "03",
+      "id": "video-intro",
+      "component": "VideoBand",
+      "content": "video-intro"
+    },
+    {
+      "ref": "s03",
+      "id": "chapter-15-years",
+      "component": "Chapter"
+    },
+    {
+      "ref": "s04",
+      "id": "your-model",
+      "component": "YourModel"
+    },
+    {
+      "ref": "05",
+      "id": "video-mid",
+      "component": "VideoBand",
+      "content": "video-mid"
+    },
+    {
+      "ref": "s05",
+      "id": "how-it-works",
+      "component": "HowItWorks"
+    },
+    {
+      "ref": "09",
+      "id": "video-strip",
+      "component": "VideoBand",
+      "content": "video-strip"
+    },
+    {
+      "ref": "s06",
+      "id": "chapter-profession",
+      "component": "Chapter"
+    },
+    {
+      "ref": "s07",
+      "id": "chapter-platform",
+      "component": "Chapter"
+    },
+    {
+      "ref": "s08",
+      "id": "chapter-why",
+      "component": "Chapter"
+    },
+    {
+      "ref": "s09",
+      "id": "under-the-hood",
+      "component": "UnderTheHood"
+    },
+    {
+      "ref": "19-20",
+      "id": "final-cta",
+      "component": "FinalCta"
+    },
+    {
+      "ref": "21",
+      "id": "video-outro",
+      "component": "VideoBand",
+      "content": "video-outro"
+    },
+    {
+      "ref": "22-24",
+      "id": "footer",
+      "component": "Footer"
+    }
+  ]
+}

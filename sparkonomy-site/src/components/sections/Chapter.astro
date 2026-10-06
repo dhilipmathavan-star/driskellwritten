@@ -1,0 +1,60 @@
+---
+// Sparkonomy story chapter, set in this design's existing type styles:
+//  • heading  = final-CTA heading (block 19): BDO Grotesk Medium 70/84, -2.1px, white, gradient highlights
+//  • body     = "Your Store / Your Data" paragraph (block 14): BDO Grotesk Light 24/1.4, white
+//  • emphasis = "Supercharged" headline (block 15): BDO Grotesk DemiBold 40/48, white, gradient highlights
+// Text segments: { t: string, hl?: true } — hl renders with the design's brand gradient.
+type Seg = { t: string; hl?: boolean };
+interface Props {
+  content: { ref: string; id?: string; heading: Seg[][]; body?: Seg[][]; emphasis?: Seg[][] };
+}
+const { content } = Astro.props;
+const lines = (rows?: Seg[][]) => rows ?? [];
+---
+<section class="chapter" id={content.id} data-ref={content.ref}>
+  <h2 class="chapter__title" data-reveal>
+    {content.heading.map((row) => (
+      <span class="chapter__line">{row.map((s) => (s.hl ? <span class="grad-text">{s.t}</span> : s.t))}</span>
+    ))}
+  </h2>
+  {content.body && (
+    <p class="chapter__body" data-reveal>
+      {lines(content.body).map((row) => (
+        <span class="chapter__line">{row.map((s) => (s.hl ? <span class="grad-text">{s.t}</span> : s.t))}</span>
+      ))}
+    </p>
+  )}
+  {content.emphasis && (
+    <p class="chapter__emphasis" data-reveal>
+      {lines(content.emphasis).map((row) => (
+        <span class="chapter__line">{row.map((s) => (s.hl ? <span class="grad-text">{s.t}</span> : s.t))}</span>
+      ))}
+    </p>
+  )}
+</section>
+
+<style>
+  .chapter {
+    position: relative; width: 100%;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px;
+    padding: 115px 40px 115px; text-align: center; color: #fff;
+  }
+  .chapter__line { display: block; }
+  .chapter__title {
+    font-family: var(--f-medium); font-weight: 400; font-size: 70px; line-height: 84px; letter-spacing: -2.1px;
+    text-wrap: balance;
+  }
+  .chapter__body { font-family: var(--f-light); font-weight: 400; font-size: 24px; line-height: 1.4; }
+  .chapter__emphasis { font-family: var(--f-demibold); font-weight: 400; font-size: 40px; line-height: 48px; }
+
+  @media (min-width: 810px) and (max-width: 1199px) {
+    .chapter { padding: 80px 40px; }
+    .chapter__title { font-size: 55px; line-height: 66px; letter-spacing: -1.65px; }
+  }
+  @media (max-width: 809px) {
+    .chapter { padding: 60px 15px; gap: 16px; }
+    .chapter__title { font-size: 26px; line-height: 31.2px; letter-spacing: -0.78px; }
+    .chapter__body { font-size: 16px; }
+    .chapter__emphasis { font-size: 24px; line-height: 30px; }
+  }
+</style>

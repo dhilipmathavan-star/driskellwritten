@@ -1,0 +1,25 @@
+{
+  "ref": "s07",
+  "id": "platform",
+  "heading": [
+    [
+      {
+        "t": "For years, we built the platform."
+      }
+    ]
+  ],
+  "emphasis": [
+    [
+      {
+        "t": "Now we're building for the Creators",
+        "hl": true
+      }
+    ],
+    [
+      {
+        "t": "who bring it to life.",
+        "hl": true
+      }
+    ]
+  ]
+}

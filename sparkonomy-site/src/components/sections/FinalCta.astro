@@ -1,0 +1,296 @@
+---
+// Final call to action — original blocks 19 (heading with gradient "your brand", no motion in
+// the source: Home tree page.pretty.js:28930–29190 has no animate/initial/hover props) and 20
+// ("Get Started": Framer's Running-Stroke component, page.pretty.js:7650–7930, inside the
+// appear wrapper `Do` at Home 29214–29250). All motion lives in the <script> below.
+interface Props {
+  content: {
+    refs: { heading: string; button: string };
+    heading: { lead: string; highlight: string; tail: string; tailCompact: string };
+    body?: { t: string; hl?: boolean }[][];
+    emphasis?: { t: string; hl?: boolean }[][];
+    button: { label: string; link: string; newTab?: boolean };
+  };
+  links: Record<string, string>;
+}
+const { content, links } = Astro.props;
+const { heading, button } = content;
+---
+<section class="final-cta" aria-labelledby="final-cta-heading">
+  <div class="fc-head" data-ref={content.refs.heading}>
+    <h2 class="fc-title" id="final-cta-heading">
+      <span class="fc-row">
+        <span class="fc-lead">{heading.lead}</span>
+        <span class="fc-hl grad-text">{heading.highlight}</span>
+      </span>
+      {heading.tail && <span class="fc-tail fc-tail--wide">{heading.tail}</span>}
+      {heading.tailCompact && <span class="fc-tail fc-tail--compact">{heading.tailCompact}</span>}
+    </h2>
+    {content.body && <p class="fc-body">{content.body.map((row) => <span class="fc-line">{row.map((s) => (s.hl ? <span class="grad-text">{s.t}</span> : s.t))}</span>)}</p>}
+    {content.emphasis && <p class="fc-emphasis">{content.emphasis.map((row) => <span class="fc-line">{row.map((s) => (s.hl ? <span class="grad-text">{s.t}</span> : s.t))}</span>)}</p>}
+  </div>
+
+  <div class="fc-cta" data-ref={content.refs.button}>
+    <div class="fc-appear">
+      <a class="fc-btn" href={links[button.link]}
+        {...(button.newTab ? { target: '_blank', rel: 'noopener' } : {})}>
+        <span class="fc-glow" aria-hidden="true"></span>
+        <span class="fc-stroke" aria-hidden="true"></span>
+        <span class="fc-fill" aria-hidden="true"></span>
+        <span class="fc-label">{button.label}</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  // ---------------------------------------------------------------------------------------
+  // 1) Appear of the button wrapper (Home page.pretty.js:29214–29250, wrapper `Do = ae(W)`
+  //    (page.pretty.js:11589) with initial `zo` / animate `Ro` (page.pretty.js:11624–11655)):
+  //      opacity 0.001 → 1, spring { stiffness 200, damping 40, mass 1, delay 1.5 },
+  //      transformPerspective 1200 (no other transform values change).
+  //    It is a plain framer-motion mount animation (no whileInView): the page is client
+  //    rendered (`data-framer-no-content`, no SSR appear script entry for 16reamx), so it runs
+  //    once when the page mounts. The breakpoint override for "bigboy" (≥1440px, c89HZ42bQ,
+  //    Home 29224–29231) sets animate/initial to undefined → no appear at ≥1440px.
+  //    Opacity is hardware-accelerated in framer-motion: the spring becomes a WAAPI animation
+  //    whose easing is linear() sampled from the spring run over [0,100]
+  //    (motion.pretty.js:551–558 `je`, 777–783 `lt`, 737–746 `ot`, 5785–5791 `Xc`).
+  // 2) Running-Stroke (page.pretty.js:7650–7930): variants Top → Right → Bottom → Left
+  //    (cycleOrder `ui`, 7672). On every base-variant change, after `delay(…, 700)` it moves to
+  //    the next variant (7762–7766 + useOnVariantChange framer.pretty.js:9073–9090,
+  //    useActiveVariantCallback 8932–8956). Transition for everything: `pi` = tween 0.8s,
+  //    ease [0,0,1,1] (linear), delay 0 (7685). Hover gesture (`li`, 7666) → variant
+  //    `${base}-hover`. Glow/Stroke `background` strings are tweened by framer-motion's
+  //    complex-value mixer: numbers linear, colours mixed in squared space
+  //    (motion.pretty.js:5741–5755 `Wc`/`qc`), output rounded (rgb → int, numbers → 1e-5).
+  //    A key whose resolved target string doesn't change keeps its running tween.
+  // ---------------------------------------------------------------------------------------
+  const root = document.documentElement;
+  const isStatic = () => root.classList.contains('no-motion') || new URLSearchParams(location.search).has('static');
+
+  // framer-motion spring generator (motion.pretty.js:436–520 `Le`), explicit physics, v0 = 0.
+  function springGen(from: number, to: number, { stiffness, damping, mass }: { stiffness: number; damping: number; mass: number }) {
+    const g = to - from;
+    const h = damping / (2 * Math.sqrt(stiffness * mass));
+    const w = Math.sqrt(stiffness / mass) / 1000; // per ms
+    const granular = Math.abs(g) < 5;
+    const restSpeed = granular ? 0.01 : 2, restDelta = granular ? 0.005 : 0.5;
+    let pos: (t: number) => number, vel: (t: number) => number;
+    if (h < 1) {
+      const x = w * Math.sqrt(1 - h * h), S = (h * w * g) / x;
+      pos = (t) => to - Math.exp(-h * w * t) * (S * Math.sin(x * t) + g * Math.cos(x * t));
+      const C = h * w * S + g * x, W = h * w * g - S * x;
+      vel = (t) => Math.exp(-h * w * t) * (C * Math.sin(x * t) + W * Math.cos(x * t));
+    } else if (h === 1) {
+      pos = (t) => to - Math.exp(-w * t) * (g + w * g * t);
+      vel = (t) => Math.exp(-w * t) * (w * w * g * t);
+    } else {
+      const e = w * Math.sqrt(h * h - 1);
+      pos = (t) => to - (Math.exp(-h * w * t) * (h * w * g * Math.sinh(Math.min(e * t, 300)) + e * g * Math.cosh(Math.min(e * t, 300)))) / e;
+      const k = (h * w * g) / e, n = h * w * k - g * e, r = h * w * g - k * e;
+      vel = (t) => Math.exp(-h * w * t) * (n * Math.sinh(Math.min(e * t, 300)) + r * Math.cosh(Math.min(e * t, 300)));
+    }
+    return (t: number) => {
+      const v = pos(t);
+      const done = Math.abs(vel(t) * 1000) <= restSpeed && Math.abs(to - v) <= restDelta;
+      return { value: done ? to : v, done };
+    };
+  }
+  // spring → { duration, linear() easing } exactly as framer-motion hands it to WAAPI
+  function springToWaapi(physics: { stiffness: number; damping: number; mass: number }) {
+    const gen = springGen(0, 100, physics);
+    let d = 0;
+    while (!gen(d).done && d < 2e4) d += 50; // `Ae`: 50ms steps, 20s cap
+    const n = Math.max(Math.round(d / 10), 2);
+    const pts: number[] = [];
+    for (let i = 0; i < n; i++) pts.push(Math.round((gen(d * (i / (n - 1))).value / 100) * 1e4) / 1e4);
+    return { duration: d, easing: `linear(${pts.join(', ')})` };
+  }
+
+  const APPEAR = { stiffness: 200, damping: 40, mass: 1, delay: 1500 }; // page.pretty.js:11635–11641
+  const BIGBOY = '(min-width: 1440px)'; // breakpoint lcunwo/c89HZ42bQ (page-live.html hydrate data)
+
+  // Running-Stroke data (page.pretty.js:7790–7871): [rx%, ry%, cx%, cy%, [r, g, b, a]]
+  type Grad = [number, number, number, number, [number, number, number, number]];
+  const PINK: Grad[4] = [243, 173, 255, 1], MAGENTA: Grad[4] = [252, 110, 255, 1];
+  const GLOW: Record<string, Grad> = {
+    Top: [25, 50, 50, 0, PINK],
+    Right: [25, 35.4, 100, 50, PINK],
+    Bottom: [25, 50, 50, 100, PINK],
+    Left: [25, 34.4, 0, 50, PINK],
+    'Top-hover': [50, 100, 50, 50, PINK],
+    'Right-hover': [50, 100, 50, 50, PINK],
+    'Bottom-hover': [50, 100, 50, 50, PINK],
+    'Left-hover': [50, 100, 50, 50, [255, 255, 255, 1]],
+  };
+  const HOVER_STROKE: Grad = [75, 181.15942028985506, 50, 50, MAGENTA];
+  const STROKE: Record<string, Grad> = {
+    Top: [20.7, 50, 50, 0, MAGENTA],
+    Right: [16.2, 41.199999999999996, 100, 50, MAGENTA],
+    Bottom: [20.7, 50, 50, 100, MAGENTA],
+    Left: [16.6, 43.1, 0, 50, MAGENTA],
+    'Top-hover': HOVER_STROKE, 'Right-hover': HOVER_STROKE, 'Bottom-hover': HOVER_STROKE, 'Left-hover': HOVER_STROKE,
+  };
+  const CYCLE = ['Top', 'Right', 'Bottom', 'Left']; // `ui`
+  const CYCLE_DELAY = 700; // `delay(() => setVariant(CycleVariantState), 700)`
+  const TWEEN_MS = 800; // `pi`: tween, duration 0.8, ease [0,0,1,1]
+
+  const san = (v: number) => Math.round(v * 1e5) / 1e5; // `xc`
+  const mixC = (a: number, b: number, p: number) => { const r = a * a, i = p * (b * b - r) + r; return i < 0 ? 0 : Math.sqrt(i); }; // `Wc`
+  const clamp255 = (v: number) => Math.round(Math.min(255, Math.max(0, v)));
+  // the value framer-motion writes (and later reads back as the next tween's origin)
+  function quantize(g: Grad): Grad {
+    const [r, gr, b, a] = g[4];
+    return [san(g[0]), san(g[1]), san(g[2]), san(g[3]), [clamp255(r), clamp255(gr), clamp255(b), san(Math.min(1, Math.max(0, a)))]];
+  }
+  const css = (g: Grad) =>
+    `radial-gradient(${g[0]}% ${g[1]}% at ${g[2]}% ${g[3]}%, rgba(${g[4][0]}, ${g[4][1]}, ${g[4][2]}, ${g[4][3]}) 0%, rgba(255, 255, 255, 0) 100%)`;
+  const mix = (a: Grad, b: Grad, p: number): Grad => quantize([
+    a[0] + (b[0] - a[0]) * p, a[1] + (b[1] - a[1]) * p, a[2] + (b[2] - a[2]) * p, a[3] + (b[3] - a[3]) * p,
+    [mixC(a[4][0], b[4][0], p), mixC(a[4][1], b[4][1], p), mixC(a[4][2], b[4][2], p), a[4][3] + (b[4][3] - a[4][3]) * p],
+  ]);
+
+  interface Layer { el: HTMLElement; defs: Record<string, Grad>; cur: Grad; target: Grad; from: Grad; start: number; running: boolean }
+
+  function initButton(btn: HTMLElement) {
+    const wrap = btn.parentElement as HTMLElement;
+    if (!window.matchMedia(BIGBOY).matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const { duration, easing } = springToWaapi(APPEAR);
+      wrap.animate({ opacity: [0.001, 1] }, { delay: APPEAR.delay, duration, easing, fill: 'both' });
+    }
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const mk = (sel: string, defs: Record<string, Grad>): Layer => {
+      const el = btn.querySelector(sel) as HTMLElement;
+      return { el, defs, cur: defs.Top, target: defs.Top, from: defs.Top, start: 0, running: false };
+    };
+    const layers = [mk('.fc-glow', GLOW), mk('.fc-stroke', STROKE)];
+    let base = 'Top', hovered = false, timer = 0, raf = 0;
+
+    const frame = () => {
+      raf = 0;
+      const now = performance.now();
+      let again = false;
+      for (const l of layers) {
+        if (!l.running) continue;
+        const p = Math.min(1, Math.max(0, (now - l.start) / TWEEN_MS));
+        l.cur = p >= 1 ? l.target : mix(l.from, l.target, p);
+        l.el.style.background = css(l.cur);
+        if (p >= 1) l.running = false; else again = true;
+      }
+      if (again) raf = requestAnimationFrame(frame);
+    };
+    const apply = () => {
+      const key = hovered ? `${base}-hover` : base;
+      for (const l of layers) {
+        const t = l.defs[key];
+        if (t === l.target || css(t) === css(l.target)) continue; // unchanged target keeps its tween
+        l.from = l.cur; l.target = t; l.start = performance.now(); l.running = true;
+      }
+      if (!raf) raf = requestAnimationFrame(frame);
+    };
+    // useOnVariantChange: runs on mount and on every base-variant change while the page is visible
+    let visible = !document.hidden;
+    const onVariant = () => {
+      clearTimeout(timer);
+      if (!visible) return;
+      timer = window.setTimeout(() => {
+        base = CYCLE[(CYCLE.indexOf(base) + 1) % CYCLE.length];
+        apply();
+        onVariant();
+      }, CYCLE_DELAY);
+    };
+    document.addEventListener('visibilitychange', () => {
+      const was = visible; visible = !document.hidden;
+      if (visible && !was) {
+        timer = window.setTimeout(() => { base = CYCLE[(CYCLE.indexOf(base) + 1) % CYCLE.length]; apply(); onVariant(); }, CYCLE_DELAY);
+      }
+    });
+    btn.addEventListener('mouseenter', () => { hovered = true; apply(); });
+    btn.addEventListener('mouseleave', () => { hovered = false; apply(); });
+    onVariant();
+  }
+
+  if (!isStatic()) document.querySelectorAll<HTMLElement>('.fc-btn').forEach(initButton);
+</script>
+
+<style>
+  .final-cta { position: relative; width: 100%; }
+
+  /* ---- block 19 ---- */
+  .fc-head {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 115px 0 80px;
+  }
+  .fc-title {
+    display: flex; flex-direction: column; align-items: center; gap: 10px; width: 100%;
+    font-family: var(--f-medium); font-weight: 400; font-size: 70px; line-height: 84px;
+    letter-spacing: -2.1px; color: #fff; text-align: center;
+  }
+  .fc-row { display: flex; justify-content: center; align-items: center; gap: 10px; width: 100%; overflow: hidden; }
+  .fc-lead, .fc-hl { display: block; white-space: pre; }
+  .fc-tail { display: block; width: 100%; line-height: 91px; white-space: pre; }
+  .fc-tail--compact { display: none; }
+  /* sub-lines in this design's body (block 14) and emphasis (block 15) styles */
+  .fc-head { gap: 24px; }
+  .fc-line { display: block; }
+  .fc-body { font-family: var(--f-light); font-weight: 400; font-size: 24px; line-height: 1.4; color: #fff; text-align: center; }
+  .fc-emphasis { font-family: var(--f-demibold); font-weight: 400; font-size: 40px; line-height: 48px; color: #fff; text-align: center; }
+  @media (max-width: 809px) { .fc-body { font-size: 16px; } .fc-emphasis { font-size: 24px; line-height: 30px; } }
+
+  /* ---- block 20 ---- */
+  .fc-cta {
+    display: flex; justify-content: center; align-items: flex-start;
+    height: 214.6px;
+  }
+  /* framer-16reamx-container: 286×70, style transformPerspective 1200 (page.pretty.js:29238) */
+  .fc-appear { position: relative; flex: none; min-width: 286px; height: 70px; transform: perspective(1200px); }
+  .fc-btn {
+    position: relative; display: flex; align-items: center; justify-content: center;
+    width: 100%; height: 100%;
+    background: rgba(255, 255, 255, 0.05); border-radius: 118px; cursor: pointer;
+  }
+  .fc-glow, .fc-stroke, .fc-fill { position: absolute; overflow: hidden; pointer-events: none; }
+  .fc-glow, .fc-stroke { inset: 0; border-radius: 72px; }
+  /* variant "Top" (fw04L6vhU) styles, page.pretty.js:7790–7800 / 7830–7838 */
+  .fc-glow {
+    filter: blur(15px);
+    background: radial-gradient(25% 50% at 50% 0%, rgb(243, 173, 255) 0%, rgba(255, 255, 255, 0) 100%);
+  }
+  .fc-stroke {
+    background: radial-gradient(20.7% 50% at 50% 0%, rgb(252, 110, 255) 0%, rgba(255, 255, 255, 0) 100%);
+  }
+  .fc-fill { inset: 2px; background: #000; border-radius: 114px; }
+  .fc-label {
+    position: relative; white-space: pre; padding: 0 36px;
+    font-family: var(--f-medium); font-size: 20px; line-height: 24px; letter-spacing: -0.2px; color: #fff;
+  }
+
+  /* laptop */
+  @media (min-width: 1200px) and (max-width: 1439px) {
+    .fc-head { padding: 115px 40px 80px; }
+    .fc-cta { align-items: center; }
+  }
+  /* tablet */
+  @media (min-width: 810px) and (max-width: 1199px) {
+    .fc-head { padding: 40px; }
+    .fc-title { font-size: 55px; line-height: 66px; letter-spacing: -1.65px; }
+    .fc-row { gap: 15px; }
+    .fc-tail { font-size: 50px; line-height: 65px; letter-spacing: -1.5px; }
+    .fc-cta { align-items: center; }
+  }
+  /* mobile */
+  @media (max-width: 809px) {
+    .fc-head { padding: 15px; }
+    .fc-title { font-size: 26px; line-height: 31.2px; letter-spacing: -0.78px; }
+    .fc-row { gap: 5px; }
+    .fc-tail { line-height: 33.8px; }
+    .fc-cta { align-items: center; }
+    .fc-appear { min-width: 220px; height: 55px; } .fc-label { font-size: 16px; padding: 0 24px; }
+  }
+  @media (max-width: 1199px) {
+    .fc-tail--wide { display: none; }
+    .fc-tail--compact { display: block; }
+  }
+</style>

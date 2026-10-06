@@ -1,0 +1,55 @@
+{
+  "ref": "s09",
+  "pill": {
+    "background": "/assets/svg/uth-pill.svg",
+    "icon": "/assets/sparkonomy/ocg-mark.webp",
+    "text": "Open Creator Graph"
+  },
+  "heading": {
+    "lead": "We're starting with what",
+    "accent": "should already be yours."
+  },
+  "intro": [
+    "Your identity.",
+    "The right to say how AI can use it."
+  ],
+  "checkIcon": "/assets/svg/uth-check.svg",
+  "cards": [
+    {
+      "title": "Be visible to AI.",
+      "body": "Control how it uses your identity.",
+      "image": "/assets/sparkonomy/creator-record-card.png",
+      "checks": [
+        "Machine-Sourced",
+        "Machine-Visible",
+        "Creator-Controlled",
+        "Declared and cryptographically timestamped"
+      ],
+      "cta": {
+        "label": "Claim your free Creator Record",
+        "link": "creatorGraph",
+        "variant": "solid"
+      }
+    },
+    {
+      "title": "Chulbuli Dixit",
+      "body": "@chulbulidixit",
+      "image": "/assets/sparkonomy/certified.png",
+      "checks": [
+        "AI Usage — Conditional",
+        "Name — Allowed",
+        "Image — Conditional",
+        "Likeness — Prohibited",
+        "Voice — Conditional",
+        "Movement — Conditional",
+        "Signature — Prohibited",
+        "25 September 2026, 14:32:07 UTC"
+      ],
+      "cta": {
+        "label": "Open Creator Graph",
+        "link": "creatorGraph",
+        "variant": "outline"
+      }
+    }
+  ]
+}

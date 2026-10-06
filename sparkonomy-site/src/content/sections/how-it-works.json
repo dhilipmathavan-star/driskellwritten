@@ -1,0 +1,53 @@
+{
+  "ref": "s05",
+  "title": {
+    "plain": "And we saw",
+    "accent": "what it takes."
+  },
+  "steps": [
+    {
+      "label": "",
+      "icon": "/assets/img/SnOMPU6z1fTbyK6AXARZO3yyU4.svg",
+      "iconHeight": 26.7,
+      "title": "No crew.",
+      "body": ""
+    },
+    {
+      "label": "",
+      "icon": "/assets/img/2wzFTufOIYFCvajBgjCmWDa4Q.svg",
+      "iconHeight": 30.7,
+      "title": "No scriptwriter.",
+      "body": ""
+    },
+    {
+      "label": "",
+      "icon": "/assets/img/EFpJnUQCLUuoPPsdBxZcAxXcK0.svg",
+      "iconHeight": 30.7,
+      "title": "No one else.",
+      "body": ""
+    }
+  ],
+  "closing": [
+    [
+      {
+        "t": "Just "
+      },
+      {
+        "t": "one person",
+        "hl": true
+      }
+    ],
+    [
+      {
+        "t": "showing up "
+      },
+      {
+        "t": "every day",
+        "hl": true
+      },
+      {
+        "t": "."
+      }
+    ]
+  ]
+}

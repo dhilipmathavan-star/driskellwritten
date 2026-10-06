@@ -1,0 +1,31 @@
+{
+  "ref": "s04",
+  "lines": [
+    {
+      "lead": "Students.",
+      "word": "",
+      "glow": ""
+    },
+    {
+      "lead": "",
+      "word": "Homemakers.",
+      "glow": "Homemakers."
+    },
+    {
+      "lead": "Doctors.",
+      "word": "",
+      "glow": ""
+    },
+    {
+      "lead": "",
+      "word": "Farmers.",
+      "glow": "Farmers."
+    }
+  ],
+  "text": "People who picked up a camera, told stories and made a living.",
+  "features": [],
+  "art": {
+    "src": "/assets/img/ivkKM6xcF8D5IjIeiYt4tiJvDE.png",
+    "alt": ""
+  }
+}

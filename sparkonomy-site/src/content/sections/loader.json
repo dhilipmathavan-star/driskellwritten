@@ -1,0 +1,14 @@
+{
+  "ref": "01",
+  "color": "rgb(0, 0, 0)",
+  "image": {
+    "src": "/assets/sparkonomy/ocg-mark.webp",
+    "width": 160,
+    "height": 160,
+    "display": [
+      80,
+      80
+    ],
+    "alt": ""
+  }
+}

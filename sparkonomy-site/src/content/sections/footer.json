@@ -1,0 +1,142 @@
+{
+  "refs": {
+    "social": "22",
+    "line": "23",
+    "copyright": "24"
+  },
+  "socialLabel": "Sparkonomy on social media",
+  "social": [
+    {
+      "label": "X",
+      "link": "x",
+      "icon": "/assets/sparkonomy/social-x.svg",
+      "iconSize": [
+        20,
+        20
+      ],
+      "border": "hover"
+    },
+    {
+      "label": "Instagram",
+      "link": "instagram",
+      "icon": "/assets/sparkonomy/social-instagram.svg",
+      "iconSize": [
+        22,
+        22
+      ],
+      "border": "hover"
+    },
+    {
+      "label": "YouTube",
+      "link": "youtube",
+      "icon": "/assets/sparkonomy/social-youtube.svg",
+      "iconSize": [
+        22,
+        22
+      ],
+      "border": "hover"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "linkedin",
+      "icon": "/assets/sparkonomy/social-linkedin.svg",
+      "iconSize": [
+        20,
+        20
+      ],
+      "border": "hover"
+    },
+    {
+      "label": "Reddit",
+      "link": "reddit",
+      "icon": "/assets/sparkonomy/social-reddit.svg",
+      "iconSize": [
+        22,
+        22
+      ],
+      "border": "hover"
+    }
+  ],
+  "line": "/assets/svg/footer-line.svg",
+  "copyright": "© Sparkonomy Pte. Ltd. All rights reserved",
+  "brand": {
+    "src": "/assets/sparkonomy/wordmark-footer.png",
+    "alt": "Sparkonomy",
+    "width": 131,
+    "height": 24
+  },
+  "compliance": {
+    "label": "Compliant with",
+    "badges": [
+      {
+        "src": "/assets/sparkonomy/dpdp.png",
+        "alt": "DPDP"
+      },
+      {
+        "src": "/assets/sparkonomy/ccpa.png",
+        "alt": "CCPA"
+      },
+      {
+        "src": "/assets/sparkonomy/pdpa.png",
+        "alt": "PDPA"
+      },
+      {
+        "src": "/assets/sparkonomy/gdpr.png",
+        "alt": "GDPR"
+      }
+    ]
+  },
+  "columns": [
+    {
+      "title": "Products",
+      "links": [
+        {
+          "label": "Open Creator Graph",
+          "link": "creatorGraph"
+        },
+        {
+          "label": "Creator Payments",
+          "link": "creatorPayments"
+        }
+      ]
+    },
+    {
+      "title": "Company",
+      "links": [
+        {
+          "label": "About Us",
+          "link": "about"
+        },
+        {
+          "label": "Contact Us",
+          "link": "contact"
+        },
+        {
+          "label": "Blogs",
+          "link": "blogs"
+        }
+      ]
+    },
+    {
+      "title": "Terms & Policies",
+      "links": [
+        {
+          "label": "Privacy Policy",
+          "link": "privacy"
+        },
+        {
+          "label": "Terms of Services",
+          "link": "terms"
+        },
+        {
+          "label": "Refund Policy",
+          "link": "refund"
+        },
+        {
+          "label": "Cookie Policy",
+          "link": "privacy"
+        }
+      ]
+    }
+  ]
+}

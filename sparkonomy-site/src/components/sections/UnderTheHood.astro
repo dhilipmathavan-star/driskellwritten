@@ -1,0 +1,366 @@
+---
+// Original block 16: "Under the hood" — vertical line with a scroll-driven gradient streak,
+// "House of Models Library" pill, gradient "hood" heading, two product cards and the
+// "Brand Accelerator" card.
+interface Card {
+  title: string; body: string; image: string; checks: string[];
+  cta: { label: string; link: string; variant: 'solid' | 'outline' };
+}
+interface Props {
+  content: {
+    ref: string;
+    pill: { background: string; icon: string; text: string };
+    heading: { lead: string; accent: string };
+    intro: string[];
+    checkIcon: string;
+    cards: Card[];
+    accelerator?: {
+      tag: string; kicker: string; title: string; body: string;
+      features: { icon: string; title: string; text: string }[];
+    };
+  };
+  links: Record<string, string>;
+}
+const { content, links } = Astro.props;
+const acc = content.accelerator;
+---
+<section class="uth" data-ref={content.ref}>
+  <div class="uth__top">
+    <div class="uth__line" aria-hidden="true"><div class="uth__streak" data-uth-streak></div></div>
+    <div class="uth__head">
+      <div class="uth__pill">
+        <img class="uth__pill-bg" src={content.pill.background} alt="" aria-hidden="true" />
+        <div class="uth__pill-row">
+          <img class="uth__pill-icon" src={content.pill.icon} alt="" aria-hidden="true" />
+          <p class="uth__pill-text">{content.pill.text}</p>
+        </div>
+      </div>
+      <div class="uth__hwrap">
+        <h2 class="uth__h">
+          <span class="uth__lead">{`${content.heading.lead} `}</span>
+          <span class="uth__hoodbox">
+            <span class="uth__hood"><span class="uth__hood-txt">{content.heading.accent}</span></span>
+            <span class="uth__hood uth__hood--glow" aria-hidden="true"><span class="uth__hood-txt">{content.heading.accent}</span></span>
+          </span>
+        </h2>
+      </div>
+      <div class="uth__intro">
+        {content.intro.map((line) => <p>{line}</p>)}
+      </div>
+    </div>
+  </div>
+
+  <div class="uth__body">
+    <div class="uth__cards">
+      {content.cards.map((card, i) => (
+        <article class={`uth-card uth-card--${i + 1}`}>
+          <div class="uth-card__media">
+            <img src={card.image} alt="" aria-hidden="true" loading="lazy" decoding="async" />
+          </div>
+          <div class="uth-card__bottom">
+            <h3 class="uth-card__title">{card.title}</h3>
+            <p class="uth-card__desc">{card.body}</p>
+            <ul class="uth-card__list">
+              {card.checks.map((c) => (
+                <li><img src={content.checkIcon} alt="" aria-hidden="true" /><span>{c}</span></li>
+              ))}
+            </ul>
+            <a class={`uth-card__btn uth-card__btn--${card.cta.variant}`} href={links[card.cta.link]}
+              {...(card.cta.link === 'app' ? { target: '_blank', rel: 'noopener' } : {})}>{card.cta.label}</a>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <div class="uth__glow uth__glow--body" aria-hidden="true">
+      <div class="uth__ell uth__ell--c"></div>
+      <div class="uth__ell uth__ell--d"></div>
+    </div>
+
+    {acc && <div class="uth__accwrap">
+      <div class="uth-acc">
+        <div class="uth-acc__left">
+          <div class="uth-acc__heads">
+            <p class="uth-acc__tag">{acc.tag}</p>
+            <p class="uth-acc__kicker">{acc.kicker}</p>
+            <h3 class="uth-acc__title">{acc.title}</h3>
+          </div>
+          <p class="uth-acc__body">{acc.body}</p>
+        </div>
+        <ul class="uth-acc__features">
+          {acc.features.map((f) => (
+            <li class="uth-acc__feat">
+              <img src={f.icon} alt="" aria-hidden="true" />
+              <div>
+                <h4>{f.title}</h4>
+                <p>{f.text}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>}
+  </div>
+</section>
+
+<script>
+  // Exact port of the Home-level withFX on `Group 129 › Section` (page.pretty.js:26110–26125):
+  //   __framer__speed 80, offset 0, adjustPosition, parallaxTransformEnabled,
+  //   styleAppearEffectEnabled, targets [{ ref: Group 129, target: "animate" }], threshold 1,
+  //   animateOnce false, enter Io = { opacity: 0, transformPerspective: 1200, … } (11612),
+  //   animate { transition: Lo = tween 0.1s ease [0.44, 0, 0.56, 1] } (11624), style perspective 1200.
+  //
+  // Parallax (framer.pretty.js:5340 `dl` / 5336 `ul`): on the element's first IntersectionObserver
+  // callback top0 = entry.boundingClientRect.top is stored (element is visibility:hidden until then,
+  // adjustPosition); afterwards y = (top0 − offset)·(speed/100 − 1) − scrollY·(speed/100 − 1)
+  //                             = 0.2 · (scrollY − top0).
+  // Appear (framer.pretty.js:5694 `Cl` + 5490 `_l` / 5546 `bl`, ES = 1 at 17669): every scroll
+  //   c = offsetTop(Group 129) − 1 − offset(0) − threshold(1)·innerHeight
+  //   inputRange [0, c−1, c, c+h] → ["initial","initial","animate","animate"] (motion interpolate,
+  //   string mixer jumps to "animate" as soon as scrollY ≥ c−1), so the streak is at opacity 1
+  //   while Group 129's top is ≤ innerHeight + 2 px, else opacity 0 — both ways (animateOnce false),
+  //   each change animated with Lo (0.1s, cubic-bezier(0.44, 0, 0.56, 1)) via WAAPI below.
+  //
+  // HYDRATION_SHIFT: on the live original the IntersectionObserver fires (~1.05s after load)
+  // before blocks 02 (+2px) and 12 (+18.1px) reach their final heights, so the stored top0 is
+  // 20.4px smaller than the settled layout (measured: translateY = 0.2·scrollY − 3007.8 at 1440;
+  // settled untransformed top 15059.4). The clone's layout is final from the start, so the same
+  // measurement is corrected by that amount at the desktop breakpoint to land on the same offset.
+  const HYDRATION_SHIFT_DESKTOP = 20.4;
+  const streak = document.querySelector<HTMLElement>('[data-uth-streak]');
+  const group = streak?.closest<HTMLElement>('[data-ref="16"]');
+  const isStatic = () => document.documentElement.classList.contains('no-motion') || new URLSearchParams(location.search).has('static');
+  if (streak && group && !isStatic()) {
+    let top0: number | null = null;
+    let state: 'initial' | 'animate' = 'initial';
+    let fade: Animation | undefined;
+    const offsetTop = (el: HTMLElement | null) => { let n = 0; while (el && el instanceof HTMLElement) { n += el.offsetTop; el = el.offsetParent as HTMLElement | null; } return n; };
+    const update = () => {
+      if (isStatic()) return;
+      const sy = scrollY;
+      if (top0 !== null) streak.style.transform = `perspective(1200px) translateY(${0.2 * (sy - top0)}px)`;
+      const c = offsetTop(group) - 1 - 0 - 1 * innerHeight;
+      const next = c > 1 ? (sy >= c - 1 ? 'animate' : 'initial') : 'animate';
+      if (next !== state) {
+        state = next;
+        // tween Lo from the current opacity; like motion (frame-synced start time) the animation
+        // is anchored to the current frame's timestamp rather than the next one.
+        const from = Number(getComputedStyle(streak).opacity), to = state === 'animate' ? 1 : 0;
+        fade?.cancel();
+        streak.style.opacity = String(to);
+        fade = streak.animate([{ opacity: from }, { opacity: to }], { duration: 100, easing: 'cubic-bezier(0.44, 0, 0.56, 1)' });
+        if (document.timeline.currentTime !== null) fade.startTime = document.timeline.currentTime;
+      }
+    };
+    const io = new IntersectionObserver((entries) => {
+      top0 = entries[0].boundingClientRect.top - (matchMedia('(min-width: 1440px)').matches ? HYDRATION_SHIFT_DESKTOP : 0);
+      streak.style.visibility = 'initial';
+      io.disconnect();
+      update();
+    });
+    streak.style.visibility = 'hidden';
+    io.observe(streak);
+    // motion's scroll() reads/updates inside the scroll event's frame — no extra rAF hop
+    addEventListener('scroll', update, { passive: true });
+    addEventListener('resize', update);
+    update();
+  }
+</script>
+
+<style>
+  .uth {
+    position: relative; isolation: isolate; width: 100%;
+    display: flex; flex-direction: column; align-items: center; padding: 0 0 80px;
+  }
+
+  /* ── top: line + heading ───────────────────────────── */
+  .uth__top { width: 100%; height: 478px; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .uth__line { flex: none; width: 1px; height: 232px; background: rgb(79, 79, 79); overflow: hidden; display: flex; align-items: center; justify-content: center; }
+  .uth__streak {
+    flex: none; width: 1px; height: 355px; opacity: 0; overflow: hidden;
+    background-image: linear-gradient(140deg, rgb(255, 59, 186) 0%, rgb(243, 173, 255) 59.9099%, rgb(98, 72, 255) 100%);
+    transform: perspective(1200px); will-change: transform;
+  }
+  html.no-motion .uth__streak { opacity: 0; transition: none; }
+
+  .uth__head { position: relative; width: 100%; height: 246px; flex: none; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; }
+  .uth__pill { position: relative; flex: none; width: 285px; height: 50px; overflow: hidden; z-index: 1; }
+  .uth__pill-bg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .uth__pill-row {
+    position: absolute; left: 0; top: 50%; width: 100%; height: 30px; transform: translateY(-15px); overflow: hidden;
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+  }
+  .uth__pill-icon { width: 21px; height: 22px; flex: none; }
+  .uth__pill-text { font-family: var(--f-medium); font-size: 19.22px; line-height: 30px; letter-spacing: -0.1922px; color: rgb(171, 169, 169); white-space: nowrap; }
+
+  /* Sparkonomy heading is two lines (lead, then gradient accent): same type, stacked, auto width */
+  .uth__hwrap, .uth__h { width: auto !important; height: auto !important; }
+  .uth__h { flex-direction: column !important; }
+  .uth__hoodbox, .uth__hood { width: auto !important; height: auto !important; }
+  .uth__hoodbox { overflow: visible !important; }
+  .uth__hwrap { flex: none; width: 662px; height: 96px; display: flex; align-items: center; justify-content: center; }
+  .uth__h {
+    flex: none; width: 662px; height: 99px; overflow: hidden; font-weight: 400;
+    display: flex; flex-direction: row; align-items: center; justify-content: center;
+  }
+  .uth__lead {
+    font-family: var(--f-medium); font-size: 84.91px; line-height: 96.8px; letter-spacing: -2.5473px; color: #fff;
+    white-space: pre; text-align: center;
+  }
+  .uth__hoodbox { position: relative; flex: none; width: 225px; height: 96px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+  .uth__hood {
+    display: block; width: 225px; text-align: center; white-space: nowrap;
+    font-family: var(--f-medium); font-size: 84.91px; line-height: 96.8px; letter-spacing: -2.5473px;
+  }
+  .uth__hood-txt {
+    background-image: linear-gradient(97.4768deg, rgb(255, 58, 186) 0%, rgb(243, 173, 255) 56.7708%, rgb(98, 72, 255) 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .uth__hood--glow {
+    position: absolute; left: 0; top: 50%; transform: translateY(-50%); z-index: 1;
+    opacity: 0.4; filter: blur(16px);
+    font-family: "BDO Grotesk", sans-serif; font-weight: 500;
+  }
+
+  /* two-line Sparkonomy heading: let the head grow instead of clipping the intro */
+  .uth__top { height: auto !important; }
+  .uth__head { height: auto !important; }
+  .uth__intro { flex: none; width: 786px; text-align: center; }
+  .uth__intro p { font-family: var(--f-medium); font-size: 19.22px; line-height: 30px; color: rgb(171, 169, 169); }
+
+  .uth__glow { position: absolute; opacity: 0.4; pointer-events: none; }
+  .uth__ell { position: absolute; aspect-ratio: 1; border-radius: 100%; filter: blur(183.05px); }
+
+  /* ── body: cards + accelerator ─────────────────────── */
+  .uth__body {
+    position: relative; width: 100%; display: flex; flex-direction: column; align-items: center; gap: 30px;
+    padding: 40px 51px 0;
+  }
+  .uth__glow--body { left: 0; right: 0; top: -52px; bottom: -120px; z-index: 0; }
+  .uth__ell--c { left: 582px; top: -39px; width: 44%; background: rgb(242, 189, 189); }
+  .uth__ell--d { left: 103px; top: 0; width: 44%; background: rgb(243, 173, 255); }
+
+  .uth__cards { width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 30px; overflow: hidden; }
+  .uth-card {
+    position: relative; z-index: 1; flex: 1 1 0; min-width: 0;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0;
+    padding: 15px; background: rgb(15, 15, 15); border-radius: 16px;
+  }
+  .uth-card::after, .uth-acc::after { content: ""; position: absolute; inset: 0; border: 1px solid #000; border-radius: inherit; pointer-events: none; }
+  .uth-card__media { width: 100%; height: 332px; flex: none; border-radius: 9px; overflow: hidden; }
+  .uth-card--2 .uth-card__media { height: 334px; }
+  .uth-card__media img { width: 100%; height: 100%; object-fit: cover; object-position: top center; border-radius: 9px; }
+  /* cards carry different list lengths: keep both card tops/bottoms aligned like the original pair */
+  .uth__cards { align-items: stretch !important; }
+  .uth-card { justify-content: flex-start !important; }
+  .uth-card__bottom { flex: 1 1 auto; }
+  .uth-card__btn { margin-top: auto; }
+  .uth-card__bottom { width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 22px; padding: 20px 0 0; }
+  .uth-card__title { width: 394px; max-width: 100%; font-family: var(--f-regular); font-weight: 400; font-size: 37.97px; line-height: 48px; letter-spacing: -1.1391px; color: #fff; }
+  .uth-card__desc { width: 100%; font-family: var(--f-regular); font-size: 15.5px; line-height: 24px; color: rgb(104, 104, 104); }
+  .uth-card__list { width: 100%; display: flex; flex-direction: column; gap: 10px; overflow: hidden; }
+  .uth-card__list li { height: 24px; display: flex; align-items: center; gap: 10px; }
+  .uth-card__list img { width: 20px; height: 20px; flex: none; }
+  .uth-card__list span { flex: 1; font-family: var(--f-regular); font-size: 15.5px; line-height: 24px; color: rgb(104, 104, 104); white-space: nowrap; }
+  .uth-card__list li:nth-child(1) span { font-size: 15.13px; }
+  .uth-card__list li:nth-child(4) span { font-size: 15.25px; }
+  .uth-card__btn {
+    position: relative; width: 100%; height: 44px; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--f-medium); font-size: 16px; line-height: 16px; text-align: center;
+  }
+  .uth-card__btn::after { content: ""; position: absolute; inset: 0; border-radius: inherit; border: 2px solid; pointer-events: none; }
+  .uth-card__btn--solid { background: #fff; color: rgb(22, 22, 22); }
+  .uth-card__btn--solid::after { border-color: rgb(22, 22, 22); }
+  .uth-card__btn--outline { color: #fff; }
+  .uth-card__btn--outline::after { border-color: #fff; }
+
+  .uth__accwrap { width: 100%; display: flex; justify-content: center; overflow: hidden; }
+  .uth-acc {
+    position: relative; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 100px;
+    padding: 40px; background: rgb(22, 22, 22); border-radius: 16px;
+  }
+  .uth-acc__left { flex: 0 0 40%; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 30px; }
+  .uth-acc__heads { width: 100%; display: flex; flex-direction: column; align-items: flex-start; gap: 26px; }
+  .uth-acc__tag {
+    position: relative; width: 161px; height: 34px; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--f-medium); font-size: 16px; line-height: 16px; color: #fff; white-space: nowrap;
+  }
+  .uth-acc__tag::after { content: ""; position: absolute; inset: 0; border: 2px solid #fff; border-radius: inherit; }
+  .uth-acc__kicker { width: 100%; font-family: var(--f-medium); font-size: 29px; line-height: 26.1px; letter-spacing: -0.87px; color: #fff; }
+  .uth-acc__title { width: 100%; font-family: var(--f-medium); font-weight: 400; font-size: 62px; line-height: 50px; letter-spacing: -1.86px; color: #fff; }
+  .uth-acc__body { width: 100%; font-family: var(--f-medium); font-size: 19.53px; line-height: 30px; color: rgb(241, 240, 238); }
+  .uth-acc__features { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 30px; }
+  .uth-acc__feat { position: relative; width: 100%; padding-left: 60px; border-radius: 12px; }
+  .uth-acc__feat img { position: absolute; left: 0; top: 0; width: 30px; height: 30px; }
+  .uth-acc__feat div { display: flex; flex-direction: column; gap: 5px; }
+  .uth-acc__feat h4 { font-family: var(--f-medium); font-weight: 400; font-size: 20px; line-height: 28px; letter-spacing: -0.4px; color: #fff; }
+  .uth-acc__feat p { font-family: var(--f-medium); font-size: 15px; line-height: 24px; color: rgba(255, 255, 255, 0.75); }
+
+  /* ── laptop ────────────────────────────────────────── */
+  @media (min-width: 1200px) and (max-width: 1439px) {
+    .uth { padding: 0 40px; }
+    .uth__body { padding: 40px 0 0; }
+    .uth-card__media img { object-fit: contain; }
+  }
+
+  /* ── tablet ────────────────────────────────────────── */
+  @media (min-width: 810px) and (max-width: 1199px) {
+    .uth { padding: 0 40px; }
+    .uth__lead { font-size: 80px; line-height: 82.4px; letter-spacing: -5.312px; }
+    .uth__hood--glow { font-size: 80px; line-height: 82.4px; letter-spacing: -5.312px; }
+    .uth__body { padding: 40px 0 0; }
+    .uth-card { padding: 23px 15px; gap: 30px; }
+    .uth-card--2 { gap: 0; }
+    .uth-card__media { height: 215px; }
+    .uth-card--2 .uth-card__media { height: 245px; }
+    .uth-card__media img { object-fit: contain; }
+    .uth-card__bottom { padding: 0; gap: 17px; }
+    .uth-card__title { width: 100%; font-size: 34px; letter-spacing: -1.02px; }
+    .uth-card__desc { min-height: 96px; }
+    .uth-card__btn { height: 45px; font-size: 15.38px; }
+    .uth-acc { flex-direction: column; gap: 49px; padding: 73px 40px; }
+    .uth-acc__left, .uth-acc__features { flex: none; width: 100%; }
+    .uth-acc__tag { height: 45px; font-size: 15.38px; }
+  }
+
+  /* Sparkonomy heading is longer than one word: below laptop both lines wrap inside the column */
+  @media (max-width: 1199px) {
+    .uth__h, .uth__hwrap { overflow: visible !important; width: 100% !important; }
+    .uth__lead, .uth__hood { white-space: normal !important; width: 100% !important; font-size: 64px !important; line-height: 1.05 !important; letter-spacing: -1.92px !important; }
+    .uth__hoodbox { width: 100% !important; overflow: visible !important; }
+    .uth__hood--glow { display: none; }
+  }
+
+  /* ── mobile ────────────────────────────────────────── */
+  @media (max-width: 809px) {
+    .uth { padding: 15px; }
+    .uth__top { height: auto; }
+    .uth__head { height: auto; }
+    .uth__hwrap { width: 100%; height: auto; }
+    .uth__h { width: 100%; height: auto; flex-direction: column; }
+    .uth__lead { width: 100%; font-size: 60px; line-height: 96.8px; letter-spacing: -1.8px; }
+    .uth__hoodbox { height: 60px; }
+    .uth__hood { font-size: 60px; line-height: 60px; letter-spacing: -1.8px; }
+    .uth__hood--glow { line-height: 96.8px; font-family: var(--f-medium); font-weight: 400; }
+    .uth__intro { width: 100%; }
+    /* Sparkonomy heading is longer than one word: let both lines wrap inside the column */
+    .uth__lead, .uth__hood { font-size: 48px !important; letter-spacing: -1.44px !important; }
+    .uth-card__list li { height: auto; }
+    .uth-card__list span { white-space: normal; }
+    .uth__body { padding: 40px 0 0; }
+    .uth__glow--body { top: -659px; }
+    .uth__ell--c, .uth__ell--d { left: 49%; top: 50%; width: 101%; transform: translate(-50%, -50%); }
+    .uth__cards { flex-direction: column; }
+    .uth-card { flex: none; width: 100%; }
+    .uth-card__media { height: 178px; }
+    .uth-card--2 .uth-card__media { height: 186px; }
+    .uth-card__media img { object-fit: contain; }
+    .uth-card__bottom { padding: 8px 0; }
+    .uth-card--2 .uth-card__bottom { padding: 7px 0 0; }
+    .uth-card__title { width: 100%; }
+    .uth-acc { flex-direction: column; gap: 20px; padding: 20px; }
+    .uth-acc__left, .uth-acc__features { flex: none; width: 100%; }
+  }
+</style>

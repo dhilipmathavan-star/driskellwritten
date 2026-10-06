@@ -1,0 +1,38 @@
+{
+  "refs": {
+    "heading": "19",
+    "button": "20"
+  },
+  "heading": {
+    "lead": "And we're only",
+    "highlight": " getting started.",
+    "tail": "",
+    "tailCompact": ""
+  },
+  "button": {
+    "label": "Claim your free Creator Record",
+    "link": "creatorGraph",
+    "newTab": true
+  },
+  "body": [
+    [
+      {
+        "t": "So every Creator can build a life doing what they love."
+      }
+    ]
+  ],
+  "emphasis": [
+    [
+      {
+        "t": "Let's "
+      },
+      {
+        "t": "spark",
+        "hl": true
+      },
+      {
+        "t": " together."
+      }
+    ]
+  ]
+}

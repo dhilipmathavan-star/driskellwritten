@@ -1,0 +1,103 @@
+---
+// Original block 01: the "Loader Comp" page-load overlay (page.pretty.js:7432–7650), placed on
+// Home as a fixed, full-viewport, pointer-events:none layer at z-index 10
+// (page.pretty.js:11722–11738, CSS .framer-1f6cbgh-container at :29399), variant "Start", BG Color rgb(0,0,0).
+//
+// Variants: Start (cEeeK4jB0) → Arrive (HSmZICM5_) → Leave (rf0klfmmt).
+//  • On mount, Start waits 2000 ms then sets Arrive; Arrive waits 2000 ms then sets Leave
+//    (useOnVariantChange + useActiveVariantCallback delay, page.pretty.js:7520–7527, framer.pretty.js:8932/9073).
+//  • Arrive has no style changes (no framer-v-i8gfp8 rules), so Start/Arrive look identical.
+//  • Leave: the GIF is unmounted (ne() = variant !== Leave, :7533 / :7585),
+//    Text bg rgb(0,0,0) → rgba(0,0,0,0) with transition $r (:7455) and the BG layer's layout
+//    animates to top:-120px / height:1vh (:7629) with transition ei (:7461).
+interface Props {
+  content: { ref: string; color: string; image: { src: string; width: number; height: number; alt: string; display?: [number, number] } };
+}
+const { content } = Astro.props;
+const { image } = content;
+---
+<div class="loader" data-ref={content.ref} aria-hidden="true">
+  <div class="loader__comp" data-loader data-variant="start">
+    <div class="loader__bg" style={`background-color:${content.color}`}></div>
+    <div class="loader__text">
+      <div class="loader__wrap">
+        <div class="loader__img" style={image.display ? `width:${image.display[0]}px;height:${image.display[1]}px` : undefined}><img src={image.src} alt={image.alt} width={image.width} height={image.height} decoding="auto" /></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* .framer-1f6cbgh-container (page.pretty.js:29399) */
+  .loader {
+    position: fixed; left: 0; bottom: 0; width: 100%; height: 100vh;
+    z-index: 10; pointer-events: none;
+  }
+  html.no-motion .loader { display: none; }
+  /* .framer-ZIJOV.framer-ye8ee4 (:7621) — root bg rgba(0,0,0,0) (:7562) */
+  .loader__comp { position: relative; width: 100%; height: 100%; overflow: hidden; background-color: rgba(0, 0, 0, 0); }
+  /* .framer-1pzp28s "BG" (:7622) */
+  .loader__bg {
+    position: absolute; left: 0; right: 0; top: 0; height: calc(var(--framer-viewport-height, 100vh) * 1);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; overflow: hidden;
+  }
+  /* .framer-1a0h1le "Text" (:7623) — bg rgb(0,0,0) (:7576) */
+  .loader__text {
+    position: absolute; inset: 0; overflow: hidden; background-color: rgb(0, 0, 0);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px;
+  }
+  /* .framer-1wd7102 (:7624) */
+  .loader__wrap { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; overflow: visible; }
+  /* .framer-1y42nsj (:7625) — Framer Image fit "fill" = object-fit: cover */
+  .loader__img { position: relative; flex: none; width: 400px; height: 300px; }
+  .loader__img img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+
+  /* Leave variant .framer-v-6wb5v3 (:7626–7627) */
+  .loader__comp[data-variant="leave"] .loader__bg { top: -120px; height: calc(var(--framer-viewport-height, 100vh) * 0.01); }
+  .loader__comp[data-variant="leave"] .loader__text { background-color: rgba(0, 0, 0, 0); }
+  .loader__comp[data-variant="leave"] .loader__wrap { min-height: 118px; min-width: 474px; }
+</style>
+
+<!-- is:inline so the timers start the moment the overlay exists (during HTML parse), the same
+     moment the original's timers start (on Loader mount, which is when its overlay first appears),
+     instead of after the module graph loads. -->
+<script is:inline>
+  (() => {
+    // Timings/easings copied from page.pretty.js (Loader Comp).
+    const STEP_MS = 2000; // te(() => T(`HSmZICM5_`), 2e3) / te(() => T(`rf0klfmmt`), 2e3) — :7521, :7525
+    const EASE = 'cubic-bezier(0.59, 0.25, 0.12, 1.17)'; // $r / ei ease [0.59, 0.25, 0.12, 1.17] — :7455, :7461
+    const TEXT_FADE = { duration: 1000, delay: 0 }; // $r: duration 1, delay 0 — :7455 (Text backgroundColor)
+    const BG_MOVE = { duration: 1000, delay: 300 }; // ei: duration 1, delay 0.3 — :7461 (BG layout)
+
+    if (new URLSearchParams(location.search).has('static')) return;
+    const comp = document.querySelector('[data-loader]');
+    if (!comp) return;
+    const bg = comp.querySelector('.loader__bg');
+    const text = comp.querySelector('.loader__text');
+    const leave = () => {
+      comp.dataset.variant = 'leave';
+      comp.querySelector('.loader__img')?.remove(); // GIF unmounted in Leave (:7585)
+      text.animate(
+        { backgroundColor: ['rgb(0, 0, 0)', 'rgba(0, 0, 0, 0)'] },
+        { ...TEXT_FADE, easing: EASE, fill: 'both' },
+      );
+      // Framer animates the BG's layout box (projection) from its Start box to its Leave box;
+      // for a plain filled rect that is the same as interpolating top/height.
+      const vh = (k) => `calc(var(--framer-viewport-height, 100vh) * ${k})`;
+      bg.animate({ top: ['0px', '-120px'], height: [vh(1), vh(0.01)] }, { ...BG_MOVE, easing: EASE, fill: 'both' });
+    };
+    // Scheduling as in the original: useOnVariantChange (framer.pretty.js:9073) arms the first
+    // timer from the Loader's mount effect. On the original that runs while the page is still
+    // hydrating, i.e. before the overlay's first paint (measured: logo removed ≈3.75 s and BG
+    // moving ≈4.08 s after the black overlay first paints). The equivalent moment here is when
+    // the overlay is parsed. delay() (framer.pretty.js:8932) is setTimeout(2000); its callback
+    // calls setVariant, which commits on the next frame, and the next timer is armed from that
+    // commit's effect.
+    setTimeout(() => {
+      requestAnimationFrame(() => {
+        comp.dataset.variant = 'arrive'; // Arrive commit (no visual change)
+        setTimeout(() => requestAnimationFrame(leave), STEP_MS);
+      });
+    }, STEP_MS);
+  })();
+</script>
