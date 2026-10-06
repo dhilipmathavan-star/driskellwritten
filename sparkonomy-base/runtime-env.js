@@ -1,0 +1,1 @@
+window.__ENV__={"API_BASE":"https://app-api.sparkonomy.com"};

@@ -1,0 +1,5 @@
+ORIGIN=https://www.sparkonomy.com
+ROUTE=/
+
+Run:  ORIGIN=https://www.sparkonomy.com ROUTE=/ PORT=3001 python3 server.py
+Open: http://localhost:3001/
